@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{28417517-CA05-4924-8F33-0CE11400F296}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34E5A0B6-4697-4F5F-BC3F-9DF9A019A93B}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DNTPersianUtils.Core", "src\DNTPersianUtils.Core\DNTPersianUtils.Core.xproj", "{EDEC6EA4-854B-4019-9BBB-4650E56DE69A}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DNTPersianUtils.Core.Tests", "src\DNTPersianUtils.Core.Tests\DNTPersianUtils.Core.Tests.xproj", "{FB2FB4FF-5207-4AE9-8D61-0851F14E822E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDEC6EA4-854B-4019-9BBB-4650E56DE69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDEC6EA4-854B-4019-9BBB-4650E56DE69A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB2FB4FF-5207-4AE9-8D61-0851F14E822E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB2FB4FF-5207-4AE9-8D61-0851F14E822E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDEC6EA4-854B-4019-9BBB-4650E56DE69A} = {28417517-CA05-4924-8F33-0CE11400F296}
+		{FB2FB4FF-5207-4AE9-8D61-0851F14E822E} = {28417517-CA05-4924-8F33-0CE11400F296}
+	EndGlobalSection
+EndGlobal
