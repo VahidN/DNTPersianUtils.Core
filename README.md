@@ -9,15 +9,9 @@ DNTPersianUtils.Core کتابخانه‌ای است متشکل از متدهای
 PM> Install-Package DNTPersianUtils.Core
 ```
 
-[مشاهده‌ی این بسته در سایت نیوگت](http://www.nuget.org/packages/DNTPersianUtils.Core/)
-
-
-<div dir="rtl">
 
 لیست متدها و امکانات این کتابخانه
 -----------------
-
-</div>
 
 |نام متد/امکانات|توضیحات|مثال|خروجی نمونه|
 | -------| :------: | :------: |  :------: |  
