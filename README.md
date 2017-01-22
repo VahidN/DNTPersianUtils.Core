@@ -2,27 +2,21 @@
 =======
 <div dir="rtl">
 DNTPersianUtils.Core کتابخانه‌ای است متشکل از متدهای الحاقی کمکی جهت کار با فرهنگ فارسی، در برنامه‌های مبتنی بر NET Core.
-</div>
-
-<div dir="rtl">
-
-روش نصب آن توسط NuGet
------------------
-برای نصب DNTPersianUtils.Core دستور ذیل را در کنسول پاورشل نیوگت اجرا کنید:
+برای نصب آن دستور ذیل را در کنسول پاورشل نیوگت اجرا کنید:
 </div>
 
 ```
 PM> Install-Package DNTPersianUtils.Core
 ```
-<div dir="rtl">
 
 [مشاهده‌ی این بسته در سایت نیوگت](http://www.nuget.org/packages/DNTPersianUtils.Core/)
-</div>
+
 
 <div dir="rtl">
 
 لیست متدها و امکانات این کتابخانه
 -----------------
+
 </div>
 
 |نام متد/امکانات|توضیحات|مثال|خروجی نمونه|
