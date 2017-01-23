@@ -8,11 +8,48 @@ namespace DNTPersianUtils.Core.Tests
     public class FriendlyPersianDateUtilsTests
     {
         [TestMethod]
-        public void Test_ToPersianDateTextify_Works()
+        public void Test_DateTimeOffset_Works()
         {
-            var dt = new DateTime(2017, 1, 10);
-            var actual = dt.ToPersianDateTextify();
-            Assert.AreEqual(expected: "سه شنبه ۲۱ دی ۱۳۹۵", actual: actual);
+            var iranStandardTimeZone = TimeZoneInfo.GetSystemTimeZones()
+                                                   .First(timeZoneInfo => timeZoneInfo.StandardName.Contains("Iran"));
+            Assert.AreEqual(expected: "Iran Standard Time", actual: iranStandardTimeZone.Id);
+
+            var irTzi = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
+            Assert.AreEqual(expected: "Iran Standard Time", actual: irTzi.Id);
+
+            var utcNow = DateTime.UtcNow;
+            var now = DateTime.Now;
+            var utcOffset = iranStandardTimeZone.GetUtcOffset(utcNow);
+            var dtoNow = new DateTimeOffset(now, utcOffset);
+
+            Assert.AreEqual(expected: dtoNow.UtcDateTime, actual: utcNow);
+        }
+
+        [TestMethod]
+        public void Test_ToFriendlyPersianDateTextify_With_DtoUtcNow_Works()
+        {
+            var dt = DateTimeOffset.UtcNow.AddMinutes(-3);
+            var actual = dt.ToFriendlyPersianDateTextify();
+            Console.WriteLine(actual);
+            Assert.IsTrue(actual.Contains("دقیقه قبل"));
+        }
+
+        [TestMethod]
+        public void Test_ToFriendlyPersianDateTextify_With_Now_Works()
+        {
+            var dt = DateTime.Now.AddMinutes(-3);
+            var actual = dt.ToFriendlyPersianDateTextify();
+            Console.WriteLine(actual);
+            Assert.IsTrue(actual.Contains("دقیقه قبل"));
+        }
+
+        [TestMethod]
+        public void Test_ToFriendlyPersianDateTextify_With_UtcNow_Works()
+        {
+            var dt = DateTime.UtcNow.AddMinutes(-3);
+            var actual = dt.ToFriendlyPersianDateTextify();
+            Console.WriteLine(actual);
+            Assert.IsTrue(actual.Contains("دقیقه قبل"));
         }
 
         [TestMethod]
@@ -25,16 +62,11 @@ namespace DNTPersianUtils.Core.Tests
         }
 
         [TestMethod]
-        public void Test_DateTimeOffset_Works()
+        public void Test_ToPersianDateTextify_Works()
         {
-            var iranStandardTimeZone = TimeZoneInfo.GetSystemTimeZones()
-                                                   .First(timeZoneInfo => timeZoneInfo.StandardName.Contains("Iran"));
-            var utcNow = DateTime.UtcNow;
-            var now = DateTime.Now;
-            var utcOffset = iranStandardTimeZone.GetUtcOffset(utcNow);
-            var dtoNow = new DateTimeOffset(now, utcOffset);
-
-            Assert.AreEqual(expected: dtoNow.UtcDateTime, actual: utcNow);
+            var dt = new DateTime(2017, 1, 10);
+            var actual = dt.ToPersianDateTextify();
+            Assert.AreEqual(expected: "سه شنبه ۲۱ دی ۱۳۹۵", actual: actual);
         }
     }
 }

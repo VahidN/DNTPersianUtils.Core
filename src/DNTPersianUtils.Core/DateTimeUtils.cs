@@ -8,6 +8,12 @@ namespace DNTPersianUtils.Core
     public static class DateTimeUtils
     {
         /// <summary>
+        /// Iran Standard Time
+        /// </summary>
+        public static readonly TimeZoneInfo IranStandardTime =
+            TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
+
+        /// <summary>
         /// محاسبه سن
         /// </summary>
         /// <param name="birthday">تاریخ تولد</param>
@@ -60,22 +66,6 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        /// بازگشت زمان جاری با توجه به نوع زمان
-        /// </summary>
-        /// <param name="dataDateTimeKind">نوع زمان ورودی</param>
-        /// <returns>هم اکنون</returns>
-        public static DateTime GetNow(this DateTimeKind dataDateTimeKind)
-        {
-            switch (dataDateTimeKind)
-            {
-                case DateTimeKind.Utc:
-                    return DateTime.UtcNow;
-                default:
-                    return DateTime.Now;
-            }
-        }
-
-        /// <summary>
         /// دریافت جزء زمانی ویژه‌ی این وهله
         /// </summary>
         public static DateTime GetDateTimeOffsetPart(
@@ -93,9 +83,44 @@ namespace DNTPersianUtils.Core
                 case DateTimeOffsetPart.UtcDateTime:
                     return dateTimeOffset.UtcDateTime;
 
+                case DateTimeOffsetPart.IranLocalDateTime:
+                    return dateTimeOffset.ToIranTimeZoneDateTimeOffset().DateTime;
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(dataDateTimeOffsetPart), dataDateTimeOffsetPart, null);
             }
+        }
+
+        /// <summary>
+        /// بازگشت زمان جاری با توجه به نوع زمان
+        /// </summary>
+        /// <param name="dataDateTimeKind">نوع زمان ورودی</param>
+        /// <returns>هم اکنون</returns>
+        public static DateTime GetNow(this DateTimeKind dataDateTimeKind)
+        {
+            switch (dataDateTimeKind)
+            {
+                case DateTimeKind.Utc:
+                    return DateTime.UtcNow;
+                default:
+                    return DateTime.Now;
+            }
+        }
+
+        /// <summary>
+        /// تبدیل منطقه زمانی این وهله به منطقه زمانی ایران
+        /// </summary>
+        public static DateTimeOffset ToIranTimeZoneDateTimeOffset(this DateTimeOffset dateTimeOffset)
+        {
+            return TimeZoneInfo.ConvertTime(dateTimeOffset, IranStandardTime);
+        }
+
+        /// <summary>
+        /// تبدیل منطقه زمانی این وهله به منطقه زمانی ایران
+        /// </summary>
+        public static DateTime ToIranTimeZoneDateTime(this DateTime dateTime)
+        {
+            return TimeZoneInfo.ConvertTime(dateTime, IranStandardTime);
         }
     }
 }

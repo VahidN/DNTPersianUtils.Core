@@ -69,12 +69,12 @@ namespace DNTPersianUtils.Core
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
         /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
         /// </summary>
-        /// <param name="info">تاریخ ورودی</param>
+        /// <param name="dt">تاریخ ورودی</param>
         /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
         /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTime info, DateTime comparisonBase)
+        public static string ToFriendlyPersianDateTextify(this DateTime dt, DateTime comparisonBase)
         {
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(info, comparisonBase).ToPersianNumbers()}";
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase).ToPersianNumbers()}";
         }
 
         /// <summary>
@@ -82,80 +82,25 @@ namespace DNTPersianUtils.Core
         /// مبنای محاسبه هم اکنون
         /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
         /// </summary>
-        /// <param name="info">تاریخ ورودی</param>
+        /// <param name="dt">تاریخ ورودی</param>
         /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTime info)
+        public static string ToFriendlyPersianDateTextify(this DateTime dt)
         {
-            var comparisonBase = info.Kind.GetNow();
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(info, comparisonBase).ToPersianNumbers()}";
+            var comparisonBase = dt.Kind.GetNow().ToIranTimeZoneDateTime();
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt.ToIranTimeZoneDateTime(), comparisonBase).ToPersianNumbers()}";
         }
 
         /// <summary>
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
         /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
         /// </summary>
-        /// <param name="info">تاریخ ورودی</param>
-        /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
-        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
-        /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTimeOffset info, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart)
-        {
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(info.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase).ToPersianNumbers()}";
-        }
-
-        /// <summary>
-        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
-        /// مبنای محاسبه هم اکنون
-        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
-        /// </summary>
-        /// <param name="info">تاریخ ورودی</param>
-        /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTimeOffset info)
-        {
-            var comparisonBase = DateTime.UtcNow;
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(info.UtcDateTime, comparisonBase).ToPersianNumbers()}";
-        }
-
-        /// <summary>
-        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
-        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
-        /// </summary>
-        /// <param name="info">تاریخ ورودی</param>
-        /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
-        /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTime? info, DateTime comparisonBase)
-        {
-            return info == null ? string.Empty : ToFriendlyPersianDateTextify(info.Value, comparisonBase);
-        }
-
-        /// <summary>
-        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
-        /// مبنای محاسبه هم اکنون
-        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
-        /// </summary>
-        /// <param name="info">تاریخ ورودی</param>
-        /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTime? info)
-        {
-            if (info == null)
-            {
-                return string.Empty;
-            }
-            var comparisonBase = info.Value.Kind.GetNow();
-            return ToFriendlyPersianDateTextify(info.Value, comparisonBase);
-        }
-
-        /// <summary>
-        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
-        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
-        /// </summary>
-        /// <param name="info">تاریخ ورودی</param>
+        /// <param name="dt">تاریخ ورودی</param>
         /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
         /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTimeOffset? info, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart)
+        public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return info == null ? string.Empty : ToFriendlyPersianDateTextify(info.Value.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase);
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase).ToPersianNumbers()}";
         }
 
         /// <summary>
@@ -163,21 +108,78 @@ namespace DNTPersianUtils.Core
         /// مبنای محاسبه هم اکنون
         /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
         /// </summary>
-        /// <param name="info">تاریخ ورودی</param>
+        /// <param name="dt">تاریخ ورودی</param>
         /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTimeOffset? info)
+        public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt)
         {
-            if (info == null)
+            var comparisonBase = DateTime.UtcNow.ToIranTimeZoneDateTime();
+            var iranLocalTime = dt.GetDateTimeOffsetPart(DateTimeOffsetPart.IranLocalDateTime);
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(iranLocalTime, comparisonBase).ToPersianNumbers()}";
+        }
+
+        /// <summary>
+        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
+        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
+        /// </summary>
+        /// <param name="dt">تاریخ ورودی</param>
+        /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
+        /// <returns>نمایش دوستانه</returns>
+        public static string ToFriendlyPersianDateTextify(this DateTime? dt, DateTime comparisonBase)
+        {
+            return dt == null ? string.Empty : ToFriendlyPersianDateTextify(dt.Value, comparisonBase);
+        }
+
+        /// <summary>
+        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
+        /// مبنای محاسبه هم اکنون
+        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
+        /// </summary>
+        /// <param name="dt">تاریخ ورودی</param>
+        /// <returns>نمایش دوستانه</returns>
+        public static string ToFriendlyPersianDateTextify(this DateTime? dt)
+        {
+            if (dt == null)
             {
                 return string.Empty;
             }
-            var comparisonBase = DateTime.UtcNow;
-            return ToFriendlyPersianDateTextify(info.Value.UtcDateTime, comparisonBase);
+            var comparisonBase = dt.Value.Kind.GetNow().ToIranTimeZoneDateTime();
+            return ToFriendlyPersianDateTextify(dt.Value.ToIranTimeZoneDateTime(), comparisonBase);
         }
 
-        private static string toFriendlyPersianDate(this DateTime info, DateTime comparisonBase)
+        /// <summary>
+        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
+        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
+        /// </summary>
+        /// <param name="dt">تاریخ ورودی</param>
+        /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        /// <returns>نمایش دوستانه</returns>
+        public static string ToFriendlyPersianDateTextify(this DateTimeOffset? dt, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            var persianDate = info.ToPersianYearMonthDay();
+            return dt == null ? string.Empty : ToFriendlyPersianDateTextify(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase);
+        }
+
+        /// <summary>
+        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
+        /// مبنای محاسبه هم اکنون
+        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
+        /// </summary>
+        /// <param name="dt">تاریخ ورودی</param>
+        /// <returns>نمایش دوستانه</returns>
+        public static string ToFriendlyPersianDateTextify(this DateTimeOffset? dt)
+        {
+            if (dt == null)
+            {
+                return string.Empty;
+            }
+            var comparisonBase = DateTime.UtcNow.ToIranTimeZoneDateTime();
+            var iranLocalTime = dt.Value.GetDateTimeOffsetPart(DateTimeOffsetPart.IranLocalDateTime);
+            return ToFriendlyPersianDateTextify(iranLocalTime, comparisonBase);
+        }
+
+        private static string toFriendlyPersianDate(this DateTime dt, DateTime comparisonBase)
+        {
+            var persianDate = dt.ToPersianYearMonthDay();
 
             //1388/10/22
             var persianYear = persianDate.Item1;
@@ -185,8 +187,8 @@ namespace DNTPersianUtils.Core
             var persianDay = persianDate.Item3;
 
             //13:14
-            var hour = info.Hour;
-            var min = info.Minute;
+            var hour = dt.Hour;
+            var min = dt.Minute;
             var hhMm =
                 $"{hour.ToString("00", CultureInfo.InvariantCulture)}:{min.ToString("00", CultureInfo.InvariantCulture)}";
 
