@@ -108,9 +108,11 @@ namespace DNTPersianUtils.Core
         /// با قالبی مانند 21 دی 1395
         /// </summary>
         /// <returns>تاریخ شمسی</returns>
-        public static string ToLongPersianDateString(this DateTimeOffset? dt)
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string ToLongPersianDateString(this DateTimeOffset? dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return dt == null ? string.Empty : ToLongPersianDateString(dt.Value.DateTime);
+            return dt == null ? string.Empty : ToLongPersianDateString(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
@@ -118,9 +120,11 @@ namespace DNTPersianUtils.Core
         /// با قالبی مانند 21 دی 1395
         /// </summary>
         /// <returns>تاریخ شمسی</returns>
-        public static string ToLongPersianDateString(this DateTimeOffset dt)
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string ToLongPersianDateString(this DateTimeOffset dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return ToLongPersianDateString(dt.DateTime);
+            return ToLongPersianDateString(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
@@ -149,9 +153,11 @@ namespace DNTPersianUtils.Core
         /// با قالبی مانند 21 دی 1395، 10:20:02 ق.ظ
         /// </summary>
         /// <returns>تاریخ شمسی</returns>
-        public static string ToLongPersianDateTimeString(this DateTimeOffset? dt)
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string ToLongPersianDateTimeString(this DateTimeOffset? dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return dt == null ? string.Empty : ToLongPersianDateTimeString(dt.Value.DateTime);
+            return dt == null ? string.Empty : ToLongPersianDateTimeString(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
@@ -159,9 +165,11 @@ namespace DNTPersianUtils.Core
         /// با قالبی مانند 21 دی 1395، 10:20:02 ق.ظ
         /// </summary>
         /// <returns>تاریخ شمسی</returns>
-        public static string ToLongPersianDateTimeString(this DateTimeOffset dt)
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string ToLongPersianDateTimeString(this DateTimeOffset dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return ToLongPersianDateTimeString(dt.DateTime);
+            return ToLongPersianDateTimeString(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
@@ -176,9 +184,11 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
         /// </summary>
-        public static Tuple<int, int, int> ToPersianYearMonthDay(this DateTimeOffset? gregorianDate)
+        /// <param name="gregorianDate">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static Tuple<int, int, int> ToPersianYearMonthDay(this DateTimeOffset? gregorianDate, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return gregorianDate == null ? null : ToPersianYearMonthDay(gregorianDate.Value.DateTime);
+            return gregorianDate == null ? null : ToPersianYearMonthDay(gregorianDate.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
@@ -192,9 +202,11 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
         /// </summary>
-        public static Tuple<int, int, int> ToPersianYearMonthDay(this DateTimeOffset gregorianDate)
+        /// <param name="gregorianDate">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static Tuple<int, int, int> ToPersianYearMonthDay(this DateTimeOffset gregorianDate, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return ToPersianYearMonthDay(gregorianDate.DateTime);
+            return ToPersianYearMonthDay(gregorianDate.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
@@ -213,20 +225,24 @@ namespace DNTPersianUtils.Core
         /// تبدیل تاریخ میلادی به شمسی
         /// با قالبی مانند 1395/10/21
         /// </summary>
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <returns>تاریخ شمسی</returns>
-        public static string ToShortPersianDateString(this DateTimeOffset? dt)
+        public static string ToShortPersianDateString(this DateTimeOffset? dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return dt == null ? string.Empty : ToShortPersianDateString(dt.Value.DateTime);
+            return dt == null ? string.Empty : ToShortPersianDateString(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
         /// تبدیل تاریخ میلادی به شمسی
         /// با قالبی مانند 1395/10/21
         /// </summary>
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <returns>تاریخ شمسی</returns>
-        public static string ToShortPersianDateString(this DateTimeOffset dt)
+        public static string ToShortPersianDateString(this DateTimeOffset dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return ToShortPersianDateString(dt.DateTime);
+            return ToShortPersianDateString(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
@@ -274,20 +290,24 @@ namespace DNTPersianUtils.Core
         /// تبدیل تاریخ میلادی به شمسی
         /// با قالبی مانند 1395/10/21 10:20
         /// </summary>
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <returns>تاریخ شمسی</returns>
-        public static string ToShortPersianDateTimeString(this DateTimeOffset? dt)
+        public static string ToShortPersianDateTimeString(this DateTimeOffset? dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return dt == null ? string.Empty : ToShortPersianDateTimeString(dt.Value.DateTime);
+            return dt == null ? string.Empty : ToShortPersianDateTimeString(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
         /// تبدیل تاریخ میلادی به شمسی
         /// با قالبی مانند 1395/10/21 10:20
         /// </summary>
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <returns>تاریخ شمسی</returns>
-        public static string ToShortPersianDateTimeString(this DateTimeOffset dt)
+        public static string ToShortPersianDateTimeString(this DateTimeOffset dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return ToShortPersianDateTimeString(dt.DateTime);
+            return ToShortPersianDateTimeString(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         private static int? getDay(string part)

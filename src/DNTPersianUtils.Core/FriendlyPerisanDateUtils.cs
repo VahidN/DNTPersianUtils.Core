@@ -47,18 +47,22 @@ namespace DNTPersianUtils.Core
         /// نمایش فارسی روز دریافتی
         /// مانند سه شنبه ۲۱ دی ۱۳۹۵
         /// </summary>
-        public static string ToPersianDateTextify(this DateTimeOffset dt)
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string ToPersianDateTextify(this DateTimeOffset dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return ToPersianDateTextify(dt.DateTime);
+            return ToPersianDateTextify(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
         /// نمایش فارسی روز دریافتی
         /// مانند سه شنبه ۲۱ دی ۱۳۹۵
         /// </summary>
-        public static string ToPersianDateTextify(this DateTimeOffset? dt)
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string ToPersianDateTextify(this DateTimeOffset? dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return dt == null ? string.Empty : ToPersianDateTextify(dt.Value.DateTime);
+            return dt == null ? string.Empty : ToPersianDateTextify(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
@@ -92,10 +96,11 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="info">تاریخ ورودی</param>
         /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTimeOffset info, DateTime comparisonBase)
+        public static string ToFriendlyPersianDateTextify(this DateTimeOffset info, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(info.DateTime, comparisonBase).ToPersianNumbers()}";
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(info.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase).ToPersianNumbers()}";
         }
 
         /// <summary>
@@ -107,8 +112,8 @@ namespace DNTPersianUtils.Core
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(this DateTimeOffset info)
         {
-            var comparisonBase = info.DateTime.Kind.GetNow();
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(info.DateTime, comparisonBase).ToPersianNumbers()}";
+            var comparisonBase = DateTime.UtcNow;
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(info.UtcDateTime, comparisonBase).ToPersianNumbers()}";
         }
 
         /// <summary>
@@ -146,10 +151,11 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="info">تاریخ ورودی</param>
         /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTimeOffset? info, DateTime comparisonBase)
+        public static string ToFriendlyPersianDateTextify(this DateTimeOffset? info, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return info == null ? string.Empty : ToFriendlyPersianDateTextify(info.Value, comparisonBase);
+            return info == null ? string.Empty : ToFriendlyPersianDateTextify(info.Value.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase);
         }
 
         /// <summary>
@@ -165,8 +171,8 @@ namespace DNTPersianUtils.Core
             {
                 return string.Empty;
             }
-            var comparisonBase = info.Value.DateTime.Kind.GetNow();
-            return ToFriendlyPersianDateTextify(info.Value, comparisonBase);
+            var comparisonBase = DateTime.UtcNow;
+            return ToFriendlyPersianDateTextify(info.Value.UtcDateTime, comparisonBase);
         }
 
         private static string toFriendlyPersianDate(this DateTime info, DateTime comparisonBase)

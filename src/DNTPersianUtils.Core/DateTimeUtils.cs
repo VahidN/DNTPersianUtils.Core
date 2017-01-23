@@ -12,10 +12,11 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="birthday">تاریخ تولد</param>
         /// <param name="comparisonBase">مبنای محاسبه مانند هم اکنون</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <returns>سن</returns>
-        public static int GetAge(this DateTimeOffset birthday, DateTime comparisonBase)
+        public static int GetAge(this DateTimeOffset birthday, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return GetAge(birthday.DateTime, comparisonBase);
+            return GetAge(birthday.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase);
         }
 
         /// <summary>
@@ -26,8 +27,8 @@ namespace DNTPersianUtils.Core
         /// <returns>سن</returns>
         public static int GetAge(this DateTimeOffset birthday)
         {
-            var birthdayDateTime = birthday.DateTime;
-            var now = birthdayDateTime.Kind.GetNow();
+            var birthdayDateTime = birthday.UtcDateTime;
+            var now = DateTime.UtcNow;
             return GetAge(birthdayDateTime, now);
         }
 
@@ -71,6 +72,29 @@ namespace DNTPersianUtils.Core
                     return DateTime.UtcNow;
                 default:
                     return DateTime.Now;
+            }
+        }
+
+        /// <summary>
+        /// دریافت جزء زمانی ویژه‌ی این وهله
+        /// </summary>
+        public static DateTime GetDateTimeOffsetPart(
+            this DateTimeOffset dateTimeOffset,
+            DateTimeOffsetPart dataDateTimeOffsetPart)
+        {
+            switch (dataDateTimeOffsetPart)
+            {
+                case DateTimeOffsetPart.DateTime:
+                    return dateTimeOffset.DateTime;
+
+                case DateTimeOffsetPart.LocalDateTime:
+                    return dateTimeOffset.LocalDateTime;
+
+                case DateTimeOffsetPart.UtcDateTime:
+                    return dateTimeOffset.UtcDateTime;
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(dataDateTimeOffsetPart), dataDateTimeOffsetPart, null);
             }
         }
     }

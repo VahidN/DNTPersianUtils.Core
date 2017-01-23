@@ -150,17 +150,21 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// گرفتن نام فارسی روزهای هفته
         /// </summary>
-        public static string GetPersianWeekDayName(this DateTimeOffset? dt)
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string GetPersianWeekDayName(this DateTimeOffset? dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return dt == null ? string.Empty : GetPersianWeekDayName(dt.Value.DateTime);
+            return dt == null ? string.Empty : GetPersianWeekDayName(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
         /// گرفتن نام فارسی روزهای هفته
         /// </summary>
-        public static string GetPersianWeekDayName(this DateTimeOffset dt)
+        /// <param name="dt">تاریخ و زمان</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string GetPersianWeekDayName(this DateTimeOffset dt, DateTimeOffsetPart dateTimeOffsetPart)
         {
-            return GetPersianWeekDayName(dt.DateTime);
+            return GetPersianWeekDayName(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
         /// <summary>
