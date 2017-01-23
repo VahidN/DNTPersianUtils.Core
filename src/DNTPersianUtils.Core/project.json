@@ -1,5 +1,5 @@
 ﻿{
-    "version": "1.1.0-*",
+    "version": "1.2.0-*",
 
     "authors": [ "Vahid Nasiri" ],
     "packOptions": {
@@ -11,11 +11,13 @@
     "description": "DNTPersianUtils.Core is a collection of Persian helper extension methods.",
 
     "dependencies": {
-        "NETStandard.Library": "1.6.1"
+        "NETStandard.Library": "1.6.1",
+        "System.Reflection": "4.3.0",
+        "System.Reflection.TypeExtensions": "4.3.0"
     },
 
     "frameworks": {
-        "netstandard1.6": {
+        "netstandard1.3": {
             "imports": "dnxcore50"
         }
     },

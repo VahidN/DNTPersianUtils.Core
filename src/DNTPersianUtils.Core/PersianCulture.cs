@@ -205,13 +205,11 @@ namespace DNTPersianUtils.Core
 
             var persianCalendar = new PersianCalendar();
             var fieldInfo = persianCulture.GetType()
-                                   .GetTypeInfo()
-                                   .GetField("calendar", BindingFlags.NonPublic | BindingFlags.Instance);
+                                          .GetField("calendar", BindingFlags.NonPublic | BindingFlags.Instance);
             fieldInfo?.SetValue(persianCulture, persianCalendar);
 
             var info = persianCulture.DateTimeFormat.GetType()
-                                             .GetTypeInfo()
-                                             .GetField("calendar", BindingFlags.NonPublic | BindingFlags.Instance);
+                                                    .GetField("calendar", BindingFlags.NonPublic | BindingFlags.Instance);
             info?.SetValue(persianCulture.DateTimeFormat, persianCalendar);
 
             persianCulture.NumberFormat.NumberDecimalSeparator = "/";
