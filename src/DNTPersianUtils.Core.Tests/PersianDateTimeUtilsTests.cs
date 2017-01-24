@@ -23,6 +23,14 @@ namespace DNTPersianUtils.Core.Tests
         }
 
         [TestMethod]
+        public void Test_ToGregorianDateTimeOffset_Works()
+        {
+            var dt = "1395/11/3 7:30";
+            var actual = dt.ToGregorianDateTimeOffset();
+            Assert.AreEqual(expected: DateTimeUtils.IranStandardTime.BaseUtcOffset, actual: actual.Value.Offset);
+        }
+
+        [TestMethod]
         public void Test_ToLongPersianDateString_Works()
         {
             var dt = new DateTime(2017, 1, 10, 10, 20, 2);
