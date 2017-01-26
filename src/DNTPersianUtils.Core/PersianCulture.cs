@@ -152,7 +152,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="dt">تاریخ و زمان</param>
         /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
-        public static string GetPersianWeekDayName(this DateTimeOffset? dt, DateTimeOffsetPart dateTimeOffsetPart)
+        public static string GetPersianWeekDayName(this DateTimeOffset? dt, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         {
             return dt == null ? string.Empty : GetPersianWeekDayName(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
@@ -162,7 +162,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="dt">تاریخ و زمان</param>
         /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
-        public static string GetPersianWeekDayName(this DateTimeOffset dt, DateTimeOffsetPart dateTimeOffsetPart)
+        public static string GetPersianWeekDayName(this DateTimeOffset dt, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         {
             return GetPersianWeekDayName(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }

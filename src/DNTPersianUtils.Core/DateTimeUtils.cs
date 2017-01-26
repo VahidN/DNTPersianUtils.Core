@@ -20,7 +20,7 @@ namespace DNTPersianUtils.Core
         /// <param name="comparisonBase">مبنای محاسبه مانند هم اکنون</param>
         /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <returns>سن</returns>
-        public static int GetAge(this DateTimeOffset birthday, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart)
+        public static int GetAge(this DateTimeOffset birthday, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         {
             return GetAge(birthday.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase);
         }
