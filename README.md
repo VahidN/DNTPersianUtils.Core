@@ -25,7 +25,7 @@ PM> Install-Package DNTPersianUtils.Core
 |string ToPersianDateTimeString(this DateTime dateTime, string format)|تبدیل تاریخ میلادی به شمسی|dt.ToPersianDateTimeString("dd MMMM yyyy")|این تبدیل بر اساس فرهنگ اصلاح شده‌ی فارسی صورت می‌گیرد|
 |string ToShortPersianDateString(this DateTimeOffset? dt)|تبدیل تاریخ میلادی به شمسی|dt.ToShortPersianDateString()|1395/10/21|
 |string ToShortPersianDateTimeString(this DateTime dt)|تبدیل تاریخ میلادی به شمسی|dt.ToShortPersianDateTimeString()|1395/10/21 10:20|
-|bool IsValidPersianDateTime(this string persianDateTime)|تعيين اعتبار تاریخ و زمان رشته‌ای شمسی|"1395/12/30".IsValidPersianDateTime()|true|
+|bool IsValidPersianDateTime(this string persianDateTime)|تعیین اعتبار تاریخ و زمان رشته‌ای شمسی|"1395/12/30".IsValidPersianDateTime()|true|
 |string ToPersianNumbers(this int number, string format = "")|تبدیل عدد انگلیسی به فارسی|123.ToPersianNumbers()|۱۲۳|
 |bool ContainsFarsi(this string txt)|آیا عبارت مدنظر حاوی حروف فارسی است؟|"Abc تست".ContainsFarsi()|true|
 |string ApplyCorrectYeKe(this string data)|اصلاح ی و ک عربی به فارسی|"می‌شود".ApplyCorrectYeKe()|می‌شود|

@@ -10,11 +10,11 @@ namespace DNTPersianUtils.Core
     public static class PersianDateTimeUtils
     {
         /// <summary>
-        /// تعيين اعتبار تاریخ شمسی
+        /// تعیین اعتبار تاریخ شمسی
         /// </summary>
-        /// <param name="persianYear">سال شمسي</param>
-        /// <param name="persianMonth">ماه شمسي</param>
-        /// <param name="persianDay">روز شمسي</param>
+        /// <param name="persianYear">سال شمسی</param>
+        /// <param name="persianMonth">ماه شمسی</param>
+        /// <param name="persianDay">روز شمسی</param>
         public static bool IsValidPersianDate(int persianYear, int persianMonth, int persianDay)
         {
             if (persianDay > 31 || persianDay <= 0)
@@ -57,7 +57,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        /// تعيين اعتبار تاریخ و زمان رشته‌ای شمسی
+        /// تعیین اعتبار تاریخ و زمان رشته‌ای شمسی
         /// با قالب‌های پشتیبانی شده‌ی ۹۰/۸/۱۴ , 1395/11/3 17:30 , ۱۳۹۰/۸/۱۴ , ۹۰-۸-۱۴ , ۱۳۹۰-۸-۱۴
         /// </summary>
         /// <param name="persianDateTime">تاریخ و زمان شمسی</param>
