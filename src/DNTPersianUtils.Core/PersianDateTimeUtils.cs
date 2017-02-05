@@ -10,6 +10,71 @@ namespace DNTPersianUtils.Core
     public static class PersianDateTimeUtils
     {
         /// <summary>
+        /// تعيين اعتبار تاریخ شمسی
+        /// </summary>
+        /// <param name="persianYear">سال شمسي</param>
+        /// <param name="persianMonth">ماه شمسي</param>
+        /// <param name="persianDay">روز شمسي</param>
+        public static bool IsValidPersianDate(int persianYear, int persianMonth, int persianDay)
+        {
+            if (persianDay > 31 || persianDay <= 0)
+            {
+                return false;
+            }
+
+            if (persianMonth > 12 || persianMonth <= 0)
+            {
+                return false;
+            }
+
+            if (persianMonth <= 6 && persianDay > 31)
+            {
+                return false;
+            }
+
+            if (persianMonth >= 7 && persianDay > 30)
+            {
+                return false;
+            }
+
+            if (persianMonth == 12)
+            {
+                var persianCalendar = new PersianCalendar();
+                var isLeapYear = persianCalendar.IsLeapYear(persianYear);
+
+                if (isLeapYear && persianDay > 30)
+                {
+                    return false;
+                }
+
+                if (!isLeapYear && persianDay > 29)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// تعيين اعتبار تاریخ و زمان رشته‌ای شمسی
+        /// با قالب‌های پشتیبانی شده‌ی ۹۰/۸/۱۴ , 1395/11/3 17:30 , ۱۳۹۰/۸/۱۴ , ۹۰-۸-۱۴ , ۱۳۹۰-۸-۱۴
+        /// </summary>
+        /// <param name="persianDateTime">تاریخ و زمان شمسی</param>
+        public static bool IsValidPersianDateTime(this string persianDateTime)
+        {
+            try
+            {
+                var dt = persianDateTime.ToGregorianDateTime();
+                return dt.HasValue;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// تبدیل تاریخ و زمان رشته‌ای شمسی به میلادی
         /// با قالب‌های پشتیبانی شده‌ی ۹۰/۸/۱۴ , 1395/11/3 17:30 , ۱۳۹۰/۸/۱۴ , ۹۰-۸-۱۴ , ۱۳۹۰-۸-۱۴
         /// </summary>
@@ -48,6 +113,11 @@ namespace DNTPersianUtils.Core
 
             var year = getYear(splitedDate[0]);
             if (!year.HasValue)
+            {
+                return null;
+            }
+
+            if(!IsValidPersianDate(year.Value, month.Value, day.Value))
             {
                 return null;
             }

@@ -61,5 +61,19 @@ namespace DNTPersianUtils.Core.Tests
             var actual = dt.ToShortPersianDateTimeString();
             Assert.AreEqual(expected: "1395/10/21 10:20", actual: actual);
         }
+
+        [TestMethod]
+        public void Test_IsValidPersianDate_Works()
+        {
+            var actual = PersianDateTimeUtils.IsValidPersianDate(1395, 12, 30);
+            Assert.AreEqual(expected: true, actual: actual);
+        }
+
+        [TestMethod]
+        public void Test_IsValidPersianDateTime_Works()
+        {
+            var actual = "1395/12/30".IsValidPersianDateTime();
+            Assert.AreEqual(expected: true, actual: actual);
+        }
     }
 }
