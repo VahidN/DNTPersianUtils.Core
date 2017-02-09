@@ -28,5 +28,32 @@ namespace DNTPersianUtils.Core.Tests
             Assert.IsTrue(PersianCulture.Instance.Calendar is PersianCalendar);
             Assert.IsTrue(PersianCulture.Instance.DateTimeFormat.Calendar is PersianCalendar);
         }
+
+        [TestMethod]
+        public void Test_GetPersianYear_Works()
+        {
+            var date = new DateTime(2014, 4, 20);
+            var year = date.GetPersianYear();
+
+            Assert.AreEqual(year, 1393);
+        }
+
+        [TestMethod]
+        public void Test_GetPersianMonth_Works()
+        {
+            var date = new DateTime(2014, 4, 20);
+            var month = date.GetPersianMonth();
+
+            Assert.AreEqual(month, 1);
+        }
+
+        [TestMethod]
+        public void Test_GetPersianDayOfMonth_Works()
+        {
+            var date = new DateTime(2014, 4, 20);
+            var dayOfMonth = date.GetPersianDayOfMonth();
+
+            Assert.AreEqual(dayOfMonth, 31);
+        }
     }
 }

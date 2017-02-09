@@ -92,6 +92,26 @@ namespace DNTPersianUtils.Core
         public static CultureInfo Instance { get; } = _cultureInfoBuilder.Value;
 
         /// <summary>
+        /// Returns the day-of-month part of this <see cref="DateTime"/> localized in Persian calendar.
+        /// </summary>
+        /// <param name="dateTime">The <see cref="DateTime"/> to extend.</param>
+        /// <returns>An integer between 1 and 31 representing the day-of-month part of this <see cref="DateTime"/>.</returns>
+        public static int GetPersianDayOfMonth(this DateTime dateTime)
+        {
+            return Instance.DateTimeFormat.Calendar.GetDayOfMonth(dateTime);
+        }
+
+        /// <summary>
+        /// Returns the month part of this <see cref="DateTime"/> localized in Persian calendar.
+        /// </summary>
+        /// <param name="dateTime">The <see cref="DateTime"/> to extend.</param>
+        /// <returns>An integer between 1 and 12 representing the month part of this <see cref="DateTime"/>.</returns>
+        public static int GetPersianMonth(this DateTime dateTime)
+        {
+            return Instance.DateTimeFormat.Calendar.GetMonth(dateTime);
+        }
+
+        /// <summary>
         /// عدد به حروف روزهای شمسی
         /// </summary>
         public static string GetPersianMonthDayNumberName(this int dayNumber)
@@ -122,6 +142,7 @@ namespace DNTPersianUtils.Core
         {
             return PersianDayWeekNames[dayOfWeek];
         }
+
         /// <summary>
         /// گرفتن نام فارسی روزهای هفته
         /// </summary>
@@ -165,6 +186,16 @@ namespace DNTPersianUtils.Core
         public static string GetPersianWeekDayName(this DateTimeOffset dt, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         {
             return GetPersianWeekDayName(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        }
+
+        /// <summary>
+        /// Returns the year part of this <see cref="DateTime"/> localized in Persian calendar.
+        /// </summary>
+        /// <param name="dateTime">The <see cref="DateTime"/> to extend.</param>
+        /// <returns>An integer between 1 and 9999 representing the year part of this <see cref="DateTime"/>.</returns>
+        public static int GetPersianYear(this DateTime dateTime)
+        {
+            return Instance.DateTimeFormat.Calendar.GetYear(dateTime);
         }
 
         /// <summary>
