@@ -31,3 +31,4 @@ PM> Install-Package DNTPersianUtils.Core
 |string ApplyCorrectYeKe(this string data)|اصلاح ی و ک عربی به فارسی|"می‌شود".ApplyCorrectYeKe()|می‌شود|
 |int GetAge(this DateTime birthday)|محاسبه سن|DateTime.Now.AddYears(-9).GetAge()|9|
 |bool IsStartOfNewYear(this DateTime now, double utcDelta = 3.5)|آیا تاریخ و زمان مدنظر آغاز سال نوی شمسی است؟|dt.IsStartOfNewYear()|true/false|
+|PersianStopwords|مجموعه کلمات بی‌اثر زبان فارسی| PersianStopwords.List | مفید برای تنظیمات جستجوهای تمام متنی |

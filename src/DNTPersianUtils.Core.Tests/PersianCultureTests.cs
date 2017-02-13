@@ -55,5 +55,11 @@ namespace DNTPersianUtils.Core.Tests
 
             Assert.AreEqual(dayOfMonth, 31);
         }
+
+        [TestMethod]
+        public void Test_PersianStopwords_Works()
+        {
+           Assert.IsTrue(PersianStopwords.List.Contains("احتراما"));
+        }
     }
 }

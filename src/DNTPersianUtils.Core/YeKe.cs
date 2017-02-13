@@ -1,27 +1,27 @@
 ﻿namespace DNTPersianUtils.Core
 {
     /// <summary>
-    ///
+    /// YeKe
     /// </summary>
     public static class YeKe
     {
         /// <summary>
-        ///
+        /// Arabic Ye Char
         /// </summary>
         public const char ArabicYeChar = (char)1610;
 
         /// <summary>
-        ///
+        /// Persian Ye Char
         /// </summary>
         public const char PersianYeChar = (char)1740;
 
         /// <summary>
-        ///
+        /// Arabic Ke Char
         /// </summary>
         public const char ArabicKeChar = (char)1603;
 
         /// <summary>
-        ///
+        /// Persian Ke Char
         /// </summary>
         public const char PersianKeChar = (char)1705;
 
