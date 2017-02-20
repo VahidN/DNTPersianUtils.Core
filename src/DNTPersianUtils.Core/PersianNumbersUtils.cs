@@ -54,21 +54,23 @@ namespace DNTPersianUtils.Core
         {
             if (string.IsNullOrWhiteSpace(data)) return string.Empty;
             return
-               data.Replace("0", "۰")
-                .Replace("1", "۱")
-                .Replace("2", "۲")
-                .Replace("3", "۳")
-                .Replace("4", "۴")
-                .Replace("5", "۵")
-                .Replace("6", "۶")
-                .Replace("7", "۷")
-                .Replace("8", "۸")
-                .Replace("9", "۹")
+               data
+                .ToEnglishNumbers()
+                .Replace("0", "\u06F0")
+                .Replace("1", "\u06F1")
+                .Replace("2", "\u06F2")
+                .Replace("3", "\u06F3")
+                .Replace("4", "\u06F4")
+                .Replace("5", "\u06F5")
+                .Replace("6", "\u06F6")
+                .Replace("7", "\u06F7")
+                .Replace("8", "\u06F8")
+                .Replace("9", "\u06F9")
                 .Replace(".", ",");
         }
 
         /// <summary>
-        /// Converts Persian digits of a given string to their equivalent English digits.
+        /// Converts Persian and Arabic digits of a given string to their equivalent English digits.
         /// </summary>
         /// <param name="data">Persian number</param>
         /// <returns></returns>
@@ -76,18 +78,27 @@ namespace DNTPersianUtils.Core
         {
             if (string.IsNullOrWhiteSpace(data)) return string.Empty;
             return
-               data.Replace("۰", "0")
-                .Replace("۱", "1")
-                .Replace("۲", "2")
-                .Replace("۳", "3")
-                .Replace("۴", "4")
-                .Replace("٤", "4")
-                .Replace("۵", "5")
-                .Replace("۶", "6")
-                .Replace("٦", "6")
-                .Replace("۷", "7")
-                .Replace("۸", "8")
-                .Replace("۹", "9");
+               data.Replace("\u0660", "0") //٠
+                   .Replace("\u06F0", "0") //۰
+                   .Replace("\u0661", "1") //١
+                   .Replace("\u06F1", "1") //۱
+                   .Replace("\u0662", "2") //٢
+                   .Replace("\u06F2", "2") //۲
+                   .Replace("\u0663", "3") //٣
+                   .Replace("\u06F3", "3") //۳
+                   .Replace("\u0664", "4") //٤
+                   .Replace("\u06F4", "4") //۴
+                   .Replace("\u0665", "5") //٥
+                   .Replace("\u06F5", "5") //۵
+                   .Replace("\u0666", "6") //٦
+                   .Replace("\u06F6", "6") //۶
+                   .Replace("\u0667", "7") //٧
+                   .Replace("\u06F7", "7") //۷
+                   .Replace("\u0668", "8") //٨
+                   .Replace("\u06F8", "8") //۸
+                   .Replace("\u0669", "9") //٩
+                   .Replace("\u06F9", "9") //۹
+                   ;
         }
     }
 }
