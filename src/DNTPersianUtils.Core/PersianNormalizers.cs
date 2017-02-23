@@ -67,6 +67,11 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Converts English digits of a given number to their equivalent Persian digits
         /// </summary>
-        ApplyPersianNumbers = 1 << 10
+        ApplyPersianNumbers = 1 << 10,
+
+        /// <summary>
+        /// حذف اعراب از حروف و کلمات
+        /// </summary>
+        RemoveDiacritics = 1 << 11
     }
 }

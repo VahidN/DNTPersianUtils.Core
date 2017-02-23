@@ -119,6 +119,10 @@ namespace DNTPersianUtils.Core.Tests
             var test = "سلامـــت";
             var result = "سلامت";
             Assert.AreEqual(result, test.NormalizePersianText(PersianNormalizers.RemoveAllKashida));
+
+            var actual = "مـجـــــــــیــــــــــد".NormalizePersianText(PersianNormalizers.RemoveAllKashida);
+            var expected = "مجید";
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
@@ -183,6 +187,18 @@ namespace DNTPersianUtils.Core.Tests
             var actual = "\u0643\u0649\u064A".NormalizePersianText(PersianNormalizers.ApplyPersianYeKe);
             var expected = "\u06A9\u06CC\u06CC";
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Test_RemoveDiacritics_Works()
+        {
+            var actual1 = "وَحید".NormalizePersianText(PersianNormalizers.RemoveDiacritics);
+            var expected1 = "وحید";
+            Assert.AreEqual(expected1, actual1);
+
+            var actual2 = "آفتاب".NormalizePersianText(PersianNormalizers.RemoveDiacritics);
+            var expected2 = "آفتاب";
+            Assert.AreEqual(expected2, actual2);
         }
     }
 }

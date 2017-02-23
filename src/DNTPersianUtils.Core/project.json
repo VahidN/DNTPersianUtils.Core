@@ -1,5 +1,5 @@
 ﻿{
-    "version": "1.7.0-*",
+    "version": "1.8.0-*",
 
     "authors": [ "Vahid Nasiri" ],
     "packOptions": {
@@ -12,6 +12,7 @@
 
     "dependencies": {
         "NETStandard.Library": "1.6.1",
+        "System.Globalization.Extensions": "4.3.0",
         "System.Reflection": "4.3.0",
         "System.Reflection.TypeExtensions": "4.3.0"
     },

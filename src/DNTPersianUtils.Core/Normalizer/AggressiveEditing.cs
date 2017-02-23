@@ -29,6 +29,16 @@ namespace DNTPersianUtils.Core.Normalizer
         private static readonly Regex _matchRemoveOutsideInsideSpacing9 = new Regex(@"(\[)\s*([^)]+?)\s*?(\])", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// Removes all kashida
+        /// </summary>
+        /// <param name="text">Text to process</param>
+        /// <returns>Processed Text</returns>
+        public static string NormalizeAllKashida(this string text)
+        {
+            return _matchRemoveAllKashida.Replace(text, "").NormalizeUnderLines();
+        }
+
+        /// <summary>
         /// Replaces more than one ! or ? mark with just one
         /// </summary>
         /// <param name="text">Text to process</param>
@@ -38,6 +48,36 @@ namespace DNTPersianUtils.Core.Normalizer
             var phase1 = _matchCleanupExtraMarks1.Replace(text,  "$1");
             var phase2 = _matchCleanupExtraMarks2.Replace(phase1,  "$1");
             return phase2;
+        }
+
+        /// <summary>
+        /// Fixes outside and inside spacing for () [] {}  “” «»
+        /// </summary>
+        /// <param name="text">Text to process</param>
+        /// <returns>Processed Text</returns>
+        public static string NormalizeOutsideInsideSpacing(this string text)
+        {
+            //should fix outside and inside spacing for () [] {}  “” «»
+            var phase1 = _matchRemoveOutsideInsideSpacing1.Replace(text, " $1$2$3 ");
+            var phase2 = _matchRemoveOutsideInsideSpacing2.Replace(phase1, " $1$2$3 ");
+            var phase3 = _matchRemoveOutsideInsideSpacing3.Replace(phase2, " $1$2$3 ");
+            var phase4 = _matchRemoveOutsideInsideSpacing4.Replace(phase3, " $1$2$3 ");
+            var phase5 = _matchRemoveOutsideInsideSpacing5.Replace(phase4, " $1$2$3 ");
+
+            // : ; , . ! ? and their Persian equivalents should have one space after and no space before
+            var phase6 = _matchRemoveOutsideInsideSpacing6.Replace(phase5, "$1 ");
+
+            // do not put space after colon that separates time parts
+            var phase7 = _matchRemoveOutsideInsideSpacing7.Replace(phase6, "$1:$2");
+
+            //should fix inside spacing for () [] {}  “” «»
+            var phase8 = _matchRemoveOutsideInsideSpacing8.Replace(phase7, "$1$2$3");
+            var phase9 = _matchRemoveOutsideInsideSpacing9.Replace(phase8, "$1$2$3");
+            var phase10 = _matchRemoveOutsideInsideSpacing10.Replace(phase9, "$1$2$3");
+            var phase11 = _matchRemoveOutsideInsideSpacing11.Replace(phase10, "$1$2$3");
+            var phase12 = _matchRemoveOutsideInsideSpacing12.Replace(phase11, "$1$2$3");
+
+            return phase12.Trim();
         }
 
         /// <summary>
@@ -53,43 +93,20 @@ namespace DNTPersianUtils.Core.Normalizer
         }
 
         /// <summary>
-        /// Removes all kashida
+        /// Clean UnderLines
         /// </summary>
         /// <param name="text">Text to process</param>
         /// <returns>Processed Text</returns>
-        public static string NormalizeAllKashida(this string text)
+        public static string NormalizeUnderLines(this string text)
         {
-            return _matchRemoveAllKashida.Replace(text, "");
-        }
+            if (string.IsNullOrWhiteSpace(text))
+                return string.Empty;
 
-        /// <summary>
-        /// Fixes outside and inside spacing for () [] {}  “” «»
-        /// </summary>
-        /// <param name="text">Text to process</param>
-        /// <returns>Processed Text</returns>
-        public static string NormalizeOutsideInsideSpacing(this string text)
-        {
-            //should fix outside and inside spacing for () [] {}  “” «»
-            var phase1 = _matchRemoveOutsideInsideSpacing1.Replace(text,  " $1$2$3 ");
-            var phase2 = _matchRemoveOutsideInsideSpacing2.Replace(phase1,  " $1$2$3 ");
-            var phase3 = _matchRemoveOutsideInsideSpacing3.Replace(phase2, " $1$2$3 ");
-            var phase4 = _matchRemoveOutsideInsideSpacing4.Replace(phase3, " $1$2$3 ");
-            var phase5 = _matchRemoveOutsideInsideSpacing5.Replace(phase4,  " $1$2$3 ");
+            const char chr1600 = (char)1600; //ـ=1600
+            const char chr8204 = (char)8204; //‌=8204
 
-            // : ; , . ! ? and their Persian equivalents should have one space after and no space before
-            var phase6 = _matchRemoveOutsideInsideSpacing6.Replace(phase5,  "$1 ");
-
-            // do not put space after colon that separates time parts
-            var phase7 = _matchRemoveOutsideInsideSpacing7.Replace(phase6,  "$1:$2");
-
-            //should fix inside spacing for () [] {}  “” «»
-            var phase8 = _matchRemoveOutsideInsideSpacing8.Replace(phase7,  "$1$2$3");
-            var phase9 = _matchRemoveOutsideInsideSpacing9.Replace(phase8,  "$1$2$3");
-            var phase10 = _matchRemoveOutsideInsideSpacing10.Replace(phase9,  "$1$2$3");
-            var phase11 = _matchRemoveOutsideInsideSpacing11.Replace(phase10, "$1$2$3");
-            var phase12 = _matchRemoveOutsideInsideSpacing12.Replace(phase11, "$1$2$3");
-
-            return phase12.Trim();
+            return text.Replace(chr1600.ToString(), "")
+                       .Replace(chr8204.ToString(), "");
         }
     }
 }

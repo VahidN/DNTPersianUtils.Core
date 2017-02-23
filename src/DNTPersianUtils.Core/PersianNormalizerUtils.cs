@@ -30,6 +30,11 @@ namespace DNTPersianUtils.Core
                 return text;
             }
 
+            if(normalizers.HasFlag(PersianNormalizers.RemoveDiacritics))
+            {
+                text = text.RemoveDiacritics();
+            }
+
             if (normalizers.HasFlag(PersianNormalizers.ApplyPersianYeKe))
             {
                 text = text.ApplyCorrectYeKe();
