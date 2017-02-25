@@ -32,4 +32,5 @@ PM> Install-Package DNTPersianUtils.Core
 |int GetAge(this DateTime birthday)|محاسبه سن|DateTime.Now.AddYears(-9).GetAge()|9|
 |bool IsStartOfNewYear(this DateTime now, double utcDelta = 3.5)|آیا تاریخ و زمان مدنظر آغاز سال نوی شمسی است؟|dt.IsStartOfNewYear()|true/false|
 |PersianStopwords|مجموعه کلمات بی‌اثر زبان فارسی| PersianStopwords.List | مفید برای تنظیمات جستجوهای تمام متنی |
-|string NormalizePersianText(this string text, PersianNormalizers normalizers)|&#x202b; نرمال كردن متون. پارامتر آن قابليت تركيب را دارد. | "'تست'".NormalizePersianText(PersianNormalizers.ConvertEnglishQuotes) | «تست» |
+|string NormalizePersianText(this string text, PersianNormalizers normalizers)|&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".NormalizePersianText(PersianNormalizers.ConvertEnglishQuotes) | «تست» |
+|Iran| لیست مناطق و استان‌ها | Iran.Provinces | Iran.Provinces لیست تو در توی استان‌ها و شهرهای ایران |

@@ -14,7 +14,7 @@ namespace DNTPersianUtils.Core.Normalizer
         private static readonly Regex _matchCleanupZwnj =
             new Regex(@"\s+‌|‌\s+", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex _matchYeHeHalfSpace =
-            new Regex(@"(\S)(ه[\s‌]+[یي])(\s)", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            new Regex(@"(\S)(ه[\s‌]+[یی])(\s)", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
 
         /// <summary>
