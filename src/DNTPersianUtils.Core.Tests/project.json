@@ -6,7 +6,7 @@
         "NETStandard.Library": "1.6.1",
         "MSTest.TestFramework": "1.0.6-preview",
         "dotnet-test-mstest": "1.1.2-preview",
-        "DNTPersianUtils.Core": "1.8.0-*"
+        "DNTPersianUtils.Core": "1.9.0-*"
     },
 
     "frameworks": {
