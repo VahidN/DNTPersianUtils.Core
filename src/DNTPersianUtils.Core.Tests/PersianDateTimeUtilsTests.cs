@@ -75,5 +75,13 @@ namespace DNTPersianUtils.Core.Tests
             var actual = "1395/12/30".IsValidPersianDateTime();
             Assert.AreEqual(expected: true, actual: actual);
         }
+
+        [TestMethod]
+        public void Test_CustomPersianDateTimeString_Works()
+        {
+            var dt = new DateTime(2017, 1, 10, 10, 20, 2);
+            var actual = dt.ToPersianDateTimeString("dd MMMM yyyy - HH:mm");
+            Assert.AreEqual(expected: "21 دی 1395 - 10:20", actual: actual);
+        }
     }
 }
