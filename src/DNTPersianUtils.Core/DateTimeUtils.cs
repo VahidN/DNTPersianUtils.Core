@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace DNTPersianUtils.Core
 {
@@ -10,8 +11,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Iran Standard Time
         /// </summary>
-        public static readonly TimeZoneInfo IranStandardTime =
-            TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
+        public static readonly TimeZoneInfo IranStandardTime = TimeZoneInfo.GetSystemTimeZones().First(timeZoneInfo => timeZoneInfo.StandardName.Contains("Iran"));
 
         /// <summary>
         /// محاسبه سن

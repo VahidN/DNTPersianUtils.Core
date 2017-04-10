@@ -12,10 +12,10 @@ namespace DNTPersianUtils.Core.Tests
         {
             var iranStandardTimeZone = TimeZoneInfo.GetSystemTimeZones()
                                                    .First(timeZoneInfo => timeZoneInfo.StandardName.Contains("Iran"));
-            Assert.AreEqual(expected: "Iran Standard Time", actual: iranStandardTimeZone.Id);
+            Assert.IsTrue(iranStandardTimeZone.Id.StartsWith("Iran", StringComparison.Ordinal));
 
             var irTzi = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
-            Assert.AreEqual(expected: "Iran Standard Time", actual: irTzi.Id);
+            Assert.IsTrue(irTzi.Id.StartsWith("Iran", StringComparison.Ordinal));
 
             var utcNow = DateTime.UtcNow;
             var now = DateTime.Now;
