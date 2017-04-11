@@ -11,7 +11,20 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Iran Standard Time
         /// </summary>
-        public static readonly TimeZoneInfo IranStandardTime = TimeZoneInfo.GetSystemTimeZones().First(timeZoneInfo => timeZoneInfo.StandardName.Contains("Iran"));
+        public static readonly TimeZoneInfo IranStandardTime;
+
+        static DateTimeUtils()
+        {
+            IranStandardTime = TimeZoneInfo.GetSystemTimeZones().FirstOrDefault(timeZoneInfo => timeZoneInfo.StandardName.Contains("Iran"));
+            if (IranStandardTime == null)
+            {
+#if NET40 || NET45 || NET46
+                throw new PlatformNotSupportedException($"This OS[{Environment.OSVersion.Platform}, {Environment.OSVersion.Version}] doesn't support IranStandardTime.");
+#else
+                throw new PlatformNotSupportedException($"This OS[{System.Runtime.InteropServices.RuntimeInformation.OSDescription}] doesn't support IranStandardTime.");
+#endif
+            }
+        }
 
         /// <summary>
         /// محاسبه سن
