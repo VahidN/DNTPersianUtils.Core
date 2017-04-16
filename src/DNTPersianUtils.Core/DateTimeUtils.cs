@@ -15,7 +15,11 @@ namespace DNTPersianUtils.Core
 
         static DateTimeUtils()
         {
-            IranStandardTime = TimeZoneInfo.GetSystemTimeZones().FirstOrDefault(timeZoneInfo => timeZoneInfo.StandardName.Contains("Iran"));
+            IranStandardTime = TimeZoneInfo.GetSystemTimeZones().FirstOrDefault(timeZoneInfo =>
+                timeZoneInfo.StandardName.Contains("Iran") ||
+                timeZoneInfo.StandardName.Contains("Tehran") ||
+                timeZoneInfo.Id.Contains("Iran") ||
+                timeZoneInfo.Id.Contains("Tehran"));
             if (IranStandardTime == null)
             {
 #if NET40 || NET45 || NET46
