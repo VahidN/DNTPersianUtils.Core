@@ -34,3 +34,4 @@ PM> Install-Package DNTPersianUtils.Core
 |PersianStopwords|مجموعه کلمات بی‌اثر زبان فارسی| PersianStopwords.List | مفید برای تنظیمات جستجوهای تمام متنی |
 |string NormalizePersianText(this string text, PersianNormalizers normalizers)|&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".NormalizePersianText(PersianNormalizers.ConvertEnglishQuotes) | «تست» |
 |Iran| لیست مناطق و استان‌ها | Iran.Provinces | Iran.Provinces لیست تو در توی استان‌ها و شهرهای ایران |
+|static bool IsValidIranianNationalCode(this string nationalCode)| بررسی اعتبار کد ملی | "0010350829".IsValidIranianNationalCode() | true |
