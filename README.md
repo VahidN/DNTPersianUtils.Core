@@ -33,6 +33,6 @@ PM> Install-Package DNTPersianUtils.Core
 |محاسبه سن|DateTime.Now.AddYears(-9).GetAge()|9|
 |آیا تاریخ و زمان مدنظر آغاز سال نوی شمسی است؟|dt.IsStartOfNewYear()|true/false|
 |مجموعه کلمات بی‌اثر زبان فارسی| PersianStopwords.List | مفید برای تنظیمات جستجوهای تمام متنی |
-|&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".NormalizePersianText(PersianNormalizers.ConvertEnglishQuotes) | «تست» |
+|&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".NormalizePersianText(<br>PersianNormalizers.ConvertEnglishQuotes) | «تست» |
 | لیست مناطق و استان‌ها | Iran.Provinces | Iran.Provinces لیست تو در توی استان‌ها و شهرهای ایران |
 | بررسی اعتبار کد ملی | "0010350829".IsValidIranianNationalCode() | true |
