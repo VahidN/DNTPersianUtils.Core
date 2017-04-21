@@ -77,5 +77,24 @@ namespace DNTPersianUtils.Core.Tests
         {
             Assert.AreEqual(false, "007-125698-4".IsValidIranianNationalCode());
         }
+
+        [DataTestMethod]
+        [DataRow("7731689956")]
+        [DataRow("45768676")]
+        [DataRow("15768643")]
+        [DataRow("15758648")]
+        public void ValidCodesTest(string code)
+        {
+            Assert.IsTrue(code.IsValidIranianNationalCode());
+        }
+
+        [DataTestMethod]
+        [DataRow("7731685956")]
+        [DataRow("c9xk9dkd")]
+        [DataRow("15758448")]
+        public void InvalidCodesTest(string code)
+        {
+            Assert.IsFalse(code.IsValidIranianNationalCode());
+        }
     }
 }
