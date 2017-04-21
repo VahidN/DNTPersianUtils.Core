@@ -83,6 +83,12 @@ namespace DNTPersianUtils.Core.Tests
         [DataRow("45768676")]
         [DataRow("15768643")]
         [DataRow("15758648")]
+        [DataRow("0013542419")]
+        [DataRow("3240175800")]
+        [DataRow("3240164175")]
+        [DataRow("3370075024")]
+        [DataRow("0010532129")]
+        [DataRow("0860170470")]
         public void ValidCodesTest(string code)
         {
             Assert.IsTrue(code.IsValidIranianNationalCode());
@@ -92,6 +98,8 @@ namespace DNTPersianUtils.Core.Tests
         [DataRow("7731685956")]
         [DataRow("c9xk9dkd")]
         [DataRow("15758448")]
+        [DataRow("324011122")]
+        [DataRow("3213213")]
         public void InvalidCodesTest(string code)
         {
             Assert.IsFalse(code.IsValidIranianNationalCode());
