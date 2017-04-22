@@ -38,3 +38,6 @@ PM> Install-Package DNTPersianUtils.Core
 | بررسی اعتبار کد ملی | "0010350829".IsValidIranianNationalCode() | true |
 | بررسی اعتبار کد بانکی شبا | "IR820540102680020817909002".<br>IsValidIranShebaNumber()| true |
 | بررسی اعتبار کد بانکی شتاب | "6221061106498670".<br>IsValidIranShetabNumber()| true |
+| بررسی اعتبار شماره موبایل | "09901464762".<br>IsValidIranianMobileNumber()| true |
+| بررسی اعتبار شماره تلفن | "37236445".<br>IsValidIranianPhoneNumber()| true |
+| بررسی اعتبار کد پستی | "1619735744".<br>IsValidIranianPostalCode()| true |
