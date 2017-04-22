@@ -89,7 +89,7 @@ namespace DNTPersianUtils.Core.Tests
         [DataRow("3370075024")]
         [DataRow("0010532129")]
         [DataRow("0860170470")]
-        public void ValidCodesTest(string code)
+        public void ValidIranianNationalCodesTest(string code)
         {
             Assert.IsTrue(code.IsValidIranianNationalCode());
         }
@@ -100,7 +100,7 @@ namespace DNTPersianUtils.Core.Tests
         [DataRow("15758448")]
         [DataRow("324011122")]
         [DataRow("3213213")]
-        public void InvalidCodesTest(string code)
+        public void InvalidIranianNationalCodesTest(string code)
         {
             Assert.IsFalse(code.IsValidIranianNationalCode());
         }

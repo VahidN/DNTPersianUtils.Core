@@ -36,3 +36,5 @@ PM> Install-Package DNTPersianUtils.Core
 |&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".NormalizePersianText(<br>PersianNormalizers.ConvertEnglishQuotes) | «تست» |
 | لیست مناطق و استان‌ها | Iran.Provinces | Iran.Provinces لیست تو در توی استان‌ها و شهرهای ایران |
 | بررسی اعتبار کد ملی | "0010350829".IsValidIranianNationalCode() | true |
+| بررسی اعتبار کد بانکی شبا | "IR820540102680020817909002".<br>IsValidIranShebaNumber()| true |
+| بررسی اعتبار کد بانکی شتاب | "6221061106498670".<br>IsValidIranShetabNumber()| true |
