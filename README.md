@@ -41,3 +41,23 @@ PM> Install-Package DNTPersianUtils.Core
 | بررسی اعتبار شماره موبایل | "09901464762".<br>IsValidIranianMobileNumber()| true |
 | بررسی اعتبار شماره تلفن | "37236445".<br>IsValidIranianPhoneNumber()| true |
 | بررسی اعتبار کد پستی | "1619735744".<br>IsValidIranianPostalCode()| true |
+
+
+
+نحوه كار با اطلاعات استان‌ها
+-----------------
+
+```csharp
+foreach (var province in Iran.Provinces)
+{
+     foreach (var county in province.Counties)
+     {
+          foreach (var district in county.Districts)
+          {
+                foreach (var city in district.Cities)
+                {
+                }
+          }
+     }
+}
+```
