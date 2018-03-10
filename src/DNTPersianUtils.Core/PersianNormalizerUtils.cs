@@ -30,7 +30,7 @@ namespace DNTPersianUtils.Core
                 return text;
             }
 
-            if(normalizers.HasFlag(PersianNormalizers.RemoveDiacritics))
+            if (normalizers.HasFlag(PersianNormalizers.RemoveDiacritics))
             {
                 text = text.RemoveDiacritics();
             }
@@ -83,6 +83,11 @@ namespace DNTPersianUtils.Core
             if (normalizers.HasFlag(PersianNormalizers.RemoveOutsideInsideSpacing))
             {
                 text = text.NormalizeOutsideInsideSpacing();
+            }
+
+            if (normalizers.HasFlag(PersianNormalizers.RemoveHexadecimalSymbols))
+            {
+                text = text.RemoveHexadecimalSymbols();
             }
 
             return text;

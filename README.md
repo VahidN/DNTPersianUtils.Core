@@ -30,10 +30,11 @@ PM> Install-Package DNTPersianUtils.Core
 |تبدیل عدد انگلیسی به فارسی|123.ToPersianNumbers()|۱۲۳|
 |آیا عبارت مدنظر حاوی حروف فارسی است؟|"Abc تست".ContainsFarsi()|true|
 |اصلاح ی و ک عربی به فارسی|"می‌شود".ApplyCorrectYeKe()|می‌شود|
+|راست به چپ کردن یک متن ساده مخلوط برای نمایش در محیط‌های چپ به راست مانند فید خوان‌ها|"سلام Abc".ApplyRle()|Abc سلام|
 |محاسبه سن|DateTime.Now.AddYears(-9).GetAge()|9|
 |آیا تاریخ و زمان مدنظر آغاز سال نوی شمسی است؟|dt.IsStartOfNewYear()|true/false|
 |مجموعه کلمات بی‌اثر زبان فارسی| PersianStopwords.List | مفید برای تنظیمات جستجوهای تمام متنی |
-|&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".NormalizePersianText(<br>PersianNormalizers.ConvertEnglishQuotes) | «تست» |
+|&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".[NormalizePersianText](/src/DNTPersianUtils.Core.Tests/NormalizerTests.cs)(<br>PersianNormalizers.ConvertEnglishQuotes) | «تست» |
 | لیست مناطق و استان‌ها | Iran.Provinces | Iran.Provinces لیست تو در توی استان‌ها و شهرهای ایران |
 | بررسی اعتبار کد ملی | "0010350829".IsValidIranianNationalCode() | true |
 | بررسی اعتبار کد بانکی شبا | "IR820540102680020817909002".<br>IsValidIranShebaNumber()| true |
@@ -44,7 +45,7 @@ PM> Install-Package DNTPersianUtils.Core
 
 
 
-نحوه كار با اطلاعات استان‌ها
+نحوه کار با اطلاعات استان‌ها
 -----------------
 
 ```csharp

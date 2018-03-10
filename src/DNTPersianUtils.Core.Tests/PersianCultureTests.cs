@@ -59,7 +59,19 @@ namespace DNTPersianUtils.Core.Tests
         [TestMethod]
         public void Test_PersianStopwords_Works()
         {
-           Assert.IsTrue(PersianStopwords.List.Contains("احتراما"));
+            Assert.IsTrue(PersianStopwords.List.Contains("احتراما"));
+        }
+
+        [TestMethod]
+        public void Test_ApplyRle_Works()
+        {
+            Assert.IsTrue("سلام".ApplyRle().StartsWith(UnicodeConstants.RleChar));
+        }
+
+        [TestMethod]
+        public void Test_WrapInDirectionalDiv_Works()
+        {
+            Assert.IsTrue("تست".WrapInDirectionalDiv().Equals("<div style='text-align: right; font-family:tahoma; font-size:9pt;' dir='rtl'>تست</div>"));
         }
     }
 }

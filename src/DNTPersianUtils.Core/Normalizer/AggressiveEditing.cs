@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Text;
+using System.Text.RegularExpressions;
 
 namespace DNTPersianUtils.Core.Normalizer
 {
@@ -28,6 +29,8 @@ namespace DNTPersianUtils.Core.Normalizer
         private static readonly Regex _matchRemoveOutsideInsideSpacing8 = new Regex(@"(\()\s*([^)]+?)\s*?(\))", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex _matchRemoveOutsideInsideSpacing9 = new Regex(@"(\[)\s*([^)]+?)\s*?(\])", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        private static readonly Regex _matchHexadecimalSymbols = new Regex("[\x00-\x08\x0B\x0C\x0E-\x1F]", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         /// <summary>
         /// Removes all kashida
         /// </summary>
@@ -45,8 +48,8 @@ namespace DNTPersianUtils.Core.Normalizer
         /// <returns>Processed Text</returns>
         public static string NormalizeExtraMarks(this string text)
         {
-            var phase1 = _matchCleanupExtraMarks1.Replace(text,  "$1");
-            var phase2 = _matchCleanupExtraMarks2.Replace(phase1,  "$1");
+            var phase1 = _matchCleanupExtraMarks1.Replace(text, "$1");
+            var phase2 = _matchCleanupExtraMarks2.Replace(phase1, "$1");
             return phase2;
         }
 
@@ -107,6 +110,26 @@ namespace DNTPersianUtils.Core.Normalizer
 
             return text.Replace(chr1600.ToString(), "")
                        .Replace(chr8204.ToString(), "");
+        }
+
+        /// <summary>
+        /// There are a lot of symbols which can't be in xml code.
+        /// </summary>
+        public static string RemoveHexadecimalSymbols(this string txt)
+        {
+            return string.IsNullOrWhiteSpace(txt) ?
+                string.Empty : _matchHexadecimalSymbols.Replace(txt, string.Empty);
+        }
+
+        /// <summary>
+        /// تبدیل یک متن عربی اسکی به یونیکد
+        /// </summary>
+        public static string ConvertArabic1256ToUtf8(this string text)
+        {
+            var latin = Encoding.GetEncoding("ISO-8859-1");
+            var bytes = latin.GetBytes(text); // get the bytes for your ANSI string
+            var arabic = Encoding.GetEncoding("Windows-1256"); // decode it using the correct encoding
+            return arabic.GetString(bytes);
         }
     }
 }

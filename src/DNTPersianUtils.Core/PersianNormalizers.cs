@@ -72,6 +72,11 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// حذف اعراب از حروف و کلمات
         /// </summary>
-        RemoveDiacritics = 1 << 11
+        RemoveDiacritics = 1 << 11,
+
+        /// <summary>
+        /// There are a lot of symbols which can't be in xml code.
+        /// </summary>
+        RemoveHexadecimalSymbols = 1 << 12
     }
 }

@@ -45,5 +45,21 @@ namespace DNTPersianUtils.Core
                         string.Empty :
                         _matchAllTags.Replace(text, " ").Replace("&nbsp;", " ");
         }
+
+        /// <summary>
+        /// اگر متن شما حاوی یک عبارت فارسی باشد آن‌را داخل یک بلاک اچ تی ام ال راست به چپ محصور می‌کند
+        /// <div style='text-align: right; font-family:{fontFamily}; font-size:{fontSize};' dir='rtl'>{body}</div>
+        /// در غیراینصورت در
+        /// <div style='text-align: left; font-family:{fontFamily}; font-size:{fontSize};' dir='ltr'>{body}</div>
+        /// </summary>
+        public static string WrapInDirectionalDiv(this string body, string fontFamily = "tahoma", string fontSize = "9pt")
+        {
+            if (string.IsNullOrWhiteSpace(body))
+                return string.Empty;
+
+            if (ContainsFarsi(body))
+                return $"<div style='text-align: right; font-family:{fontFamily}; font-size:{fontSize};' dir='rtl'>{body}</div>";
+            return $"<div style='text-align: left; font-family:{fontFamily}; font-size:{fontSize};' dir='ltr'>{body}</div>";
+        }
     }
 }
