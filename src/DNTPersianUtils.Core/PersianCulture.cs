@@ -17,11 +17,11 @@ namespace DNTPersianUtils.Core
         public static readonly IDictionary<DayOfWeek, string> PersianDayWeekNames = new Dictionary<DayOfWeek, string>
           {
             {DayOfWeek.Saturday, "شنبه"},
-            {DayOfWeek.Sunday,  "یک شنبه"},
-            {DayOfWeek.Monday,  "دو شنبه"},
-            {DayOfWeek.Tuesday, "سه شنبه"},
-            {DayOfWeek.Wednesday, "چهار شنبه"},
-            {DayOfWeek.Thursday, "پنج شنبه"},
+            {DayOfWeek.Sunday,  "یکشنبه"},
+            {DayOfWeek.Monday,  "دوشنبه"},
+            {DayOfWeek.Tuesday, "سه‌شنبه"},
+            {DayOfWeek.Wednesday, "چهارشنبه"},
+            {DayOfWeek.Thursday, "پنجشنبه"},
             {DayOfWeek.Friday, "جمعه"}
           };
 
