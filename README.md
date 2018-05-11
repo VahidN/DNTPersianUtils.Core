@@ -26,7 +26,6 @@ PM> Install-Package DNTPersianUtils.Core
 |تبدیل تاریخ میلادی به شمسی|dt.ToPersianDateTimeString("dd MMMM yyyy")|این تبدیل بر اساس فرهنگ اصلاح شده‌ی فارسی صورت می‌گیرد. مانند <br> dt.ToPersianDateTimeString("dd MMMM yyyy - HH:mm") <br> &#x202b; با این خروجی فرضی: «21 دی 1395 - 10:20»|
 |تبدیل تاریخ میلادی به شمسی|dt.ToShortPersianDateString()|1395/10/21|
 |تبدیل تاریخ میلادی به شمسی|dt.ToShortPersianDateTimeString()|1395/10/21 10:20|
-|تعیین اعتبار تاریخ و زمان رشته‌ای شمسی|"1395/12/30".IsValidPersianDateTime()<br>&#x202b;به همراه [ValidPersianDateTime] مخصوص MVC|true|
 |تبدیل عدد انگلیسی به فارسی|123.ToPersianNumbers()|۱۲۳|
 |آیا عبارت مدنظر حاوی حروف فارسی است؟|"Abc تست".ContainsFarsi()|true|
 |اصلاح ی و ک عربی به فارسی|"می‌شود".ApplyCorrectYeKe()|می‌شود|
@@ -36,6 +35,15 @@ PM> Install-Package DNTPersianUtils.Core
 |مجموعه کلمات بی‌اثر زبان فارسی| PersianStopwords.List | مفید برای تنظیمات جستجوهای تمام متنی |
 |&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".[NormalizePersianText](/src/DNTPersianUtils.Core.Tests/NormalizerTests.cs)(<br>PersianNormalizers.ConvertEnglishQuotes) | «تست» |
 | لیست مناطق و استان‌ها | Iran.Provinces | Iran.Provinces لیست تو در توی استان‌ها و شهرهای ایران |
+
+
+اعتبارسنج‌ها
+-----------------
+
+
+|نام متد/امکانات|مثال|خروجی نمونه|
+| -------| :------: | :------: |
+|تعیین اعتبار تاریخ و زمان رشته‌ای شمسی|"1395/12/30".IsValidPersianDateTime()<br>&#x202b;به همراه [ValidPersianDateTime] مخصوص MVC|true|
 | بررسی اعتبار کد ملی | "0010350829".IsValidIranianNationalCode() <br>&#x202b;به همراه [ValidIranianNationalCode] مخصوص MVC| true |
 | بررسی اعتبار کد بانکی شبا | "IR820540102680020817909002".<br>IsValidIranShebaNumber() <br>&#x202b;به همراه [ValidIranShebaNumber] مخصوص MVC| true |
 | بررسی اعتبار کد بانکی شتاب | "6221061106498670".<br>IsValidIranShetabNumber() <br>&#x202b;به همراه [ValidIranShetabNumber] مخصوص MVC| true |
