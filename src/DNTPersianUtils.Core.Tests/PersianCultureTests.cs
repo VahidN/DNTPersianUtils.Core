@@ -82,5 +82,14 @@ namespace DNTPersianUtils.Core.Tests
             Assert.AreEqual(expected: new DateTime(1397, 1, 1, persianCalendar), actual: persianYear.StartDate);
             Assert.AreEqual(expected: new DateTime(1397, 12, 29, 23, 59, 59, persianCalendar), actual: persianYear.EndDate);
         }
+
+        [TestMethod]
+        public void Test_GetPersianMonthStartAndEndDates_Works()
+        {
+            var persianCalendar = new PersianCalendar();
+            var persianMonth = 1397.GetPersianMonthStartAndEndDates(5);
+            Assert.AreEqual(expected: new DateTime(1397, 5, 1, persianCalendar), actual: persianMonth.StartDate);
+            Assert.AreEqual(expected: new DateTime(1397, 5, 31, 23, 59, 59, persianCalendar), actual: persianMonth.EndDate);
+        }
     }
 }

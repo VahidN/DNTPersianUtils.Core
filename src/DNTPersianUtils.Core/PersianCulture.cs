@@ -23,6 +23,22 @@ namespace DNTPersianUtils.Core
     }
 
     /// <summary>
+    /// اجزای ماه شمسی
+    /// </summary>
+    public class PersianMonth
+    {
+        /// <summary>
+        /// اولین روز ماه شمسی
+        /// </summary>
+        public DateTime StartDate { set; get; }
+
+        /// <summary>
+        /// آخرین روز ماه شمسی
+        /// </summary>
+        public DateTime EndDate { set; get; }
+    }
+
+    /// <summary>
     /// فرهنگ فارسی سفارشی سازی شده
     /// </summary>
     public static class PersianCulture
@@ -220,11 +236,10 @@ namespace DNTPersianUtils.Core
         public static PersianYear GetPersianYearStartAndEndDates(this int persianYear)
         {
             var persianCalendar = new PersianCalendar();
-            var isLeapYear = persianCalendar.IsLeapYear(persianYear);
             return new PersianYear
             {
                 StartDate = new DateTime(persianYear, 1, 1, persianCalendar),
-                EndDate = new DateTime(persianYear, 12, isLeapYear ? 30 : 29, 23, 59, 59, persianCalendar)
+                EndDate = new DateTime(persianYear, 12, persianYear.GetPersianMonthLastDay(12), 23, 59, 59, persianCalendar)
             };
         }
 
@@ -246,6 +261,69 @@ namespace DNTPersianUtils.Core
         {
             var persianYear = dateTimeOffset.GetDateTimeOffsetPart(dateTimeOffsetPart).GetPersianYear();
             return persianYear.GetPersianYearStartAndEndDates();
+        }
+
+        /// <summary>
+        /// تاریخ روزهای ابتدا و انتهای ماه شمسی را بازگشت می‌دهد
+        /// </summary>
+        public static PersianMonth GetPersianMonthStartAndEndDates(this int persianYear, int persianMonth)
+        {
+            var persianCalendar = new PersianCalendar();
+            var isLeapYear = persianCalendar.IsLeapYear(persianYear);
+            return new PersianMonth
+            {
+                StartDate = new DateTime(persianYear, persianMonth, 1, persianCalendar),
+                EndDate = new DateTime(persianYear, persianMonth, persianYear.GetPersianMonthLastDay(persianMonth), 23, 59, 59, persianCalendar)
+            };
+        }
+
+        /// <summary>
+        /// ماه شمسی معادل را محاسبه کرده و سپس
+        /// تاریخ روزهای ابتدا و انتهای آن ماه شمسی را بازگشت می‌دهد
+        /// </summary>
+        public static PersianMonth GetPersianMonthStartAndEndDates(this DateTime dateTime)
+        {
+            var persianYear = dateTime.GetPersianYear();
+            var persianMonth = dateTime.GetPersianMonth();
+            return persianYear.GetPersianMonthStartAndEndDates(persianMonth);
+        }
+
+        /// <summary>
+        /// ماه شمسی معادل را محاسبه کرده و سپس
+        /// تاریخ روزهای ابتدا و انتهای آن ماه شمسی را بازگشت می‌دهد
+        /// </summary>
+        public static PersianMonth GetPersianMonthStartAndEndDates(this DateTimeOffset dateTimeOffset, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        {
+            var dateTime = dateTimeOffset.GetDateTimeOffsetPart(dateTimeOffsetPart);
+            var persianYear = dateTime.GetPersianYear();
+            var persianMonth = dateTime.GetPersianMonth();
+            return persianYear.GetPersianMonthStartAndEndDates(persianMonth);
+        }
+
+        /// <summary>
+        /// شماره آخرین روز ماه شمسی را بر می‌گرداند
+        /// </summary>
+        /// <param name="persianYear">سال شمسی</param>
+        /// <param name="persianMonth">ماه شمسی</param>
+        /// <returns>شماره آخرین روز ماه</returns>
+        public static int GetPersianMonthLastDay(this int persianYear, int persianMonth)
+        {
+            if (persianMonth > 12 || persianMonth <= 0)
+            {
+                throw new ArgumentOutOfRangeException("ماه وارد شده معتبر نیست.");
+            }
+
+            if (persianMonth <= 6)
+            {
+                return 31;
+            }
+
+            if (persianMonth == 12)
+            {
+                var persianCalendar = new PersianCalendar();
+                return persianCalendar.IsLeapYear(persianYear) ? 30 : 29;
+            }
+            return 30;
         }
 
         /// <summary>
