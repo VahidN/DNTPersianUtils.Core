@@ -71,7 +71,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="dt">تاریخ ورودی</param>
         /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
-        /// <param name="appendHhMm">آيا ساعت نيز به نتيجه‌اضافه شود؟</param>
+        /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(this DateTime dt, DateTime comparisonBase, bool appendHhMm = true)
         {
@@ -84,7 +84,7 @@ namespace DNTPersianUtils.Core
         /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
         /// </summary>
         /// <param name="dt">تاریخ ورودی</param>
-        /// <param name="appendHhMm">آيا ساعت نيز به نتيجه‌اضافه شود؟</param>
+        /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(this DateTime dt, bool appendHhMm = true)
         {
@@ -99,7 +99,7 @@ namespace DNTPersianUtils.Core
         /// <param name="dt">تاریخ ورودی</param>
         /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
         /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
-        /// <param name="appendHhMm">آيا ساعت نيز به نتيجه‌اضافه شود؟</param>
+        /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime, bool appendHhMm = true)
         {
@@ -112,7 +112,7 @@ namespace DNTPersianUtils.Core
         /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
         /// </summary>
         /// <param name="dt">تاریخ ورودی</param>
-        /// <param name="appendHhMm">آيا ساعت نيز به نتيجه‌اضافه شود؟</param>
+        /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt, bool appendHhMm = true)
         {

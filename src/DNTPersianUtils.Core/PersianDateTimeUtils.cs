@@ -77,9 +77,10 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// تبدیل تاریخ و زمان رشته‌ای شمسی به میلادی
         /// با قالب‌های پشتیبانی شده‌ی ۹۰/۸/۱۴ , 1395/11/3 17:30 , ۱۳۹۰/۸/۱۴ , ۹۰-۸-۱۴ , ۱۳۹۰-۸-۱۴
+        /// در اینجا اگر رشته‌ی مدنظر قابل تبدیل نباشد، مقدار نال را دریافت خواهید کرد
         /// </summary>
         /// <param name="persianDateTime">تاریخ و زمان شمسی</param>
-        /// <returns>تاریخ و زمان قمری</returns>
+        /// <returns>تاریخ و زمان میلادی</returns>
         public static DateTime? ToGregorianDateTime(this string persianDateTime)
         {
             if (string.IsNullOrWhiteSpace(persianDateTime))
@@ -117,7 +118,7 @@ namespace DNTPersianUtils.Core
                 return null;
             }
 
-            if(!IsValidPersianDate(year.Value, month.Value, day.Value))
+            if (!IsValidPersianDate(year.Value, month.Value, day.Value))
             {
                 return null;
             }
@@ -156,9 +157,10 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// تبدیل تاریخ و زمان رشته‌ای شمسی به میلادی
         /// با قالب‌های پشتیبانی شده‌ی ۹۰/۸/۱۴ , 1395/11/3 17:30 , ۱۳۹۰/۸/۱۴ , ۹۰-۸-۱۴ , ۱۳۹۰-۸-۱۴
+        /// در اینجا اگر رشته‌ی مدنظر قابل تبدیل نباشد، مقدار نال را دریافت خواهید کرد
         /// </summary>
         /// <param name="persianDateTime">تاریخ و زمان شمسی</param>
-        /// <returns>تاریخ و زمان قمری</returns>
+        /// <returns>تاریخ و زمان میلادی</returns>
         public static DateTimeOffset? ToGregorianDateTimeOffset(this string persianDateTime)
         {
             var dateTime = persianDateTime.ToGregorianDateTime();
