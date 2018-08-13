@@ -238,8 +238,8 @@ namespace DNTPersianUtils.Core
             var persianCalendar = new PersianCalendar();
             return new PersianYear
             {
-                StartDate = new DateTime(persianYear, 1, 1, persianCalendar),
-                EndDate = new DateTime(persianYear, 12, persianYear.GetPersianMonthLastDay(12), 23, 59, 59, persianCalendar)
+                StartDate = persianCalendar.ToDateTime(persianYear, 1, 1, 0, 0, 0, 0),
+                EndDate = persianCalendar.ToDateTime(persianYear, 12, persianYear.GetPersianMonthLastDay(12), 23, 59, 59, 0)
             };
         }
 
@@ -272,8 +272,8 @@ namespace DNTPersianUtils.Core
             var isLeapYear = persianCalendar.IsLeapYear(persianYear);
             return new PersianMonth
             {
-                StartDate = new DateTime(persianYear, persianMonth, 1, persianCalendar),
-                EndDate = new DateTime(persianYear, persianMonth, persianYear.GetPersianMonthLastDay(persianMonth), 23, 59, 59, persianCalendar)
+                StartDate = persianCalendar.ToDateTime(persianYear, persianMonth, 1, 0, 0, 0, 0),
+                EndDate = persianCalendar.ToDateTime(persianYear, persianMonth, persianYear.GetPersianMonthLastDay(persianMonth), 23, 59, 59, 0)
             };
         }
 
