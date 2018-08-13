@@ -73,5 +73,14 @@ namespace DNTPersianUtils.Core.Tests
         {
             Assert.IsTrue("تست".WrapInDirectionalDiv().Equals("<div style='text-align: right; font-family:tahoma; font-size:9pt;' dir='rtl'>تست</div>"));
         }
+
+        [TestMethod]
+        public void Test_GetPersianYearStartAndEndDates_Works()
+        {
+            var persianCalendar = new PersianCalendar();
+            var persianYear = 1397.GetPersianYearStartAndEndDates();
+            Assert.AreEqual(expected: new DateTime(1397, 1, 1, persianCalendar), actual: persianYear.StartDate);
+            Assert.AreEqual(expected: new DateTime(1397, 12, 29, 23, 59, 59, persianCalendar), actual: persianYear.EndDate);
+        }
     }
 }

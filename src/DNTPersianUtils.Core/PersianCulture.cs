@@ -7,6 +7,22 @@ using System.Threading;
 namespace DNTPersianUtils.Core
 {
     /// <summary>
+    /// اجزای سال شمسی
+    /// </summary>
+    public class PersianYear
+    {
+        /// <summary>
+        /// اولین روز سال شمسی
+        /// </summary>
+        public DateTime StartDate { set; get; }
+
+        /// <summary>
+        /// آخرین روز سال شمسی
+        /// </summary>
+        public DateTime EndDate { set; get; }
+    }
+
+    /// <summary>
     /// فرهنگ فارسی سفارشی سازی شده
     /// </summary>
     public static class PersianCulture
@@ -196,6 +212,40 @@ namespace DNTPersianUtils.Core
         public static int GetPersianYear(this DateTime dateTime)
         {
             return Instance.DateTimeFormat.Calendar.GetYear(dateTime);
+        }
+
+        /// <summary>
+        /// تاریخ روزهای ابتدا و انتهای سال شمسی را بازگشت می‌دهد
+        /// </summary>
+        public static PersianYear GetPersianYearStartAndEndDates(this int persianYear)
+        {
+            var persianCalendar = new PersianCalendar();
+            var isLeapYear = persianCalendar.IsLeapYear(persianYear);
+            return new PersianYear
+            {
+                StartDate = new DateTime(persianYear, 1, 1, persianCalendar),
+                EndDate = new DateTime(persianYear, 12, isLeapYear ? 30 : 29, 23, 59, 59, persianCalendar)
+            };
+        }
+
+        /// <summary>
+        /// سال شمسی معادل را محاسبه کرده و سپس
+        /// تاریخ روزهای ابتدا و انتهای آن سال شمسی را بازگشت می‌دهد
+        /// </summary>
+        public static PersianYear GetPersianYearStartAndEndDates(this DateTime dateTime)
+        {
+            var persianYear = dateTime.GetPersianYear();
+            return persianYear.GetPersianYearStartAndEndDates();
+        }
+
+        /// <summary>
+        /// سال شمسی معادل را محاسبه کرده و سپس
+        /// تاریخ روزهای ابتدا و انتهای آن سال شمسی را بازگشت می‌دهد
+        /// </summary>
+        public static PersianYear GetPersianYearStartAndEndDates(this DateTimeOffset dateTimeOffset, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        {
+            var persianYear = dateTimeOffset.GetDateTimeOffsetPart(dateTimeOffsetPart).GetPersianYear();
+            return persianYear.GetPersianYearStartAndEndDates();
         }
 
         /// <summary>
