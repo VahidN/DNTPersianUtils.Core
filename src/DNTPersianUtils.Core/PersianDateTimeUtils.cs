@@ -275,7 +275,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="gregorianDate">تاریخ و زمان</param>
         /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
-        public static Tuple<int, int, int> ToPersianYearMonthDay(this DateTimeOffset? gregorianDate, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        public static (int Year, int Month, int Day) ToPersianYearMonthDay(this DateTimeOffset? gregorianDate, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         {
             return gregorianDate == null ? null : ToPersianYearMonthDay(gregorianDate.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
@@ -283,7 +283,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
         /// </summary>
-        public static Tuple<int, int, int> ToPersianYearMonthDay(this DateTime? gregorianDate)
+        public static (int Year, int Month, int Day) ToPersianYearMonthDay(this DateTime? gregorianDate)
         {
             return gregorianDate == null ? null : ToPersianYearMonthDay(gregorianDate.Value);
         }
@@ -293,7 +293,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="gregorianDate">تاریخ و زمان</param>
         /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
-        public static Tuple<int, int, int> ToPersianYearMonthDay(this DateTimeOffset gregorianDate, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        public static (int Year, int Month, int Day) ToPersianYearMonthDay(this DateTimeOffset gregorianDate, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         {
             return ToPersianYearMonthDay(gregorianDate.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
@@ -301,13 +301,13 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
         /// </summary>
-        public static Tuple<int, int, int> ToPersianYearMonthDay(this DateTime gregorianDate)
+        public static (int Year, int Month, int Day) ToPersianYearMonthDay(this DateTime gregorianDate)
         {
             var persianCalendar = new PersianCalendar();
             var persianYear = persianCalendar.GetYear(gregorianDate);
             var persianMonth = persianCalendar.GetMonth(gregorianDate);
             var persianDay = persianCalendar.GetDayOfMonth(gregorianDate);
-            return new Tuple<int, int, int>(persianYear, persianMonth, persianDay);
+            return (persianYear, persianMonth, persianDay);
         }
 
         /// <summary>
