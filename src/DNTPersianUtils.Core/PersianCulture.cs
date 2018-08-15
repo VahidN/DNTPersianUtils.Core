@@ -39,6 +39,27 @@ namespace DNTPersianUtils.Core
     }
 
     /// <summary>
+    /// اجزای روز شمسی
+    /// </summary>
+    public class PersianDay
+    {
+        /// <summary>
+        /// سال شمسي
+        /// </summary>
+        public int Year { set; get; }
+
+        /// <summary>
+        /// ماه شمسي
+        /// </summary>
+        public int Month { set; get; }
+
+        /// <summary>
+        /// روز شمسي
+        /// </summary>
+        public int Day { set; get; }
+    }
+
+    /// <summary>
     /// فرهنگ فارسی سفارشی سازی شده
     /// </summary>
     public static class PersianCulture
@@ -189,7 +210,7 @@ namespace DNTPersianUtils.Core
         public static string GetPersianWeekDayName(this DateTime dt)
         {
             var dateParts = dt.ToPersianYearMonthDay();
-            return PersianDayWeekNames[new PersianCalendar().ToDateTime(dateParts.Item1, dateParts.Item2, dateParts.Item3, dt.Hour, dt.Minute, dt.Second, 0).DayOfWeek];
+            return PersianDayWeekNames[new PersianCalendar().ToDateTime(dateParts.Year, dateParts.Month, dateParts.Day, dt.Hour, dt.Minute, dt.Second, 0).DayOfWeek];
         }
 
         /// <summary>

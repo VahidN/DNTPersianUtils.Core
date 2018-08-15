@@ -31,7 +31,7 @@ namespace DNTPersianUtils.Core
         public static string ToPersianDateTextify(this DateTime dt)
         {
             var dateParts = dt.ToPersianYearMonthDay();
-            return ToPersianDateTextify(dateParts.Item1, dateParts.Item2, dateParts.Item3);
+            return ToPersianDateTextify(dateParts.Year, dateParts.Month, dateParts.Day);
         }
 
         /// <summary>
@@ -186,9 +186,9 @@ namespace DNTPersianUtils.Core
             var persianDate = dt.ToPersianYearMonthDay();
 
             //1388/10/22
-            var persianYear = persianDate.Item1;
-            var persianMonth = persianDate.Item2;
-            var persianDay = persianDate.Item3;
+            var persianYear = persianDate.Year;
+            var persianMonth = persianDate.Month;
+            var persianDay = persianDate.Day;
 
             //13:14
             var hour = dt.Hour;
