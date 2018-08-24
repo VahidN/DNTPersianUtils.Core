@@ -44,17 +44,17 @@ namespace DNTPersianUtils.Core
     public class PersianDay
     {
         /// <summary>
-        /// سال شمسي
+        /// سال شمسی
         /// </summary>
         public int Year { set; get; }
 
         /// <summary>
-        /// ماه شمسي
+        /// ماه شمسی
         /// </summary>
         public int Month { set; get; }
 
         /// <summary>
-        /// روز شمسي
+        /// روز شمسی
         /// </summary>
         public int Day { set; get; }
     }

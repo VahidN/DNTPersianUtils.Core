@@ -8719,6 +8719,11 @@ namespace DNTPersianUtils.Core.IranCities
         /// </summary>
         public static ISet<Province> Provinces { get; } = _provincesProvider.Value;
 
+        /// <summary>
+        /// مناسبت‌های تعطیلات رسمی ایران
+        /// </summary>
+        public static ISet<IranHoliday> Holidays { get; } = IranHolidays.Instance;
+
         private static ISet<Province> getProvinces()
         {
             var provinces = new HashSet<Province>();

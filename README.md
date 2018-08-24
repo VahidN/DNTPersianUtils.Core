@@ -37,6 +37,8 @@ PM> Install-Package DNTPersianUtils.Core
 |مجموعه کلمات بی‌اثر زبان فارسی| PersianStopwords.List | مفید برای تنظیمات جستجوهای تمام متنی |
 |&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".[NormalizePersianText](/src/DNTPersianUtils.Core.Tests/NormalizerTests.cs)(<br>PersianNormalizers.ConvertEnglishQuotes) | «تست» |
 | لیست مناطق و استان‌ها | Iran.Provinces | Iran.Provinces لیست تو در توی استان‌ها و شهرهای ایران |
+| مناسبت‌های تعطیلات رسمی ایران | Iran.Holidays | مناسبت‌های تعطیلات رسمی ایران از سال 1395 تا پایان سال 1397 |
+| دریافت لیست روزهای کاری یک بازه زمانی | IranHolidays.GetBusinessDays() | روزهای کاری ایران از سال 1395 تا پایان سال 1397 |
 
 
 اعتبارسنج‌ها
