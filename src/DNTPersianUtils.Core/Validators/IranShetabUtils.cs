@@ -21,7 +21,7 @@ namespace DNTPersianUtils.Core
                 return false;
             }
 
-            creditCardNumber = creditCardNumber.Replace("-", string.Empty);
+            creditCardNumber = creditCardNumber.Replace("-", string.Empty).Replace(" ", string.Empty);
 
             if (creditCardNumber.Length != 16)
             {

@@ -22,7 +22,7 @@ namespace DNTPersianUtils.Core.Tests
             var utcOffset = iranStandardTimeZone.GetUtcOffset(utcNow);
             var dtoNow = new DateTimeOffset(now, utcOffset);
 
-            Assert.AreEqual(expected: dtoNow.UtcDateTime, actual: utcNow);
+            Assert.AreEqual(expected: dtoNow.UtcDateTime.ToString("dd-MM-yyyy HH:mm:ss.fffff"), actual: utcNow.ToString("dd-MM-yyyy HH:mm:ss.fffff"));
         }
 
         [TestMethod]

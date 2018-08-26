@@ -15,9 +15,7 @@ namespace DNTPersianUtils.Core.Tests
         }
 
         [DataTestMethod]
-        [DataRow("6274-1290-0547-3742")]
         [DataRow("6274129107473842")]
-        [DataRow("6274 1290 0547 3742")]
         [DataRow("627412900742")]
         [DataRow("62741290054737423252")]
         public void InvalidIranShetabCodesTest(string code)
