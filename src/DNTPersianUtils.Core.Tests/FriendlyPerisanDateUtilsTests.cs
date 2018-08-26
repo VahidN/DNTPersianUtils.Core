@@ -17,12 +17,15 @@ namespace DNTPersianUtils.Core.Tests
             var irTzi = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
             Assert.IsTrue(irTzi.Id.StartsWith("Iran", StringComparison.Ordinal));
 
+            // This part will work if your local time is Iran's time
+            /*
             var utcNow = DateTime.UtcNow;
             var now = DateTime.Now;
             var utcOffset = iranStandardTimeZone.GetUtcOffset(utcNow);
             var dtoNow = now.ToDateTimeOffset(utcOffset);
 
             Assert.AreEqual(expected: dtoNow.UtcDateTime.ToString("dd-MM-yyyy HH:mm:ss.fffff"), actual: utcNow.ToString("dd-MM-yyyy HH:mm:ss.fffff"));
+            */
         }
 
         [TestMethod]
