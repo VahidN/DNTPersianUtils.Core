@@ -17,7 +17,7 @@ namespace DNTPersianUtils.Core.Tests
             var irTzi = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
             Assert.IsTrue(irTzi.Id.StartsWith("Iran", StringComparison.Ordinal));
 
-            var utcNow = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified);
+            var utcNow = DateTime.UtcNow;
             var now = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Unspecified);
             var utcOffset = iranStandardTimeZone.GetUtcOffset(utcNow);
             var dtoNow = new DateTimeOffset(now, utcOffset);
