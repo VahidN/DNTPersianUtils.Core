@@ -18,9 +18,9 @@ namespace DNTPersianUtils.Core.Tests
             Assert.IsTrue(irTzi.Id.StartsWith("Iran", StringComparison.Ordinal));
 
             var utcNow = DateTime.UtcNow;
-            var now = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Unspecified);
+            var now = DateTime.Now;
             var utcOffset = iranStandardTimeZone.GetUtcOffset(utcNow);
-            var dtoNow = new DateTimeOffset(now, utcOffset);
+            var dtoNow = now.ToDateTimeOffset(utcOffset);
 
             Assert.AreEqual(expected: dtoNow.UtcDateTime.ToString("dd-MM-yyyy HH:mm:ss.fffff"), actual: utcNow.ToString("dd-MM-yyyy HH:mm:ss.fffff"));
         }

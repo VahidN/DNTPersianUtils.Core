@@ -196,5 +196,26 @@ namespace DNTPersianUtils.Core
         {
             return DateTime.DaysInMonth(value.Year, 2) == 29;
         }
+
+        /// <summary>
+        /// Converts a DateTime to a DateTimeOffset
+        /// </summary>
+        /// <param name="dt">Source DateTime.</param>
+        /// <param name="offset">Offset</param>
+        public static DateTimeOffset ToDateTimeOffset(this DateTime dt, TimeSpan offset)
+        {
+            if (dt == DateTime.MinValue)
+                return DateTimeOffset.MinValue;
+
+            return new DateTimeOffset(dt.Ticks, offset);
+        }
+
+        /// <summary>
+        /// Converts a DateTime to a DateTimeOffset
+        /// </summary>
+        /// <param name="dt">Source DateTime.</param>
+        /// <param name="offsetInHours">Offset</param>
+        public static DateTimeOffset ToDateTimeOffset(this DateTime dt, double offsetInHours = 0)
+            => ToDateTimeOffset(dt, offsetInHours == 0 ? TimeSpan.Zero : TimeSpan.FromHours(offsetInHours));
     }
 }
