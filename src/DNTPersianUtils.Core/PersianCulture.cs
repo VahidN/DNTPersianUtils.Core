@@ -7,59 +7,6 @@ using System.Threading;
 namespace DNTPersianUtils.Core
 {
     /// <summary>
-    /// اجزای سال شمسی
-    /// </summary>
-    public class PersianYear
-    {
-        /// <summary>
-        /// اولین روز سال شمسی
-        /// </summary>
-        public DateTime StartDate { set; get; }
-
-        /// <summary>
-        /// آخرین روز سال شمسی
-        /// </summary>
-        public DateTime EndDate { set; get; }
-    }
-
-    /// <summary>
-    /// اجزای ماه شمسی
-    /// </summary>
-    public class PersianMonth
-    {
-        /// <summary>
-        /// اولین روز ماه شمسی
-        /// </summary>
-        public DateTime StartDate { set; get; }
-
-        /// <summary>
-        /// آخرین روز ماه شمسی
-        /// </summary>
-        public DateTime EndDate { set; get; }
-    }
-
-    /// <summary>
-    /// اجزای روز شمسی
-    /// </summary>
-    public class PersianDay
-    {
-        /// <summary>
-        /// سال شمسی
-        /// </summary>
-        public int Year { set; get; }
-
-        /// <summary>
-        /// ماه شمسی
-        /// </summary>
-        public int Month { set; get; }
-
-        /// <summary>
-        /// روز شمسی
-        /// </summary>
-        public int Day { set; get; }
-    }
-
-    /// <summary>
     /// فرهنگ فارسی سفارشی سازی شده
     /// </summary>
     public static class PersianCulture
