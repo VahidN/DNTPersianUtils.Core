@@ -46,4 +46,15 @@
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.5.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="events.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="events.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
 </Project>
