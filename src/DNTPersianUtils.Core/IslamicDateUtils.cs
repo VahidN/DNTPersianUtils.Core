@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DNTPersianUtils.Core
 {
@@ -8,6 +10,7 @@ namespace DNTPersianUtils.Core
     /// </summary>
     public static class IslamicDateUtils
     {
+        private static readonly JObject oo = JObject.Parse(System.IO.File.ReadAllText("events.json"));
         private static readonly IDictionary<int, long[]> _yearsMonthsInJd = new Dictionary<int, long[]>();
         private static readonly int _supportedYearsStart;
         private static readonly long[] _yearsStartJd;
@@ -617,6 +620,132 @@ namespace DNTPersianUtils.Core
         public static long PersianDayToJdn(this PersianDay persian)
         {
             return PersianDayToJdn(persian.Year, persian.Month, persian.Day);
+        }
+
+        /// <summary>
+        /// دریافت لیست مناسبت های شمسی و قمری
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        public static List<Holiday> GetDayEvents(int year, int month, int day)
+        {
+            var hijriNow = PersianDayToIslamicDay(year, month, day);
+
+            var getPersianEvents = oo["Persian Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == day.ToString() && x.SelectToken("month").ToString() == month.ToString() && x.SelectToken("type").ToString() == "Iran").Select(m => (string)m.SelectToken("title")).ToArray();
+            var getHijriEvents = oo["Hijri Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == hijriNow.Day.ToString() && x.SelectToken("month").ToString() == hijriNow.Month.ToString() && x.SelectToken("type").ToString() == "Islamic Iran").Select(m => (string)m.SelectToken("title")).ToArray();
+
+            var getHijriIsHoliday = oo["Hijri Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == hijriNow.Day.ToString() && x.SelectToken("month").ToString() == hijriNow.Month.ToString() && x.SelectToken("type").ToString() == "Islamic Iran").Select(m => (string)m.SelectToken("holiday")).ToArray();
+            var getPersianIsHoliday = oo["Persian Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == day.ToString() && x.SelectToken("month").ToString() == month.ToString() && x.SelectToken("type").ToString() == "Iran").Select(m => (string)m.SelectToken("holiday")).ToArray();
+
+            string hijriIsHoliday = string.Join(", ", getHijriIsHoliday).Replace(",", Environment.NewLine);
+            string persianIsHoliday = string.Join(", ", getPersianIsHoliday).Replace(",", Environment.NewLine);
+
+            string persianEvents = string.Join(", ", getPersianEvents).Replace(",", Environment.NewLine);
+            string hijriEvents = string.Join(", ", getHijriEvents).Replace(",", Environment.NewLine);
+
+            List<Holiday> Events = new List<Holiday>();
+
+            List<string> myTitle = new List<string>();
+            List<string> myHoliday = new List<string>();
+
+
+            foreach (var item in hijriEvents.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+                myTitle.Add(item);
+
+            foreach (var item in hijriIsHoliday.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+                myHoliday.Add(item);
+
+            foreach (var item in persianEvents.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+                myTitle.Add(item);
+
+            foreach (var item in persianIsHoliday.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+                myHoliday.Add(item);
+
+            for (int i = 0; i < myTitle.Count; i++)
+            {
+                Events.Add(new Holiday { IsHoliday = Convert.ToBoolean(myHoliday[i]), Title = myTitle[i] });
+            }
+
+            return Events;
+        }
+
+        /// <summary>
+        /// دریافت لیست مناسبت های شمسی
+        /// </summary>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        public static List<Holiday> GetPersianDayEvents(int month, int day)
+        {
+            var getPersianEvents = oo["Persian Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == day.ToString() && x.SelectToken("month").ToString() == month.ToString() && x.SelectToken("type").ToString() == "Iran").Select(m => (string)m.SelectToken("title")).ToArray();
+            var getPersianIsHoliday = oo["Persian Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == day.ToString() && x.SelectToken("month").ToString() == month.ToString() && x.SelectToken("type").ToString() == "Iran").Select(m => (string)m.SelectToken("holiday")).ToArray();
+
+            string persianEvents = string.Join(", ", getPersianEvents).Replace(",", Environment.NewLine);
+            string persianIsHoliday = string.Join(", ", getPersianIsHoliday).Replace(",", Environment.NewLine);
+
+            List<Holiday> Events = new List<Holiday>();
+
+            List<string> myTitle = new List<string>();
+            List<string> myHoliday = new List<string>();
+
+
+            foreach (var item in persianEvents.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+                myTitle.Add(item);
+
+            foreach (var item in persianIsHoliday.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+                myHoliday.Add(item);
+
+            for (int i = 0; i < myTitle.Count; i++)
+            {
+                Events.Add(new Holiday { IsHoliday = Convert.ToBoolean(myHoliday[i]), Title = myTitle[i] });
+            }
+
+            return Events;
+        }
+
+        /// <summary>
+        /// دریافت لیست مناسبت های قمری
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        public static List<Holiday> GetHijriDayEvents(int year, int month, int day)
+        {
+            var hijriNow = PersianDayToIslamicDay(year, month, day);
+
+            var getHijriEvents = oo["Hijri Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == hijriNow.Day.ToString() && x.SelectToken("month").ToString() == hijriNow.Month.ToString() && x.SelectToken("type").ToString() == "Islamic Iran").Select(m => (string)m.SelectToken("title")).ToArray();
+            var getHijriIsHoliday = oo["Hijri Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == hijriNow.Day.ToString() && x.SelectToken("month").ToString() == hijriNow.Month.ToString() && x.SelectToken("type").ToString() == "Islamic Iran").Select(m => (string)m.SelectToken("holiday")).ToArray();
+
+            string hijriEvents = string.Join(", ", getHijriEvents).Replace(",", Environment.NewLine);
+            string hijriIsHoliday = string.Join(", ", getHijriIsHoliday).Replace(",", Environment.NewLine);
+
+            List<Holiday> Events = new List<Holiday>();
+
+            List<string> myTitle = new List<string>();
+            List<string> myHoliday = new List<string>();
+
+
+            foreach (var item in hijriEvents.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+                myTitle.Add(item);
+
+            foreach (var item in hijriIsHoliday.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+                myHoliday.Add(item);
+
+            for (int i = 0; i < myTitle.Count; i++)
+            {
+                Events.Add(new Holiday { IsHoliday = Convert.ToBoolean(myHoliday[i]), Title = myTitle[i] });
+            }
+
+            return Events;
+        }
+
+        public class Holiday
+        {
+            public bool IsHoliday { get; set; }
+            public string Title { get; set; }
         }
     }
 }
