@@ -64,7 +64,7 @@ namespace DNTPersianUtils.Core
 
     /// <summary>
     /// مناسبت‌های تعطیلات رسمی ایران
-    /// از سال 1395 تا پایان سال 1397
+    /// از سال 1395 تا پایان سال 1398
     /// </summary>
     public static class IranHolidays
     {
@@ -76,14 +76,14 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// سال خاتمه تعاریف مناسبت‌های تعطیل در این کتابخانه
         /// </summary>
-        public const int EndYear = 1397;
+        public const int EndYear = 1398;
 
         private static readonly Lazy<ISet<IranHoliday>> _holidayProvider =
                 new Lazy<ISet<IranHoliday>>(getIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
 
         /// <summary>
         /// مناسبت‌های تعطیلات رسمی ایران
-        /// از سال 1395 تا پایان سال 1397
+        /// از سال 1395 تا پایان سال 1398
         /// </summary>
         public static ISet<IranHoliday> Instance { get; } = _holidayProvider.Value;
 
@@ -505,6 +505,148 @@ namespace DNTPersianUtils.Core
                 },
 
                 // ----------------------- سال 1398
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 1, 1, 0, 0, 0, 0),
+                    Description = "جشن نوروز/جشن سال نو"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 1, 2, 0, 0, 0, 0),
+                    Description = "عیدنوروز"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 1, 3, 0, 0, 0, 0),
+                    Description = "عیدنوروز"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 1, 4, 0, 0, 0, 0),
+                    Description = "عیدنوروز"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 1, 12, 0, 0, 0, 0),
+                    Description = "روز جمهوری اسلامی ایران"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 1, 13, 0, 0, 0, 0),
+                    Description = "جشن سیزده به در"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 1, 14, 0, 0, 0, 0),
+                    Description = "مبعث رسول اکرم"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 2, 1, 0, 0, 0, 0),
+                    Description = "ولادت حضرت قائم عجل الله تعالی فرجه و جشن نیمه شعبان"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 3, 5, 0, 0, 0, 0),
+                    Description = "شهادت حضرت علی علیه السلام"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 3, 14, 0, 0, 0, 0),
+                    Description = "رحلت حضرت امام خمینی"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 3, 15, 0, 0, 0, 0),
+                    Description = "قیام 15 خرداد"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 3, 16, 0, 0, 0, 0),
+                    Description = "عید سعید فطر"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 4, 8, 0, 0, 0, 0),
+                    Description = "شهادت امام جعفر صادق علیه السلام"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 5, 21, 0, 0, 0, 0),
+                    Description = "عید سعید قربان"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 5, 29, 0, 0, 0, 0),
+                    Description = "عید سعید غدیر خم"
+                },
+
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 6, 18, 0, 0, 0, 0),
+                    Description = "تاسوعای حسینی"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 6, 19, 0, 0, 0, 0),
+                    Description = "عاشورای حسینی"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 7, 27, 0, 0, 0, 0),
+                    Description = "اربعین حسینی"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 8, 5, 0, 0, 0, 0),
+                    Description = "رحلت رسول اکرم؛ شهادت امام حسن مجتبی علیه السلام"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 8, 7, 0, 0, 0, 0),
+                    Description = "شهادت امام رضا علیه السلام"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 8, 15, 0, 0, 0, 0),
+                    Description = "شهادت امام حسن‌عسکری و آغاز امامت حضرت ولی‌عصر(عج)"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 8, 24, 0, 0, 0, 0),
+                    Description = "میلاد رسول اکرم و امام جعفر صادق علیه السلام"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 11, 9, 0, 0, 0, 0),
+                    Description = "شهادت حضرت فاطمه زهرا سلام الله علیها"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 11, 22, 0, 0, 0, 0),
+                    Description = "پیروزی انقلاب اسلامی"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 12, 18, 0, 0, 0, 0),
+                    Description = "ولادت امام علی علیه السلام و روز پدر"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1398, 12, 29, 0, 0, 0, 0),
+                    Description = "روز ملی شدن صنعت نفت ایران؛ ولادت امام علی علیه السلام و روز پدر"
+                },
+
+                // ----------------------- سال 1399
 
             };
 
@@ -515,7 +657,7 @@ namespace DNTPersianUtils.Core
 
         /// <summary>
         /// دریافت لیست روزهای کاری ایران در یک بازه زمانی
-        /// از سال 1395 تا پایان سال 1397
+        /// از سال 1395 تا پایان سال 1398
         /// </summary>
         /// <param name="from">از تاریخ</param>
         /// <param name="to">تا تاریخ</param>
@@ -533,7 +675,7 @@ namespace DNTPersianUtils.Core
 
         /// <summary>
         /// تشخیص تعطیلات رسمی ایران
-        /// از سال 1395 تا پایان سال 1397
+        /// از سال 1395 تا پایان سال 1398
         /// </summary>
         /// <param name="date">تاریخ</param>
         public static bool IsHoliday(this DateTime date)
@@ -545,7 +687,7 @@ namespace DNTPersianUtils.Core
 
         /// <summary>
         /// تشخیص تعطیلات رسمی ایران
-        /// از سال 1395 تا پایان سال 1397
+        /// از سال 1395 تا پایان سال 1398
         /// </summary>
         /// <param name="date">تاریخ</param>
         /// <param name="dateTimeOffsetPart"></param>
@@ -557,7 +699,7 @@ namespace DNTPersianUtils.Core
 
         /// <summary>
         /// دریافت لیست روزهای کاری ایران در یک بازه زمانی
-        /// از سال 1395 تا پایان سال 1397
+        /// از سال 1395 تا پایان سال 1398
         /// </summary>
         /// <param name="from">از تاریخ</param>
         /// <param name="to">تا تاریخ</param>
@@ -572,7 +714,7 @@ namespace DNTPersianUtils.Core
 
         /// <summary>
         /// دریافت لیست روزهای کاری ایران در یکسال شمسی
-        /// از سال 1395 تا پایان سال 1397
+        /// از سال 1395 تا پایان سال 1398
         /// </summary>
         /// <param name="persianYear">سال شمسی</param>
         /// <returns>روزهای کاری</returns>
@@ -591,7 +733,7 @@ namespace DNTPersianUtils.Core
 
         /// <summary>
         /// دریافت لیست روزهای کاری ایران در یک ماه شمسی
-        /// از سال 1395 تا پایان سال 1397
+        /// از سال 1395 تا پایان سال 1398
         /// </summary>
         /// <param name="persianYear">سال شمسی</param>
         /// <param name="persianMonth">ماه شمسی</param>
