@@ -549,7 +549,7 @@ namespace DNTPersianUtils.Core
 
                 new IranHoliday
                 {
-                    Holiday = persianCalendar.ToDateTime(1398, 3, 5, 0, 0, 0, 0),
+                    Holiday = persianCalendar.ToDateTime(1398, 3, 6, 0, 0, 0, 0),
                     Description = "شهادت حضرت علی علیه السلام"
                 },
                 new IranHoliday
@@ -560,12 +560,12 @@ namespace DNTPersianUtils.Core
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1398, 3, 15, 0, 0, 0, 0),
-                    Description = "قیام 15 خرداد"
+                    Description = "قیام 15 خرداد و عید سعید فطر"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1398, 3, 16, 0, 0, 0, 0),
-                    Description = "عید سعید فطر"
+                    Description = "تعطیل به مناسبت عید سعید فطر"
                 },
 
                 new IranHoliday
