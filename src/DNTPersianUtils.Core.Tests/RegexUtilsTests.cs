@@ -62,7 +62,6 @@ namespace DNTPersianUtils.Core.Tests
             Assert.IsTrue(text.ContainsOnlyFarsiLetters());
         }
         
-        
         [DataTestMethod]
         [DataRow("اaلب")]
         [DataRow("a")]
@@ -74,6 +73,28 @@ namespace DNTPersianUtils.Core.Tests
         public void Test_DoesNot_ContainsOnlyFarsiLetters_Works(string text)
         {
             Assert.IsFalse(text.ContainsOnlyFarsiLetters());
+        }
+       
+        [DataTestMethod]
+        [DataRow("دوست​ها")] // 8203    \u200B
+        [DataRow("دوست‌ها")] // 8204    \u200C
+        [DataRow("دوست‎ها")] // 8206    \u200E
+        [DataRow("دوست‏ها")] // 8207    \u200F
+        public void Test_Contains_Thin_Spaces(string text)
+        {
+            var hasThinSpace = text.ContainsThinSpace();
+
+            Assert.IsTrue(hasThinSpace);
+        }
+
+        [DataTestMethod]
+        [DataRow("دوست ها")]
+        [DataRow("دوستها")]
+        public void Test_DoesNot_Contains_Thin_Spaces(string text)
+        {
+            var hasThinSpace = text.ContainsThinSpace();
+
+            Assert.IsFalse(hasThinSpace);
         }
     }
 }

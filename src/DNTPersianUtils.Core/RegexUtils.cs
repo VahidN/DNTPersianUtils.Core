@@ -42,6 +42,13 @@ namespace DNTPersianUtils.Core
 #endif
             );
         
+        internal static readonly  Regex _hasHalfSpaces =
+                    new Regex(@"\u200B|\u200C|\u200E|\u200F",
+                        options: RegexOptions.Compiled | RegexOptions.IgnoreCase
+        #if !NET40
+                        , matchTimeout: MatchTimeout
+        #endif
+                    );        
         
         /// <summary>
         /// آیا عبارت مدنظر حاوی حروف و اعداد فارسی است؟
@@ -95,5 +102,19 @@ namespace DNTPersianUtils.Core
             return !string.IsNullOrEmpty(text) &&
                    _matchOnlyPersianNumbersRange.IsMatch(text.StripHtmlTags());
         }
+        
+        /// <summary>
+        /// آیا عبارت مدنظر شامل نیم فاصله است؟ 
+        /// </summary>
+        public static bool ContainsHalfSpace(this string text)
+            => _hasHalfSpaces.IsMatch(text);
+            //=> text.Contains((char) 8203) || text.Contains((char) 8204) || 
+            //   text.Contains((char) 8206) || text.Contains((char) 8207);
+
+        /// <summary>
+        /// آیا عبارت مدنظر شامل نیم فاصله است؟ 
+        /// </summary>
+        public static bool ContainsThinSpace(this string text)
+            => ContainsHalfSpace(text);
     }
 }
