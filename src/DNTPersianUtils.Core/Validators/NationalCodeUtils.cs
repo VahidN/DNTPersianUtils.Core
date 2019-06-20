@@ -40,6 +40,10 @@ namespace DNTPersianUtils.Core
                 return false;
             }
 
+            var allDigitEqual = new[] { "0000000000", "1111111111", "2222222222", "3333333333", "4444444444", "5555555555", "6666666666", "7777777777", "8888888888", "9999999999" };
+            if (allDigitEqual.Contains(nationalCode))
+                return false;
+
             var j = nationalCodeLength;
             var sum = 0;
             for (var i = 0; i < nationalCode.Length - 1; i++)
