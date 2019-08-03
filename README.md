@@ -61,7 +61,7 @@ PM> Install-Package DNTPersianUtils.Core
 | بررسی اعتبار اعداد تمام فارسی | "۹۹۹۹۹".<br>ContainsOnlyPersianNumbers() <br>&#x202b;به همراه [ShouldContainOnlyPersianNumbers] مخصوص MVC| true |
 | بررسی اعتبار حروف و يا اعداد فارسی بودن تنها قسمتی از متن | "Abc تست".<br>ContainsFarsi() <br>&#x202b;به همراه [ShouldContainPersianLettersOrNumbers] مخصوص MVC| true |
 | بررسی اعتبار حروف فارسی بودن تمام متن | "تست".<br>ContainsOnlyFarsiLetters() <br>&#x202b;به همراه [ShouldContainOnlyPersianLetters] مخصوص MVC| true |
-
+| بررسی اعتبار شناسه ملی حقوقی | "14005893875".IsValidIranianNationalLegalCode() <br>&#x202b;به همراه [ValidIranianNationalLegalCodeAttribute] مخصوص MVC| true |
 
 
 نحوه کار با اطلاعات استان‌ها
