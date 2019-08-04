@@ -91,5 +91,49 @@ namespace DNTPersianUtils.Core.Tests
             Assert.AreEqual(expected: new DateTime(1397, 5, 1, persianCalendar), actual: persianMonth.StartDate);
             Assert.AreEqual(expected: new DateTime(1397, 5, 31, 23, 59, 59, persianCalendar), actual: persianMonth.EndDate);
         }
+
+        [TestMethod]
+        public void Test_GetPersianMonthStartAndEndDates_For_Dates_Works()
+        {
+            var persianCalendar = new PersianCalendar();
+            var date = new DateTime(1398, 5, 13, persianCalendar);
+            var persianMonth = date.GetPersianMonthStartAndEndDates();
+
+            Assert.AreEqual(expected: new DateTime(1398, 5, 1, persianCalendar), actual: persianMonth.StartDate);
+            Assert.AreEqual(expected: new DateTime(1398, 5, 31, 23, 59, 59, persianCalendar), actual: persianMonth.EndDate);
+        }
+
+        [TestMethod]
+        public void Test_GetPersianWeekStartAndEndDates_For_Dates_Works_1()
+        {
+            var persianCalendar = new PersianCalendar();
+            var date = new DateTime(1398, 5, 13, persianCalendar);
+            var persianWeek = date.GetPersianWeekStartAndEndDates();
+
+            Assert.AreEqual(expected: new DateTime(1398, 5, 12, persianCalendar), actual: persianWeek.StartDate);
+            Assert.AreEqual(expected: new DateTime(1398, 5, 18, 23, 59, 59, persianCalendar), actual: persianWeek.EndDate);
+        }
+
+        [TestMethod]
+        public void Test_GetPersianWeekStartAndEndDates_For_Dates_Works_2()
+        {
+            var persianCalendar = new PersianCalendar();
+            var date = new DateTime(1398, 5, 21, persianCalendar);
+            var persianWeek = date.GetPersianWeekStartAndEndDates();
+
+            Assert.AreEqual(expected: new DateTime(1398, 5, 19, persianCalendar), actual: persianWeek.StartDate);
+            Assert.AreEqual(expected: new DateTime(1398, 5, 25, 23, 59, 59, persianCalendar), actual: persianWeek.EndDate);
+        }
+
+        [TestMethod]
+        public void Test_GetPersianWeekStartAndEndDates_For_Dates_Works_3()
+        {
+            var persianCalendar = new PersianCalendar();
+            var date = new DateTime(1398, 5, 30, persianCalendar);
+            var persianWeek = date.GetPersianWeekStartAndEndDates();
+
+            Assert.AreEqual(expected: new DateTime(1398, 5, 26, persianCalendar), actual: persianWeek.StartDate);
+            Assert.AreEqual(expected: new DateTime(1398, 6, 1, 23, 59, 59, persianCalendar), actual: persianWeek.EndDate);
+        }
     }
 }

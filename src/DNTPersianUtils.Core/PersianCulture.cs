@@ -269,6 +269,42 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
+        /// تاریخ روزهای ابتدا و انتهای هفته شمسی را بازگشت می‌دهد
+        /// </summary>
+        public static PersianWeek GetPersianWeekStartAndEndDates(this int persianYear, int persianMonth, int persianDay)
+        {
+            var dateTime = new PersianCalendar().ToDateTime(persianYear, persianMonth, persianDay, 0, 0, 0, 0);
+            return GetPersianWeekStartAndEndDates(dateTime);
+        }
+
+        /// <summary>
+        /// هفته شمسی معادل را محاسبه کرده و سپس
+        /// تاریخ روزهای ابتدا و انتهای آن هفته شمسی را بازگشت می‌دهد
+        /// </summary>
+        public static PersianWeek GetPersianWeekStartAndEndDates(this DateTime dateTime)
+        {
+            var firstDayOfWeek = Instance.DateTimeFormat.FirstDayOfWeek;
+            var offset = -1 * (7 + ((dateTime.DayOfWeek - firstDayOfWeek) % 7));
+            var firstDayOfWeekDate = dateTime.AddDays(offset);
+            var lastDayOfWeekDate = firstDayOfWeekDate.AddDays(6);
+            return new PersianWeek
+            {
+                StartDate = firstDayOfWeekDate,
+                EndDate = new DateTime(lastDayOfWeekDate.Year, lastDayOfWeekDate.Month, lastDayOfWeekDate.Day, 23, 59, 59, 0)
+            };
+        }
+
+        /// <summary>
+        /// هفته شمسی معادل را محاسبه کرده و سپس
+        /// تاریخ روزهای ابتدا و انتهای آن هفته شمسی را بازگشت می‌دهد
+        /// </summary>
+        public static PersianWeek GetPersianWeekStartAndEndDates(this DateTimeOffset dateTimeOffset, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        {
+            var dateTime = dateTimeOffset.GetDateTimeOffsetPart(dateTimeOffsetPart);
+            return GetPersianWeekStartAndEndDates(dateTime);
+        }
+
+        /// <summary>
         /// شماره آخرین روز ماه شمسی را بر می‌گرداند
         /// </summary>
         /// <param name="persianYear">سال شمسی</param>
