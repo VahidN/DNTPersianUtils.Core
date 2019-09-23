@@ -50,8 +50,7 @@
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            var day = obj as PersianDay;
-            if (day == null)
+            if (!(obj is PersianDay day))
                 return false;
 
             return this.Year == day.Year &&

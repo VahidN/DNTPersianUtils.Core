@@ -168,7 +168,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Checks the given date is between the two provided dates
         /// </summary>
-        public static bool IsBetween(this DateTime date, DateTime startDate, DateTime endDate, Boolean compareTime = false)
+        public static bool IsBetween(this DateTime date, DateTime startDate, DateTime endDate, bool compareTime = false)
         {
             return compareTime ? date >= startDate && date <= endDate : date.Date >= startDate.Date && date.Date <= endDate.Date;
         }

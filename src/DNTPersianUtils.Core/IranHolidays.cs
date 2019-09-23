@@ -661,9 +661,20 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="from">از تاریخ</param>
         /// <param name="to">تا تاریخ</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
         /// <returns>روزهای کاری</returns>
-        public static IEnumerable<DateTime> GetBusinessDays(this DateTime from, DateTime to)
+        public static IEnumerable<DateTime> GetBusinessDays(this DateTime from, DateTime to, bool convertToIranTimeZone = true)
         {
+            if (from.Kind == DateTimeKind.Utc && convertToIranTimeZone)
+            {
+                from = from.ToIranTimeZoneDateTime();
+            }
+
+            if (to.Kind == DateTimeKind.Utc && convertToIranTimeZone)
+            {
+                to = to.ToIranTimeZoneDateTime();
+            }
+
             for (var date = from; date <= to; date = date.AddDays(1))
             {
                 if (!date.IsHoliday())
@@ -678,8 +689,14 @@ namespace DNTPersianUtils.Core
         /// از سال 1395 تا پایان سال 1398
         /// </summary>
         /// <param name="date">تاریخ</param>
-        public static bool IsHoliday(this DateTime date)
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static bool IsHoliday(this DateTime date, bool convertToIranTimeZone = true)
         {
+            if (date.Kind == DateTimeKind.Utc && convertToIranTimeZone)
+            {
+                date = date.ToIranTimeZoneDateTime();
+            }
+
             return Instance.Any(x => x.Holiday.Year == date.Year &&
                                      x.Holiday.Month == date.Month &&
                                      x.Holiday.Day == date.Day);

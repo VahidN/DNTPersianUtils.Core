@@ -2,7 +2,11 @@
 =======
 <div dir="rtl">
 
-[![Build status](https://ci.appveyor.com/api/projects/status/d6xyhvwp1avk9la4?svg=true)](https://ci.appveyor.com/project/VahidN/dntpersianutils-core)
+<p>
+  <a href="https://github.com/VahidN/DNTPersianUtils.Core">
+     <img alt="GitHub Actions status" src="https://github.com/VahidN/DNTPersianUtils.Core/workflows/.NET%20Core%20Build/badge.svg">
+  </a>
+</p>
 
 DNTPersianUtils.Core کتابخانه‌ای است متشکل از متدهای الحاقی کمکی جهت کار با فرهنگ فارسی، در برنامه‌های مبتنی بر NET Core. و همچنین NET 4.x.
 برای نصب آن دستور ذیل را در کنسول پاورشل نیوگت اجرا کنید:

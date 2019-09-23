@@ -28,9 +28,9 @@ namespace DNTPersianUtils.Core
         /// نمایش فارسی روز دریافتی
         /// مانند سه شنبه ۲۱ دی ۱۳۹۵
         /// </summary>
-        public static string ToPersianDateTextify(this DateTime dt)
+        public static string ToPersianDateTextify(this DateTime dt, bool convertToIranTimeZone = true)
         {
-            var dateParts = dt.ToPersianYearMonthDay();
+            var dateParts = dt.ToPersianYearMonthDay(convertToIranTimeZone);
             return ToPersianDateTextify(dateParts.Year, dateParts.Month, dateParts.Day);
         }
 
@@ -72,10 +72,12 @@ namespace DNTPersianUtils.Core
         /// <param name="dt">تاریخ ورودی</param>
         /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
         /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
         /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTime dt, DateTime comparisonBase, bool appendHhMm = true)
+        public static string ToFriendlyPersianDateTextify(
+            this DateTime dt, DateTime comparisonBase, bool appendHhMm = true, bool convertToIranTimeZone = true)
         {
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase, appendHhMm).ToPersianNumbers()}";
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase, appendHhMm, convertToIranTimeZone).ToPersianNumbers()}";
         }
 
         /// <summary>
@@ -85,11 +87,13 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="dt">تاریخ ورودی</param>
         /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
         /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTime dt, bool appendHhMm = true)
+        public static string ToFriendlyPersianDateTextify(
+            this DateTime dt, bool appendHhMm = true, bool convertToIranTimeZone = true)
         {
-            var comparisonBase = dt.Kind.GetNow().ToIranTimeZoneDateTime();
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt.ToIranTimeZoneDateTime(), comparisonBase, appendHhMm).ToPersianNumbers()}";
+            var comparisonBase = convertToIranTimeZone ? dt.Kind.GetNow().ToIranTimeZoneDateTime() : dt.Kind.GetNow();
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase, appendHhMm, convertToIranTimeZone).ToPersianNumbers()}";
         }
 
         /// <summary>
@@ -103,7 +107,7 @@ namespace DNTPersianUtils.Core
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt, DateTime comparisonBase, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime, bool appendHhMm = true)
         {
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase, appendHhMm).ToPersianNumbers()}";
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase, appendHhMm, false).ToPersianNumbers()}";
         }
 
         /// <summary>
@@ -118,7 +122,7 @@ namespace DNTPersianUtils.Core
         {
             var comparisonBase = DateTime.UtcNow.ToIranTimeZoneDateTime();
             var iranLocalTime = dt.GetDateTimeOffsetPart(DateTimeOffsetPart.IranLocalDateTime);
-            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(iranLocalTime, comparisonBase, appendHhMm).ToPersianNumbers()}";
+            return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(iranLocalTime, comparisonBase, appendHhMm, false).ToPersianNumbers()}";
         }
 
         /// <summary>
@@ -139,15 +143,16 @@ namespace DNTPersianUtils.Core
         /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
         /// </summary>
         /// <param name="dt">تاریخ ورودی</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
         /// <returns>نمایش دوستانه</returns>
-        public static string ToFriendlyPersianDateTextify(this DateTime? dt)
+        public static string ToFriendlyPersianDateTextify(this DateTime? dt, bool convertToIranTimeZone = true)
         {
             if (dt == null)
             {
                 return string.Empty;
             }
-            var comparisonBase = dt.Value.Kind.GetNow().ToIranTimeZoneDateTime();
-            return ToFriendlyPersianDateTextify(dt.Value.ToIranTimeZoneDateTime(), comparisonBase);
+            var comparisonBase = convertToIranTimeZone ? dt.Value.Kind.GetNow().ToIranTimeZoneDateTime() : dt.Value.Kind.GetNow();
+            return ToFriendlyPersianDateTextify(dt.Value, comparisonBase, convertToIranTimeZone);
         }
 
         /// <summary>
@@ -181,9 +186,13 @@ namespace DNTPersianUtils.Core
             return ToFriendlyPersianDateTextify(iranLocalTime, comparisonBase);
         }
 
-        private static string toFriendlyPersianDate(this DateTime dt, DateTime comparisonBase, bool appendHhMm)
+        private static string toFriendlyPersianDate(this DateTime dt, DateTime comparisonBase, bool appendHhMm, bool convertToIranTimeZone)
         {
-            var persianDate = dt.ToPersianYearMonthDay();
+            if (dt.Kind == DateTimeKind.Utc && convertToIranTimeZone)
+            {
+                dt = dt.ToIranTimeZoneDateTime();
+            }
+            var persianDate = dt.ToPersianYearMonthDay(false);
 
             //1388/10/22
             var persianYear = persianDate.Year;

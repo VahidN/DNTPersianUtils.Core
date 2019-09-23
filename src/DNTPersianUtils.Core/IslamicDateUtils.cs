@@ -462,10 +462,10 @@ namespace DNTPersianUtils.Core
         /// تبدیل تاریخ میلادی به قمری
         /// </summary>
         /// <param name="gregorian">روز میلادی</param>
-        /// <returns></returns>
-        public static IslamicDay ToIslamicDay(this DateTime gregorian)
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static IslamicDay ToIslamicDay(this DateTime gregorian, bool convertToIranTimeZone = true)
         {
-            return JdnToIslamicDay(ToJdn(gregorian));
+            return JdnToIslamicDay(ToJdn(gregorian, convertToIranTimeZone));
         }
 
         /// <summary>
@@ -495,9 +495,13 @@ namespace DNTPersianUtils.Core
         ///
         /// </summary>
         /// <param name="gregorian"></param>
-        /// <returns></returns>
-        public static long ToJdn(this DateTime gregorian)
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static long ToJdn(this DateTime gregorian, bool convertToIranTimeZone = true)
         {
+            if (gregorian.Kind == DateTimeKind.Utc && convertToIranTimeZone)
+            {
+                gregorian = gregorian.ToIranTimeZoneDateTime();
+            }
             return GregorianToJdn(gregorian.Year, gregorian.Month, gregorian.Day);
         }
 
@@ -541,10 +545,10 @@ namespace DNTPersianUtils.Core
         ///
         /// </summary>
         /// <param name="gregorian"></param>
-        /// <returns></returns>
-        public static PersianDay ToPersianDay(this DateTime gregorian)
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static PersianDay ToPersianDay(this DateTime gregorian, bool convertToIranTimeZone = true)
         {
-            return JdnToPersianDay(ToJdn(gregorian));
+            return JdnToPersianDay(ToJdn(gregorian, convertToIranTimeZone));
         }
 
         /// <summary>
