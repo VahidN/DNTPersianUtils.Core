@@ -115,6 +115,17 @@ namespace DNTPersianUtils.Core.Tests
         }
 
         [TestMethod]
+        public void Test_GetPersianWeekStartAndEndDates_For_Dates_Works_Saturday()
+        {
+            var persianCalendar = new PersianCalendar();
+            var date = new DateTime(1398, 5, 12, persianCalendar);
+            var persianWeek = date.GetPersianWeekStartAndEndDates();
+
+            Assert.AreEqual(expected: new DateTime(1398, 5, 12, persianCalendar), actual: persianWeek.StartDate);
+            Assert.AreEqual(expected: new DateTime(1398, 5, 18, 23, 59, 59, persianCalendar), actual: persianWeek.EndDate);
+        }
+
+        [TestMethod]
         public void Test_GetPersianWeekStartAndEndDates_For_Dates_Works_2()
         {
             var persianCalendar = new PersianCalendar();

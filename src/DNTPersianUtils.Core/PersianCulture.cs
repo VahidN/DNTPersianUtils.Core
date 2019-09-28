@@ -318,7 +318,7 @@ namespace DNTPersianUtils.Core
             }
 
             var firstDayOfWeek = Instance.DateTimeFormat.FirstDayOfWeek;
-            var offset = -1 * (7 + ((dateTime.DayOfWeek - firstDayOfWeek) % 7));
+            var offset = -1 * ((7 + (dateTime.DayOfWeek - firstDayOfWeek)) % 7);
             var firstDayOfWeekDate = dateTime.AddDays(offset);
             var lastDayOfWeekDate = firstDayOfWeekDate.AddDays(6);
             return new PersianWeek
