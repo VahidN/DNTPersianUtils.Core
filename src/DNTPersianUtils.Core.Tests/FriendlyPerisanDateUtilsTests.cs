@@ -80,5 +80,14 @@ namespace DNTPersianUtils.Core.Tests
             var actual = dt.ToFriendlyPersianDateTextify(comparisonBase, appendHhMm: false);
             Assert.AreEqual(expected: $"{UnicodeConstants.RleChar}۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵", actual: actual);
         }
+
+        [TestMethod]
+        public void Test_ToFriendlyPersianDateTextify_WithoutDate_Works()
+        {
+            var dt = new DateTime(2017, 1, 10, 10, 20, 2);
+            var comparisonBase = new DateTime(2017, 1, 20);
+            var actual = dt.ToFriendlyPersianDateTextify(comparisonBase, appendHhMm: false, includePersianDate: false);
+            Assert.AreEqual(expected: $"{UnicodeConstants.RleChar}۱۰ روز قبل", actual: actual);
+        }
     }
 }

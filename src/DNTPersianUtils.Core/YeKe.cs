@@ -1,4 +1,7 @@
-﻿namespace DNTPersianUtils.Core
+﻿using System;
+using System.Globalization;
+
+namespace DNTPersianUtils.Core
 {
     /// <summary>
     /// YeKe
@@ -44,6 +47,19 @@
                             .Replace(ArabicYeChar2, PersianYeChar)
                             .Replace(ArabicKeChar, PersianKeChar)
                             .Trim();
+        }
+
+        /// <summary>
+        /// Fixes common writing mistakes caused by using a bad keyboard layout,
+        /// such as replacing Arabic Ye with Persian one and so on ...
+        /// </summary>
+        /// <param name="data">Text to process</param>
+        /// <returns>Processed Text</returns>
+        public static string ApplyCorrectYeKe(this object data)
+        {
+            return data == null ?
+                        string.Empty :
+                        Convert.ToString(data, CultureInfo.InvariantCulture).ApplyCorrectYeKe();
         }
     }
 }
