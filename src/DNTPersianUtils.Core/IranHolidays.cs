@@ -647,6 +647,151 @@ namespace DNTPersianUtils.Core
                 },
 
                 // ----------------------- سال 1399
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 1, 1, 0, 0, 0, 0),
+                    Description = "جشن نوروز/جشن سال نو"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 1, 2, 0, 0, 0, 0),
+                    Description = "عیدنوروز"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 1, 3, 0, 0, 0, 0),
+                    Description = "عیدنوروز و مبعث رسول اکرم"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 1, 4, 0, 0, 0, 0),
+                    Description = "عیدنوروز"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 1, 12, 0, 0, 0, 0),
+                    Description = "روز جمهوری اسلامی ایران"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 1, 13, 0, 0, 0, 0),
+                    Description = "جشن سیزده به در"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 1, 21, 0, 0, 0, 0),
+                    Description = "ولادت حضرت قائم عجل الله تعالی فرجه و جشن نیمه شعبان"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 2, 26, 0, 0, 0, 0),
+                    Description = "شهادت حضرت علی علیه السلام"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 3, 4, 0, 0, 0, 0),
+                    Description = "عید سعید فطر"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 3, 5, 0, 0, 0, 0),
+                    Description = "تعطیل به مناسبت عید سعید فطر"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 3, 14, 0, 0, 0, 0),
+                    Description = "رحلت حضرت امام خمینی"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 3, 15, 0, 0, 0, 0),
+                    Description = "قیام 15 خرداد"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 3, 28, 0, 0, 0, 0),
+                    Description = "شهادت امام جعفر صادق علیه السلام"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 5, 10, 0, 0, 0, 0),
+                    Description = "عید سعید قربان"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 5, 18, 0, 0, 0, 0),
+                    Description = "عید سعید غدیر خم"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 6, 8, 0, 0, 0, 0),
+                    Description = "تاسوعای حسینی"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 6, 9, 0, 0, 0, 0),
+                    Description = "عاشورای حسینی"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 7, 17, 0, 0, 0, 0),
+                    Description = "اربعین حسینی"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 7, 25, 0, 0, 0, 0),
+                    Description = "رحلت رسول اکرم؛ شهادت امام حسن مجتبی علیه السلام"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 7, 26, 0, 0, 0, 0),
+                    Description = "شهادت امام رضا علیه السلام"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 8, 4, 0, 0, 0, 0),
+                    Description = "شهادت امام حسن‌عسکری و آغاز امامت حضرت ولی‌عصر(عج)"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 8, 13, 0, 0, 0, 0),
+                    Description = "میلاد رسول اکرم و امام جعفر صادق علیه السلام"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 10, 28, 0, 0, 0, 0),
+                    Description = "شهادت حضرت فاطمه زهرا سلام الله علیها"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 11, 22, 0, 0, 0, 0),
+                    Description = "پیروزی انقلاب اسلامی"
+                },
+
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 12, 7, 0, 0, 0, 0),
+                    Description = "ولادت امام علی علیه السلام و روز پدر"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 12, 21, 0, 0, 0, 0),
+                    Description = "مبعث رسول اکرم"
+                },
+                new IranHoliday
+                {
+                    Holiday = persianCalendar.ToDateTime(1399, 12, 29, 0, 0, 0, 0),
+                    Description = "روز ملی شدن صنعت نفت ایران"
+                },
+                // ----------------------- سال 1400
 
             };
 
