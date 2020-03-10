@@ -23,6 +23,59 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public const char ArabicYeChar2 = (char)1610;
 
+
+        /// <summary>
+        /// ؠ
+        /// </summary>
+        public const char ArabicYeWithOneDotBelow = (char)1568;
+
+        /// <summary>
+        /// ئ
+        /// </summary>
+        public const char ArabicYeWithHighHamze = (char)1574;
+
+        /// <summary>
+        /// ؽ
+        /// </summary>
+        public const char ArabicYeWithInvertedV = (char)1597;
+
+        /// <summary>
+        /// ؾ
+        /// </summary>
+        public const char ArabicYeWithTwoDotsAbove = (char)1598;
+
+        /// <summary>
+        /// ؿ
+        /// </summary>
+        public const char ArabicYeWithThreeDotsAbove = (char)1599;
+
+        /// <summary>
+        /// ٸ
+        /// </summary>
+        public const char ArabicYeWithHighHamzeYeh = (char)1656;
+
+        /// <summary>
+        /// ې
+        /// </summary>
+        public const char ArabicYeWithFinalForm = (char)1744;
+
+        /// <summary>
+        /// ۑ
+        /// </summary>
+        public const char ArabicYeWithThreeDotsBelow = (char)1745;
+
+        /// <summary>
+        /// ۍ
+        /// </summary>
+        public const char ArabicYeWithTail = (char)1741;
+
+        /// <summary>
+        /// ێ
+        /// </summary>
+        public const char ArabicYeSmallV = (char)1742;
+
+
+
         /// <summary>
         /// Persian Ke Char \u06A9 = ARABIC LETTER KEHEH
         /// </summary>
@@ -45,6 +98,16 @@ namespace DNTPersianUtils.Core
                         string.Empty :
                         data.Replace(ArabicYeChar1, PersianYeChar)
                             .Replace(ArabicYeChar2, PersianYeChar)
+                            .Replace(ArabicYeWithOneDotBelow, PersianYeChar)
+                            .Replace(ArabicYeWithHighHamze, PersianYeChar)
+                            .Replace(ArabicYeWithInvertedV, PersianYeChar)
+                            .Replace(ArabicYeWithTwoDotsAbove, PersianYeChar)
+                            .Replace(ArabicYeWithThreeDotsAbove, PersianYeChar)
+                            .Replace(ArabicYeWithHighHamzeYeh, PersianYeChar)
+                            .Replace(ArabicYeWithFinalForm, PersianYeChar)
+                            .Replace(ArabicYeWithThreeDotsBelow, PersianYeChar)
+                            .Replace(ArabicYeWithTail, PersianYeChar)
+                            .Replace(ArabicYeSmallV, PersianYeChar)
                             .Replace(ArabicKeChar, PersianKeChar)
                             .Trim();
         }
