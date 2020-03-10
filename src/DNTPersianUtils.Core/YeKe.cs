@@ -23,7 +23,6 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public const char ArabicYeChar2 = (char)1610;
 
-
         /// <summary>
         /// ؠ
         /// </summary>
@@ -73,8 +72,6 @@ namespace DNTPersianUtils.Core
         /// ێ
         /// </summary>
         public const char ArabicYeSmallV = (char)1742;
-
-
 
         /// <summary>
         /// Persian Ke Char \u06A9 = ARABIC LETTER KEHEH
