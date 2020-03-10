@@ -10,7 +10,7 @@ namespace DNTPersianUtils.Core
         private static readonly Regex _matchIranianMobileNumber1 = new Regex(@"^(((98)|(\+98)|(0098)|0)(9){1}[0-9]{9})+$", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex _matchIranianMobileNumber2 = new Regex(@"^(9){1}[0-9]{9}$", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex _matchIranianPhoneNumber = new Regex("^[2-9][0-9]{7}$", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
-        private static readonly Regex _matchIranianPostalCode = new Regex(@"^(\d{5}-?\d{5})$", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static readonly Regex _matchIranianPostalCode = new Regex(@"\b(?!(\d)\1{3})[13-9]{4}[1346-9][013-9]{5}\b", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
         /// Validate Iranian mobile number
