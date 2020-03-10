@@ -7,15 +7,18 @@ namespace DNTPersianUtils.Core.Tests
     {
         [DataTestMethod]
         [DataRow("1619735744")]
-        [DataRow("16197-35744")]
         public void ValidIranianPostalCodesTest(string code)
         {
             Assert.IsTrue(code.IsValidIranianPostalCode());
         }
 
         [DataTestMethod]
-        [DataRow("116197-35744")]
         [DataRow("11619735744")]
+        [DataRow("0000073574")]
+        [DataRow("0200073574")]
+        [DataRow("2222273574")]
+        [DataRow("1111735744")]
+        [DataRow("1961535744")]
         public void InvalidIranianPostalCodesTest(string code)
         {
             Assert.IsFalse(code.IsValidIranianPostalCode());
