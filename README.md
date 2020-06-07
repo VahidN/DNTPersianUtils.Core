@@ -27,7 +27,7 @@ PM> Install-Package DNTPersianUtils.Core
 |نمایش فارسی روز دریافتی|dt.ToPersianDateTextify()|سه شنبه ۲۱ دی ۱۳۹۵|
 |نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی|dt.ToFriendlyPersianDateTextify()|&#x202b;۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰|
 |تبدیلگر عدد به حروف|1234567.NumberToText(Language.Persian)|یک میلیون و دویست و سی و چهار هزار و پانصد و شصت و هفت|
-|نگارش اصلاح شده‌ی فرهنگ فارسی|PersianCulture.Instance|در این فرهنگ تاریخ میلادی با شمسی جایگزین شده‌است|
+|نگارش اصلاح شده‌ی فرهنگ فارسی|PersianCulture.Instance <br> Thread.CurrentThread.CurrentCulture = PersianCulture.Instance;|در این فرهنگ تاریخ میلادی با شمسی جایگزین شده‌است|
 |تبدیل تاریخ و زمان رشته‌ای شمسی به میلادی|"1395/11/3 7:30".ToGregorianDateTime()|new DateTime(2017, 1, 22, 7, 30, 0)|
 |تبدیل تاریخ میلادی به شمسی|dt.ToLongPersianDateString()|&#x202b;21 دی 1395|
 |تبدیل تاریخ میلادی به شمسی|dt.ToLongPersianDateTimeString()|&#x202b;21 دی 1395، 10:20:02 ق.ظ|
