@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNTPersianUtils.Core", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNTPersianUtils.Core.Tests", "src\DNTPersianUtils.Core.Tests\DNTPersianUtils.Core.Tests.csproj", "{FB2FB4FF-5207-4AE9-8D61-0851F14E822E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.PerformanceTests", "src\DNTPersianUtils.Core.PerformanceTests\DNTPersianUtils.Core.PerformanceTests.csproj", "{8A5B3E1A-9CFC-4CE8-A555-AB70500DA9AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|Any CPU = Release|Any CPU
@@ -24,6 +26,8 @@ Global
 		{EDEC6EA4-854B-4019-9BBB-4650E56DE69A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB2FB4FF-5207-4AE9-8D61-0851F14E822E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB2FB4FF-5207-4AE9-8D61-0851F14E822E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5B3E1A-9CFC-4CE8-A555-AB70500DA9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5B3E1A-9CFC-4CE8-A555-AB70500DA9AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -31,5 +35,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EDEC6EA4-854B-4019-9BBB-4650E56DE69A} = {28417517-CA05-4924-8F33-0CE11400F296}
 		{FB2FB4FF-5207-4AE9-8D61-0851F14E822E} = {28417517-CA05-4924-8F33-0CE11400F296}
+		{8A5B3E1A-9CFC-4CE8-A555-AB70500DA9AD} = {28417517-CA05-4924-8F33-0CE11400F296}
 	EndGlobalSection
 EndGlobal
