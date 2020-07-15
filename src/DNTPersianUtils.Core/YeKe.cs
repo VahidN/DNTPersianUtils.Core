@@ -91,22 +91,39 @@ namespace DNTPersianUtils.Core
         /// <returns>Processed Text</returns>
         public static string ApplyCorrectYeKe(this string data)
         {
-            return string.IsNullOrWhiteSpace(data) ?
-                        string.Empty :
-                        data.Replace(ArabicYeChar1, PersianYeChar)
-                            .Replace(ArabicYeChar2, PersianYeChar)
-                            .Replace(ArabicYeWithOneDotBelow, PersianYeChar)
-                            .Replace(ArabicYeWithHighHamze, PersianYeChar)
-                            .Replace(ArabicYeWithInvertedV, PersianYeChar)
-                            .Replace(ArabicYeWithTwoDotsAbove, PersianYeChar)
-                            .Replace(ArabicYeWithThreeDotsAbove, PersianYeChar)
-                            .Replace(ArabicYeWithHighHamzeYeh, PersianYeChar)
-                            .Replace(ArabicYeWithFinalForm, PersianYeChar)
-                            .Replace(ArabicYeWithThreeDotsBelow, PersianYeChar)
-                            .Replace(ArabicYeWithTail, PersianYeChar)
-                            .Replace(ArabicYeSmallV, PersianYeChar)
-                            .Replace(ArabicKeChar, PersianKeChar)
-                            .Trim();
+            if (string.IsNullOrWhiteSpace(data)) return string.Empty;
+
+            var dataChars = data.ToCharArray();
+            for (var i = 0; i < dataChars.Length; i++)
+            {
+                switch (dataChars[i])
+                {
+                    case ArabicYeChar1:
+                    case ArabicYeChar2:
+                    case ArabicYeWithOneDotBelow:
+                    case ArabicYeWithHighHamze:
+                    case ArabicYeWithInvertedV:
+                    case ArabicYeWithTwoDotsAbove:
+                    case ArabicYeWithThreeDotsAbove:
+                    case ArabicYeWithHighHamzeYeh:
+                    case ArabicYeWithFinalForm:
+                    case ArabicYeWithThreeDotsBelow:
+                    case ArabicYeWithTail:
+                    case ArabicYeSmallV:
+                        dataChars[i] = PersianYeChar;
+                        break;
+
+                    case ArabicKeChar:
+                        dataChars[i] = PersianKeChar;
+                        break;
+
+                    default:
+                        dataChars[i] = dataChars[i];
+                        break;
+                }
+            }
+
+            return new string(dataChars);
         }
 
         /// <summary>

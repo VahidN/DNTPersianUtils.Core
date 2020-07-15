@@ -55,68 +55,68 @@ namespace DNTPersianUtils.Core
         {
             if (string.IsNullOrWhiteSpace(data)) return string.Empty;
 
-            var strBuilder = new StringBuilder(data);
-            for (var i = 0; i < strBuilder.Length; i++)
+            var dataChars = data.ToCharArray();
+            for (var i = 0; i < dataChars.Length; i++)
             {
-                switch (strBuilder[i])
+                switch (dataChars[i])
                 {
                     case '0':
                     case '\u0660':
-                        strBuilder[i] = '\u06F0';
+                        dataChars[i] = '\u06F0';
                         break;
 
                     case '1':
                     case '\u0661':
-                        strBuilder[i] = '\u06F1';
+                        dataChars[i] = '\u06F1';
                         break;
 
                     case '2':
                     case '\u0662':
-                        strBuilder[i] = '\u06F2';
+                        dataChars[i] = '\u06F2';
                         break;
 
                     case '3':
                     case '\u0663':
-                        strBuilder[i] = '\u06F3';
+                        dataChars[i] = '\u06F3';
                         break;
 
                     case '4':
                     case '\u0664':
-                        strBuilder[i] = '\u06F4';
+                        dataChars[i] = '\u06F4';
                         break;
 
                     case '5':
                     case '\u0665':
-                        strBuilder[i] = '\u06F5';
+                        dataChars[i] = '\u06F5';
                         break;
 
                     case '6':
                     case '\u0666':
-                        strBuilder[i] = '\u06F6';
+                        dataChars[i] = '\u06F6';
                         break;
 
                     case '7':
                     case '\u0667':
-                        strBuilder[i] = '\u06F7';
+                        dataChars[i] = '\u06F7';
                         break;
 
                     case '8':
                     case '\u0668':
-                        strBuilder[i] = '\u06F8';
+                        dataChars[i] = '\u06F8';
                         break;
 
                     case '9':
                     case '\u0669':
-                        strBuilder[i] = '\u06F9';
+                        dataChars[i] = '\u06F9';
                         break;
 
                     default:
-                        strBuilder[i] = strBuilder[i];
+                        dataChars[i] = dataChars[i];
                         break;
                 }
             }
 
-            return strBuilder.ToString();
+            return new string(dataChars);
         }
 
         /// <summary>
@@ -128,68 +128,68 @@ namespace DNTPersianUtils.Core
         {
             if (string.IsNullOrWhiteSpace(data)) return string.Empty;
 
-            var strBuilder = new StringBuilder(data);
-            for (var i = 0; i < strBuilder.Length; i++)
+            var dataChars = data.ToCharArray();
+            for (var i = 0; i < dataChars.Length; i++)
             {
-                switch (strBuilder[i])
+                switch (dataChars[i])
                 {
                     case '\u06F0':
                     case '\u0660':
-                        strBuilder[i] = '0';
+                        dataChars[i] = '0';
                         break;
 
                     case '\u06F1':
                     case '\u0661':
-                        strBuilder[i] = '1';
+                        dataChars[i] = '1';
                         break;
 
                     case '\u06F2':
                     case '\u0662':
-                        strBuilder[i] = '2';
+                        dataChars[i] = '2';
                         break;
 
                     case '\u06F3':
                     case '\u0663':
-                        strBuilder[i] = '3';
+                        dataChars[i] = '3';
                         break;
 
                     case '\u06F4':
                     case '\u0664':
-                        strBuilder[i] = '4';
+                        dataChars[i] = '4';
                         break;
 
                     case '\u06F5':
                     case '\u0665':
-                        strBuilder[i] = '5';
+                        dataChars[i] = '5';
                         break;
 
                     case '\u06F6':
                     case '\u0666':
-                        strBuilder[i] = '6';
+                        dataChars[i] = '6';
                         break;
 
                     case '\u06F7':
                     case '\u0667':
-                        strBuilder[i] = '7';
+                        dataChars[i] = '7';
                         break;
 
                     case '\u06F8':
                     case '\u0668':
-                        strBuilder[i] = '8';
+                        dataChars[i] = '8';
                         break;
 
                     case '\u06F9':
                     case '\u0669':
-                        strBuilder[i] = '9';
+                        dataChars[i] = '9';
                         break;
 
                     default:
-                        strBuilder[i] = strBuilder[i];
+                        dataChars[i] = dataChars[i];
                         break;
                 }
             }
 
-            return strBuilder.ToString();
+            return new string(dataChars);
         }
     }
 }
