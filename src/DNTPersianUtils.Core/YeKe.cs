@@ -29,11 +29,6 @@ namespace DNTPersianUtils.Core
         public const char ArabicYeWithOneDotBelow = (char)1568;
 
         /// <summary>
-        /// ئ
-        /// </summary>
-        public const char ArabicYeWithHighHamze = (char)1574;
-
-        /// <summary>
         /// ؽ
         /// </summary>
         public const char ArabicYeWithInvertedV = (char)1597;
@@ -100,8 +95,7 @@ namespace DNTPersianUtils.Core
                 {
                     case ArabicYeChar1:
                     case ArabicYeChar2:
-                    case ArabicYeWithOneDotBelow:
-                    case ArabicYeWithHighHamze:
+                    case ArabicYeWithOneDotBelow:                    
                     case ArabicYeWithInvertedV:
                     case ArabicYeWithTwoDotsAbove:
                     case ArabicYeWithThreeDotsAbove:

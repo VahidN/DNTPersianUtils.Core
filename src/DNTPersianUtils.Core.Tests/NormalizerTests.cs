@@ -190,6 +190,14 @@ namespace DNTPersianUtils.Core.Tests
         }
 
         [TestMethod]
+        public void Test_ApplyCorrectYeKe_2_Works()
+        {
+            var actual = "تئوری".NormalizePersianText(PersianNormalizers.ApplyPersianYeKe);
+            var expected = "تئوری";
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void Test_RemoveDiacritics_Works()
         {
             var actual1 = "وَحید".NormalizePersianText(PersianNormalizers.RemoveDiacritics);

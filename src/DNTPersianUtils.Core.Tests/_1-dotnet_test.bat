@@ -1,2 +1,2 @@
-dotnet test
+dotnet test -v n
 pause
