@@ -14,7 +14,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public override bool IsValid(object value)
         {
-            if (value == null)
+            if (string.IsNullOrWhiteSpace(value as string))
             {
                 return true; // returning false, makes this field required.
             }
