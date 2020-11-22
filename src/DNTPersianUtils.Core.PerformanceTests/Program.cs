@@ -1,9 +1,9 @@
 ﻿using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
-using BenchmarkDotNet.Horology;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Running;
 using BenchmarkDotNet.Environments;
+using Perfolizer.Horology;
 
 namespace DNTPersianUtils.Core.PerformanceTests
 {
