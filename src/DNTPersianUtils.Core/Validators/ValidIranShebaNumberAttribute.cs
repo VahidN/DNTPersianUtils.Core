@@ -6,7 +6,7 @@ namespace DNTPersianUtils.Core
     /// <summary>
     /// Determines whether the specified value of the object is a valid IranShebaNumber.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Parameter)]
     public sealed class ValidIranShebaNumberAttribute : ValidationAttribute
     {
         /// <summary>
