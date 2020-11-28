@@ -6,7 +6,7 @@ namespace DNTPersianUtils.Core
     /// <summary>
     /// Determines whether the specified value of the object is a valid IranianMobileNumber.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Parameter)]
     public sealed class ValidIranianMobileNumberAttribute : ValidationAttribute
     {
         /// <summary>
