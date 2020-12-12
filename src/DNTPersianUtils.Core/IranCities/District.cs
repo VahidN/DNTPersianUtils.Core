@@ -10,12 +10,12 @@ namespace DNTPersianUtils.Core.IranCities
         /// <summary>
         /// District Name
         /// </summary>
-        public string DistrictName { get; set; }
+        public string DistrictName { get; set; } = default!;
 
         /// <summary>
         /// Cities
         /// </summary>
-        public ISet<City> Cities { get; set; } = new HashSet<City>();
+        public ISet<City> Cities { get; } = new HashSet<City>();
 
         /// <summary>
         /// ToString
@@ -33,8 +33,7 @@ namespace DNTPersianUtils.Core.IranCities
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            var district = obj as District;
-            if (district == null)
+            if (obj is not District district)
                 return false;
 
             return this.DistrictName == district.DistrictName;

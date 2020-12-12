@@ -6,7 +6,7 @@
     public static class UnicodeConstants
     {
         /// <summary>
-        ///
+        /// RLE Char = 0x202B
         /// </summary>
         public const char RleChar = (char)0x202B;
 

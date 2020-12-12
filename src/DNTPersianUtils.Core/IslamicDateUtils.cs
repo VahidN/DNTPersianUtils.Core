@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DNTPersianUtils.Core
 {
@@ -8,20 +9,8 @@ namespace DNTPersianUtils.Core
     /// </summary>
     public static class IslamicDateUtils
     {
-        private static readonly IDictionary<int, long[]> _yearsMonthsInJd = new Dictionary<int, long[]>();
-        private static readonly int _supportedYearsStart;
-        private static readonly long[] _yearsStartJd;
-        private static readonly long _jdSupportEnd;
-        private const long JdSupportStart = 2453766;
-        private const int NMonths = 1405 * 12 + 1;
-
-        /// <summary>
-        /// ایده گرفته شده از: https://github.com/ebraminio/DroidPersianCalendar
-        /// </summary>
-        static IslamicDateUtils()
-        {
-            // https://github.com/ilius/starcal/blob/master/scal3/cal_types/hijri-monthes.json
-            int[] hijriMonths =
+        // https://github.com/ilius/starcal/blob/master/scal3/cal_types/hijri-monthes.json
+        private static readonly int[] hijriMonths =
             {
                 1427, 30, 29, 29, 30, 29, 30, 30, 30, 30, 29, 29, 30,
                 1428, 29, 30, 29, 29, 29, 30, 30, 29, 30, 30, 30, 29,
@@ -90,6 +79,20 @@ namespace DNTPersianUtils.Core
                 1491, 29, 30, 29, 30, 29, 30, 30, 29, 30, 29, 30, 30
             };
 
+        private static readonly IDictionary<int, long[]> _yearsMonthsInJd = new Dictionary<int, long[]>();
+        private static readonly int _supportedYearsStart;
+        private static readonly long[] _yearsStartJd;
+        private static readonly long _jdSupportEnd;
+        private const long JdSupportStart = 2453766;
+        private const int NMonths = 1405 * 12 + 1;
+
+        /// <summary>
+        /// ایده گرفته شده از: https://github.com/ebraminio/DroidPersianCalendar
+        /// </summary>
+        [SuppressMessage("Microsoft.Usage", "CA1810:Initialize all static fields in 'IslamicDateUtils' when those fields are declared and remove the explicit static constructor",
+                    Justification = "The code will become very ugly!")]
+        static IslamicDateUtils()
+        {
             var years = (int)Math.Ceiling(((float)hijriMonths.Length) / 13);
             _yearsStartJd = new long[years];
             _supportedYearsStart = hijriMonths[0];
@@ -111,7 +114,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// Hijri To Jd
         /// </summary>
         /// <param name="year"></param>
         /// <param name="month"></param>
@@ -144,11 +147,11 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// Jd To Hijri
         /// </summary>
         /// <param name="jd"></param>
         /// <returns></returns>
-        public static int[] JdToHijri(long jd)
+        public static int[]? JdToHijri(long jd)
         {
             if (jd < JdSupportStart || jd >= _jdSupportEnd || _yearsStartJd == null)
                 return null;
@@ -170,7 +173,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// IslamicDay To PersianDay
         /// </summary>
         /// <param name="year">سال قمری</param>
         /// <param name="month">ماه قمری</param>
@@ -182,7 +185,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// Jdn To PersianDay
         /// </summary>
         /// <param name="jdn"></param>
         /// <returns></returns>
@@ -220,7 +223,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// PersianDay To Jdn
         /// </summary>
         /// <param name="year"></param>
         /// <param name="month"></param>
@@ -249,7 +252,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// IslamicDay To Jdn
         /// </summary>
         /// <param name="year">سال قمری</param>
         /// <param name="month">ماه قمری</param>
@@ -368,7 +371,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// Jdn To IslamicDay
         /// </summary>
         /// <param name="jd"></param>
         /// <returns></returns>
@@ -416,7 +419,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// Jdn To Gregorian DateTime
         /// </summary>
         /// <param name="jdn"></param>
         /// <returns></returns>
@@ -438,7 +441,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// Jdn To Julian
         /// </summary>
         /// <param name="jdn"></param>
         /// <returns></returns>
@@ -492,7 +495,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// To Jdn
         /// </summary>
         /// <param name="gregorian"></param>
         /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
@@ -506,7 +509,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// Gregorian To Jdn
         /// </summary>
         /// <param name="lYear"></param>
         /// <param name="lMonth"></param>
@@ -529,7 +532,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// Julian To Jdn
         /// </summary>
         /// <param name="lYear"></param>
         /// <param name="lMonth"></param>
@@ -542,7 +545,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// To PersianDay
         /// </summary>
         /// <param name="gregorian"></param>
         /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
@@ -552,7 +555,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// IslamicDay To Gregorian
         /// </summary>
         /// <param name="islamic"></param>
         /// <returns></returns>
@@ -562,17 +565,22 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// IslamicDay To Jdn
         /// </summary>
         /// <param name="islamic"></param>
         /// <returns></returns>
         public static long IslamicDayToJdn(this IslamicDay islamic)
         {
+            if (islamic == null)
+            {
+                throw new ArgumentNullException(nameof(islamic));
+            }
+
             return IslamicDayToJdn(islamic.Year, islamic.Month, islamic.Day);
         }
 
         /// <summary>
-        ///
+        /// IslamicDay To PersianDay
         /// </summary>
         /// <param name="islamic"></param>
         /// <returns></returns>
@@ -582,7 +590,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// PersianDay To Gregorian
         /// </summary>
         /// <param name="persian"></param>
         /// <returns></returns>
@@ -614,12 +622,17 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        ///
+        /// PersianDay To Jdn
         /// </summary>
         /// <param name="persian"></param>
         /// <returns></returns>
         public static long PersianDayToJdn(this PersianDay persian)
         {
+            if (persian == null)
+            {
+                throw new ArgumentNullException(nameof(persian));
+            }
+
             return PersianDayToJdn(persian.Year, persian.Month, persian.Day);
         }
     }

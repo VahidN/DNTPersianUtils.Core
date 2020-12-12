@@ -1,4 +1,6 @@
-﻿namespace DNTPersianUtils.Core
+﻿using System.Globalization;
+
+namespace DNTPersianUtils.Core
 {
     /// <summary>
     /// اجزای روز قمری
@@ -40,7 +42,7 @@
         /// </summary>
         public override string ToString()
         {
-            return $"{Year}/{Month.ToString("00")}/{Day.ToString("00")}";
+            return $"{Year}/{Month.ToString("00", CultureInfo.InvariantCulture)}/{Day.ToString("00", CultureInfo.InvariantCulture)}";
         }
 
         /// <summary>

@@ -14,7 +14,7 @@ namespace DNTPersianUtils.Core
         public static string ToPersianNumbers(this int number, string format = "")
         {
             return ToPersianNumbers(!string.IsNullOrEmpty(format) ?
-                    number.ToString(format) : number.ToString(CultureInfo.InvariantCulture));
+                    number.ToString(format, CultureInfo.InvariantCulture) : number.ToString(CultureInfo.InvariantCulture));
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace DNTPersianUtils.Core
         public static string ToPersianNumbers(this long number, string format = "")
         {
             return ToPersianNumbers(!string.IsNullOrEmpty(format) ?
-                    number.ToString(format) : number.ToString(CultureInfo.InvariantCulture));
+                    number.ToString(format, CultureInfo.InvariantCulture) : number.ToString(CultureInfo.InvariantCulture));
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace DNTPersianUtils.Core
         {
             if (!number.HasValue) number = 0;
             return ToPersianNumbers(!string.IsNullOrEmpty(format) ?
-                    number.Value.ToString(format) : number.Value.ToString(CultureInfo.InvariantCulture));
+                    number.Value.ToString(format, CultureInfo.InvariantCulture) : number.Value.ToString(CultureInfo.InvariantCulture));
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace DNTPersianUtils.Core
         {
             if (!number.HasValue) number = 0;
             return ToPersianNumbers(!string.IsNullOrEmpty(format) ?
-                number.Value.ToString(format) : number.Value.ToString(CultureInfo.InvariantCulture));
+                number.Value.ToString(format, CultureInfo.InvariantCulture) : number.Value.ToString(CultureInfo.InvariantCulture));
         }
 
         /// <summary>

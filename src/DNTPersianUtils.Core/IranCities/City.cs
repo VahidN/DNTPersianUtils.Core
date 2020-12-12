@@ -8,22 +8,22 @@
         /// <summary>
         /// Province Name
         /// </summary>
-        public string ProvinceName { get; set; }
+        public string ProvinceName { get; set; } = default!;
 
         /// <summary>
         /// County Name
         /// </summary>
-        public string CountyName { get; set; }
+        public string CountyName { get; set; } = default!;
 
         /// <summary>
         /// District Name
         /// </summary>
-        public string DistrictName { get; set; }
+        public string DistrictName { get; set; } = default!;
 
         /// <summary>
         /// City Name
         /// </summary>
-        public string CityName { get; set; }
+        public string CityName { get; set; } = default!;
 
         /// <summary>
         /// City Division Code

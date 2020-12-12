@@ -348,7 +348,7 @@ namespace DNTPersianUtils.Core
         {
             if (persianMonth > 12 || persianMonth <= 0)
             {
-                throw new ArgumentOutOfRangeException("ماه وارد شده معتبر نیست.");
+                throw new ArgumentOutOfRangeException(nameof(persianMonth), "ماه وارد شده معتبر نیست.");
             }
 
             if (persianMonth <= 6)

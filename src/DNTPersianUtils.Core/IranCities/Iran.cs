@@ -13,7 +13,7 @@ namespace DNTPersianUtils.Core.IranCities
         /// <summary>
         /// Iran's Cities.
         /// </summary>
-        public static ISet<City> Cities = new HashSet<City>(new List<City>
+        public static readonly ISet<City> Cities = new HashSet<City>(new List<City>
         {
           new City{
             ProvinceName= "همدان",

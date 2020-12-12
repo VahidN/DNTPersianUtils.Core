@@ -61,7 +61,8 @@ namespace DNTPersianUtils.Core
         /// با قالب‌های پشتیبانی شده‌ی ۹۰/۸/۱۴ , 1395/11/3 17:30 , ۱۳۹۰/۸/۱۴ , ۹۰-۸-۱۴ , ۱۳۹۰-۸-۱۴
         /// </summary>
         /// <param name="persianDateTime">تاریخ و زمان شمسی</param>
-        public static bool IsValidPersianDateTime(this string persianDateTime)
+        /// <param name="throwOnException"></param>
+        public static bool IsValidPersianDateTime(this string persianDateTime, bool throwOnException = false)
         {
             try
             {
@@ -70,6 +71,10 @@ namespace DNTPersianUtils.Core
             }
             catch
             {
+                if (throwOnException)
+                {
+                    throw;
+                }
                 return false;
             }
         }
@@ -131,8 +136,8 @@ namespace DNTPersianUtils.Core
             if (!string.IsNullOrWhiteSpace(rawTime))
             {
                 var splitedTime = rawTime.Split(new[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
-                hour = int.Parse(splitedTime[0]);
-                minute = int.Parse(splitedTime[1]);
+                hour = int.Parse(splitedTime[0], CultureInfo.InvariantCulture);
+                minute = int.Parse(splitedTime[1], CultureInfo.InvariantCulture);
                 if (splitedTime.Length > 2)
                 {
                     var lastPart = splitedTime[2].Trim();
@@ -146,7 +151,10 @@ namespace DNTPersianUtils.Core
                     }
                     else
                     {
-                        int.TryParse(lastPart, out second);
+                        if (!int.TryParse(lastPart, out second))
+                        {
+                            second = 0;
+                        }
                     }
                 }
             }

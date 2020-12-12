@@ -11,29 +11,22 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Iran Standard Time
         /// </summary>
-        public static readonly TimeZoneInfo IranStandardTime;
-
-        /// <summary>
-        /// Epoch represented as DateTime
-        /// </summary>
-        public static readonly DateTime Epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-
-        static DateTimeUtils()
-        {
-            IranStandardTime = TimeZoneInfo.GetSystemTimeZones().FirstOrDefault(timeZoneInfo =>
+        public static readonly TimeZoneInfo IranStandardTime =
+            TimeZoneInfo.GetSystemTimeZones().FirstOrDefault(timeZoneInfo =>
                 timeZoneInfo.StandardName.Contains("Iran") ||
                 timeZoneInfo.StandardName.Contains("Tehran") ||
                 timeZoneInfo.Id.Contains("Iran") ||
-                timeZoneInfo.Id.Contains("Tehran"));
-            if (IranStandardTime == null)
-            {
+                timeZoneInfo.Id.Contains("Tehran")) ??
 #if NET40 || NET45 || NET46
                 throw new PlatformNotSupportedException($"This OS[{Environment.OSVersion.Platform}, {Environment.OSVersion.Version}] doesn't support IranStandardTime.");
 #else
                 throw new PlatformNotSupportedException($"This OS[{System.Runtime.InteropServices.RuntimeInformation.OSDescription}] doesn't support IranStandardTime.");
 #endif
-            }
-        }
+
+        /// <summary>
+        /// Epoch represented as DateTime
+        /// </summary>
+        public static readonly DateTime Epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
         /// <summary>
         /// محاسبه سن

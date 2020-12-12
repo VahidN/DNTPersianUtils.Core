@@ -19,7 +19,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// توضیحات مناسبت
         /// </summary>
-        public string Description { set; get; }
+        public string Description { set; get; } = default!;
 
         /// <summary>
         /// ToString()
@@ -37,8 +37,7 @@ namespace DNTPersianUtils.Core
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            var day = obj as IranHoliday;
-            if (day == null)
+            if (obj is not IranHoliday day)
                 return false;
 
             return this.Holiday.Year == day.Holiday.Year &&

@@ -10,12 +10,12 @@ namespace DNTPersianUtils.Core.IranCities
         /// <summary>
         /// Province Name
         /// </summary>
-        public string ProvinceName { get; set; }
+        public string ProvinceName { get; set; } = default!;
 
         /// <summary>
         /// Counties
         /// </summary>
-        public ISet<County> Counties { get; set; } = new HashSet<County>();
+        public ISet<County> Counties { get; } = new HashSet<County>();
 
         /// <summary>
         /// ToString()
@@ -33,8 +33,7 @@ namespace DNTPersianUtils.Core.IranCities
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            var province = obj as Province;
-            if (province == null)
+            if (obj is not Province province)
                 return false;
 
             return this.ProvinceName == province.ProvinceName;

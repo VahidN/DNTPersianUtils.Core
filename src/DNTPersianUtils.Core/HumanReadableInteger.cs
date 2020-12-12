@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DNTPersianUtils.Core
@@ -68,7 +69,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Equivalent names
         /// </summary>
-        public IList<string> Names { set; get; }
+        public IEnumerable<string> Names { get; set; } = new List<string>();
     }
 
     /// <summary>
@@ -240,7 +241,7 @@ namespace DNTPersianUtils.Core
 
         private static string getName(int idx, Language language, DigitGroup group)
         {
-            return _numberWords.First(x => x.Group == group && x.Language == language).Names[idx];
+            return _numberWords.First(x => x.Group == group && x.Language == language).Names.ElementAt(idx);
         }
 
         private static string wordify(long number, Language language, string leftDigitsText, int thousands)
