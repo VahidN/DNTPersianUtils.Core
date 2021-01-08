@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using static System.FormattableString;
 
 namespace DNTPersianUtils.Core
 {
@@ -42,7 +43,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public override string ToString()
         {
-            return $"{Year}/{Month.ToString("00", CultureInfo.InvariantCulture)}/{Day.ToString("00", CultureInfo.InvariantCulture)}";
+            return Invariant($"{Year}/{Month.ToString("00", CultureInfo.InvariantCulture)}/{Day.ToString("00", CultureInfo.InvariantCulture)}");
         }
 
         /// <summary>
@@ -52,7 +53,7 @@ namespace DNTPersianUtils.Core
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            if (!(obj is PersianDay day))
+            if (obj is not PersianDay day)
                 return false;
 
             return this.Year == day.Year &&

@@ -3,32 +3,6 @@
 namespace DNTPersianUtils.Core
 {
     /// <summary>
-    ///  Sun Event
-    /// </summary>
-    public enum SunEvent
-    {
-        /// <summary>
-        /// march equinox
-        /// </summary>
-        VernalEquinox,
-
-        /// <summary>
-        /// June solstice
-        /// </summary>
-        SummerSolstice,
-
-        /// <summary>
-        /// September equinox
-        /// </summary>
-        AutumnalEquinox,
-
-        /// <summary>
-        /// December solstice
-        /// </summary>
-        WinterSolstice
-    }
-
-    /// <summary>
     /// Based on Jean Meeus book _Astronomical Algorithms_
     /// </summary>
     public static class EquinoxCalculator

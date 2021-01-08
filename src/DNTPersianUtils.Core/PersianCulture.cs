@@ -14,7 +14,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// معادل فارسی روزهای هفته میلادی
         /// </summary>
-        public static readonly IDictionary<DayOfWeek, string> PersianDayWeekNames = new Dictionary<DayOfWeek, string>
+        public static IDictionary<DayOfWeek, string> PersianDayWeekNames { get; } = new Dictionary<DayOfWeek, string>
           {
             {DayOfWeek.Saturday, "شنبه"},
             {DayOfWeek.Sunday,  "یک شنبه"},
@@ -28,7 +28,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// عدد به حروف روزهای شمسی
         /// </summary>
-        public static readonly IDictionary<int, string> PersianMonthDayNumberNames = new Dictionary<int, string>
+        public static IDictionary<int, string> PersianMonthDayNumberNames { get; } = new Dictionary<int, string>
            {
              { 1, "یکم" },
              { 2, "دوم" },
@@ -66,7 +66,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// نام فارسی ماه‌های شمسی
         /// </summary>
-        public static readonly IDictionary<int, string> PersianMonthNames = new Dictionary<int, string>
+        public static IDictionary<int, string> PersianMonthNames { get; } = new Dictionary<int, string>
            {
             {1, "فروردین"},
             {2, "اردیبهشت"},
@@ -262,7 +262,6 @@ namespace DNTPersianUtils.Core
         public static PersianMonth GetPersianMonthStartAndEndDates(this int persianYear, int persianMonth)
         {
             var persianCalendar = new PersianCalendar();
-            var isLeapYear = persianCalendar.IsLeapYear(persianYear);
             return new PersianMonth
             {
                 StartDate = persianCalendar.ToDateTime(persianYear, persianMonth, 1, 0, 0, 0, 0),

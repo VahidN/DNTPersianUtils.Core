@@ -8,7 +8,7 @@ namespace DNTPersianUtils.Core.Normalizer
     public static class FixDots
     {
         private static readonly Regex _matchConvertDotsToEllipsis =
-            new Regex(@"\s*\.{3,}", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            new Regex(@"\s*\.{3,}", options: RegexOptions.Compiled | RegexOptions.IgnoreCase, matchTimeout: RegexUtils.MatchTimeout);
 
         /// <summary>
         /// Replaces three dots with ellipsis.
@@ -18,7 +18,7 @@ namespace DNTPersianUtils.Core.Normalizer
         /// <returns>Processed Text</returns>
         public static string NormalizeDotsToEllipsis(this string text)
         {
-            return _matchConvertDotsToEllipsis.Replace(text,  @"…");
+            return _matchConvertDotsToEllipsis.Replace(text, @"…");
         }
     }
 }

@@ -8,13 +8,13 @@ namespace DNTPersianUtils.Core.Normalizer
     public static class FixZwnj
     {
         private static readonly Regex _matchApplyHalfSpaceRule1 =
-            new Regex(@"\s+(ن?می)\s+", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            new Regex(@"\s+(ن?می)\s+", options: RegexOptions.Compiled | RegexOptions.IgnoreCase, matchTimeout: RegexUtils.MatchTimeout);
         private static readonly Regex _matchApplyHalfSpaceRule2 =
-            new Regex(@"\s+(تر(ی(ن)?)?|ها(ی)?)\s+", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            new Regex(@"\s+(تر(ی(ن)?)?|ها(ی)?)\s+", options: RegexOptions.Compiled | RegexOptions.IgnoreCase, matchTimeout: RegexUtils.MatchTimeout);
         private static readonly Regex _matchCleanupZwnj =
-            new Regex(@"\s+‌|‌\s+", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            new Regex(@"\s+‌|‌\s+", options: RegexOptions.Compiled | RegexOptions.IgnoreCase, matchTimeout: RegexUtils.MatchTimeout);
         private static readonly Regex _matchYeHeHalfSpace =
-            new Regex(@"(\S)(ه[\s‌]+[یی])(\s)", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            new Regex(@"(\S)(ه[\s‌]+[یی])(\s)", options: RegexOptions.Compiled | RegexOptions.IgnoreCase, matchTimeout: RegexUtils.MatchTimeout);
 
 
         /// <summary>
@@ -27,10 +27,10 @@ namespace DNTPersianUtils.Core.Normalizer
             text = text.NormalizeZwnj();
 
             //put zwnj between word and prefix (mi* nemi*)
-            var phase1 = _matchApplyHalfSpaceRule1.Replace(text, @" $1‌");
+            var phase1 = _matchApplyHalfSpaceRule1.Replace(text, " $1‌");
 
             //put zwnj between word and suffix (*tar *tarin *ha *haye)
-            var phase2 = _matchApplyHalfSpaceRule2.Replace(phase1,  @"‌$1 ");
+            var phase2 = _matchApplyHalfSpaceRule2.Replace(phase1, "‌$1 ");
 
             var phase3 = phase2.NormalizeYeHeHalfSpace();
             return phase3;
@@ -43,7 +43,7 @@ namespace DNTPersianUtils.Core.Normalizer
         /// <returns>Processed Text</returns>
         public static string NormalizeZwnj(this string text)
         {
-            return _matchCleanupZwnj.Replace(text,  " ");
+            return _matchCleanupZwnj.Replace(text, " ");
         }
 
         /// <summary>

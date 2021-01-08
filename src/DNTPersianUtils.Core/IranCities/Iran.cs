@@ -13,7 +13,7 @@ namespace DNTPersianUtils.Core.IranCities
         /// <summary>
         /// Iran's Cities.
         /// </summary>
-        public static readonly ISet<City> Cities = new HashSet<City>(new List<City>
+        public static ISet<City> Cities {get;} =  new HashSet<City>(new List<City>
         {
           new City{
             ProvinceName= "همدان",
@@ -8727,14 +8727,14 @@ namespace DNTPersianUtils.Core.IranCities
         private static ISet<Province> getProvinces()
         {
             var provinces = new HashSet<Province>();
-            foreach (var provinceName in Cities.Select(x => x.ProvinceName).Distinct())
+            foreach (var provinceName in Cities.Select(x => x.ProvinceName).Distinct(StringComparer.OrdinalIgnoreCase))
             {
                 provinces.Add(new Province { ProvinceName = provinceName });
             }
 
             foreach (var province in provinces)
             {
-                foreach (var thisProvince in Cities.Where(x => x.ProvinceName == province.ProvinceName))
+                foreach (var thisProvince in Cities.Where(x => string.Equals(x.ProvinceName, province.ProvinceName, StringComparison.Ordinal)))
                 {
                     province.Counties.Add(new County { CountyName = thisProvince.CountyName });
                 }
@@ -8742,7 +8742,8 @@ namespace DNTPersianUtils.Core.IranCities
                 foreach (var county in province.Counties)
                 {
                     foreach (var thisCounty in Cities.Where(x =>
-                            x.ProvinceName == province.ProvinceName && x.CountyName == county.CountyName))
+                            string.Equals(x.ProvinceName, province.ProvinceName, StringComparison.Ordinal) 
+							&& string.Equals(x.CountyName, county.CountyName, StringComparison.Ordinal)))
                     {
                         county.Districts.Add(new District { DistrictName = thisCounty.DistrictName });
                     }
@@ -8753,9 +8754,9 @@ namespace DNTPersianUtils.Core.IranCities
                     foreach (var district in county.Districts)
                     {
                         foreach (var thisDistrict in Cities.Where(x =>
-                           x.ProvinceName == province.ProvinceName &&
-                           x.CountyName == county.CountyName &&
-                           x.DistrictName == district.DistrictName))
+                           string.Equals(x.ProvinceName, province.ProvinceName, StringComparison.Ordinal) &&
+                           string.Equals(x.CountyName, county.CountyName, StringComparison.Ordinal) &&
+                           string.Equals(x.DistrictName, district.DistrictName, StringComparison.Ordinal)))
                         {
                             district.Cities.Add(new City
                             {

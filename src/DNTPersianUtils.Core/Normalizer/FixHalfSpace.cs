@@ -3,9 +3,8 @@
     /// <summary>
     /// Replaces thin spaces with a replacement
     /// </summary>
-    public static class FixThinSpace
+    public static class FixHalfSpace
     {
-
         /// <summary>
         ///  Replaces thin/half spaces with the replacement provided.
         /// </summary>

@@ -12,7 +12,7 @@ namespace DNTPersianUtils.Core
         /// A collection of Persian stopwords
         /// Source: https://github.com/ziaa/Persian-stopwords-collection
         /// </summary>
-        public static readonly ISet<string> List = new HashSet<string>(new[]
+        public static ISet<string> List { get; } = new HashSet<string>(new[]
             {
                 "ـ",
                 "-",

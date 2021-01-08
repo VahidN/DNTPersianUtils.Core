@@ -97,8 +97,8 @@ namespace DNTPersianUtils.Core
             persianDateTime = persianDateTime.Trim().ToEnglishNumbers();
             var splitedDateTime = persianDateTime.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            var rawTime = splitedDateTime.FirstOrDefault(s => s.Contains(':'));
-            var rawDate = splitedDateTime.FirstOrDefault(s => !s.Contains(':'));
+            var rawTime = Array.Find(splitedDateTime, s => s.Contains(':'));
+            var rawDate = Array.Find(splitedDateTime, s => !s.Contains(':'));
 
             var splitedDate = rawDate?.Split('/', ',', '؍', '.', '-');
             if (splitedDate?.Length != 3)
@@ -151,7 +151,7 @@ namespace DNTPersianUtils.Core
                     }
                     else
                     {
-                        if (!int.TryParse(lastPart, out second))
+                        if (!int.TryParse(lastPart, NumberStyles.Number, CultureInfo.InvariantCulture, out second))
                         {
                             second = 0;
                         }
@@ -480,7 +480,7 @@ namespace DNTPersianUtils.Core
 
         private static Tuple<bool, int> toNumber(this string data)
         {
-            bool result = int.TryParse(data, out var number);
+            bool result = int.TryParse(data, NumberStyles.Number, CultureInfo.InvariantCulture, out var number);
             return new Tuple<bool, int>(result, number);
         }
     }

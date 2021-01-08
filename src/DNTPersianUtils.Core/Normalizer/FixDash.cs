@@ -8,9 +8,9 @@ namespace DNTPersianUtils.Core.Normalizer
     public static class FixDash
     {
         private static readonly Regex _matchFixDashes1 =
-            new Regex(@"-{3}", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            new Regex(@"-{3}", options: RegexOptions.Compiled | RegexOptions.IgnoreCase, matchTimeout: RegexUtils.MatchTimeout);
         private static readonly Regex _matchFixDashes2 =
-            new Regex(@"-{2}", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            new Regex(@"-{2}", options: RegexOptions.Compiled | RegexOptions.IgnoreCase, matchTimeout: RegexUtils.MatchTimeout);
 
         /// <summary>
         /// Replaces double dash to ndash and triple dash to mdash.
@@ -20,8 +20,8 @@ namespace DNTPersianUtils.Core.Normalizer
         /// <returns>Processed Text</returns>
         public static string NormalizeDashes(this string text)
         {
-            var phase1 = _matchFixDashes1.Replace(text, @"—");
-            var phase2 = _matchFixDashes2.Replace(phase1, @"–");
+            var phase1 = _matchFixDashes1.Replace(text, "—");
+            var phase2 = _matchFixDashes2.Replace(phase1, "–");
             return phase2;
         }
     }

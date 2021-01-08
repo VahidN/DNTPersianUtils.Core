@@ -36,7 +36,7 @@ namespace DNTPersianUtils.Core.IranCities
             if (obj is not District district)
                 return false;
 
-            return this.DistrictName == district.DistrictName;
+            return string.Equals(this.DistrictName, district.DistrictName, System.StringComparison.Ordinal);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace DNTPersianUtils.Core.IranCities
             unchecked
             {
                 var hash = 17;
-                hash = hash * 23 + DistrictName.GetHashCode();
+                hash = hash * 23 + System.StringComparer.Ordinal.GetHashCode(DistrictName);
                 return hash;
             }
         }

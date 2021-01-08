@@ -17,7 +17,7 @@ namespace DNTPersianUtils.Core
                 timeZoneInfo.StandardName.Contains("Tehran") ||
                 timeZoneInfo.Id.Contains("Iran") ||
                 timeZoneInfo.Id.Contains("Tehran")) ??
-#if NET40 || NET45 || NET46
+#if NET46
                 throw new PlatformNotSupportedException($"This OS[{Environment.OSVersion.Platform}, {Environment.OSVersion.Version}] doesn't support IranStandardTime.");
 #else
                 throw new PlatformNotSupportedException($"This OS[{System.Runtime.InteropServices.RuntimeInformation.OSDescription}] doesn't support IranStandardTime.");

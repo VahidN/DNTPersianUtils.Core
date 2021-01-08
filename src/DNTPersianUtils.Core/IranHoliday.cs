@@ -1,29 +1,29 @@
-using System.Collections.Generic;
+using System;
 
-namespace DNTPersianUtils.Core.IranCities
+namespace DNTPersianUtils.Core
 {
     /// <summary>
-    /// Iran's County
+    /// مناسبت‌های تعطیلات رسمی ایران
     /// </summary>
-    public class County
+    public class IranHoliday
     {
         /// <summary>
-        /// County Name
+        /// روز مناسبت تعطیل رسمی
         /// </summary>
-        public string CountyName { get; set; } = default!;
+        public DateTime Holiday { set; get; }
 
         /// <summary>
-        /// Districts
+        /// توضیحات مناسبت
         /// </summary>
-        public ISet<District> Districts { get; } = new HashSet<District>();
+        public string Description { set; get; } = default!;
 
         /// <summary>
-        /// ToString
+        /// ToString()
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{CountyName}";
+            return $"{Description}";
         }
 
         /// <summary>
@@ -33,10 +33,12 @@ namespace DNTPersianUtils.Core.IranCities
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            if (obj is not County county)
+            if (obj is not IranHoliday day)
                 return false;
 
-            return string.Equals(this.CountyName, county.CountyName, System.StringComparison.Ordinal);
+            return this.Holiday.Year == day.Holiday.Year &&
+                   this.Holiday.Month == day.Holiday.Month &&
+                   this.Holiday.Day == day.Holiday.Day;
         }
 
         /// <summary>
@@ -48,7 +50,8 @@ namespace DNTPersianUtils.Core.IranCities
             unchecked
             {
                 var hash = 17;
-                hash = hash * 23 + System.StringComparer.Ordinal.GetHashCode(CountyName);
+                hash = hash * 23 + Holiday.GetHashCode();
+                hash = hash * 23 + StringComparer.Ordinal.GetHashCode(Description);
                 return hash;
             }
         }

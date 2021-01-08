@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using static System.FormattableString;
 
 namespace DNTPersianUtils.Core
 {
@@ -21,7 +22,7 @@ namespace DNTPersianUtils.Core
 
             var strDay = PersianCulture.GetPersianWeekDayName(persianYear, persianMonth, persianDay);
             var strMonth = PersianCulture.PersianMonthNames[persianMonth];
-            return $"{strDay} {persianDay} {strMonth} {persianYear}".ToPersianNumbers();
+            return Invariant($"{strDay} {persianDay} {strMonth} {persianYear}").ToPersianNumbers();
         }
 
         /// <summary>
@@ -289,26 +290,27 @@ namespace DNTPersianUtils.Core
 
             if (totalSeconds < 30 * TimeConstants.Day)
             {
-                return $"{(int)Math.Abs(totalDays)} روز{suffix}{dayStr}";
+                return Invariant($"{(int)Math.Abs(totalDays)} روز{suffix}{dayStr}");
             }
 
             if (totalSeconds < 12 * TimeConstants.Month)
             {
                 int months = Convert.ToInt32(Math.Floor((double)Math.Abs(diff.Days) / 30));
-                return months <= 1 ? $"1 ماه{suffix}{dayStr}" : $"{months} ماه{suffix}{dayStr}";
+                return months <= 1 ? Invariant($"1 ماه{suffix}{dayStr}") : Invariant($"{months} ماه{suffix}{dayStr}");
             }
 
             var years = Convert.ToInt32(Math.Floor((double)Math.Abs(diff.Days) / 365));
             var daysMonths = (double)Math.Abs(diff.Days) / 30;
             var nextMonths = Convert.ToInt32(Math.Truncate(daysMonths)) - (years * 12) - 1;
-            var nextMonthsStr = nextMonths <= 0 ? "" : $"{(years >= 1 ? " و " : "")}{nextMonths} ماه";
+            var and = years >= 1 ? " و " : "";
+            var nextMonthsStr = nextMonths <= 0 ? "" : Invariant($"{and}{nextMonths} ماه");
 
             if (years < 1)
             {
                 return $"{nextMonthsStr}{suffix}{dayStr}";
             }
 
-            return $"{years} سال{nextMonthsStr}{suffix}{dayStr}";
+            return Invariant($"{years} سال{nextMonthsStr}{suffix}{dayStr}");
         }
     }
 }

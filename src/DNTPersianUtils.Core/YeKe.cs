@@ -95,7 +95,7 @@ namespace DNTPersianUtils.Core
                 {
                     case ArabicYeChar1:
                     case ArabicYeChar2:
-                    case ArabicYeWithOneDotBelow:                    
+                    case ArabicYeWithOneDotBelow:
                     case ArabicYeWithInvertedV:
                     case ArabicYeWithTwoDotsAbove:
                     case ArabicYeWithThreeDotsAbove:
@@ -109,10 +109,6 @@ namespace DNTPersianUtils.Core
 
                     case ArabicKeChar:
                         dataChars[i] = PersianKeChar;
-                        break;
-
-                    default:
-                        dataChars[i] = dataChars[i];
                         break;
                 }
             }

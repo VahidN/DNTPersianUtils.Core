@@ -8,61 +8,6 @@ namespace DNTPersianUtils.Core
 {
     /// <summary>
     /// مناسبت‌های تعطیلات رسمی ایران
-    /// </summary>
-    public class IranHoliday
-    {
-        /// <summary>
-        /// روز مناسبت تعطیل رسمی
-        /// </summary>
-        public DateTime Holiday { set; get; }
-
-        /// <summary>
-        /// توضیحات مناسبت
-        /// </summary>
-        public string Description { set; get; } = default!;
-
-        /// <summary>
-        /// ToString()
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            return $"{Description}";
-        }
-
-        /// <summary>
-        /// Equals
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        public override bool Equals(object obj)
-        {
-            if (obj is not IranHoliday day)
-                return false;
-
-            return this.Holiday.Year == day.Holiday.Year &&
-                   this.Holiday.Month == day.Holiday.Month &&
-                   this.Holiday.Day == day.Holiday.Day;
-        }
-
-        /// <summary>
-        /// GetHashCode
-        /// </summary>
-        /// <returns></returns>
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                var hash = 17;
-                hash = hash * 23 + Holiday.GetHashCode();
-                hash = hash * 23 + Description.GetHashCode();
-                return hash;
-            }
-        }
-    }
-
-    /// <summary>
-    /// مناسبت‌های تعطیلات رسمی ایران
     /// از سال 1395 تا پایان سال 1398
     /// </summary>
     public static class IranHolidays
@@ -800,35 +745,6 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        /// دریافت لیست روزهای کاری ایران در یک بازه زمانی
-        /// از سال 1395 تا پایان سال 1398
-        /// </summary>
-        /// <param name="from">از تاریخ</param>
-        /// <param name="to">تا تاریخ</param>
-        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
-        /// <returns>روزهای کاری</returns>
-        public static IEnumerable<DateTime> GetBusinessDays(this DateTime from, DateTime to, bool convertToIranTimeZone = true)
-        {
-            if (from.Kind == DateTimeKind.Utc && convertToIranTimeZone)
-            {
-                from = from.ToIranTimeZoneDateTime();
-            }
-
-            if (to.Kind == DateTimeKind.Utc && convertToIranTimeZone)
-            {
-                to = to.ToIranTimeZoneDateTime();
-            }
-
-            for (var date = from; date <= to; date = date.AddDays(1))
-            {
-                if (!date.IsHoliday())
-                {
-                    yield return date;
-                }
-            }
-        }
-
-        /// <summary>
         /// تشخیص تعطیلات رسمی ایران
         /// از سال 1395 تا پایان سال 1398
         /// </summary>
@@ -856,6 +772,35 @@ namespace DNTPersianUtils.Core
         {
             var fromDt = date.GetDateTimeOffsetPart(dateTimeOffsetPart);
             return IsHoliday(fromDt);
+        }
+
+        /// <summary>
+        /// دریافت لیست روزهای کاری ایران در یک بازه زمانی
+        /// از سال 1395 تا پایان سال 1398
+        /// </summary>
+        /// <param name="from">از تاریخ</param>
+        /// <param name="to">تا تاریخ</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        /// <returns>روزهای کاری</returns>
+        public static IEnumerable<DateTime> GetBusinessDays(this DateTime from, DateTime to, bool convertToIranTimeZone = true)
+        {
+            if (from.Kind == DateTimeKind.Utc && convertToIranTimeZone)
+            {
+                from = from.ToIranTimeZoneDateTime();
+            }
+
+            if (to.Kind == DateTimeKind.Utc && convertToIranTimeZone)
+            {
+                to = to.ToIranTimeZoneDateTime();
+            }
+
+            for (var date = from; date <= to; date = date.AddDays(1))
+            {
+                if (!date.IsHoliday())
+                {
+                    yield return date;
+                }
+            }
         }
 
         /// <summary>

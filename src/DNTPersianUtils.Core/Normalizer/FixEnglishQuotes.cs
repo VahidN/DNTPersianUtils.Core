@@ -8,7 +8,7 @@ namespace DNTPersianUtils.Core.Normalizer
     public static class FixEnglishQuotes
     {
         private static readonly Regex _matchConvertEnglishQuotes =
-            new Regex(@"([""'`]+)(.+?)(\1)", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            new Regex(@"([""'`]+)(.+?)(\1)", options: RegexOptions.Compiled | RegexOptions.IgnoreCase, matchTimeout: RegexUtils.MatchTimeout);
 
         /// <summary>
         /// Replaces English quotes with their Persian equivalent.
@@ -18,7 +18,7 @@ namespace DNTPersianUtils.Core.Normalizer
         /// <returns>Processed Text</returns>
         public static string NormalizeEnglishQuotes(this string text)
         {
-            return _matchConvertEnglishQuotes.Replace(text, @"«$2»");
+            return _matchConvertEnglishQuotes.Replace(text, "«$2»");
         }
     }
 }

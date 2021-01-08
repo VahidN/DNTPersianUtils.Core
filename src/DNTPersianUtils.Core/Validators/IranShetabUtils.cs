@@ -8,7 +8,7 @@ namespace DNTPersianUtils.Core
     /// </summary>
     public static class IranShetabUtils
     {
-        private static readonly Regex _matchIranShetab = new Regex(@"[0-9]{16}", options: RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static readonly Regex _matchIranShetab = new Regex(@"[0-9]{16}", options: RegexOptions.Compiled | RegexOptions.IgnoreCase, matchTimeout: RegexUtils.MatchTimeout);
 
         /// <summary>
         /// validate Shetab card numbers

@@ -36,7 +36,7 @@ namespace DNTPersianUtils.Core.IranCities
             if (obj is not Province province)
                 return false;
 
-            return this.ProvinceName == province.ProvinceName;
+            return string.Equals(this.ProvinceName, province.ProvinceName, System.StringComparison.Ordinal);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace DNTPersianUtils.Core.IranCities
             unchecked
             {
                 var hash = 17;
-                hash = hash * 23 + ProvinceName.GetHashCode();
+                hash = hash * 23 + System.StringComparer.Ordinal.GetHashCode(ProvinceName);
                 return hash;
             }
         }

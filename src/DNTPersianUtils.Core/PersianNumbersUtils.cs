@@ -109,10 +109,6 @@ namespace DNTPersianUtils.Core
                     case '\u0669':
                         dataChars[i] = '\u06F9';
                         break;
-
-                    default:
-                        dataChars[i] = dataChars[i];
-                        break;
                 }
             }
 
@@ -181,10 +177,6 @@ namespace DNTPersianUtils.Core
                     case '\u06F9':
                     case '\u0669':
                         dataChars[i] = '9';
-                        break;
-
-                    default:
-                        dataChars[i] = dataChars[i];
                         break;
                 }
             }

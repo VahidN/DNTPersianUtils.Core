@@ -1,77 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace DNTPersianUtils.Core
 {
-    /// <summary>
-    /// Number to word languages
-    /// </summary>
-    public enum Language
-    {
-        /// <summary>
-        /// English Language
-        /// </summary>
-        English,
-
-        /// <summary>
-        /// Persian Language
-        /// </summary>
-        Persian
-    }
-
-    /// <summary>
-    /// Digit's groups
-    /// </summary>
-    public enum DigitGroup
-    {
-        /// <summary>
-        /// Ones group
-        /// </summary>
-        Ones,
-
-        /// <summary>
-        /// Teens group
-        /// </summary>
-        Teens,
-
-        /// <summary>
-        /// Tens group
-        /// </summary>
-        Tens,
-
-        /// <summary>
-        /// Hundreds group
-        /// </summary>
-        Hundreds,
-
-        /// <summary>
-        /// Thousands group
-        /// </summary>
-        Thousands
-    }
-
-    /// <summary>
-    /// Equivalent names of a group
-    /// </summary>
-    public class NumberWord
-    {
-        /// <summary>
-        /// Digit's group
-        /// </summary>
-        public DigitGroup Group { set; get; }
-
-        /// <summary>
-        /// Number to word language
-        /// </summary>
-        public Language Language { set; get; }
-
-        /// <summary>
-        /// Equivalent names
-        /// </summary>
-        public IEnumerable<string> Names { get; set; } = new List<string>();
-    }
-
     /// <summary>
     /// Convert a number into words
     /// </summary>
