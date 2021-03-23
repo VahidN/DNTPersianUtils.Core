@@ -86,8 +86,9 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="persianDateTime">تاریخ و زمان شمسی</param>
         /// <param name="convertToUtc">Converts the value of the current DateTime to Coordinated Universal Time (UTC)</param>
+        /// <param name="beginningOfCentury">سال شروع قرن، اگر سال وارد شده دو رقمي است</param>
         /// <returns>تاریخ و زمان میلادی</returns>
-        public static DateTime? ToGregorianDateTime(this string persianDateTime, bool convertToUtc = false)
+        public static DateTime? ToGregorianDateTime(this string persianDateTime, bool convertToUtc = false, int beginningOfCentury = 1300)
         {
             if (string.IsNullOrWhiteSpace(persianDateTime))
             {
@@ -118,7 +119,7 @@ namespace DNTPersianUtils.Core
                 return null;
             }
 
-            var year = getYear(splitedDate[0]);
+            var year = getYear(splitedDate[0], beginningOfCentury);
             if (!year.HasValue)
             {
                 return null;
@@ -469,12 +470,12 @@ namespace DNTPersianUtils.Core
             return pMonth;
         }
 
-        private static int? getYear(string part)
+        private static int? getYear(string part, int beginningOfCentury)
         {
             var year = part.toNumber();
             if (!year.Item1) return null;
             var pYear = year.Item2;
-            if (part.Length == 2) pYear += 1300;
+            if (part.Length == 2) pYear += beginningOfCentury;
             return pYear;
         }
 

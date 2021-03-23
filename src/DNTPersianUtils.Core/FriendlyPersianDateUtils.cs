@@ -13,11 +13,11 @@ namespace DNTPersianUtils.Core
         /// نمایش فارسی روز دریافتی شمسی
         /// مانند سه شنبه ۲۱ دی ۱۳۹۵
         /// </summary>
-        public static string ToPersianDateTextify(int persianYear, int persianMonth, int persianDay)
+        public static string ToPersianDateTextify(int persianYear, int persianMonth, int persianDay, int beginningOfCentury = 1300)
         {
             if (persianYear <= 99)
             {
-                persianYear += 1300;
+                persianYear += beginningOfCentury;
             }
 
             var strDay = PersianCulture.GetPersianWeekDayName(persianYear, persianMonth, persianDay);
