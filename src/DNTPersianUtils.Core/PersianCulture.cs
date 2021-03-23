@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Reflection;
 using System.Threading;
@@ -366,6 +367,8 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// اصلاح تقویم فرهنگ فارسی
         /// </summary>
+        [SuppressMessage("Microsoft.Usage", "S3011:Make sure that this accessibility bypass is safe here",
+                    Justification = "We need this to correct a mistake!")]
         private static CultureInfo getPersianCulture()
         {
             var persianCulture = new CultureInfo("fa-IR")
