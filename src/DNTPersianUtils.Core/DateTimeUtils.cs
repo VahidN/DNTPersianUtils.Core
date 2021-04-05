@@ -13,14 +13,14 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public static readonly TimeZoneInfo IranStandardTime =
             TimeZoneInfo.GetSystemTimeZones().FirstOrDefault(timeZoneInfo =>
-                timeZoneInfo.StandardName.Contains("Iran") ||
-                timeZoneInfo.StandardName.Contains("Tehran") ||
-                timeZoneInfo.Id.Contains("Iran") ||
-                timeZoneInfo.Id.Contains("Tehran")) ??
-#if NET46
-                throw new PlatformNotSupportedException($"This OS[{Environment.OSVersion.Platform}, {Environment.OSVersion.Version}] doesn't support IranStandardTime.");
+                timeZoneInfo.StandardName.Contains("Iran", StringComparison.OrdinalIgnoreCase) ||
+                timeZoneInfo.StandardName.Contains("Tehran", StringComparison.OrdinalIgnoreCase) ||
+                timeZoneInfo.Id.Contains("Iran", StringComparison.OrdinalIgnoreCase) ||
+                timeZoneInfo.Id.Contains("Tehran", StringComparison.OrdinalIgnoreCase)) ??
+#if !NETSTANDARD1_3
+        IranTimeZoneInfo.Instance;
 #else
-                throw new PlatformNotSupportedException($"This OS[{System.Runtime.InteropServices.RuntimeInformation.OSDescription}] doesn't support IranStandardTime.");
+        throw new PlatformNotSupportedException($"This OS[{System.Runtime.InteropServices.RuntimeInformation.OSDescription}] doesn't support IranStandardTime.");
 #endif
 
         /// <summary>

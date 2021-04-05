@@ -12,13 +12,20 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Determines whether the specified value of the object is valid.
         /// </summary>
-        public override bool IsValid(object value)
+        public override bool IsValid(object? value)
         {
-            if (string.IsNullOrWhiteSpace(value as string))
+            if (value is null)
             {
                 return true; // returning false, makes this field required.
             }
-            return value.ToString().IsValidIranianPhoneNumber();
+
+            var valStr = value.ToString();
+            if (string.IsNullOrWhiteSpace(valStr))
+            {
+                return true; // returning false, makes this field required.
+            }
+
+            return valStr.IsValidIranianPhoneNumber();
         }
     }
 }

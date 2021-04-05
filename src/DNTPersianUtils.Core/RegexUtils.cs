@@ -36,7 +36,7 @@ namespace DNTPersianUtils.Core
         public static bool ContainsFarsi(this string txt)
         {
             return !string.IsNullOrEmpty(txt) &&
-                _matchArabicHebrew.IsMatch(txt.StripHtmlTags().Replace(",", ""));
+                _matchArabicHebrew.IsMatch(txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase));
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace DNTPersianUtils.Core
         public static bool ContainsOnlyFarsiLetters(this string txt)
         {
             return !string.IsNullOrEmpty(txt) &&
-                   _matchOnlyPersianLetters.IsMatch(txt.StripHtmlTags().Replace(",", ""));
+                   _matchOnlyPersianLetters.IsMatch(txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase));
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace DNTPersianUtils.Core
         {
             return string.IsNullOrEmpty(text) ?
                         string.Empty :
-                        _matchAllTags.Replace(text, " ").Replace("&nbsp;", " ");
+                        _matchAllTags.Replace(text, " ").Replace("&nbsp;", " ", StringComparison.OrdinalIgnoreCase);
         }
 
         /// <summary>

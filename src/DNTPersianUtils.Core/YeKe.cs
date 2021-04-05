@@ -124,9 +124,9 @@ namespace DNTPersianUtils.Core
         /// <returns>Processed Text</returns>
         public static string ApplyCorrectYeKe(this object data)
         {
-            return data == null ?
+            return data is null ?
                         string.Empty :
-                        Convert.ToString(data, CultureInfo.InvariantCulture).ApplyCorrectYeKe();
+                        Convert.ToString(data, CultureInfo.InvariantCulture)?.ApplyCorrectYeKe() ?? string.Empty;
         }
     }
 }

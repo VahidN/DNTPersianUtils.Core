@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -109,8 +110,8 @@ namespace DNTPersianUtils.Core.Normalizer
             const char chr1600 = (char)1600; //ـ=1600
             const char chr8204 = (char)8204; //‌=8204
 
-            return text.Replace(chr1600.ToString(), "")
-                       .Replace(chr8204.ToString(), "");
+            return text.Replace(chr1600.ToString(), "", StringComparison.OrdinalIgnoreCase)
+                       .Replace(chr8204.ToString(), "", StringComparison.OrdinalIgnoreCase);
         }
 
         /// <summary>

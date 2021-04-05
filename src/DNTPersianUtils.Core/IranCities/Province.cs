@@ -31,7 +31,7 @@ namespace DNTPersianUtils.Core.IranCities
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is not Province province)
                 return false;

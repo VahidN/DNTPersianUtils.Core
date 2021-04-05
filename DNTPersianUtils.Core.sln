@@ -17,6 +17,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNTPersianUtils.Core.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.PerformanceTests", "src\DNTPersianUtils.Core.PerformanceTests\DNTPersianUtils.Core.PerformanceTests.csproj", "{8A5B3E1A-9CFC-4CE8-A555-AB70500DA9AD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DNTPersianUtils.Core.BlazorWasmTests", "DNTPersianUtils.Core.BlazorWasmTests", "{FF1C1964-6074-4482-8F39-CA1464329339}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.BlazorWasmTests.Client", "src\DNTPersianUtils.Core.BlazorWasmTests\Client\DNTPersianUtils.Core.BlazorWasmTests.Client.csproj", "{FC2B4650-E680-43E6-9CAD-55BA49761AB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.BlazorWasmTests.Server", "src\DNTPersianUtils.Core.BlazorWasmTests\Server\DNTPersianUtils.Core.BlazorWasmTests.Server.csproj", "{B9767166-FADC-4B57-AE77-7B57E661E292}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.BlazorWasmTests.Shared", "src\DNTPersianUtils.Core.BlazorWasmTests\Shared\DNTPersianUtils.Core.BlazorWasmTests.Shared.csproj", "{D7AEE972-1AF5-44E6-AB90-0E0888B05A7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|Any CPU = Release|Any CPU
@@ -28,6 +36,12 @@ Global
 		{FB2FB4FF-5207-4AE9-8D61-0851F14E822E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A5B3E1A-9CFC-4CE8-A555-AB70500DA9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A5B3E1A-9CFC-4CE8-A555-AB70500DA9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2B4650-E680-43E6-9CAD-55BA49761AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2B4650-E680-43E6-9CAD-55BA49761AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9767166-FADC-4B57-AE77-7B57E661E292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9767166-FADC-4B57-AE77-7B57E661E292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7AEE972-1AF5-44E6-AB90-0E0888B05A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7AEE972-1AF5-44E6-AB90-0E0888B05A7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +50,9 @@ Global
 		{EDEC6EA4-854B-4019-9BBB-4650E56DE69A} = {28417517-CA05-4924-8F33-0CE11400F296}
 		{FB2FB4FF-5207-4AE9-8D61-0851F14E822E} = {28417517-CA05-4924-8F33-0CE11400F296}
 		{8A5B3E1A-9CFC-4CE8-A555-AB70500DA9AD} = {28417517-CA05-4924-8F33-0CE11400F296}
+		{FF1C1964-6074-4482-8F39-CA1464329339} = {28417517-CA05-4924-8F33-0CE11400F296}
+		{FC2B4650-E680-43E6-9CAD-55BA49761AB6} = {FF1C1964-6074-4482-8F39-CA1464329339}
+		{B9767166-FADC-4B57-AE77-7B57E661E292} = {FF1C1964-6074-4482-8F39-CA1464329339}
+		{D7AEE972-1AF5-44E6-AB90-0E0888B05A7D} = {FF1C1964-6074-4482-8F39-CA1464329339}
 	EndGlobalSection
 EndGlobal

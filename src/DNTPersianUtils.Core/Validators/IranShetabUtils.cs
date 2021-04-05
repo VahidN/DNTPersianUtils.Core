@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace DNTPersianUtils.Core
@@ -21,7 +22,7 @@ namespace DNTPersianUtils.Core
                 return false;
             }
 
-            creditCardNumber = creditCardNumber.Replace("-", string.Empty).Replace(" ", string.Empty);
+            creditCardNumber = creditCardNumber.Replace("-", string.Empty, StringComparison.OrdinalIgnoreCase).Replace(" ", string.Empty, StringComparison.OrdinalIgnoreCase);
 
             if (creditCardNumber.Length != 16)
             {

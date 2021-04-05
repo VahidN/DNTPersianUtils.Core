@@ -98,8 +98,8 @@ namespace DNTPersianUtils.Core
             persianDateTime = persianDateTime.Trim().ToEnglishNumbers();
             var splitedDateTime = persianDateTime.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            var rawTime = Array.Find(splitedDateTime, s => s.Contains(':'));
-            var rawDate = Array.Find(splitedDateTime, s => !s.Contains(':'));
+            var rawTime = Array.Find(splitedDateTime, s => s.Contains(':', StringComparison.OrdinalIgnoreCase));
+            var rawDate = Array.Find(splitedDateTime, s => !s.Contains(':', StringComparison.OrdinalIgnoreCase));
 
             var splitedDate = rawDate?.Split('/', ',', '؍', '.', '-');
             if (splitedDate?.Length != 3)
