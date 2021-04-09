@@ -10,6 +10,11 @@ namespace DNTPersianUtils.Core
     public sealed class ShouldContainPersianLettersOrNumbersAttribute : ValidationAttribute
     {
         /// <summary>
+        /// Can a user enter a text containing whitespaces
+        /// </summary>
+        public bool AllowWhitespace { set; get; }
+
+        /// <summary>
         /// Determines whether the specified value of the object is valid.
         /// </summary>
         public override bool IsValid(object? value)
@@ -25,7 +30,7 @@ namespace DNTPersianUtils.Core
                 return true; // returning false, makes this field required.
             }
 
-            return valStr.ContainsFarsi();
+            return valStr.ContainsFarsi(AllowWhitespace);
         }
     }
 }

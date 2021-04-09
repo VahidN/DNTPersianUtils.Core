@@ -25,7 +25,7 @@ namespace DNTPersianUtils.Core
                 text = text.ToPersianNumbers();
             }
 
-            if (!text.ContainsFarsi())
+            if (!text.ContainsFarsi(allowWhitespace: true))
             {
                 return text;
             }

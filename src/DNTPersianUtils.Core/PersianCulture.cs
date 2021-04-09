@@ -129,7 +129,7 @@ namespace DNTPersianUtils.Core
         {
             if (dayNumber < 1 || dayNumber > 31)
             {
-                throw new ArgumentOutOfRangeException($"{nameof(dayNumber)} must be between 1, 31.");
+                throw new ArgumentOutOfRangeException(nameof(dayNumber), $"{nameof(dayNumber)} must be between 1, 31.");
             }
             return PersianMonthDayNumberNames[dayNumber];
         }
@@ -141,7 +141,7 @@ namespace DNTPersianUtils.Core
         {
             if (monthNumber < 1 || monthNumber > 12)
             {
-                throw new ArgumentOutOfRangeException($"{nameof(monthNumber)} must be between 1, 12.");
+                throw new ArgumentOutOfRangeException(nameof(monthNumber), $"{nameof(monthNumber)} must be between 1, 12.");
             }
             return PersianMonthNames[monthNumber];
         }

@@ -16,7 +16,7 @@
         public static string ApplyRle(this string text)
         {
             if (string.IsNullOrWhiteSpace(text)) return string.Empty;
-            return text.ContainsFarsi() ? $"{RleChar}{text}" : text;
+            return text.ContainsFarsi(allowWhitespace: true) ? $"{RleChar}{text}" : text;
         }
     }
 }

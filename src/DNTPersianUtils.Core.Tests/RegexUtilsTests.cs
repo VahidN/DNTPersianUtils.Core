@@ -24,7 +24,7 @@ namespace DNTPersianUtils.Core.Tests
         {
             Assert.IsTrue(text.ContainsFarsi());
         }
-        
+
         [DataTestMethod]
         [DataRow("this is not rtl")]
         [DataRow("this-is-not-rtl")]
@@ -33,7 +33,7 @@ namespace DNTPersianUtils.Core.Tests
         {
             Assert.IsFalse(text.ContainsFarsi());
         }
-        
+
         [DataTestMethod]
         [DataRow("۱۲۳")]
         [DataRow("۴۵۶۷۸")]
@@ -52,7 +52,7 @@ namespace DNTPersianUtils.Core.Tests
         {
             Assert.IsFalse(text.ContainsOnlyPersianNumbers());
         }
-        
+
         [DataTestMethod]
         [DataRow("الب")]
         [DataRow("تثج")]
@@ -61,7 +61,15 @@ namespace DNTPersianUtils.Core.Tests
         {
             Assert.IsTrue(text.ContainsOnlyFarsiLetters());
         }
-        
+
+        [DataTestMethod]
+        [DataRow("فارسي است")]
+        [DataRow("تست")]
+        public void Test_ContainsOnlyFarsiLetters_With_Whitespaces_Works(string text)
+        {
+            Assert.IsTrue(text.ContainsOnlyFarsiLetters(allowWhitespace: true));
+        }
+
         [DataTestMethod]
         [DataRow("اaلب")]
         [DataRow("a")]
@@ -74,7 +82,7 @@ namespace DNTPersianUtils.Core.Tests
         {
             Assert.IsFalse(text.ContainsOnlyFarsiLetters());
         }
-       
+
         [DataTestMethod]
         [DataRow("دوست​ها")] // 8203    \u200B
         [DataRow("دوست‌ها")] // 8204    \u200C

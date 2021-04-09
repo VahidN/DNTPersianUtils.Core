@@ -33,19 +33,50 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// آیا عبارت مدنظر حاوی حروف و اعداد فارسی است؟
         /// </summary>
-        public static bool ContainsFarsi(this string txt)
+        public static bool ContainsFarsi(this string txt, bool allowWhitespace = false)
         {
-            return !string.IsNullOrEmpty(txt) &&
-                _matchArabicHebrew.IsMatch(txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase));
+            if (string.IsNullOrEmpty(txt))
+            {
+                return false;
+            }
+
+            var input = txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase);
+            if (allowWhitespace)
+            {
+                input = input.RemoveAllWhitespaces();
+            }
+            return _matchArabicHebrew.IsMatch(input);
         }
 
         /// <summary>
         /// آیا عبارت مدنظر فقط حاوی حروف فارسی است؟
         /// </summary>
-        public static bool ContainsOnlyFarsiLetters(this string txt)
+        public static bool ContainsOnlyFarsiLetters(this string txt, bool allowWhitespace = false)
         {
-            return !string.IsNullOrEmpty(txt) &&
-                   _matchOnlyPersianLetters.IsMatch(txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase));
+            if (string.IsNullOrEmpty(txt))
+            {
+                return false;
+            }
+
+            var input = txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase);
+            if (allowWhitespace)
+            {
+                input = input.RemoveAllWhitespaces();
+            }
+            return _matchOnlyPersianLetters.IsMatch(input);
+        }
+
+        /// <summary>
+        /// حذف تمام فواصل خالي از يك رشته
+        /// </summary>
+        public static string RemoveAllWhitespaces(this string txt)
+        {
+            if (string.IsNullOrEmpty(txt))
+            {
+                return string.Empty;
+            }
+
+            return string.Join("", txt.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
         }
 
         /// <summary>
@@ -69,7 +100,7 @@ namespace DNTPersianUtils.Core
             if (string.IsNullOrWhiteSpace(body))
                 return string.Empty;
 
-            if (ContainsFarsi(body))
+            if (ContainsFarsi(body, allowWhitespace: true))
                 return $"<div style='text-align: right; font-family:{fontFamily}; font-size:{fontSize};' dir='rtl'>{body}</div>";
             return $"<div style='text-align: left; font-family:{fontFamily}; font-size:{fontSize};' dir='ltr'>{body}</div>";
         }
@@ -77,10 +108,19 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// آیا عبارت مدنظر فقط حاوی اعداد فارسی است؟
         /// </summary>
-        public static bool ContainsOnlyPersianNumbers(this string text)
+        public static bool ContainsOnlyPersianNumbers(this string text, bool allowWhitespace = false)
         {
-            return !string.IsNullOrEmpty(text) &&
-                   _matchOnlyPersianNumbersRange.IsMatch(text.StripHtmlTags());
+            if (string.IsNullOrEmpty(text))
+            {
+                return false;
+            }
+
+            var input = text.StripHtmlTags();
+            if (allowWhitespace)
+            {
+                input = input.RemoveAllWhitespaces();
+            }
+            return _matchOnlyPersianNumbersRange.IsMatch(input);
         }
 
         /// <summary>
