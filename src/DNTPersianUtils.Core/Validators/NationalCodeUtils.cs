@@ -12,7 +12,12 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public static bool IsNumber(this string data)
         {
-            return !string.IsNullOrWhiteSpace(data) && data.All(char.IsDigit);
+            if (string.IsNullOrWhiteSpace(data))
+            {
+                return false;
+            }
+
+            return data.ToEnglishNumbers().All(char.IsDigit);
         }
 
         /// <summary>
@@ -26,6 +31,8 @@ namespace DNTPersianUtils.Core
             {
                 return false;
             }
+
+            nationalCode = nationalCode.ToEnglishNumbers();
 
             nationalCode = nationalCode.PadLeft(10, '0');
 

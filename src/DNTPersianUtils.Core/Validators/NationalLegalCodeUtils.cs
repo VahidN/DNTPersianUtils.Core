@@ -20,6 +20,7 @@ namespace DNTPersianUtils.Core
                 return false;
             }
 
+            nationalLegalCode = nationalLegalCode.ToEnglishNumbers();
             nationalLegalCode = nationalLegalCode.PadLeft(11, '0');
             const int nationalLegalCodeLength = 11;
 
@@ -34,7 +35,7 @@ namespace DNTPersianUtils.Core
             }
 
             int beforeControlNumber = (int)char.GetNumericValue(nationalLegalCode[9]) + 2;
-            int[] coefficientStatic= { 29, 27, 23, 19, 17, 29, 27, 23, 19, 17 };
+            int[] coefficientStatic = { 29, 27, 23, 19, 17, 29, 27, 23, 19, 17 };
 
             var sum = 0;
             for (var i = 0; i < nationalLegalCode.Length - 1; i++)

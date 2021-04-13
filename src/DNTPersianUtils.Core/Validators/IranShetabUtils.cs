@@ -22,7 +22,9 @@ namespace DNTPersianUtils.Core
                 return false;
             }
 
-            creditCardNumber = creditCardNumber.Replace("-", string.Empty, StringComparison.OrdinalIgnoreCase).Replace(" ", string.Empty, StringComparison.OrdinalIgnoreCase);
+            creditCardNumber = creditCardNumber.ToEnglishNumbers();
+            creditCardNumber = creditCardNumber.Replace("-", string.Empty, StringComparison.OrdinalIgnoreCase)
+                                            .Replace(" ", string.Empty, StringComparison.OrdinalIgnoreCase);
 
             if (creditCardNumber.Length != 16)
             {

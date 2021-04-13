@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>DNTPersianUtils.Core is a collection of Persian helper extension methods.</Description>
-    <VersionPrefix>4.2.0</VersionPrefix>
+    <VersionPrefix>4.2.1</VersionPrefix>
     <Authors>Vahid Nasiri</Authors>
     <TargetFrameworks>net5.0;netstandard2.1;netstandard2.0;net46;netstandard1.3;</TargetFrameworks>
     <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">net5.0;netstandard2.1;netstandard1.3;netstandard2.0</TargetFrameworks>

@@ -20,6 +20,8 @@ namespace DNTPersianUtils.Core
                 return false;
             }
 
+            iban = iban.ToEnglishNumbers();
+
             if (iban.Length < 4 || iban[0] == ' ' || iban[1] == ' ' || iban[2] == ' ' || iban[3] == ' ')
             {
                 return false;

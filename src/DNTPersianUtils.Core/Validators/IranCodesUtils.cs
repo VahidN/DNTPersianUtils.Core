@@ -17,8 +17,13 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public static bool IsValidIranianMobileNumber(this string mobileNumber)
         {
-            return !string.IsNullOrWhiteSpace(mobileNumber) &&
-                (_matchIranianMobileNumber1.IsMatch(mobileNumber) || _matchIranianMobileNumber2.IsMatch(mobileNumber));
+            if (string.IsNullOrWhiteSpace(mobileNumber))
+            {
+                return false;
+            }
+
+            mobileNumber = mobileNumber.ToEnglishNumbers();
+            return _matchIranianMobileNumber1.IsMatch(mobileNumber) || _matchIranianMobileNumber2.IsMatch(mobileNumber);
         }
 
         /// <summary>
@@ -26,6 +31,12 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public static bool IsValidIranianPhoneNumber(this string phoneNumber)
         {
+            if (string.IsNullOrWhiteSpace(phoneNumber))
+            {
+                return false;
+            }
+
+            phoneNumber = phoneNumber.ToEnglishNumbers();
             return !string.IsNullOrWhiteSpace(phoneNumber) && _matchIranianPhoneNumber.IsMatch(phoneNumber);
         }
 
@@ -34,6 +45,12 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public static bool IsValidIranianPostalCode(this string postalCode)
         {
+            if (string.IsNullOrWhiteSpace(postalCode))
+            {
+                return false;
+            }
+
+            postalCode = postalCode.ToEnglishNumbers();
             return !string.IsNullOrWhiteSpace(postalCode) && _matchIranianPostalCode.IsMatch(postalCode);
         }
     }
