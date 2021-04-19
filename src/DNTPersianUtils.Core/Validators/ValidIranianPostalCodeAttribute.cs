@@ -27,5 +27,25 @@ namespace DNTPersianUtils.Core
 
             return valStr.IsValidIranianPostalCode();
         }
+
+        /// <summary>
+        /// Determines whether the specified value of the object is valid.
+        /// </summary>
+        protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
+        {
+            if (IsValid(value))
+            {
+                return null;
+            }
+
+            if (validationContext == null)
+            {
+                throw new ArgumentNullException(nameof(validationContext));
+            }
+
+            return string.IsNullOrWhiteSpace(validationContext.MemberName)
+                ? new ValidationResult(ErrorMessage)
+                : new ValidationResult(ErrorMessage, new[] { validationContext.MemberName });
+        }
     }
 }
