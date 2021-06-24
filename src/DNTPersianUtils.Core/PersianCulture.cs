@@ -16,7 +16,7 @@ namespace DNTPersianUtils.Core
         /// معادل فارسی روزهای هفته میلادی
         /// </summary>
         public static IDictionary<DayOfWeek, string> PersianDayWeekNames { get; } = new Dictionary<DayOfWeek, string>
-          {
+        {
             {DayOfWeek.Saturday, "شنبه"},
             {DayOfWeek.Sunday,  "یک شنبه"},
             {DayOfWeek.Monday,  "دو شنبه"},
@@ -24,7 +24,21 @@ namespace DNTPersianUtils.Core
             {DayOfWeek.Wednesday, "چهار شنبه"},
             {DayOfWeek.Thursday, "پنج شنبه"},
             {DayOfWeek.Friday, "جمعه"}
-          };
+        };
+
+        /// <summary>
+        /// معادل کوتاه فارسی روزهای هفته میلادی
+        /// </summary>
+        public static IDictionary<DayOfWeek, string> ShortPersianDayNamesOfWeek { get; } = new Dictionary<DayOfWeek, string>
+        {
+            {DayOfWeek.Saturday, "ش"},
+            {DayOfWeek.Sunday,  "ی"},
+            {DayOfWeek.Monday,  "د"},
+            {DayOfWeek.Tuesday, "س"},
+            {DayOfWeek.Wednesday, "چ"},
+            {DayOfWeek.Thursday, "پ"},
+            {DayOfWeek.Friday, "ج"}
+        };
 
         /// <summary>
         /// عدد به حروف روزهای شمسی
@@ -263,10 +277,15 @@ namespace DNTPersianUtils.Core
         public static PersianMonth GetPersianMonthStartAndEndDates(this int persianYear, int persianMonth)
         {
             var persianCalendar = new PersianCalendar();
+            var startDate = persianCalendar.ToDateTime(persianYear, persianMonth, 1, 0, 0, 0, 0);
+            var endDate = persianCalendar.ToDateTime(persianYear, persianMonth, persianYear.GetPersianMonthLastDay(persianMonth), 23, 59, 59, 0);
             return new PersianMonth
             {
-                StartDate = persianCalendar.ToDateTime(persianYear, persianMonth, 1, 0, 0, 0, 0),
-                EndDate = persianCalendar.ToDateTime(persianYear, persianMonth, persianYear.GetPersianMonthLastDay(persianMonth), 23, 59, 59, 0)
+                StartDate = startDate,
+                EndDate = endDate,
+                LastDayNumber = GetPersianMonthLastDay(persianYear, persianMonth),
+                StartDateDayOfWeek = startDate.DayOfWeek.GetPersianWeekDayNumber(),
+                EndDateDayOfWeek = endDate.DayOfWeek.GetPersianWeekDayNumber()
             };
         }
 
@@ -362,6 +381,43 @@ namespace DNTPersianUtils.Core
                 return persianCalendar.IsLeapYear(persianYear) ? 30 : 29;
             }
             return 30;
+        }
+
+        /// <summary>
+        /// دریافت معادل عدد شمسی نام روز هفته‌ی میلادی؛ شروع شده از عدد یک.
+        /// برای مثال سان‌دی معادل روز 2 هفته شمسی است
+        /// </summary>
+        public static int GetPersianWeekDayNumber(this DayOfWeek dayOfWeek)
+        {
+            return dayOfWeek switch
+            {
+                DayOfWeek.Saturday => 1,
+                DayOfWeek.Sunday => 2,
+                DayOfWeek.Monday => 3,
+                DayOfWeek.Tuesday => 4,
+                DayOfWeek.Wednesday => 5,
+                DayOfWeek.Thursday => 6,
+                DayOfWeek.Friday => 7,
+                _ => throw new ArgumentOutOfRangeException(nameof(dayOfWeek), "روز وارد شده معتبر نیست."),
+            };
+        }
+
+        /// <summary>
+        /// دریافت معادل عدد شمسی نام روز هفته‌ی میلادی؛ شروع شده از عدد یک.
+        /// برای مثال سان‌دی معادل روز 2 هفته شمسی است
+        /// </summary>
+        public static int GetPersianWeekDayNumber(this DateTime dateTime)
+        {
+            return GetPersianWeekDayNumber(dateTime.DayOfWeek);
+        }
+
+        /// <summary>
+        /// دریافت معادل عدد شمسی نام روز هفته‌ی میلادی؛ شروع شده از عدد یک.
+        /// برای مثال سان‌دی معادل روز 2 هفته شمسی است
+        /// </summary>
+        public static int GetPersianWeekDayNumber(this int persianYear, int persianMonth)
+        {
+            return GetPersianWeekDayNumber(new PersianCalendar().ToDateTime(persianYear, persianMonth, 1, 0, 0, 0, 0));
         }
 
         /// <summary>

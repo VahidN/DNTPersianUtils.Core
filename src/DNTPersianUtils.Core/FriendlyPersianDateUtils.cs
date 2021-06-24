@@ -74,7 +74,7 @@ namespace DNTPersianUtils.Core
         /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
         /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
         /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
-        /// <param name="includePersianDate">آيا تاريخ نيز به نتيجه اضافه شود؟</param>
+        /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(
             this DateTime dt, DateTime comparisonBase, bool appendHhMm = true, bool convertToIranTimeZone = true, bool includePersianDate = true)
@@ -90,7 +90,7 @@ namespace DNTPersianUtils.Core
         /// <param name="dt">تاریخ ورودی</param>
         /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
         /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
-        /// <param name="includePersianDate">آيا تاريخ نيز به نتيجه اضافه شود؟</param>
+        /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(
             this DateTime dt, bool appendHhMm = true, bool convertToIranTimeZone = true, bool includePersianDate = true)
@@ -107,7 +107,7 @@ namespace DNTPersianUtils.Core
         /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
         /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
         /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
-        /// <param name="includePersianDate">آيا تاريخ نيز به نتيجه اضافه شود؟</param>
+        /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(
             this DateTimeOffset dt, DateTime comparisonBase,
@@ -123,7 +123,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="dt">تاریخ ورودی</param>
         /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
-        /// <param name="includePersianDate">آيا تاريخ نيز به نتيجه اضافه شود؟</param>
+        /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
         /// <returns>نمایش دوستانه</returns>
         public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt, bool appendHhMm = true, bool includePersianDate = true)
         {

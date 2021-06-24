@@ -896,6 +896,39 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
+        /// لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
+        /// از سال 1395 تا پایان سال 1398
+        /// </summary>
+        /// <param name="date">تاریخ</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static IEnumerable<string>? GetHolidays(this DateTime date, bool convertToIranTimeZone = true)
+        {
+            if (date.Kind == DateTimeKind.Utc && convertToIranTimeZone)
+            {
+                date = date.ToIranTimeZoneDateTime();
+            }
+
+            var result = Instance.Where(x => x.Holiday.Year == date.Year &&
+                                            x.Holiday.Month == date.Month &&
+                                            x.Holiday.Day == date.Day)
+                                .Select(x => x.Description)
+                                .ToList();
+            return result.Count > 0 ? result : null;
+        }
+
+        /// <summary>
+        /// لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
+        /// از سال 1395 تا پایان سال 1398
+        /// </summary>
+        /// <param name="date">تاریخ</param>
+        /// <param name="dateTimeOffsetPart"></param>
+        public static IEnumerable<string>? GetHolidays(this DateTimeOffset date, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        {
+            var fromDt = date.GetDateTimeOffsetPart(dateTimeOffsetPart);
+            return GetHolidays(fromDt);
+        }
+
+        /// <summary>
         /// تشخیص تعطیلات رسمی ایران
         /// از سال 1395 تا پایان سال 1398
         /// </summary>
@@ -909,8 +942,8 @@ namespace DNTPersianUtils.Core
             }
 
             return Instance.Any(x => x.Holiday.Year == date.Year &&
-                                     x.Holiday.Month == date.Month &&
-                                     x.Holiday.Day == date.Day);
+                                    x.Holiday.Month == date.Month &&
+                                    x.Holiday.Day == date.Day);
         }
 
         /// <summary>

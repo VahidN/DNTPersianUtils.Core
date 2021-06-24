@@ -63,7 +63,7 @@ namespace DNTPersianUtils.Core.Tests
         }
 
         [DataTestMethod]
-        [DataRow("فارسي است")]
+        [DataRow("فارسی است")]
         [DataRow("تست")]
         public void Test_ContainsOnlyFarsiLetters_With_Whitespaces_Works(string text)
         {

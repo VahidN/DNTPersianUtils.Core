@@ -210,5 +210,15 @@ namespace DNTPersianUtils.Core
         /// <param name="offsetInHours">Offset</param>
         public static DateTimeOffset ToDateTimeOffset(this DateTime dt, double offsetInHours = 0)
             => ToDateTimeOffset(dt, offsetInHours == 0 ? TimeSpan.Zero : TimeSpan.FromHours(offsetInHours));
+
+        /// <summary>
+        /// Retruns dt.Date which is the start of the day
+        /// </summary>
+        public static DateTime GetStartOfDay(this DateTime dt) => dt.Date;
+
+        /// <summary>
+        /// Retruns the end of the day
+        /// </summary>
+        public static DateTime GetEndOfDay(this DateTime dt) => dt.Date.AddTicks(-1).AddDays(1);
     }
 }

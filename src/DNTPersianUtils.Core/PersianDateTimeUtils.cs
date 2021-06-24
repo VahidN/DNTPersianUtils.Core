@@ -80,13 +80,24 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
+        /// تبدیل به تاریخ شمسی
+        /// </summary>
+        /// <param name="persianYear">سال شمسی</param>
+        /// <param name="persianMonth">ماه شمسی</param>
+        /// <param name="persianDay">روز شمسی</param>
+        public static DateTime ToPersianDate(this int persianYear, int persianMonth, int persianDay)
+        {
+            return new PersianCalendar().ToDateTime(persianYear, persianMonth, persianDay, 0, 0, 0, 0);
+        }
+
+        /// <summary>
         /// تبدیل تاریخ و زمان رشته‌ای شمسی به میلادی
         /// با قالب‌های پشتیبانی شده‌ی ۹۰/۸/۱۴ , 1395/11/3 17:30 , ۱۳۹۰/۸/۱۴ , ۹۰-۸-۱۴ , ۱۳۹۰-۸-۱۴
         /// در اینجا اگر رشته‌ی مدنظر قابل تبدیل نباشد، مقدار نال را دریافت خواهید کرد
         /// </summary>
         /// <param name="persianDateTime">تاریخ و زمان شمسی</param>
         /// <param name="convertToUtc">Converts the value of the current DateTime to Coordinated Universal Time (UTC)</param>
-        /// <param name="beginningOfCentury">سال شروع قرن، اگر سال وارد شده دو رقمي است</param>
+        /// <param name="beginningOfCentury">سال شروع قرن، اگر سال وارد شده دو رقمی است</param>
         /// <returns>تاریخ و زمان میلادی</returns>
         public static DateTime? ToGregorianDateTime(this string persianDateTime, bool convertToUtc = false, int beginningOfCentury = 1300)
         {
@@ -351,7 +362,14 @@ namespace DNTPersianUtils.Core
             var persianYear = persianCalendar.GetYear(gregorianDate);
             var persianMonth = persianCalendar.GetMonth(gregorianDate);
             var persianDay = persianCalendar.GetDayOfMonth(gregorianDate);
-            return new PersianDay { Year = persianYear, Month = persianMonth, Day = persianDay };
+            var holidays = gregorianDate.GetHolidays(convertToIranTimeZone);
+            return new PersianDay
+            {
+                Year = persianYear,
+                Month = persianMonth,
+                Day = persianDay,
+                Holidays = holidays
+            };
         }
 
         /// <summary>

@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using static System.FormattableString;
 
 namespace DNTPersianUtils.Core
@@ -22,6 +23,11 @@ namespace DNTPersianUtils.Core
         /// روز شمسی
         /// </summary>
         public int Day { set; get; }
+
+        /// <summary>
+        /// در صورت تعطیل رسمی بودن، با عناوین مناسبت‌ها مقدار دهی خواهد شد
+        /// </summary>
+        public IEnumerable<string>? Holidays { set; get; }
 
         /// <summary>
         /// اجزای روز شمسی

@@ -67,7 +67,7 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
-        /// حذف تمام فواصل خالي از يك رشته
+        /// حذف تمام فواصل خالی از یک رشته
         /// </summary>
         public static string RemoveAllWhitespaces(this string txt)
         {
