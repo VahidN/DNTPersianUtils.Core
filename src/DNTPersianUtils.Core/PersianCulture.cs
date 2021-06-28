@@ -27,6 +27,20 @@ namespace DNTPersianUtils.Core
         };
 
         /// <summary>
+        /// معادل فارسی روزهای هفته میلادی
+        /// </summary>
+        public static IEnumerable<string> PersianDayNamesOfWeek { get; } = new List<string>
+        {
+            "شنبه",
+            "یک شنبه",
+            "دو شنبه",
+            "سه شنبه",
+            "چهار شنبه",
+            "پنج شنبه",
+            "جمعه"
+        };
+
+        /// <summary>
         /// معادل کوتاه فارسی روزهای هفته میلادی
         /// </summary>
         public static IDictionary<DayOfWeek, string> ShortPersianDayNamesOfWeek { get; } = new Dictionary<DayOfWeek, string>
@@ -38,6 +52,20 @@ namespace DNTPersianUtils.Core
             {DayOfWeek.Wednesday, "چ"},
             {DayOfWeek.Thursday, "پ"},
             {DayOfWeek.Friday, "ج"}
+        };
+
+        /// <summary>
+        /// معادل کوتاه فارسی روزهای هفته میلادی
+        /// </summary>
+        public static IEnumerable<string> ShortPersianDayWeekNames { get; } = new List<string>
+        {
+            "ش",
+            "ی",
+            "د",
+            "س",
+            "چ",
+            "پ",
+            "ج"
         };
 
         /// <summary>
