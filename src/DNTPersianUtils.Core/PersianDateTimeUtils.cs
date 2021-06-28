@@ -186,10 +186,13 @@ namespace DNTPersianUtils.Core
         /// در اینجا اگر رشته‌ی مدنظر قابل تبدیل نباشد، مقدار نال را دریافت خواهید کرد
         /// </summary>
         /// <param name="persianDateTime">تاریخ و زمان شمسی</param>
+        /// <param name="convertToUtc">Converts the value of the current DateTime to Coordinated Universal Time (UTC)</param>
+        /// <param name="beginningOfCentury">سال شروع قرن، اگر سال وارد شده دو رقمی است</param>
         /// <returns>تاریخ و زمان میلادی</returns>
-        public static DateTimeOffset? ToGregorianDateTimeOffset(this string persianDateTime)
+        public static DateTimeOffset? ToGregorianDateTimeOffset(
+            this string persianDateTime, bool convertToUtc = false, int beginningOfCentury = 1300)
         {
-            var dateTime = persianDateTime.ToGregorianDateTime();
+            var dateTime = persianDateTime.ToGregorianDateTime(convertToUtc, beginningOfCentury);
             if (dateTime == null)
             {
                 return null;
