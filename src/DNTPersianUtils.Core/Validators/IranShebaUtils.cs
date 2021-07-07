@@ -13,7 +13,7 @@ namespace DNTPersianUtils.Core
         /// Validate IBAN (International Bank Account Number, Sheba)
         /// </summary>
         /// <param name="iban">International Bank Account Number, Sheba</param>
-        public static bool IsValidIranShebaNumber(this string iban)
+        public static bool IsValidIranShebaNumber(this string? iban)
         {
             if (string.IsNullOrEmpty(iban))
             {

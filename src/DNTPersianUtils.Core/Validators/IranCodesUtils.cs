@@ -15,7 +15,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Validate Iranian mobile number
         /// </summary>
-        public static bool IsValidIranianMobileNumber(this string mobileNumber)
+        public static bool IsValidIranianMobileNumber(this string? mobileNumber)
         {
             if (string.IsNullOrWhiteSpace(mobileNumber))
             {
@@ -29,7 +29,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Validate Iranian phone number
         /// </summary>
-        public static bool IsValidIranianPhoneNumber(this string phoneNumber)
+        public static bool IsValidIranianPhoneNumber(this string? phoneNumber)
         {
             if (string.IsNullOrWhiteSpace(phoneNumber))
             {
@@ -43,7 +43,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Validate Iranian postal code
         /// </summary>
-        public static bool IsValidIranianPostalCode(this string postalCode)
+        public static bool IsValidIranianPostalCode(this string? postalCode)
         {
             if (string.IsNullOrWhiteSpace(postalCode))
             {

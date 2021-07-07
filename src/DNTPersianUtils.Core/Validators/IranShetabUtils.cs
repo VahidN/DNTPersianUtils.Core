@@ -15,7 +15,7 @@ namespace DNTPersianUtils.Core
         /// validate Shetab card numbers
         /// </summary>
         /// <param name="creditCardNumber">Shetab card number</param>
-        public static bool IsValidIranShetabNumber(this string creditCardNumber)
+        public static bool IsValidIranShetabNumber(this string? creditCardNumber)
         {
             if (string.IsNullOrEmpty(creditCardNumber))
             {

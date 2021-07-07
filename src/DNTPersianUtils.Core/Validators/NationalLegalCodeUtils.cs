@@ -13,7 +13,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="nationalLegalCode">National Legal Code</param>
         /// <returns></returns>
-        public static bool IsValidIranianNationalLegalCode(this string nationalLegalCode)
+        public static bool IsValidIranianNationalLegalCode(this string? nationalLegalCode)
         {
             if (string.IsNullOrWhiteSpace(nationalLegalCode))
             {

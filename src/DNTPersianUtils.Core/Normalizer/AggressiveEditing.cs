@@ -102,7 +102,7 @@ namespace DNTPersianUtils.Core.Normalizer
         /// </summary>
         /// <param name="text">Text to process</param>
         /// <returns>Processed Text</returns>
-        public static string NormalizeUnderLines(this string text)
+        public static string NormalizeUnderLines(this string? text)
         {
             if (string.IsNullOrWhiteSpace(text))
                 return string.Empty;
@@ -117,7 +117,7 @@ namespace DNTPersianUtils.Core.Normalizer
         /// <summary>
         /// There are a lot of symbols which can't be in xml code.
         /// </summary>
-        public static string RemoveHexadecimalSymbols(this string txt)
+        public static string RemoveHexadecimalSymbols(this string? txt)
         {
             return string.IsNullOrWhiteSpace(txt) ?
                 string.Empty : _matchHexadecimalSymbols.Replace(txt, string.Empty);
@@ -126,8 +126,13 @@ namespace DNTPersianUtils.Core.Normalizer
         /// <summary>
         /// تبدیل یک متن عربی اسکی به یونیکد
         /// </summary>
-        public static string ConvertArabic1256ToUtf8(this string text)
+        public static string ConvertArabic1256ToUtf8(this string? text)
         {
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                return string.Empty;
+            }
+
             var latin = Encoding.GetEncoding("ISO-8859-1");
             var bytes = latin.GetBytes(text); // get the bytes for your ANSI string
             var arabic = Encoding.GetEncoding("Windows-1256"); // decode it using the correct encoding

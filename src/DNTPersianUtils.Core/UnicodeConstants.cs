@@ -18,7 +18,7 @@
         /// <summary>
         ///  Applies RLE to the text if it contains Persian words.
         /// </summary>
-        public static string ApplyRle(this string text)
+        public static string ApplyRle(this string? text)
         {
             if (string.IsNullOrWhiteSpace(text)) return string.Empty;
             return text.ContainsFarsi(allowWhitespace: true) ? $"{RleChar}{text}" : text;
@@ -29,7 +29,7 @@
         /// </summary>
         /// <param name="data">string data</param>
         /// <returns>A fixed string</returns>
-        public static string FixWeakCharacters(this string data)
+        public static string FixWeakCharacters(this string? data)
         {
             if (string.IsNullOrEmpty(data)) return string.Empty;
             var weakCharacters = new[] { @"\", "/", "+", "-", "=", ";", "$", ":", "*" };

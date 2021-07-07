@@ -51,7 +51,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="data">English number</param>
         /// <returns></returns>
-        public static string ToPersianNumbers(this string data)
+        public static string ToPersianNumbers(this string? data)
         {
             if (string.IsNullOrWhiteSpace(data)) return string.Empty;
 
@@ -120,7 +120,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="data">Persian number</param>
         /// <returns></returns>
-        public static string ToEnglishNumbers(this string data)
+        public static string ToEnglishNumbers(this string? data)
         {
             if (string.IsNullOrWhiteSpace(data)) return string.Empty;
 

@@ -33,7 +33,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// آیا عبارت مدنظر حاوی حروف و اعداد فارسی است؟
         /// </summary>
-        public static bool ContainsFarsi(this string txt, bool allowWhitespace = false)
+        public static bool ContainsFarsi(this string? txt, bool allowWhitespace = false)
         {
             if (string.IsNullOrEmpty(txt))
             {
@@ -51,7 +51,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// آیا عبارت مدنظر فقط حاوی حروف فارسی است؟
         /// </summary>
-        public static bool ContainsOnlyFarsiLetters(this string txt, bool allowWhitespace = false)
+        public static bool ContainsOnlyFarsiLetters(this string? txt, bool allowWhitespace = false)
         {
             if (string.IsNullOrEmpty(txt))
             {
@@ -69,7 +69,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// حذف تمام فواصل خالی از یک رشته
         /// </summary>
-        public static string RemoveAllWhitespaces(this string txt)
+        public static string RemoveAllWhitespaces(this string? txt)
         {
             if (string.IsNullOrEmpty(txt))
             {
@@ -82,7 +82,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// حذف تگ‌های یک عبارت
         /// </summary>
-        public static string StripHtmlTags(this string text)
+        public static string StripHtmlTags(this string? text)
         {
             return string.IsNullOrEmpty(text) ?
                         string.Empty :
@@ -95,7 +95,7 @@ namespace DNTPersianUtils.Core
         /// در غیراینصورت در
         /// <div style='text-align: left; font-family:{fontFamily}; font-size:{fontSize};' dir='ltr'>{body}</div>
         /// </summary>
-        public static string WrapInDirectionalDiv(this string body, string fontFamily = "tahoma", string fontSize = "9pt")
+        public static string WrapInDirectionalDiv(this string? body, string fontFamily = "tahoma", string fontSize = "9pt")
         {
             if (string.IsNullOrWhiteSpace(body))
                 return string.Empty;
@@ -108,7 +108,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// آیا عبارت مدنظر فقط حاوی اعداد فارسی است؟
         /// </summary>
-        public static bool ContainsOnlyPersianNumbers(this string text, bool allowWhitespace = false)
+        public static bool ContainsOnlyPersianNumbers(this string? text, bool allowWhitespace = false)
         {
             if (string.IsNullOrEmpty(text))
             {

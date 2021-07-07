@@ -12,7 +12,7 @@ namespace DNTPersianUtils.Core.Normalizer
         /// <summary>
         /// حذف اعراب از حروف و کلمات
         /// </summary>
-        public static string RemoveDiacritics(this string text)
+        public static string RemoveDiacritics(this string? text)
         {
             if (string.IsNullOrWhiteSpace(text))
                 return string.Empty;

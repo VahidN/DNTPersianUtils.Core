@@ -67,7 +67,7 @@ namespace DNTPersianUtils.Core
             const int beginningOfLastRowIndex = 35;
             if (monthCells[beginningOfLastRowIndex] is null)
             {
-                monthCells.RemoveRange(35, 7);
+                monthCells.RemoveRange(beginningOfLastRowIndex, 7);
             }
         }
     }

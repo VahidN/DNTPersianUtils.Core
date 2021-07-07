@@ -10,7 +10,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// If string is a number returns true
         /// </summary>
-        public static bool IsNumber(this string data)
+        public static bool IsNumber(this string? data)
         {
             if (string.IsNullOrWhiteSpace(data))
             {
@@ -25,7 +25,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="nationalCode">National Code</param>
         /// <returns></returns>
-        public static bool IsValidIranianNationalCode(this string nationalCode)
+        public static bool IsValidIranianNationalCode(this string? nationalCode)
         {
             if (string.IsNullOrWhiteSpace(nationalCode))
             {

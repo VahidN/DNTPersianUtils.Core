@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.Linq;
 
 namespace DNTPersianUtils.Core
 {
@@ -62,7 +61,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="persianDateTime">تاریخ و زمان شمسی</param>
         /// <param name="throwOnException"></param>
-        public static bool IsValidPersianDateTime(this string persianDateTime, bool throwOnException = false)
+        public static bool IsValidPersianDateTime(this string? persianDateTime, bool throwOnException = false)
         {
             try
             {
@@ -99,7 +98,7 @@ namespace DNTPersianUtils.Core
         /// <param name="convertToUtc">Converts the value of the current DateTime to Coordinated Universal Time (UTC)</param>
         /// <param name="beginningOfCentury">سال شروع قرن، اگر سال وارد شده دو رقمی است</param>
         /// <returns>تاریخ و زمان میلادی</returns>
-        public static DateTime? ToGregorianDateTime(this string persianDateTime, bool convertToUtc = false, int beginningOfCentury = 1300)
+        public static DateTime? ToGregorianDateTime(this string? persianDateTime, bool convertToUtc = false, int beginningOfCentury = 1300)
         {
             if (string.IsNullOrWhiteSpace(persianDateTime))
             {
@@ -107,30 +106,30 @@ namespace DNTPersianUtils.Core
             }
 
             persianDateTime = persianDateTime.Trim().ToEnglishNumbers();
-            var splitedDateTime = persianDateTime.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            var splittedDateTime = persianDateTime.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            var rawTime = Array.Find(splitedDateTime, s => s.Contains(':', StringComparison.OrdinalIgnoreCase));
-            var rawDate = Array.Find(splitedDateTime, s => !s.Contains(':', StringComparison.OrdinalIgnoreCase));
+            var rawTime = Array.Find(splittedDateTime, s => s.Contains(':', StringComparison.OrdinalIgnoreCase));
+            var rawDate = Array.Find(splittedDateTime, s => !s.Contains(':', StringComparison.OrdinalIgnoreCase));
 
-            var splitedDate = rawDate?.Split('/', ',', '؍', '.', '-');
-            if (splitedDate?.Length != 3)
+            var splittedDate = rawDate?.Split('/', ',', '؍', '.', '-');
+            if (splittedDate?.Length != 3)
             {
                 return null;
             }
 
-            var day = getDay(splitedDate[2]);
+            var day = getDay(splittedDate[2]);
             if (!day.HasValue)
             {
                 return null;
             }
 
-            var month = getMonth(splitedDate[1]);
+            var month = getMonth(splittedDate[1]);
             if (!month.HasValue)
             {
                 return null;
             }
 
-            var year = getYear(splitedDate[0], beginningOfCentury);
+            var year = getYear(splittedDate[0], beginningOfCentury);
             if (!year.HasValue)
             {
                 return null;
@@ -147,12 +146,12 @@ namespace DNTPersianUtils.Core
 
             if (!string.IsNullOrWhiteSpace(rawTime))
             {
-                var splitedTime = rawTime.Split(new[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
-                hour = int.Parse(splitedTime[0], CultureInfo.InvariantCulture);
-                minute = int.Parse(splitedTime[1], CultureInfo.InvariantCulture);
-                if (splitedTime.Length > 2)
+                var splittedTime = rawTime.Split(new[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+                hour = int.Parse(splittedTime[0], CultureInfo.InvariantCulture);
+                minute = int.Parse(splittedTime[1], CultureInfo.InvariantCulture);
+                if (splittedTime.Length > 2)
                 {
-                    var lastPart = splitedTime[2].Trim();
+                    var lastPart = splittedTime[2].Trim();
                     var formatInfo = PersianCulture.Instance.DateTimeFormat;
                     if (lastPart.Equals(formatInfo.PMDesignator, StringComparison.OrdinalIgnoreCase))
                     {
@@ -190,7 +189,7 @@ namespace DNTPersianUtils.Core
         /// <param name="beginningOfCentury">سال شروع قرن، اگر سال وارد شده دو رقمی است</param>
         /// <returns>تاریخ و زمان میلادی</returns>
         public static DateTimeOffset? ToGregorianDateTimeOffset(
-            this string persianDateTime, bool convertToUtc = false, int beginningOfCentury = 1300)
+            this string? persianDateTime, bool convertToUtc = false, int beginningOfCentury = 1300)
         {
             var dateTime = persianDateTime.ToGregorianDateTime(convertToUtc, beginningOfCentury);
             if (dateTime == null)
