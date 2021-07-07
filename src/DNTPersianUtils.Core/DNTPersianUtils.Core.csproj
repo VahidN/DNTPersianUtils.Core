@@ -40,7 +40,7 @@
     <Features>strict</Features>
     <ReportAnalyzer>true</ReportAnalyzer>
   </PropertyGroup>
-  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+  <!--<ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <PackageReference Include="Meziantou.Analyzer" Version="1.0.651">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -49,7 +49,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
+  </ItemGroup>-->
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
