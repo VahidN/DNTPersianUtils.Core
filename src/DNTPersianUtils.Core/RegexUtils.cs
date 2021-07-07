@@ -71,7 +71,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public static string RemoveAllWhitespaces(this string? txt)
         {
-            if (string.IsNullOrEmpty(txt))
+            if (txt is null)
             {
                 return string.Empty;
             }

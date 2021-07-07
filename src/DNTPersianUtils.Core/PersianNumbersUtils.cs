@@ -53,7 +53,10 @@ namespace DNTPersianUtils.Core
         /// <returns></returns>
         public static string ToPersianNumbers(this string? data)
         {
-            if (string.IsNullOrWhiteSpace(data)) return string.Empty;
+            if (data is null)
+            {
+                return string.Empty;
+            }
 
             var dataChars = data.ToCharArray();
             for (var i = 0; i < dataChars.Length; i++)
@@ -122,7 +125,10 @@ namespace DNTPersianUtils.Core
         /// <returns></returns>
         public static string ToEnglishNumbers(this string? data)
         {
-            if (string.IsNullOrWhiteSpace(data)) return string.Empty;
+            if (data is null)
+            {
+                return string.Empty;
+            }
 
             var dataChars = data.ToCharArray();
             for (var i = 0; i < dataChars.Length; i++)

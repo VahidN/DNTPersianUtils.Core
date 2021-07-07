@@ -104,8 +104,10 @@ namespace DNTPersianUtils.Core.Normalizer
         /// <returns>Processed Text</returns>
         public static string NormalizeUnderLines(this string? text)
         {
-            if (string.IsNullOrWhiteSpace(text))
+            if (text is null)
+            {
                 return string.Empty;
+            }
 
             const char chr1600 = (char)1600; //ـ=1600
             const char chr8204 = (char)8204; //‌=8204

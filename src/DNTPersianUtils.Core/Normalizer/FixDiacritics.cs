@@ -14,8 +14,10 @@ namespace DNTPersianUtils.Core.Normalizer
         /// </summary>
         public static string RemoveDiacritics(this string? text)
         {
-            if (string.IsNullOrWhiteSpace(text))
+            if (text is null)
+            {
                 return string.Empty;
+            }
 
             var normalizedString = text.Normalize(NormalizationForm.FormKC);
             var stringBuilder = new StringBuilder();

@@ -20,7 +20,11 @@
         /// </summary>
         public static string ApplyRle(this string? text)
         {
-            if (string.IsNullOrWhiteSpace(text)) return string.Empty;
+            if (text is null)
+            {
+                return string.Empty;
+            }
+
             return text.ContainsFarsi(allowWhitespace: true) ? $"{RleChar}{text}" : text;
         }
 
@@ -31,7 +35,11 @@
         /// <returns>A fixed string</returns>
         public static string FixWeakCharacters(this string? data)
         {
-            if (string.IsNullOrEmpty(data)) return string.Empty;
+            if (data is null)
+            {
+                return string.Empty;
+            }
+
             var weakCharacters = new[] { @"\", "/", "+", "-", "=", ";", "$", ":", "*" };
             foreach (var weakCharacter in weakCharacters)
             {

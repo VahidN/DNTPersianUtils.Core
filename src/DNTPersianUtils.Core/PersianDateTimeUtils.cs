@@ -100,7 +100,7 @@ namespace DNTPersianUtils.Core
         /// <returns>تاریخ و زمان میلادی</returns>
         public static DateTime? ToGregorianDateTime(this string? persianDateTime, bool convertToUtc = false, int beginningOfCentury = 1300)
         {
-            if (string.IsNullOrWhiteSpace(persianDateTime))
+            if (persianDateTime is null)
             {
                 return null;
             }

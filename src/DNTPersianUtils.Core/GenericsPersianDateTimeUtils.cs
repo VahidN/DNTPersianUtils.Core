@@ -168,10 +168,7 @@ namespace DNTPersianUtils.Core
         /// <returns>true if conversion is successful, otherwise false.</returns>
         public static bool TryParsePersianDateToDateTimeOrDateTimeOffset<TValue>(
             this string? persianDate,
-#if NET5_0
-            [MaybeNullWhen(false)]
-#endif
-            out TValue result,
+            out TValue? result,
             int beginningOfCentury = 1300,
             bool throwOnException = false)
         {
@@ -241,10 +238,7 @@ namespace DNTPersianUtils.Core
         public static bool TryParseDateTimeOrDateTimeOffset<TValue>(
             this string? value,
             string format,
-#if NET5_0
-            [MaybeNullWhen(false)]
-#endif
-            out TValue result)
+            out TValue? result)
         {
             var targetType = Nullable.GetUnderlyingType(typeof(TValue)) ?? typeof(TValue);
 
@@ -274,10 +268,7 @@ namespace DNTPersianUtils.Core
         private static bool TryParseDateTime<TValue>(
             this string? value,
             string format,
-#if NET5_0
-            [MaybeNullWhen(false)]
-#endif
-            out TValue result)
+            out TValue? result)
         {
             var success = TryConvertToDateTime(value, format, out var parsedValue);
             if (success)
@@ -303,10 +294,7 @@ namespace DNTPersianUtils.Core
         private static bool TryParseDateTimeOffset<TValue>(
             this string? value,
             string format,
-#if NET5_0
-            [MaybeNullWhen(false)]
-#endif
-            out TValue result)
+            out TValue? result)
         {
             var success = TryConvertToDateTimeOffset(value, format, out var parsedValue);
             if (success)
