@@ -10,6 +10,49 @@ namespace DNTPersianUtils.Core
     public static class GenericsPersianDateTimeUtils
     {
         /// <summary>
+        /// Converts an instance of DateTime or DateTimeOffset to PersianDay
+        /// </summary>
+        public static PersianDay? ToPersianYearMonthDay<TValue>(this TValue? value)
+        {
+            return value switch
+            {
+                DateTime dateTimeValue => dateTimeValue == default ? null : dateTimeValue.ToPersianYearMonthDay(),
+                DateTimeOffset dateTimeOffsetValue => dateTimeOffsetValue == default ? null : dateTimeOffsetValue.ToPersianYearMonthDay(),
+                _ => null
+            };
+        }
+
+        /// <summary>
+        /// Is this date value null or default?
+        /// </summary>
+        public static bool IsNullOrDefaultDateTimeOrDateTimeOffset<TValue>(this TValue? value)
+        {
+            return value switch
+            {
+                DateTime dateTimeValue => dateTimeValue == default,
+                DateTimeOffset dateTimeOffsetValue => dateTimeOffsetValue == default,
+                _ => true
+            };
+        }
+
+        /// <summary>
+        /// Determines the type of T, which can be DateTime?, DateTimeOffset?, DateTimeOffset or DateTime.
+        /// </summary>
+        public static bool IsDateTimeOrDateTimeOffsetType<T>()
+        {
+            var targetType = Nullable.GetUnderlyingType(typeof(T)) ?? typeof(T);
+            return targetType == typeof(DateTime) || targetType == typeof(DateTimeOffset);
+        }
+
+        /// <summary>
+        /// Determines the type of T, which can be DateTime?, DateTimeOffset?, DateTimeOffset or DateTime.
+        /// </summary>
+        public static bool IsDateTimeOrDateTimeOffsetType<T>(this T? _)
+        {
+            return IsDateTimeOrDateTimeOffsetType<T>();
+        }
+
+        /// <summary>
         /// Converts an instance of DateTime or DateTimeOffset to an string
         /// </summary>
         public static string FormatDateValue<TValue>(this TValue? value, string dateFormat)
@@ -34,6 +77,25 @@ namespace DNTPersianUtils.Core
                     dateTimeValue == default ? string.Empty : dateTimeValue.ToShortPersianDateString(),
                 DateTimeOffset dateTimeOffsetValue =>
                     dateTimeOffsetValue == default ? string.Empty : dateTimeOffsetValue.ToShortPersianDateString(),
+                _ => string.Empty
+            };
+        }
+
+        /// <summary>
+        /// Converts an instance of DateTime or DateTimeOffset ToPersianDateTimeString
+        /// </summary>
+        public static string FormatDateToPersianDateTime<TValue>(
+            this TValue? value,
+            string format,
+            bool convertToIranTimeZone = true,
+            DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        {
+            return value switch
+            {
+                DateTime dateTimeValue =>
+                    dateTimeValue == default ? string.Empty : dateTimeValue.ToPersianDateTimeString(format, convertToIranTimeZone),
+                DateTimeOffset dateTimeOffsetValue =>
+                    dateTimeOffsetValue == default ? string.Empty : dateTimeOffsetValue.ToPersianDateTimeString(format, convertToIranTimeZone, dateTimeOffsetPart),
                 _ => string.Empty
             };
         }
@@ -168,6 +230,9 @@ namespace DNTPersianUtils.Core
         /// <returns>true if conversion is successful, otherwise false.</returns>
         public static bool TryParsePersianDateToDateTimeOrDateTimeOffset<TValue>(
             this string? persianDate,
+#if NET5_0 || NETSTANDARD2_1
+[MaybeNullWhen(false)]
+#endif
             out TValue? result,
             int beginningOfCentury = 1300,
             bool throwOnException = false)
@@ -238,6 +303,9 @@ namespace DNTPersianUtils.Core
         public static bool TryParseDateTimeOrDateTimeOffset<TValue>(
             this string? value,
             string format,
+#if NET5_0 || NETSTANDARD2_1
+[MaybeNullWhen(false)]
+#endif
             out TValue? result)
         {
             var targetType = Nullable.GetUnderlyingType(typeof(TValue)) ?? typeof(TValue);
@@ -268,6 +336,9 @@ namespace DNTPersianUtils.Core
         private static bool TryParseDateTime<TValue>(
             this string? value,
             string format,
+#if NET5_0 || NETSTANDARD2_1
+[MaybeNullWhen(false)]
+#endif
             out TValue? result)
         {
             var success = TryConvertToDateTime(value, format, out var parsedValue);
@@ -294,6 +365,9 @@ namespace DNTPersianUtils.Core
         private static bool TryParseDateTimeOffset<TValue>(
             this string? value,
             string format,
+#if NET5_0 || NETSTANDARD2_1
+[MaybeNullWhen(false)]
+#endif
             out TValue? result)
         {
             var success = TryConvertToDateTimeOffset(value, format, out var parsedValue);

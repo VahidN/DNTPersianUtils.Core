@@ -315,14 +315,66 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
+        /// تبدیل تاریخ میلادی به شمسی
+        /// </summary>
+        /// <returns>تاریخ شمسی</returns>
+        /// <param name="dateTime"></param>
+        /// <param name="format"></param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static string ToPersianDateTimeString(
+                this DateTime? dateTime, string format, bool convertToIranTimeZone = true)
+        {
+            return dateTime == null ?
+                    string.Empty :
+                    dateTime.Value.ToPersianDateTimeString(format, convertToIranTimeZone);
+        }
+
+        /// <summary>
+        /// تبدیل تاریخ میلادی به شمسی
+        /// </summary>
+        /// <returns>تاریخ شمسی</returns>
+        /// <param name="dateTime"></param>
+        /// <param name="format"></param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string ToPersianDateTimeString(
+            this DateTimeOffset dateTime,
+            string format,
+            bool convertToIranTimeZone = true,
+            DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        {
+            var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
+            return ToPersianDateTimeString(dt, format, convertToIranTimeZone);
+        }
+
+        /// <summary>
+        /// تبدیل تاریخ میلادی به شمسی
+        /// </summary>
+        /// <returns>تاریخ شمسی</returns>
+        /// <param name="dateTime"></param>
+        /// <param name="format"></param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
+        public static string ToPersianDateTimeString(
+            this DateTimeOffset? dateTime,
+            string format,
+            bool convertToIranTimeZone = true,
+            DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        {
+            return dateTime == null ?
+                    string.Empty :
+                    ToPersianDateTimeString(dateTime.Value.GetDateTimeOffsetPart(dateTimeOffsetPart), format, convertToIranTimeZone);
+        }
+
+        /// <summary>
         /// تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
         /// </summary>
         /// <param name="gregorianDate">تاریخ و زمان</param>
         /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
-        public static PersianDay ToPersianYearMonthDay(this DateTimeOffset? gregorianDate, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        public static PersianDay? ToPersianYearMonthDay(this DateTimeOffset? gregorianDate, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         {
             return gregorianDate == null ?
-               throw new ArgumentNullException(nameof(gregorianDate)) :
+               null :
                ToPersianYearMonthDay(gregorianDate.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
         }
 
@@ -331,10 +383,10 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="gregorianDate"></param>
         /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
-        public static PersianDay ToPersianYearMonthDay(this DateTime? gregorianDate, bool convertToIranTimeZone = true)
+        public static PersianDay? ToPersianYearMonthDay(this DateTime? gregorianDate, bool convertToIranTimeZone = true)
         {
             return gregorianDate == null ?
-                throw new ArgumentNullException(nameof(gregorianDate)) :
+                null :
                 ToPersianYearMonthDay(gregorianDate.Value, convertToIranTimeZone);
         }
 
