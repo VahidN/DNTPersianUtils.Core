@@ -12,12 +12,17 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// Converts an instance of DateTime or DateTimeOffset to PersianDay
         /// </summary>
-        public static PersianDay? ToPersianYearMonthDay<TValue>(this TValue? value)
+        public static PersianDay? ToPersianYearMonthDay<TValue>(
+            this TValue? value,
+            bool convertToIranTimeZone = true,
+            DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         {
             return value switch
             {
-                DateTime dateTimeValue => dateTimeValue == default ? null : dateTimeValue.ToPersianYearMonthDay(),
-                DateTimeOffset dateTimeOffsetValue => dateTimeOffsetValue == default ? null : dateTimeOffsetValue.ToPersianYearMonthDay(),
+                DateTime dateTimeValue =>
+                    dateTimeValue == default ? null : dateTimeValue.ToPersianYearMonthDay(convertToIranTimeZone),
+                DateTimeOffset dateTimeOffsetValue =>
+                    dateTimeOffsetValue == default ? null : dateTimeOffsetValue.ToPersianYearMonthDay(dateTimeOffsetPart),
                 _ => null
             };
         }
