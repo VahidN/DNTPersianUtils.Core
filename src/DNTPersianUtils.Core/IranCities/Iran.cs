@@ -13,7 +13,7 @@ namespace DNTPersianUtils.Core.IranCities
         /// <summary>
         /// Iran's Cities.
         /// </summary>
-        public static ISet<City> Cities {get;} =  new HashSet<City>(new List<City>
+        public static IEnumerable<City> Cities { get; } = new List<City>
         {
           new City{
             ProvinceName= "همدان",
@@ -8709,24 +8709,92 @@ namespace DNTPersianUtils.Core.IranCities
             CityName= "مبارک شهر",
             CityDivisionCode= 71245
           }
-        });
+        };
 
-        private static readonly Lazy<ISet<Province>> _provincesProvider =
-                new Lazy<ISet<Province>>(getProvinces, LazyThreadSafetyMode.ExecutionAndPublication);
+        private static readonly Lazy<IEnumerable<Province>> _provincesProvider =
+                new Lazy<IEnumerable<Province>>(getProvinces, LazyThreadSafetyMode.ExecutionAndPublication);
 
         /// <summary>
         /// Iran's Provinces.
         /// </summary>
-        public static ISet<Province> Provinces { get; } = _provincesProvider.Value;
+        public static IEnumerable<Province> Provinces { get; } = _provincesProvider.Value;
 
         /// <summary>
         /// مناسبت‌های تعطیلات رسمی ایران
         /// </summary>
-        public static ISet<IranHoliday> Holidays { get; } = IranHolidays.Instance;
+        public static IEnumerable<IranHoliday> Holidays { get; } = IranHolidays.Instance;
 
-        private static ISet<Province> getProvinces()
+        /// <summary>
+        /// لیست استان‌های ایران
+        /// </summary>
+        public static IEnumerable<string> FindProvinces()
         {
-            var provinces = new HashSet<Province>();
+            return Iran.Cities.Select(x => x.ProvinceName)
+                            .Distinct(StringComparer.OrdinalIgnoreCase)
+                            .OrderBy(province => province)
+                            .ToList();
+        }
+
+        /// <summary>
+        /// لیست شهرستان‌های استان انتخابی
+        /// </summary>
+        public static IEnumerable<string> FindCountiesOfSelectedProvince(string? selectedProvince)
+        {
+            if (string.IsNullOrWhiteSpace(selectedProvince))
+            {
+                return Enumerable.Empty<string>();
+            }
+
+            return Cities.Where(x => string.Equals(x.ProvinceName, selectedProvince, StringComparison.Ordinal))
+                            .Select(x => x.CountyName)
+                            .Distinct(StringComparer.OrdinalIgnoreCase)
+                            .OrderBy(county => county)
+                            .ToList();
+        }
+
+        /// <summary>
+        /// لیست بخش‌های شهرستان انتخابی
+        /// </summary>
+        public static IEnumerable<string> FindDistrictsOfSelectedCounty(string? selectedProvince, string? selectedCounty)
+        {
+            if (string.IsNullOrWhiteSpace(selectedProvince) || string.IsNullOrWhiteSpace(selectedCounty))
+            {
+                return Enumerable.Empty<string>();
+            }
+
+            return Cities.Where(x =>
+                            string.Equals(x.ProvinceName, selectedProvince, StringComparison.Ordinal)
+                            && string.Equals(x.CountyName, selectedCounty, StringComparison.Ordinal))
+                            .Select(x => x.DistrictName)
+                            .Distinct(StringComparer.OrdinalIgnoreCase)
+                            .OrderBy(district => district)
+                            .ToList();
+        }
+
+        /// <summary>
+        /// لیست دهستان‌های بخش انتخابی ایران
+        /// </summary>
+        public static IEnumerable<City> FindCitiesOfSelectedDistrict(string? selectedProvince, string? selectedCounty, string? selectedDistrict)
+        {
+            if (string.IsNullOrWhiteSpace(selectedProvince)
+                || string.IsNullOrWhiteSpace(selectedCounty)
+                || string.IsNullOrWhiteSpace(selectedDistrict))
+            {
+                return Enumerable.Empty<City>();
+            }
+
+            return Cities.Where(x =>
+                            string.Equals(x.ProvinceName, selectedProvince, StringComparison.Ordinal) &&
+                            string.Equals(x.CountyName, selectedCounty, StringComparison.Ordinal) &&
+                            string.Equals(x.DistrictName, selectedDistrict, StringComparison.Ordinal))
+                            .Distinct()
+                            .OrderBy(city => city.CityName)
+                            .ToList();
+        }
+
+        private static IEnumerable<Province> getProvinces()
+        {
+            var provinces = new List<Province>();
             foreach (var provinceName in Cities.Select(x => x.ProvinceName).Distinct(StringComparer.OrdinalIgnoreCase))
             {
                 provinces.Add(new Province { ProvinceName = provinceName });
@@ -8742,8 +8810,8 @@ namespace DNTPersianUtils.Core.IranCities
                 foreach (var county in province.Counties)
                 {
                     foreach (var thisCounty in Cities.Where(x =>
-                            string.Equals(x.ProvinceName, province.ProvinceName, StringComparison.Ordinal) 
-							&& string.Equals(x.CountyName, county.CountyName, StringComparison.Ordinal)))
+                            string.Equals(x.ProvinceName, province.ProvinceName, StringComparison.Ordinal)
+                            && string.Equals(x.CountyName, county.CountyName, StringComparison.Ordinal)))
                     {
                         county.Districts.Add(new District { DistrictName = thisCounty.DistrictName });
                     }

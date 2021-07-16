@@ -1,4 +1,5 @@
-﻿using DNTPersianUtils.Core.IranCities;
+﻿using System.Linq;
+using DNTPersianUtils.Core.IranCities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DNTPersianUtils.Core.Tests
@@ -9,7 +10,7 @@ namespace DNTPersianUtils.Core.Tests
         [TestMethod]
         public void Test_IranProvincesCount_Is_Correct()
         {
-            Assert.AreEqual(31, Iran.Provinces.Count);
+            Assert.AreEqual(31, Iran.Provinces.Count());
         }
     }
 }

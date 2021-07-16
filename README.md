@@ -65,7 +65,7 @@ PM> Install-Package DNTPersianUtils.Core
 | بررسی اعتبار شماره تلفن | "37236445".<br>IsValidIranianPhoneNumber() <br>&#x202b;به همراه [ValidIranianPhoneNumber] مخصوص MVC| true |
 | بررسی اعتبار کد پستی | "1619735744".<br>IsValidIranianPostalCode() <br>&#x202b;به همراه [ValidIranianPostalCode] مخصوص MVC| true |
 | بررسی اعتبار اعداد تمام فارسی | "۹۹۹۹۹".<br>ContainsOnlyPersianNumbers() <br>&#x202b;به همراه [ShouldContainOnlyPersianNumbers] مخصوص MVC| true |
-| بررسی اعتبار حروف و يا اعداد فارسی بودن تنها قسمتی از متن | "Abc تست".<br>ContainsFarsi() <br>&#x202b;به همراه [ShouldContainPersianLettersOrNumbers] مخصوص MVC| true |
+| بررسی اعتبار حروف و یا اعداد فارسی بودن تنها قسمتی از متن | "Abc تست".<br>ContainsFarsi() <br>&#x202b;به همراه [ShouldContainPersianLettersOrNumbers] مخصوص MVC| true |
 | بررسی اعتبار حروف فارسی بودن تمام متن | "تست".<br>ContainsOnlyFarsiLetters() <br>&#x202b;به همراه [ShouldContainOnlyPersianLetters] مخصوص MVC| true |
 | بررسی اعتبار شناسه ملی حقوقی | "14005893875".IsValidIranianNationalLegalCode() <br>&#x202b;به همراه [ValidIranianNationalLegalCodeAttribute] مخصوص MVC| true |
 
