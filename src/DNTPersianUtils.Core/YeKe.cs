@@ -84,7 +84,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="data">Text to process</param>
         /// <returns>Processed Text</returns>
-        public static string ApplyCorrectYeKe(this string data)
+        public static string ApplyCorrectYeKe(this string? data)
         {
             if (string.IsNullOrWhiteSpace(data)) return string.Empty;
 
@@ -122,7 +122,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         /// <param name="data">Text to process</param>
         /// <returns>Processed Text</returns>
-        public static string ApplyCorrectYeKe(this object data)
+        public static string ApplyCorrectYeKe(this object? data)
         {
             return data is null ?
                         string.Empty :
