@@ -129,7 +129,7 @@ namespace DNTPersianUtils.Core
                         }
                         break;
 
-                    case '/':
+                    case '?':
                         dataChars[i] = '؟';
                         break;
 
