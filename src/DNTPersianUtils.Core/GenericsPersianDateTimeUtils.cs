@@ -10,6 +10,31 @@ namespace DNTPersianUtils.Core
     public static class GenericsPersianDateTimeUtils
     {
         /// <summary>
+        /// display a numeric value using the equivalent text
+        /// </summary>
+        /// <param name="number">input number</param>
+        /// <param name="language">local language</param>
+        /// <returns>the equivalent text</returns>
+        public static string ConvertNumberToText<TValue>(this TValue? number, Language language)
+        {
+            return number switch
+            {
+                short shortValue => shortValue.NumberToText(language),
+                ushort ushortValue => ushortValue.NumberToText(language),
+                int intValue => intValue.NumberToText(language),
+                uint uintValue => uintValue.NumberToText(language),
+                byte byteValue => byteValue.NumberToText(language),
+                sbyte sbyteValue => sbyteValue.NumberToText(language),
+                decimal decimalValue => decimalValue.NumberToText(language),
+                double doubleValue => doubleValue.NumberToText(language),
+                float floatValue => floatValue.NumberToText(language),
+                long longValue => longValue.NumberToText(language),
+                ulong ulongValue => ulongValue.NumberToText(language),
+                _ => string.Empty
+            };
+        }
+
+        /// <summary>
         /// Converts an instance of DateTime or DateTimeOffset to PersianDay
         /// </summary>
         public static PersianDay? ConvertToPersianDay<TValue>(

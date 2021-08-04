@@ -93,6 +93,27 @@ namespace DNTPersianUtils.Core
             { Language.Persian, "صفر" }
         };
 
+        /// <summary>
+        /// display a numeric value using the equivalent text
+        /// </summary>
+        /// <param name="number">input number</param>
+        /// <param name="language">local language</param>
+        /// <returns>the equivalent text</returns>
+        public static string NumberToText(this short number, Language language)
+        {
+            return NumberToText((long)number, language);
+        }
+
+        /// <summary>
+        /// display a numeric value using the equivalent text
+        /// </summary>
+        /// <param name="number">input number</param>
+        /// <param name="language">local language</param>
+        /// <returns>the equivalent text</returns>
+        public static string NumberToText(this ushort number, Language language)
+        {
+            return NumberToText((long)number, language);
+        }
 
         /// <summary>
         /// display a numeric value using the equivalent text
@@ -133,6 +154,17 @@ namespace DNTPersianUtils.Core
         /// <param name="number">input number</param>
         /// <param name="language">local language</param>
         /// <returns>the equivalent text</returns>
+        public static string NumberToText(this sbyte number, Language language)
+        {
+            return NumberToText((long)number, language);
+        }
+
+        /// <summary>
+        /// display a numeric value using the equivalent text
+        /// </summary>
+        /// <param name="number">input number</param>
+        /// <param name="language">local language</param>
+        /// <returns>the equivalent text</returns>
         public static string NumberToText(this decimal number, Language language)
         {
             return NumberToText((long)number, language);
@@ -155,6 +187,17 @@ namespace DNTPersianUtils.Core
         /// <param name="number">input number</param>
         /// <param name="language">local language</param>
         /// <returns>the equivalent text</returns>
+        public static string NumberToText(this float number, Language language)
+        {
+            return NumberToText((long)number, language);
+        }
+
+        /// <summary>
+        /// display a numeric value using the equivalent text
+        /// </summary>
+        /// <param name="number">input number</param>
+        /// <param name="language">local language</param>
+        /// <returns>the equivalent text</returns>
         public static string NumberToText(this long number, Language language)
         {
             if (number == 0)
@@ -167,6 +210,22 @@ namespace DNTPersianUtils.Core
                 return _negative[language] + NumberToText(-number, language);
             }
 
+            return wordify((ulong)number, language, string.Empty, 0);
+        }
+
+        /// <summary>
+        /// display a numeric value using the equivalent text
+        /// </summary>
+        /// <param name="number">input number</param>
+        /// <param name="language">local language</param>
+        /// <returns>the equivalent text</returns>
+        public static string NumberToText(this ulong number, Language language)
+        {
+            if (number == 0)
+            {
+                return _zero[language];
+            }
+
             return wordify(number, language, string.Empty, 0);
         }
 
@@ -175,7 +234,7 @@ namespace DNTPersianUtils.Core
             return _numberWords.First(x => x.Group == group && x.Language == language).Names.ElementAt(idx);
         }
 
-        private static string wordify(long number, Language language, string leftDigitsText, int thousands)
+        private static string wordify(ulong number, Language language, string leftDigitsText, int thousands)
         {
             if (number == 0)
             {
