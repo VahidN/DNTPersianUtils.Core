@@ -20,7 +20,7 @@ namespace DNTPersianUtils.Core
         /// <summary>
         /// سال خاتمه تعاریف مناسبت‌های تعطیل در این کتابخانه
         /// </summary>
-        public const int EndYear = 1398;
+        public const int EndYear = 1400;
 
         private static readonly Lazy<ISet<IranHoliday>> _holidayProvider =
                 new Lazy<ISet<IranHoliday>>(getIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
