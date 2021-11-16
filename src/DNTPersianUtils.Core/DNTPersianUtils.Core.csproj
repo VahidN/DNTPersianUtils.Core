@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>DNTPersianUtils.Core is a collection of Persian helper extension methods.</Description>
-    <VersionPrefix>5.3.1</VersionPrefix>
+    <VersionPrefix>5.3.2</VersionPrefix>
     <Authors>Vahid Nasiri</Authors>
-    <TargetFrameworks>net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
+    <TargetFrameworks>net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
     <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">net5.0;netstandard2.1;netstandard1.3;netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>DNTPersianUtils.Core</AssemblyName>
@@ -51,7 +51,7 @@
     </PackageReference>
   </ItemGroup>-->
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <PlatformTarget>anycpu</PlatformTarget>
@@ -96,5 +96,10 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' "></ItemGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
     <DefineConstants>NET5_0</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' "></ItemGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
+    <DefineConstants>NET6_0</DefineConstants>
   </PropertyGroup>
 </Project>
