@@ -12,6 +12,13 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public DateTime Holiday { set; get; }
 
+#if NET6_0
+        /// <summary>
+        /// روز مناسبت تعطیل رسمی
+        /// </summary>
+        public DateOnly HolidayDate => Holiday.ToDateOnly();
+#endif
+
         /// <summary>
         /// توضیحات مناسبت
         /// </summary>

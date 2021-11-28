@@ -491,6 +491,18 @@ namespace DNTPersianUtils.Core
             return JdnToIslamicDay(ToJdn(gregorian, convertToIranTimeZone));
         }
 
+#if NET6_0
+        /// <summary>
+        /// تبدیل تاریخ میلادی به قمری
+        /// </summary>
+        /// <param name="gregorian">روز میلادی</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static IslamicDay ToIslamicDay(this DateOnly gregorian, bool convertToIranTimeZone = true)
+        {
+            return gregorian.ToDateTime().ToIslamicDay(convertToIranTimeZone);
+        }
+#endif
+
         /// <summary>
         /// تبدیل تاریخ میلادی به قمری
         /// </summary>
@@ -527,6 +539,18 @@ namespace DNTPersianUtils.Core
             }
             return GregorianToJdn(gregorian.Year, gregorian.Month, gregorian.Day);
         }
+
+#if NET6_0
+        /// <summary>
+        /// To Jdn
+        /// </summary>
+        /// <param name="gregorian"></param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static long ToJdn(this DateOnly gregorian, bool convertToIranTimeZone = true)
+        {
+            return gregorian.ToDateTime().ToJdn(convertToIranTimeZone);
+        }
+#endif
 
         /// <summary>
         /// Gregorian To Jdn
@@ -573,6 +597,18 @@ namespace DNTPersianUtils.Core
         {
             return JdnToPersianDay(ToJdn(gregorian, convertToIranTimeZone));
         }
+
+#if NET6_0
+        /// <summary>
+        /// To PersianDay
+        /// </summary>
+        /// <param name="gregorian"></param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static PersianDay ToPersianDay(this DateOnly gregorian, bool convertToIranTimeZone = true)
+        {
+            return gregorian.ToDateTime().ToPersianDay(convertToIranTimeZone);
+        }
+#endif
 
         /// <summary>
         /// IslamicDay To Gregorian

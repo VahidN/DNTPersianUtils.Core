@@ -12,9 +12,23 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public DateTime StartDate { set; get; }
 
+#if NET6_0
+        /// <summary>
+        /// اولین روز سال شمسی
+        /// </summary>
+        public DateOnly StartDateOnly => StartDate.ToDateOnly();
+#endif
+
         /// <summary>
         /// آخرین روز سال شمسی
         /// </summary>
         public DateTime EndDate { set; get; }
+
+#if NET6_0
+        /// <summary>
+        /// آخرین روز سال شمسی
+        /// </summary>
+        public DateOnly EndDateOnly => EndDate.ToDateOnly();
+#endif
     }
 }

@@ -68,6 +68,55 @@ namespace DNTPersianUtils.Core
             return age;
         }
 
+#if NET6_0
+        /// <summary>
+        /// تبديل به ابتداي روز ساختار قبلي
+        /// </summary>
+        /// <param name="date">تاريخ مدنظر</param>
+        public static DateTime ToDateTime(this DateOnly date)
+        {
+            return date.ToDateTime(new TimeOnly(0, 0));
+        }
+
+        /// <summary>
+        /// تبديل به ابتداي روز ساختار جديد
+        /// </summary>
+        /// <param name="dateTime">تاريخ مدنظر</param>
+        public static DateOnly ToDateOnly(this DateTime dateTime)
+        {
+            return DateOnly.FromDateTime(dateTime);
+        }
+
+        /// <summary>
+        /// تبديل به ابتداي روز ساختار قبلي
+        /// </summary>
+        /// <param name="date">تاريخ مدنظر</param>
+        public static DateTime? ToDateTime(this DateOnly? date)
+        {
+            return date?.ToDateTime(new TimeOnly(0, 0));
+        }
+
+        /// <summary>
+        /// تبديل به ابتداي روز ساختار جديد
+        /// </summary>
+        /// <param name="dateTime">تاريخ مدنظر</param>
+        public static DateOnly? ToDateOnly(this DateTime? dateTime)
+        {
+            return dateTime is null ? null : DateOnly.FromDateTime(dateTime.Value);
+        }
+
+        /// <summary>
+        /// محاسبه سن
+        /// </summary>
+        /// <param name="birthday">تاریخ تولد</param>
+        /// <param name="comparisonBase">مبنای محاسبه مانند هم اکنون</param>
+        /// <returns>سن</returns>
+        public static int GetAge(this DateOnly birthday, DateOnly comparisonBase)
+        {
+            return birthday.ToDateTime().GetAge(comparisonBase.ToDateTime());
+        }
+#endif
+
         /// <summary>
         /// محاسبه سن
         /// مبنای محاسبه هم اکنون
@@ -80,6 +129,18 @@ namespace DNTPersianUtils.Core
             return GetAge(birthday, now);
         }
 
+#if NET6_0
+        /// <summary>
+        /// محاسبه سن
+        /// مبنای محاسبه هم اکنون
+        /// </summary>
+        /// <param name="birthday">تاریخ تولد</param>
+        /// <returns>سن</returns>
+        public static int GetAge(this DateOnly birthday)
+        {
+            return birthday.ToDateTime().GetAge();
+        }
+#endif
         /// <summary>
         /// دریافت جزء زمانی ویژه‌ی این وهله
         /// </summary>
@@ -139,6 +200,18 @@ namespace DNTPersianUtils.Core
             return (long)dateTime.ToUniversalTime().Subtract(Epoch).TotalMilliseconds;
         }
 
+#if NET6_0
+        /// <summary>
+        /// Converts a given <see cref="DateOnly"/> to milliseconds from Epoch.
+        /// </summary>
+        /// <param name="date">A given <see cref="DateOnly"/></param>
+        /// <returns>Milliseconds since Epoch</returns>
+        public static long ToEpochMilliseconds(this DateOnly date)
+        {
+            return date.ToDateTime().ToEpochMilliseconds();
+        }
+#endif
+
         /// <summary>
         /// Converts a given <see cref="DateTime"/> to milliseconds from Epoch.
         /// </summary>
@@ -161,6 +234,18 @@ namespace DNTPersianUtils.Core
         {
             return dateTime.ToEpochMilliseconds() / 1000;
         }
+
+#if NET6_0
+        /// <summary>
+        /// Converts a given <see cref="DateOnly"/> to seconds from Epoch.
+        /// </summary>
+        /// <param name="date">A given <see cref="DateOnly"/></param>
+        /// <returns>The Unix time stamp</returns>
+        public static long ToEpochSeconds(this DateOnly date)
+        {
+            return date.ToDateTime().ToEpochSeconds();
+        }
+#endif
 
         /// <summary>
         /// Converts a given <see cref="DateTime"/> to seconds from Epoch.
@@ -204,6 +289,16 @@ namespace DNTPersianUtils.Core
             return dateTime == new DateTime(dateTime.Year, dateTime.Month, 1).AddMonths(1).AddDays(-1);
         }
 
+#if NET6_0
+        /// <summary>
+        /// Returns whether the given date is the last day of the month
+        /// </summary>
+        public static bool IsLastDayOfTheMonth(this DateOnly date)
+        {
+            return date.ToDateTime().IsLastDayOfTheMonth();
+        }
+#endif
+
         /// <summary>
         /// Returns whether the given date is the last day of the month
         /// </summary>
@@ -221,6 +316,16 @@ namespace DNTPersianUtils.Core
         {
             return value.DayOfWeek == DayOfWeek.Sunday || value.DayOfWeek == DayOfWeek.Saturday;
         }
+
+#if NET6_0
+        /// <summary>
+        /// Returns whether the given date falls in a weekend
+        /// </summary>
+        public static bool IsWeekend(this DateOnly date)
+        {
+            return date.ToDateTime().IsWeekend();
+        }
+#endif
 
         /// <summary>
         /// Returns whether the given date falls in a weekend
@@ -240,6 +345,15 @@ namespace DNTPersianUtils.Core
             return DateTime.DaysInMonth(value.Year, 2) == 29;
         }
 
+#if NET6_0
+        /// <summary>
+        /// Determines if a given year is a LeapYear or not.
+        /// </summary>
+        public static bool IsLeapYear(this DateOnly date)
+        {
+            return date.ToDateTime().IsLeapYear();
+        }
+#endif
         /// <summary>
         /// Determines if a given year is a LeapYear or not.
         /// </summary>
@@ -263,6 +377,18 @@ namespace DNTPersianUtils.Core
             return new DateTimeOffset(dt.Ticks, offset);
         }
 
+#if NET6_0
+        /// <summary>
+        /// Converts a Date to a DateTimeOffset
+        /// </summary>
+        /// <param name="date">Source Date.</param>
+        /// <param name="offset">Offset</param>
+        public static DateTimeOffset ToDateTimeOffset(this DateOnly date, TimeSpan offset)
+        {
+            return date.ToDateTime().ToDateTimeOffset(offset);
+        }
+#endif
+
         /// <summary>
         /// Converts a DateTime to a DateTimeOffset
         /// </summary>
@@ -271,10 +397,27 @@ namespace DNTPersianUtils.Core
         public static DateTimeOffset ToDateTimeOffset(this DateTime dt, double offsetInHours = 0)
             => ToDateTimeOffset(dt, offsetInHours == 0 ? TimeSpan.Zero : TimeSpan.FromHours(offsetInHours));
 
+#if NET6_0
+        /// <summary>
+        /// Converts a Date to a DateTimeOffset
+        /// </summary>
+        /// <param name="date">Source Date.</param>
+        /// <param name="offsetInHours">Offset</param>
+        public static DateTimeOffset ToDateTimeOffset(this DateOnly date, double offsetInHours = 0)
+            => date.ToDateTime().ToDateTimeOffset(offsetInHours);
+#endif
+
         /// <summary>
         /// Retruns dt.Date which is the start of the day
         /// </summary>
         public static DateTime GetStartOfDay(this DateTime dt) => dt.Date;
+
+#if NET6_0
+        /// <summary>
+        /// Retruns Date which is the start of the day
+        /// </summary>
+        public static DateTime GetStartOfDay(this DateOnly date) => date.ToDateTime().GetStartOfDay();
+#endif
 
         /// <summary>
         /// Retruns dateTime.Date which is the start of the day
@@ -290,6 +433,13 @@ namespace DNTPersianUtils.Core
         /// Retruns the end of the day
         /// </summary>
         public static DateTime GetEndOfDay(this DateTime dt) => dt.Date.AddTicks(-1).AddDays(1);
+
+#if NET6_0
+        /// <summary>
+        /// Retruns the end of the day
+        /// </summary>
+        public static DateTime GetEndOfDay(this DateOnly date) => date.ToDateTime().GetEndOfDay();
+#endif
 
         /// <summary>
         /// Retruns the end of the day
@@ -321,6 +471,20 @@ namespace DNTPersianUtils.Core
             int diff = (7 + (dt.DayOfWeek - dayOfWeek)) % 7;
             return dt.AddDays(-diff).Date;
         }
+
+#if NET6_0
+        /// <summary>
+        /// برای نمونه تاریخ جمعه‌ی قبلی را باز می‌گرداند
+        /// </summary>
+        /// <param name="date">تاریخ</param>
+        /// <param name="dayOfWeek">مبنای محاسبه</param>
+        /// <param name="includeToday">آیا امروز هم محاسبه شود؟</param>
+        /// <returns></returns>
+        public static DateTime GetPrevious(this DateOnly date, DayOfWeek dayOfWeek, bool includeToday = true)
+        {
+            return date.ToDateTime().GetPrevious(dayOfWeek, includeToday);
+        }
+#endif
 
         /// <summary>
         /// برای نمونه تاریخ جمعه‌ی قبلی را باز می‌گرداند
@@ -356,6 +520,20 @@ namespace DNTPersianUtils.Core
             }
             return dt.AddDays(DayOfWeek.Saturday - dt.DayOfWeek).Date;
         }
+
+#if NET6_0
+        /// <summary>
+        /// برای نمونه تاریخ جمعه‌ی بعدی را باز می‌گرداند
+        /// </summary>
+        /// <param name="date">تاریخ</param>
+        /// <param name="dayOfWeek">مبنای محاسبه</param>
+        /// <param name="includeToday">آیا امروز هم محاسبه شود؟</param>
+        /// <returns></returns>
+        public static DateTime GetNext(this DateOnly date, DayOfWeek dayOfWeek, bool includeToday = true)
+        {
+            return date.ToDateTime().GetNext(dayOfWeek, includeToday);
+        }
+#endif
 
         /// <summary>
         /// برای نمونه تاریخ جمعه‌ی بعدی را باز می‌گرداند

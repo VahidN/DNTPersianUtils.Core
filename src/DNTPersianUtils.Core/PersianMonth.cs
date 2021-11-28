@@ -12,6 +12,13 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public DateTime StartDate { set; get; }
 
+#if NET6_0
+        /// <summary>
+        /// اولین روز ماه شمسی
+        /// </summary>
+        public DateOnly StartDateOnly => StartDate.ToDateOnly();
+#endif
+
         /// <summary>
         /// اولین روز ماه در هفته‌ای که واقع شده‌است، در تقویم شمسی هفتگی، چه شماره‌ی روزی را دارد؟
         /// برای مثال سان‌دی معادل روز 2 هفته شمسی است
@@ -22,6 +29,13 @@ namespace DNTPersianUtils.Core
         /// آخرین روز ماه شمسی
         /// </summary>
         public DateTime EndDate { set; get; }
+
+#if NET6_0
+        /// <summary>
+        /// آخرین روز ماه شمسی
+        /// </summary>
+        public DateOnly EndDateOnly => EndDate.ToDateOnly();
+#endif
 
         /// <summary>
         /// آخرین روز ماه در هفته‌ای که واقع شده‌است، در تقویم شمسی هفتگی، چه شماره‌ی روزی را دارد؟

@@ -106,6 +106,16 @@ namespace DNTPersianUtils.Core
                    now.Second == vernalEquinoxDateTime.Second;
         }
 
+#if NET6_0
+        /// <summary>
+        /// Is given date start of a new year?
+        /// </summary>
+        public static bool IsStartOfNewYear(this DateOnly now, double utcDelta = 3.5)
+        {
+            return now.ToDateTime().IsStartOfNewYear(utcDelta);
+        }
+#endif
+
         /// <summary>
         /// Converts a fractional Julian Day to a .NET DateTime.
         /// </summary>

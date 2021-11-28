@@ -916,6 +916,19 @@ namespace DNTPersianUtils.Core
             return result.Count > 0 ? result : null;
         }
 
+#if NET6_0
+        /// <summary>
+        /// لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
+        /// از سال 1395 تا پایان سال 1398
+        /// </summary>
+        /// <param name="date">تاریخ</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static IEnumerable<string>? GetHolidays(this DateOnly date, bool convertToIranTimeZone = true)
+        {
+            return date.ToDateTime().GetHolidays(convertToIranTimeZone);
+        }
+#endif
+
         /// <summary>
         /// لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
         /// از سال 1395 تا پایان سال 1398
@@ -945,6 +958,19 @@ namespace DNTPersianUtils.Core
                                     x.Holiday.Month == date.Month &&
                                     x.Holiday.Day == date.Day);
         }
+
+#if NET6_0
+        /// <summary>
+        /// تشخیص تعطیلات رسمی ایران
+        /// از سال 1395 تا پایان سال 1398
+        /// </summary>
+        /// <param name="date">تاریخ</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        public static bool IsHoliday(this DateOnly date, bool convertToIranTimeZone = true)
+        {
+            return date.ToDateTime().IsHoliday(convertToIranTimeZone);
+        }
+#endif
 
         /// <summary>
         /// تشخیص تعطیلات رسمی ایران
@@ -986,6 +1012,21 @@ namespace DNTPersianUtils.Core
                 }
             }
         }
+
+#if NET6_0
+        /// <summary>
+        /// دریافت لیست روزهای کاری ایران در یک بازه زمانی
+        /// از سال 1395 تا پایان سال 1398
+        /// </summary>
+        /// <param name="from">از تاریخ</param>
+        /// <param name="to">تا تاریخ</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        /// <returns>روزهای کاری</returns>
+        public static IEnumerable<DateTime> GetBusinessDays(this DateOnly from, DateOnly to, bool convertToIranTimeZone = true)
+        {
+            return from.ToDateTime().GetBusinessDays(to.ToDateTime(), convertToIranTimeZone);
+        }
+#endif
 
         /// <summary>
         /// دریافت لیست روزهای کاری ایران در یک بازه زمانی

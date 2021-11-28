@@ -35,6 +35,17 @@ namespace DNTPersianUtils.Core
             return ToPersianDateTextify(dateParts.Year, dateParts.Month, dateParts.Day);
         }
 
+#if NET6_0
+        /// <summary>
+        /// نمایش فارسی روز دریافتی
+        /// مانند سه شنبه ۲۱ دی ۱۳۹۵
+        /// </summary>
+        public static string ToPersianDateTextify(this DateOnly date, bool convertToIranTimeZone = true)
+        {
+            return date.ToDateTime().ToPersianDateTextify(convertToIranTimeZone);
+        }
+#endif
+
         /// <summary>
         /// نمایش فارسی روز دریافتی
         /// مانند سه شنبه ۲۱ دی ۱۳۹۵
@@ -44,6 +55,16 @@ namespace DNTPersianUtils.Core
             return dt == null ? string.Empty : ToPersianDateTextify(dt.Value);
         }
 
+#if NET6_0
+        /// <summary>
+        /// نمایش فارسی روز دریافتی
+        /// مانند سه شنبه ۲۱ دی ۱۳۹۵
+        /// </summary>
+        public static string ToPersianDateTextify(this DateOnly? date)
+        {
+            return date.ToDateTime().ToPersianDateTextify();
+        }
+#endif
         /// <summary>
         /// نمایش فارسی روز دریافتی
         /// مانند سه شنبه ۲۱ دی ۱۳۹۵
@@ -82,6 +103,24 @@ namespace DNTPersianUtils.Core
             return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase, appendHhMm, convertToIranTimeZone, includePersianDate).ToPersianNumbers()}";
         }
 
+#if NET6_0
+        /// <summary>
+        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
+        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
+        /// </summary>
+        /// <param name="date">تاریخ ورودی</param>
+        /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
+        /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
+        /// <returns>نمایش دوستانه</returns>
+        public static string ToFriendlyPersianDateTextify(
+            this DateOnly date, DateOnly comparisonBase, bool appendHhMm = true, bool convertToIranTimeZone = true, bool includePersianDate = true)
+        {
+            return date.ToDateTime().ToFriendlyPersianDateTextify(comparisonBase.ToDateTime(), appendHhMm, convertToIranTimeZone, includePersianDate);
+        }
+#endif
+
         /// <summary>
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
         /// مبنای محاسبه هم اکنون
@@ -98,6 +137,24 @@ namespace DNTPersianUtils.Core
             var comparisonBase = convertToIranTimeZone ? dt.Kind.GetNow().ToIranTimeZoneDateTime() : dt.Kind.GetNow();
             return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase, appendHhMm, convertToIranTimeZone, includePersianDate).ToPersianNumbers()}";
         }
+
+#if NET6_0
+        /// <summary>
+        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
+        /// مبنای محاسبه هم اکنون
+        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
+        /// </summary>
+        /// <param name="date">تاریخ ورودی</param>
+        /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
+        /// <returns>نمایش دوستانه</returns>
+        public static string ToFriendlyPersianDateTextify(
+            this DateOnly date, bool appendHhMm = true, bool convertToIranTimeZone = true, bool includePersianDate = true)
+        {
+            return date.ToDateTime().ToFriendlyPersianDateTextify(appendHhMm, convertToIranTimeZone, includePersianDate);
+        }
+#endif
 
         /// <summary>
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
@@ -144,6 +201,20 @@ namespace DNTPersianUtils.Core
             return dt == null ? string.Empty : ToFriendlyPersianDateTextify(dt.Value, comparisonBase);
         }
 
+#if NET6_0
+        /// <summary>
+        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
+        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
+        /// </summary>
+        /// <param name="date">تاریخ ورودی</param>
+        /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
+        /// <returns>نمایش دوستانه</returns>
+        public static string ToFriendlyPersianDateTextify(this DateOnly? date, DateOnly comparisonBase)
+        {
+            return date.ToDateTime().ToFriendlyPersianDateTextify(comparisonBase.ToDateTime());
+        }
+#endif
+
         /// <summary>
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
         /// مبنای محاسبه هم اکنون
@@ -161,6 +232,21 @@ namespace DNTPersianUtils.Core
             var comparisonBase = convertToIranTimeZone ? dt.Value.Kind.GetNow().ToIranTimeZoneDateTime() : dt.Value.Kind.GetNow();
             return ToFriendlyPersianDateTextify(dt.Value, comparisonBase, convertToIranTimeZone);
         }
+
+#if NET6_0
+        /// <summary>
+        /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
+        /// مبنای محاسبه هم اکنون
+        /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
+        /// </summary>
+        /// <param name="date">تاریخ ورودی</param>
+        /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+        /// <returns>نمایش دوستانه</returns>
+        public static string ToFriendlyPersianDateTextify(this DateOnly? date, bool convertToIranTimeZone = true)
+        {
+            return date.ToDateTime().ToFriendlyPersianDateTextify(convertToIranTimeZone);
+        }
+#endif
 
         /// <summary>
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
