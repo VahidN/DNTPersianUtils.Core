@@ -1,6 +1,6 @@
 ﻿DNTPersianUtils.Core
 =======
-<div dir="rtl">
+
 
 <p>
   <a href="https://github.com/VahidN/DNTPersianUtils.Core">
@@ -8,6 +8,7 @@
   </a>
 </p>
 
+<div dir="rtl">
 DNTPersianUtils.Core کتابخانه‌ای است متشکل از متدهای الحاقی کمکی جهت کار با فرهنگ فارسی، در برنامه‌های مبتنی بر NET Core. و همچنین NET 4.x.
 برای نصب آن دستور ذیل را در کنسول پاورشل نیوگت اجرا کنید:
 </div>
