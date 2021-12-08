@@ -13,7 +13,7 @@ DNTPersianUtils.Core کتابخانه‌ای است متشکل از متدهای
 برای نصب آن دستور ذیل را در کنسول پاورشل نیوگت اجرا کنید:
 </div>
 
-[![Nuget](https://img.shields.io/nuget/v/DNTPersianUtils.Core)](https://github.com/VahidN/DNTPersianUtils.Core)
+[![Nuget](https://img.shields.io/nuget/v/DNTPersianUtils.Core)](https://www.nuget.org/packages/DNTPersianUtils.Core/)
 ```
 PM> Install-Package DNTPersianUtils.Core
 ```
