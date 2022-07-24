@@ -8,10 +8,11 @@
   </a>
 </p>
 
-<div dir="rtl">
-DNTPersianUtils.Core کتابخانه‌ای است متشکل از متدهای الحاقی کمکی جهت کار با فرهنگ فارسی، در برنامه‌های مبتنی بر NET Core. و همچنین NET 4.x.
-برای نصب آن دستور ذیل را در کنسول پاورشل نیوگت اجرا کنید:
+<div>
+DNTPersianUtils.Core is a library made of additional utilities to help with Persian culture. Based on .NET Core and .NET 4.x.
+For installation run the command below in Powershell with NuGet
 </div>
+<br \>
 
 [![Nuget](https://img.shields.io/nuget/v/DNTPersianUtils.Core)](https://www.nuget.org/packages/DNTPersianUtils.Core/)
 ```
@@ -19,59 +20,61 @@ PM> Install-Package DNTPersianUtils.Core
 ```
 
 
-لیست متدها و امکانات این کتابخانه
+Methods and Library Options
 -----------------
 
 
-|نام متد/امکانات|مثال|خروجی نمونه|
+|Method Name/Options|Example|Example Output|
 | -------| :------: | :------: |
-|نمایش فارسی روز دریافتی|dt.ToPersianDateTextify()|سه شنبه ۲۱ دی ۱۳۹۵|
-|نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی|dt.ToFriendlyPersianDateTextify()|&#x202b;۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰|
-|تبدیلگر عدد به حروف|1234567.NumberToText(Language.Persian)|یک میلیون و دویست و سی و چهار هزار و پانصد و شصت و هفت|
-|نگارش اصلاح شده‌ی فرهنگ فارسی|PersianCulture.Instance <br> Thread.CurrentThread.CurrentCulture = PersianCulture.Instance;|در این فرهنگ تاریخ میلادی با شمسی جایگزین شده‌است|
-|تبدیل تاریخ و زمان رشته‌ای شمسی به میلادی|"1395/11/3 7:30".ToGregorianDateTime()|new DateTime(2017, 1, 22, 7, 30, 0)|
-|تبدیل تاریخ میلادی به شمسی|dt.ToLongPersianDateString()|&#x202b;21 دی 1395|
-|تبدیل تاریخ میلادی به شمسی|dt.ToLongPersianDateTimeString()|&#x202b;21 دی 1395، 10:20:02 ق.ظ|
-|تبدیل تاریخ میلادی به شمسی|dt.ToPersianDateTimeString("dd MMMM yyyy")|این تبدیل بر اساس فرهنگ اصلاح شده‌ی فارسی صورت می‌گیرد. مانند <br> dt.ToPersianDateTimeString("dd MMMM yyyy - HH:mm") <br> &#x202b; با این خروجی فرضی: «21 دی 1395 - 10:20»|
-|تبدیل تاریخ میلادی به شمسی|dt.ToShortPersianDateString()|1395/10/21|
-|تبدیل تاریخ میلادی به شمسی|dt.ToShortPersianDateTimeString()|1395/10/21 10:20|
-|تاریخ روزهای ابتدا و انتهای سال شمسی|dt.GetPersianYearStartAndEndDates()|[مثال](/src/DNTPersianUtils.Core.Tests/PersianCultureTests.cs)|
-|تاریخ روزهای ابتدا و انتهای ماه شمسی|dt.GetPersianMonthStartAndEndDates()|[مثال](/src/DNTPersianUtils.Core.Tests/PersianCultureTests.cs)|
-|تاریخ روزهای ابتدا و انتهای هفته شمسی|dt.GetPersianWeekStartAndEndDates()|[مثال](/src/DNTPersianUtils.Core.Tests/PersianCultureTests.cs)|
-|تبدیل عدد انگلیسی به فارسی|123.ToPersianNumbers()|۱۲۳|
-|آیا عبارت مدنظر حاوی حروف فارسی است؟|"Abc تست".ContainsFarsi()|true|
-|اصلاح ی و ک عربی به فارسی|"می‌شود".ApplyCorrectYeKe()|می‌شود|
-|راست به چپ کردن یک متن ساده مخلوط برای نمایش در محیط‌های چپ به راست مانند فید خوان‌ها|"سلام Abc".ApplyRle()|Abc سلام|
-|محاسبه سن|DateTime.Now.AddYears(-9).GetAge()|9|
-|آیا تاریخ و زمان مدنظر آغاز سال نوی شمسی است؟|dt.IsStartOfNewYear()|true/false|
-|مجموعه کلمات بی‌اثر زبان فارسی| PersianStopwords.List | مفید برای تنظیمات جستجوهای تمام متنی |
-|&#x202b; نرمال کردن متون. پارامتر آن قابلیت ترکیب را دارد. | "'تست'".[NormalizePersianText](/src/DNTPersianUtils.Core.Tests/NormalizerTests.cs)(<br>PersianNormalizers.ConvertEnglishQuotes) | «تست» |
-| لیست مناطق و استان‌ها | Iran.Provinces | Iran.Provinces لیست تو در توی استان‌ها و شهرهای ایران |
-| مناسبت‌های تعطیلات رسمی ایران | Iran.Holidays | مناسبت‌های تعطیلات رسمی ایران از سال 1395 تا پایان سال 1401 |
-| دریافت لیست روزهای کاری یک بازه زمانی | IranHolidays.GetBusinessDays() | روزهای کاری ایران از سال 1395 تا پایان سال 1401 |
-|تبدیل تاریخ میلادی به قمری|new DateTime(2018, 08, 31).ToIslamicDay()|new IslamicDay(1439, 12, 19)|
-|تبدیل تاریخ شمسی به قمری|IslamicDateUtils.PersianDayToIslamicDay(1397, 6, 9)|new IslamicDay(1439, 12, 19)|
+|Show input date in Farsi|dt.ToPersianDateTextify()|سه شنبه ۲۱ دی ۱۳۹۵|
+|Convert date and time to Shamsi|dt.ToFriendlyPersianDateTextify()|&#x202b;۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰|
+|Convert number to letters|1234567.NumberToText(Language.Persian)|یک میلیون و دویست و سی و چهار هزار و پانصد و شصت و هفت|
+|Corrected Farsi Culture|PersianCulture.Instance <br> Thread.CurrentThread.CurrentCulture = PersianCulture.Instance;|در این فرهنگ تاریخ میلادی با شمسی جایگزین شده‌است|
+|Convert Shamsi date and time to Miladi (string)|"1395/11/3 7:30".ToGregorianDateTime()|new DateTime(2017, 1, 22, 7, 30, 0)|
+|Conver Shamsi date and time to Miladi|dt.ToLongPersianDateString()|&#x202b;21 دی 1395|
+|Conver Shamsi date and time to Miladi|dt.ToLongPersianDateTimeString()|&#x202b;21 دی 1395، 10:20:02 ق.ظ|
+|Conver Shamsi date and time to Miladi|dt.ToPersianDateTimeString("dd MMMM yyyy")|این تبدیل بر اساس فرهنگ اصلاح شده‌ی فارسی صورت می‌گیرد. مانند <br> dt.ToPersianDateTimeString("dd MMMM yyyy - HH:mm") <br> &#x202b; با این خروجی فرضی: «21 دی 1395 - 10:20»|
+|Conver Shamsi date and time to Miladi|dt.ToShortPersianDateString()|1395/10/21|
+|Conver Shamsi date and time to Miladi|dt.ToShortPersianDateTimeString()|1395/10/21 10:20|
+|Start and end date of Shamsi year|dt.GetPersianYearStartAndEndDates()|[Example](/src/DNTPersianUtils.Core.Tests/PersianCultureTests.cs)|
+|Start and end date of Shamsi month|dt.GetPersianMonthStartAndEndDates()|[Example](/src/DNTPersianUtils.Core.Tests/PersianCultureTests.cs)|
+|Start and end date of Shamsi week|dt.GetPersianWeekStartAndEndDates()|[Example](/src/DNTPersianUtils.Core.Tests/PersianCultureTests.cs)|
+|Convert English number to Farsi|123.ToPersianNumbers()|۱۲۳|
+|Does a phrase contain Farsi?|"Abc تست".ContainsFarsi()|true|
+|Use correct case of Farsi 'Y' and 'K'|"می‌شود".ApplyCorrectYeKe()|می‌شود|
+|Convert written direction to right-to-left|"سلام Abc".ApplyRle()|Abc سلام|
+|Calculate age|DateTime.Now.AddYears(-9).GetAge()|9|
+|Is a date the start of the Shamsi year?|dt.IsStartOfNewYear()|true/false|
+|Collection of neutral Farsi words| PersianStopwords.List | مفید برای تنظیمات جستجوهای تمام متنی |
+|&#x202b; Normaliza text | "'تست'".[NormalizePersianText](/src/DNTPersianUtils.Core.Tests/NormalizerTests.cs)(<br>PersianNormalizers.ConvertEnglishQuotes) | «تست» |
+| List Iran's provinces | Iran.Provinces | Iran.Provinces لیست تو در توی استان‌ها و شهرهای ایران |
+| List Iran's holidays | Iran.Holidays | مناسبت‌های تعطیلات رسمی ایران از سال 1395 تا پایان سال 1401 |
+| List business days within a range | IranHolidays.GetBusinessDays() | روزهای کاری ایران از سال 1395 تا پایان سال 1401 |
+|Convert Miladi date to Lunar|new DateTime(2018, 08, 31).ToIslamicDay()|new IslamicDay(1439, 12, 19)|
+|Convert Shamsi date to Lunar|IslamicDateUtils.PersianDayToIslamicDay(1397, 6, 9)|new IslamicDay(1439, 12, 19)|
 
-اعتبارسنج‌ها
+
+
+Validators
 -----------------
 
 
-|نام متد/امکانات|مثال|خروجی نمونه|
+|Method's Name/Options|Examples|Example Outputs|
 | -------| :------: | :------: |
-|تعیین اعتبار تاریخ و زمان رشته‌ای شمسی|"1395/12/30".IsValidPersianDateTime()<br>&#x202b;به همراه [ValidPersianDateTime] مخصوص MVC|true|
-| بررسی اعتبار کد ملی | "0010350829".IsValidIranianNationalCode() <br>&#x202b;به همراه [ValidIranianNationalCode] مخصوص MVC| true |
-| بررسی اعتبار کد بانکی شبا | "IR820540102680020817909002".<br>IsValidIranShebaNumber() <br>&#x202b;به همراه [ValidIranShebaNumber] مخصوص MVC| true |
-| بررسی اعتبار کد بانکی شتاب | "6221061106498670".<br>IsValidIranShetabNumber() <br>&#x202b;به همراه [ValidIranShetabNumber] مخصوص MVC| true |
-| بررسی اعتبار شماره موبایل | "09901464762".<br>IsValidIranianMobileNumber() <br>&#x202b;به همراه [ValidIranianMobileNumber] مخصوص MVC| true |
-| بررسی اعتبار شماره تلفن | "37236445".<br>IsValidIranianPhoneNumber() <br>&#x202b;به همراه [ValidIranianPhoneNumber] مخصوص MVC| true |
-| بررسی اعتبار کد پستی | "1619735744".<br>IsValidIranianPostalCode() <br>&#x202b;به همراه [ValidIranianPostalCode] مخصوص MVC| true |
-| بررسی اعتبار اعداد تمام فارسی | "۹۹۹۹۹".<br>ContainsOnlyPersianNumbers() <br>&#x202b;به همراه [ShouldContainOnlyPersianNumbers] مخصوص MVC| true |
-| بررسی اعتبار حروف و یا اعداد فارسی بودن تنها قسمتی از متن | "Abc تست".<br>ContainsFarsi() <br>&#x202b;به همراه [ShouldContainPersianLettersOrNumbers] مخصوص MVC| true |
-| بررسی اعتبار حروف فارسی بودن تمام متن | "تست".<br>ContainsOnlyFarsiLetters() <br>&#x202b;به همراه [ShouldContainOnlyPersianLetters] مخصوص MVC| true |
-| بررسی اعتبار شناسه ملی حقوقی | "14005893875".IsValidIranianNationalLegalCode() <br>&#x202b;به همراه [ValidIranianNationalLegalCodeAttribute] مخصوص MVC| true |
+|Determine validation of Shamsi date and time (string)|"1395/12/30".IsValidPersianDateTime()<br>&#x202b;به همراه [ValidPersianDateTime] مخصوص MVC|true|
+| Validate national ID | "0010350829".IsValidIranianNationalCode() <br>&#x202b;به همراه [ValidIranianNationalCode] مخصوص MVC| true |
+| Validate Shaba bank code | "IR820540102680020817909002".<br>IsValidIranShebaNumber() <br>&#x202b;به همراه [ValidIranShebaNumber] مخصوص MVC| true |
+| Validate Shetab bank code | "6221061106498670".<br>IsValidIranShetabNumber() <br>&#x202b;به همراه [ValidIranShetabNumber] مخصوص MVC| true |
+| Validate cellphone number | "09901464762".<br>IsValidIranianMobileNumber() <br>&#x202b;به همراه [ValidIranianMobileNumber] مخصوص MVC| true |
+| Validate home phone number | "37236445".<br>IsValidIranianPhoneNumber() <br>&#x202b;به همراه [ValidIranianPhoneNumber] مخصوص MVC| true |
+| Validate postal code | "1619735744".<br>IsValidIranianPostalCode() <br>&#x202b;به همراه [ValidIranianPostalCode] مخصوص MVC| true |
+| Validate all Farsi digits | "۹۹۹۹۹".<br>ContainsOnlyPersianNumbers() <br>&#x202b;به همراه [ShouldContainOnlyPersianNumbers] مخصوص MVC| true |
+| Validate Farsi letters and digits for a part of text | "Abc تست".<br>ContainsFarsi() <br>&#x202b;به همراه [ShouldContainPersianLettersOrNumbers] مخصوص MVC| true |
+| Validate Farsi letters and digits for entire text | "تست".<br>ContainsOnlyFarsiLetters() <br>&#x202b;به همراه [ShouldContainOnlyPersianLetters] مخصوص MVC| true |
+| Validate national birth certificate ID | "14005893875".IsValidIranianNationalLegalCode() <br>&#x202b;به همراه [ValidIranianNationalLegalCodeAttribute] مخصوص MVC| true |
 
 
-نحوه کار با اطلاعات استان‌ها
+Usage With Provincial Data 
 -----------------
 
 ```csharp
