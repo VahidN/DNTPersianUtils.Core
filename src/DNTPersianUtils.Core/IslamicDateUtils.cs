@@ -491,7 +491,7 @@ namespace DNTPersianUtils.Core
             return JdnToIslamicDay(ToJdn(gregorian, convertToIranTimeZone));
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// تبدیل تاریخ میلادی به قمری
         /// </summary>
@@ -540,7 +540,7 @@ namespace DNTPersianUtils.Core
             return GregorianToJdn(gregorian.Year, gregorian.Month, gregorian.Day);
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// To Jdn
         /// </summary>
@@ -598,7 +598,7 @@ namespace DNTPersianUtils.Core
             return JdnToPersianDay(ToJdn(gregorian, convertToIranTimeZone));
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// To PersianDay
         /// </summary>

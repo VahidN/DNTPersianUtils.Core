@@ -106,7 +106,7 @@ namespace DNTPersianUtils.Core
                    now.Second == vernalEquinoxDateTime.Second;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Is given date start of a new year?
         /// </summary>

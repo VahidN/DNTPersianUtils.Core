@@ -955,7 +955,7 @@ namespace DNTPersianUtils.Core
             return result.Count > 0 ? result : null;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
         /// از سال 1395 تا پایان سال 1398
@@ -998,7 +998,7 @@ namespace DNTPersianUtils.Core
                                     x.Holiday.Day == date.Day);
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// تشخیص تعطیلات رسمی ایران
         /// از سال 1395 تا پایان سال 1398
@@ -1052,7 +1052,7 @@ namespace DNTPersianUtils.Core
             }
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// دریافت لیست روزهای کاری ایران در یک بازه زمانی
         /// از سال 1395 تا پایان سال 1398

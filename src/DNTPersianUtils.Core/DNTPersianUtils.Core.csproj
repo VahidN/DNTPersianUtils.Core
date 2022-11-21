@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>DNTPersianUtils.Core is a collection of Persian helper extension methods.</Description>
-    <VersionPrefix>5.4.5</VersionPrefix>
+    <VersionPrefix>5.4.6</VersionPrefix>
     <Authors>Vahid Nasiri</Authors>
-    <TargetFrameworks>net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
+    <TargetFrameworks>net7.0;net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
     <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">net5.0;netstandard2.1;netstandard1.3;netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>DNTPersianUtils.Core</AssemblyName>
@@ -41,7 +41,7 @@
     <ReportAnalyzer>true</ReportAnalyzer>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Meziantou.Analyzer" Version="1.0.697">
+    <PackageReference Include="Meziantou.Analyzer" Version="1.0.750">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -97,5 +97,10 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' "></ItemGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
     <DefineConstants>NET6_0</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net7.0' "></ItemGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0' ">
+    <DefineConstants>NET7_0</DefineConstants>
   </PropertyGroup>
 </Project>

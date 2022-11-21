@@ -35,7 +35,7 @@ namespace DNTPersianUtils.Core
             return ToPersianDateTextify(dateParts.Year, dateParts.Month, dateParts.Day);
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// نمایش فارسی روز دریافتی
         /// مانند سه شنبه ۲۱ دی ۱۳۹۵
@@ -55,7 +55,7 @@ namespace DNTPersianUtils.Core
             return dt == null ? string.Empty : ToPersianDateTextify(dt.Value);
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// نمایش فارسی روز دریافتی
         /// مانند سه شنبه ۲۱ دی ۱۳۹۵
@@ -103,7 +103,7 @@ namespace DNTPersianUtils.Core
             return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase, appendHhMm, convertToIranTimeZone, includePersianDate).ToPersianNumbers()}";
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
         /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
@@ -138,7 +138,7 @@ namespace DNTPersianUtils.Core
             return $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase, appendHhMm, convertToIranTimeZone, includePersianDate).ToPersianNumbers()}";
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
         /// مبنای محاسبه هم اکنون
@@ -201,7 +201,7 @@ namespace DNTPersianUtils.Core
             return dt == null ? string.Empty : ToFriendlyPersianDateTextify(dt.Value, comparisonBase);
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
         /// مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
@@ -233,7 +233,7 @@ namespace DNTPersianUtils.Core
             return ToFriendlyPersianDateTextify(dt.Value, comparisonBase, convertToIranTimeZone);
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
         /// مبنای محاسبه هم اکنون

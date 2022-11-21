@@ -68,7 +68,7 @@ namespace DNTPersianUtils.Core
             return age;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// تبديل به ابتداي روز ساختار قبلي
         /// </summary>
@@ -129,7 +129,7 @@ namespace DNTPersianUtils.Core
             return GetAge(birthday, now);
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// محاسبه سن
         /// مبنای محاسبه هم اکنون
@@ -200,7 +200,7 @@ namespace DNTPersianUtils.Core
             return (long)dateTime.ToUniversalTime().Subtract(Epoch).TotalMilliseconds;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Converts a given <see cref="DateOnly"/> to milliseconds from Epoch.
         /// </summary>
@@ -235,7 +235,7 @@ namespace DNTPersianUtils.Core
             return dateTime.ToEpochMilliseconds() / 1000;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Converts a given <see cref="DateOnly"/> to seconds from Epoch.
         /// </summary>
@@ -289,7 +289,7 @@ namespace DNTPersianUtils.Core
             return dateTime == new DateTime(dateTime.Year, dateTime.Month, 1).AddMonths(1).AddDays(-1);
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Returns whether the given date is the last day of the month
         /// </summary>
@@ -317,7 +317,7 @@ namespace DNTPersianUtils.Core
             return value.DayOfWeek == DayOfWeek.Sunday || value.DayOfWeek == DayOfWeek.Saturday;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Returns whether the given date falls in a weekend
         /// </summary>
@@ -345,7 +345,7 @@ namespace DNTPersianUtils.Core
             return DateTime.DaysInMonth(value.Year, 2) == 29;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Determines if a given year is a LeapYear or not.
         /// </summary>
@@ -377,7 +377,7 @@ namespace DNTPersianUtils.Core
             return new DateTimeOffset(dt.Ticks, offset);
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Converts a Date to a DateTimeOffset
         /// </summary>
@@ -397,7 +397,7 @@ namespace DNTPersianUtils.Core
         public static DateTimeOffset ToDateTimeOffset(this DateTime dt, double offsetInHours = 0)
             => ToDateTimeOffset(dt, offsetInHours == 0 ? TimeSpan.Zero : TimeSpan.FromHours(offsetInHours));
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Converts a Date to a DateTimeOffset
         /// </summary>
@@ -412,7 +412,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public static DateTime GetStartOfDay(this DateTime dt) => dt.Date;
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Retruns Date which is the start of the day
         /// </summary>
@@ -434,7 +434,7 @@ namespace DNTPersianUtils.Core
         /// </summary>
         public static DateTime GetEndOfDay(this DateTime dt) => dt.Date.AddTicks(-1).AddDays(1);
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// Retruns the end of the day
         /// </summary>
@@ -472,7 +472,7 @@ namespace DNTPersianUtils.Core
             return dt.AddDays(-diff).Date;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// برای نمونه تاریخ جمعه‌ی قبلی را باز می‌گرداند
         /// </summary>
@@ -521,7 +521,7 @@ namespace DNTPersianUtils.Core
             return dt.AddDays(DayOfWeek.Saturday - dt.DayOfWeek).Date;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         /// <summary>
         /// برای نمونه تاریخ جمعه‌ی بعدی را باز می‌گرداند
         /// </summary>
