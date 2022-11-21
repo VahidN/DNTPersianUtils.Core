@@ -46,17 +46,17 @@ namespace DNTPersianUtils.Core
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1395, 1, 2, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1395, 1, 3, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1395, 1, 4, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
@@ -183,17 +183,17 @@ namespace DNTPersianUtils.Core
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1396, 1, 2, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1396, 1, 3, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1396, 1, 4, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
@@ -320,17 +320,17 @@ namespace DNTPersianUtils.Core
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1397, 1, 2, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1397, 1, 3, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1397, 1, 4, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
@@ -457,17 +457,17 @@ namespace DNTPersianUtils.Core
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1398, 1, 2, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1398, 1, 3, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1398, 1, 4, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
@@ -599,17 +599,17 @@ namespace DNTPersianUtils.Core
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1399, 1, 2, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1399, 1, 3, 0, 0, 0, 0),
-                    Description = "عیدنوروز و مبعث رسول اکرم"
+                    Description = "عید نوروز و مبعث رسول اکرم"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1399, 1, 4, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
@@ -745,17 +745,17 @@ namespace DNTPersianUtils.Core
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1400,01,02, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1400,01,03, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1400,01,04, 0, 0, 0, 0),
-                    Description = "عیدنوروز"
+                    Description = "عید نوروز"
                 },
                 new IranHoliday
                 {
@@ -879,7 +879,7 @@ namespace DNTPersianUtils.Core
                 new IranHoliday
                 {
                     Holiday = persianCalendar.ToDateTime(1400,12,27, 0, 0, 0, 0),
-                    Description = "ولادت حضرت قائم (عج لالله تعالی) و روز جهانی مستضعفین"
+                    Description = "ولادت حضرت قائم (عج) و روز جهانی مستضعفین"
                 },
                 new IranHoliday
                 {
@@ -890,9 +890,9 @@ namespace DNTPersianUtils.Core
                 // ----------------------- سال 1401
 				
 		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 01, 01, 0, 0, 0, 0), Description = "جشن نوروز, جشن سال نو" },
-		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 01, 02, 0, 0, 0, 0), Description = "عیدنوروز" },
-		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 01, 03, 0, 0, 0, 0), Description = "عیدنوروز" },
-		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 01, 04, 0, 0, 0, 0), Description = "عیدنوروز" },
+		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 01, 02, 0, 0, 0, 0), Description = "عید نوروز" },
+		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 01, 03, 0, 0, 0, 0), Description = "عید نوروز" },
+		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 01, 04, 0, 0, 0, 0), Description = "عید نوروز" },
 		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 01, 12, 0, 0, 0, 0), Description = "روز جمهوری اسلامی ایران" },
 		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 01, 13, 0, 0, 0, 0), Description = "جشن سیزده به در" },
 
@@ -923,7 +923,7 @@ namespace DNTPersianUtils.Core
 		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 11, 22, 0, 0, 0, 0), Description = "پیروزی انقلاب اسلامی" },
 		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 11, 29, 0, 0, 0, 0), Description = "مبعث رسول اکرم" },
 
-		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 12, 17, 0, 0, 0, 0), Description = "ولادت حضرت قائم (عج لالله تعالی)" },
+		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 12, 17, 0, 0, 0, 0), Description = "ولادت حضرت قائم (عج)" },
 		new IranHoliday{ Holiday = persianCalendar.ToDateTime(1401, 12, 29, 0, 0, 0, 0), Description = "روز ملی شدن صنعت نفت ایران" },
 
 		// ----------------------- سال 1402				
