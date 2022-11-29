@@ -1,106 +1,106 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <Description>DNTPersianUtils.Core is a collection of Persian helper extension methods.</Description>
-    <VersionPrefix>5.4.7</VersionPrefix>
-    <Authors>Vahid Nasiri</Authors>
-    <TargetFrameworks>net7.0;net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
-    <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">net5.0;netstandard2.1;netstandard1.3;netstandard2.0</TargetFrameworks>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AssemblyName>DNTPersianUtils.Core</AssemblyName>
-    <PackageId>DNTPersianUtils.Core</PackageId>
-    <PackageTags>Persian;.NETCore;PersianDate;DateTime;Iran;PersianCalendar</PackageTags>
-    <PackageProjectUrl>https://github.com/VahidN/DNTPersianUtils.Core</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/VahidN/DNTPersianUtils.Core</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.3' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
-    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.3' ">1.6.1</NetStandardImplicitPackageVersion>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <DebugType>embedded</DebugType>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-  </PropertyGroup>
-  <PropertyGroup>
-    <LangVersion>latest</LangVersion>
-    <AnalysisLevel>latest</AnalysisLevel>
-    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
-    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-    <Nullable>enable</Nullable>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
-    <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
-    <Deterministic>true</Deterministic>
-    <Features>strict</Features>
-    <ReportAnalyzer>true</ReportAnalyzer>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Meziantou.Analyzer" Version="1.0.750">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <PlatformTarget>anycpu</PlatformTarget>
-  </PropertyGroup>
+    <PropertyGroup>
+        <Description>DNTPersianUtils.Core is a collection of Persian helper extension methods.</Description>
+        <VersionPrefix>5.4.8</VersionPrefix>
+        <Authors>Vahid Nasiri</Authors>
+        <TargetFrameworks>net7.0;net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
+        <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">net5.0;netstandard2.1;netstandard1.3;netstandard2.0</TargetFrameworks>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <AssemblyName>DNTPersianUtils.Core</AssemblyName>
+        <PackageId>DNTPersianUtils.Core</PackageId>
+        <PackageTags>Persian;.NETCore;PersianDate;DateTime;Iran;PersianCalendar</PackageTags>
+        <PackageProjectUrl>https://github.com/VahidN/DNTPersianUtils.Core</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/VahidN/DNTPersianUtils.Core</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.3' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+        <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.3' ">1.6.1</NetStandardImplicitPackageVersion>
+        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <DebugType>embedded</DebugType>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    </PropertyGroup>
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <AnalysisLevel>latest</AnalysisLevel>
+        <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+        <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+        <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+        <Deterministic>true</Deterministic>
+        <Features>strict</Features>
+        <ReportAnalyzer>true</ReportAnalyzer>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Meziantou.Analyzer" Version="1.0.750">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+    </ItemGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <PlatformTarget>anycpu</PlatformTarget>
+    </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-  </ItemGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
-    <DefineConstants>NET4_6</DefineConstants>
-    <NoWarn>$(NoWarn);nullable</NoWarn>
-  </PropertyGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+        <Reference Include="System"/>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="System.ComponentModel.DataAnnotations"/>
+    </ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+        <DefineConstants>NET4_6</DefineConstants>
+        <NoWarn>$(NoWarn);nullable</NoWarn>
+    </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-    <PackageReference Include="System.Globalization.Extensions" Version="4.3.0" />
-    <PackageReference Include="System.Reflection" Version="4.3.0" />
-    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-  </ItemGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-    <DefineConstants>NETSTANDARD1_3</DefineConstants>
-    <NoWarn>$(NoWarn);nullable</NoWarn>
-  </PropertyGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+        <PackageReference Include="System.Globalization.Extensions" Version="4.3.0"/>
+        <PackageReference Include="System.Reflection" Version="4.3.0"/>
+        <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0"/>
+        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0"/>
+    </ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+        <DefineConstants>NETSTANDARD1_3</DefineConstants>
+        <NoWarn>$(NoWarn);nullable</NoWarn>
+    </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-  </ItemGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <DefineConstants>NETSTANDARD2_0</DefineConstants>
-    <NoWarn>$(NoWarn);nullable</NoWarn>
-  </PropertyGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0"/>
+    </ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+        <DefineConstants>NETSTANDARD2_0</DefineConstants>
+        <NoWarn>$(NoWarn);nullable</NoWarn>
+    </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-  </ItemGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
-    <DefineConstants>NETSTANDARD2_1</DefineConstants>
-  </PropertyGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0"/>
+    </ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+        <DefineConstants>NETSTANDARD2_1</DefineConstants>
+    </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' "></ItemGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
-    <DefineConstants>NET5_0</DefineConstants>
-  </PropertyGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' "></ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
+        <DefineConstants>NET5_0</DefineConstants>
+    </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' "></ItemGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
-    <DefineConstants>NET6_0</DefineConstants>
-  </PropertyGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' "></ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
+        <DefineConstants>NET6_0</DefineConstants>
+    </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net7.0' "></ItemGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0' ">
-    <DefineConstants>NET7_0</DefineConstants>
-  </PropertyGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net7.0' "></ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0' ">
+        <DefineConstants>NET7_0</DefineConstants>
+    </PropertyGroup>
 </Project>

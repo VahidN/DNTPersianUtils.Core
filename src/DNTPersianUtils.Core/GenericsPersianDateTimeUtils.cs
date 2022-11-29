@@ -66,13 +66,16 @@ public static class GenericsPersianDateTimeUtils
         return value switch
                {
                    DateTime dateTimeValue =>
-                       dateTimeValue == default ? default : (TValue)(object)(dateTimeValue.Date + timeSpan),
+                       dateTimeValue == default ? default : (TValue)(object)dateTimeValue.Date.Add(timeSpan),
 #if NET6_0 || NET7_0
                    DateOnly dateOnlyValue =>
                        dateOnlyValue == default ? default : (TValue)(object)dateOnlyValue.AddDays(timeSpan.Days),
 #endif
                    DateTimeOffset dateTimeOffsetValue =>
-                       dateTimeOffsetValue == default ? default : (TValue)(object)(dateTimeOffsetValue.Date + timeSpan),
+                       dateTimeOffsetValue == default
+                           ? default
+                           : (TValue)(object)new DateTimeOffset(dateTimeOffsetValue.Date.Add(timeSpan),
+                                                                dateTimeOffsetValue.Offset),
                    _ => default,
                };
     }
