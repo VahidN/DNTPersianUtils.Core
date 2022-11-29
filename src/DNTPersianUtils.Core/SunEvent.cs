@@ -1,28 +1,27 @@
-namespace DNTPersianUtils.Core
+namespace DNTPersianUtils.Core;
+
+/// <summary>
+///     Sun Event
+/// </summary>
+public enum SunEvent
 {
     /// <summary>
-    ///  Sun Event
+    ///     march equinox
     /// </summary>
-    public enum SunEvent
-    {
-        /// <summary>
-        /// march equinox
-        /// </summary>
-        VernalEquinox,
+    VernalEquinox,
 
-        /// <summary>
-        /// June solstice
-        /// </summary>
-        SummerSolstice,
+    /// <summary>
+    ///     June solstice
+    /// </summary>
+    SummerSolstice,
 
-        /// <summary>
-        /// September equinox
-        /// </summary>
-        AutumnalEquinox,
+    /// <summary>
+    ///     September equinox
+    /// </summary>
+    AutumnalEquinox,
 
-        /// <summary>
-        /// December solstice
-        /// </summary>
-        WinterSolstice
-    }
+    /// <summary>
+    ///     December solstice
+    /// </summary>
+    WinterSolstice,
 }

@@ -1,33 +1,32 @@
-namespace DNTPersianUtils.Core
+namespace DNTPersianUtils.Core;
+
+/// <summary>
+///     Digit's groups
+/// </summary>
+public enum DigitGroup
 {
     /// <summary>
-    /// Digit's groups
+    ///     Ones group
     /// </summary>
-    public enum DigitGroup
-    {
-        /// <summary>
-        /// Ones group
-        /// </summary>
-        Ones,
+    Ones,
 
-        /// <summary>
-        /// Teens group
-        /// </summary>
-        Teens,
+    /// <summary>
+    ///     Teens group
+    /// </summary>
+    Teens,
 
-        /// <summary>
-        /// Tens group
-        /// </summary>
-        Tens,
+    /// <summary>
+    ///     Tens group
+    /// </summary>
+    Tens,
 
-        /// <summary>
-        /// Hundreds group
-        /// </summary>
-        Hundreds,
+    /// <summary>
+    ///     Hundreds group
+    /// </summary>
+    Hundreds,
 
-        /// <summary>
-        /// Thousands group
-        /// </summary>
-        Thousands
-    }
+    /// <summary>
+    ///     Thousands group
+    /// </summary>
+    Thousands,
 }

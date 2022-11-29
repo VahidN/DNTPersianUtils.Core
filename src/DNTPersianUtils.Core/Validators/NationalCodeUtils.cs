@@ -1,63 +1,62 @@
 ﻿using System.Linq;
 
-namespace DNTPersianUtils.Core
+namespace DNTPersianUtils.Core;
+
+/// <summary>
+///     Validate IR National Code
+/// </summary>
+public static class NationalCodeUtils
 {
     /// <summary>
-    /// Validate IR National Code
+    ///     If string is a number returns true
     /// </summary>
-    public static class NationalCodeUtils
+    public static bool IsNumber(this string? data)
     {
-        /// <summary>
-        /// If string is a number returns true
-        /// </summary>
-        public static bool IsNumber(this string? data)
+        if (string.IsNullOrWhiteSpace(data))
         {
-            if (string.IsNullOrWhiteSpace(data))
-            {
-                return false;
-            }
-
-            return data.ToEnglishNumbers().All(char.IsDigit);
+            return false;
         }
 
-        /// <summary>
-        /// Validate IR National Code
-        /// </summary>
-        /// <param name="nationalCode">National Code</param>
-        /// <returns></returns>
-        public static bool IsValidIranianNationalCode(this string? nationalCode)
+        return data.ToEnglishNumbers().All(char.IsDigit);
+    }
+
+    /// <summary>
+    ///     Validate IR National Code
+    /// </summary>
+    /// <param name="nationalCode">National Code</param>
+    /// <returns></returns>
+    public static bool IsValidIranianNationalCode(this string? nationalCode)
+    {
+        if (string.IsNullOrWhiteSpace(nationalCode))
         {
-            if (string.IsNullOrWhiteSpace(nationalCode))
-            {
-                return false;
-            }
-
-            nationalCode = nationalCode.ToEnglishNumbers();
-
-            nationalCode = nationalCode.PadLeft(10, '0');
-
-            const int nationalCodeLength = 10;
-            if (nationalCode.Length != nationalCodeLength)
-            {
-                return false;
-            }
-
-            if (!nationalCode.IsNumber())
-            {
-                return false;
-            }
-
-            var j = nationalCodeLength;
-            var sum = 0;
-            for (var i = 0; i < nationalCode.Length - 1; i++)
-            {
-                sum += (int)char.GetNumericValue(nationalCode[i]) * j--;
-            }
-
-            var remainder = sum % 11;
-            var controlNumber = (int)char.GetNumericValue(nationalCode[9]);
-            return remainder < 2 && controlNumber == remainder ||
-                   remainder >= 2 && controlNumber == 11 - remainder;
+            return false;
         }
+
+        nationalCode = nationalCode.ToEnglishNumbers();
+
+        nationalCode = nationalCode.PadLeft(10, '0');
+
+        const int nationalCodeLength = 10;
+        if (nationalCode.Length != nationalCodeLength)
+        {
+            return false;
+        }
+
+        if (!nationalCode.IsNumber())
+        {
+            return false;
+        }
+
+        var j = nationalCodeLength;
+        var sum = 0;
+        for (var i = 0; i < nationalCode.Length - 1; i++)
+        {
+            sum += (int)char.GetNumericValue(nationalCode[i]) * j--;
+        }
+
+        var remainder = sum % 11;
+        var controlNumber = (int)char.GetNumericValue(nationalCode[9]);
+        return (remainder < 2 && controlNumber == remainder) ||
+               (remainder >= 2 && controlNumber == 11 - remainder);
     }
 }

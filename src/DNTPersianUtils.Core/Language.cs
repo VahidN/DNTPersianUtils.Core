@@ -1,18 +1,17 @@
-namespace DNTPersianUtils.Core
+namespace DNTPersianUtils.Core;
+
+/// <summary>
+///     Number to word languages
+/// </summary>
+public enum Language
 {
     /// <summary>
-    /// Number to word languages
+    ///     English Language
     /// </summary>
-    public enum Language
-    {
-        /// <summary>
-        /// English Language
-        /// </summary>
-        English,
+    English,
 
-        /// <summary>
-        /// Persian Language
-        /// </summary>
-        Persian
-    }
+    /// <summary>
+    ///     Persian Language
+    /// </summary>
+    Persian,
 }

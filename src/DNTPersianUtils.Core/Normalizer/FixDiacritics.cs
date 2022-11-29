@@ -1,37 +1,38 @@
-﻿using System;
+﻿#if NETSTANDARD1_3
+using System;
+#endif
 using System.Globalization;
 using System.Text;
 
-namespace DNTPersianUtils.Core.Normalizer
+namespace DNTPersianUtils.Core.Normalizer;
+
+/// <summary>
+///     حذف اعراب از حروف و کلمات
+/// </summary>
+public static class FixDiacritics
 {
     /// <summary>
-    /// حذف اعراب از حروف و کلمات
+    ///     حذف اعراب از حروف و کلمات
     /// </summary>
-    public static class FixDiacritics
+    public static string RemoveDiacritics(this string? text)
     {
-        /// <summary>
-        /// حذف اعراب از حروف و کلمات
-        /// </summary>
-        public static string RemoveDiacritics(this string? text)
+        if (text is null)
         {
-            if (text is null)
-            {
-                return string.Empty;
-            }
-
-            var normalizedString = text.Normalize(NormalizationForm.FormKC);
-            var stringBuilder = new StringBuilder();
-
-            foreach (var c in normalizedString)
-            {
-                var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
-                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
-                {
-                    stringBuilder.Append(c);
-                }
-            }
-
-            return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
+            return string.Empty;
         }
+
+        var normalizedString = text.Normalize(NormalizationForm.FormKC);
+        var stringBuilder = new StringBuilder();
+
+        foreach (var c in normalizedString)
+        {
+            var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+            if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+            {
+                stringBuilder.Append(c);
+            }
+        }
+
+        return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
     }
 }
