@@ -57,6 +57,25 @@ namespace DNTPersianUtils.Core
         }
 
         /// <summary>
+        /// Updates the time part of the input DateOnly?/DateTime?, DateTimeOffset?, DateTimeOffset or DateOnly/DateTime 
+        /// </summary>
+        public static TValue? UpdateTimeOfDayPart<TValue>(this TValue? value, TimeSpan timeSpan)
+        {
+            return value switch
+                   {
+                       DateTime dateTimeValue =>
+                           dateTimeValue == default ? default : (TValue)(object)(dateTimeValue.Date + timeSpan),
+#if NET6_0 || NET7_0
+                       DateOnly dateOnlyValue =>
+                           dateOnlyValue == default ? default : (TValue)(object)dateOnlyValue.AddDays(timeSpan.Days),
+#endif
+                       DateTimeOffset dateTimeOffsetValue =>
+                           dateTimeOffsetValue == default ? default : (TValue)(object)(dateTimeOffsetValue.Date + timeSpan),
+                       _ => default
+                   };
+        }
+        
+        /// <summary>
         /// Is this date value null or default?
         /// </summary>
         public static bool IsNullOrDefaultDateTimeOrDateTimeOffset<TValue>(this TValue? value)
