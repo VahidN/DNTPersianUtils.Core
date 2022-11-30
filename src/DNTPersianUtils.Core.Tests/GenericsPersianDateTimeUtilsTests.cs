@@ -58,4 +58,12 @@ public class GenericsPersianDateTimeUtilsTests
         var expected = new DateTimeOffset(2017, 1, 10, 11, 10, 0, TimeSpan.FromHours(3.5));
         Assert.AreEqual(expected, actual);
     }
+
+    [TestMethod]
+    public void Test_GetTimeOfDayPart_Works()
+    {
+        var dt = new DateTime(2017, 1, 10, 10, 20, 2);
+        var actual = dt.GetTimeOfDayPart();
+        Assert.AreEqual(new TimeSpan(10, 20, 2), actual);
+    }
 }

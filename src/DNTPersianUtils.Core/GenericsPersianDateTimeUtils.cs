@@ -81,6 +81,25 @@ public static class GenericsPersianDateTimeUtils
     }
 
     /// <summary>
+    ///     Gets the TimeOfDay of the input DateOnly?/DateTime?, DateTimeOffset?, DateTimeOffset or DateOnly/DateTime
+    /// </summary>
+    public static TimeSpan? GetTimeOfDayPart<TValue>(this TValue? value)
+    {
+        return value switch
+               {
+                   DateTime dateTimeValue =>
+                       dateTimeValue == default ? default : dateTimeValue.TimeOfDay,
+#if NET6_0 || NET7_0
+                   DateOnly dateOnlyValue =>
+                       dateOnlyValue == default ? default : dateOnlyValue.ToDateTime().TimeOfDay,
+#endif
+                   DateTimeOffset dateTimeOffsetValue =>
+                       dateTimeOffsetValue == default ? default : dateTimeOffsetValue.TimeOfDay,
+                   _ => default,
+               };
+    }
+
+    /// <summary>
     ///     Is this date value null or default?
     /// </summary>
     public static bool IsNullOrDefaultDateTimeOrDateTimeOffset<TValue>(this TValue? value)
