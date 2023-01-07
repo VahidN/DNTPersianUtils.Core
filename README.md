@@ -40,7 +40,7 @@ PM> Install-Package DNTPersianUtils.Core
 |تاریخ روزهای ابتدا و انتهای هفته شمسی|dt.GetPersianWeekStartAndEndDates()|[مثال](/src/DNTPersianUtils.Core.Tests/PersianCultureTests.cs)|
 |تبدیل عدد انگلیسی به فارسی|123.ToPersianNumbers()|۱۲۳|
 |آیا عبارت مدنظر حاوی حروف فارسی است؟|"Abc تست".ContainsFarsi()|true|
-|اصلاح ی و ک عربی به فارسی|"می‌شود".ApplyCorrectYeKe()|می‌شود|
+|اصلاح ي و ك عربی به فارسی|"سنجاقك آبي".ApplyCorrectYeKe()|سنجاقک آبی|
 |راست به چپ کردن یک متن ساده مخلوط برای نمایش در محیط‌های چپ به راست مانند فید خوان‌ها|"سلام Abc".ApplyRle()|Abc سلام|
 |محاسبه سن|DateTime.Now.AddYears(-9).GetAge()|9|
 |آیا تاریخ و زمان مدنظر آغاز سال نوی شمسی است؟|dt.IsStartOfNewYear()|true/false|
