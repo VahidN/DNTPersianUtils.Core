@@ -10073,7 +10073,7 @@ public static class Iran
                      .ToList();
     }
 
-    private static IEnumerable<Province> getProvinces()
+    private static List<Province> getProvinces()
     {
         var provinces = new List<Province>();
         foreach (var provinceName in Cities.Select(x => x.ProvinceName).Distinct(StringComparer.OrdinalIgnoreCase))
