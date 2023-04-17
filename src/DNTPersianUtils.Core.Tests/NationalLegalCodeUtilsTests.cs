@@ -65,6 +65,12 @@ public class NationalLegalCodeUtilsTests
         Assert.AreEqual(false, "0254".IsValidIranianNationalLegalCode());
     }
 
+    [TestMethod]
+    public void NationalLegalCodeValidationTestShortString2()
+    {
+        Assert.AreEqual(false, "221".IsValidIranianNationalLegalCode());
+    }
+
     [DataTestMethod]
     [DataRow("14005893875")]
     [DataRow("14006278162")]

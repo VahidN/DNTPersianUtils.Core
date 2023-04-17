@@ -34,13 +34,14 @@ public static class NationalCodeUtils
 
         nationalCode = nationalCode.ToEnglishNumbers();
 
-        nationalCode = nationalCode.PadLeft(10, '0');
-
+        const int initialZeros = 2;
         const int nationalCodeLength = 10;
-        if (nationalCode.Length != nationalCodeLength)
+        if (nationalCode.Length < nationalCodeLength - initialZeros || nationalCode.Length > nationalCodeLength)
         {
             return false;
         }
+
+        nationalCode = nationalCode.PadLeft(10, '0');
 
         if (!nationalCode.IsNumber())
         {
