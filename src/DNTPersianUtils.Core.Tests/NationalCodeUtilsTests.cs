@@ -10,7 +10,7 @@ public class NationalCodeUtilsTests
     {
         Assert.AreEqual(true, "0010350829".IsNumber());
     }
-
+    
     [TestMethod]
     public void TestIsNumber2()
     {
@@ -70,6 +70,12 @@ public class NationalCodeUtilsTests
     public void NationalCodeValidationTestShortString()
     {
         Assert.AreEqual(false, "0254".IsValidIranianNationalCode());
+    }
+
+    [TestMethod]
+    public void NationalCodeValidationTestShortString2()
+    {
+        Assert.AreEqual(false, "221".IsValidIranianNationalCode());
     }
 
     [TestMethod]

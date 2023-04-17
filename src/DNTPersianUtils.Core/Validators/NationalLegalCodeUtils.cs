@@ -19,13 +19,15 @@ public static class NationalLegalCodeUtils
         }
 
         nationalLegalCode = nationalLegalCode.ToEnglishNumbers();
-        nationalLegalCode = nationalLegalCode.PadLeft(11, '0');
+        const int initialZeros = 3;
         const int nationalLegalCodeLength = 11;
 
-        if (nationalLegalCode.Length != nationalLegalCodeLength)
+        if (nationalLegalCode.Length < nationalLegalCodeLength - initialZeros || nationalLegalCode.Length > nationalLegalCodeLength)
         {
             return false;
         }
+
+        nationalLegalCode = nationalLegalCode.PadLeft(11, '0');
 
         if (!nationalLegalCode.IsNumber())
         {
