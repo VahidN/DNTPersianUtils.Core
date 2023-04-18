@@ -12,7 +12,7 @@ public class PersianCultureTests
     {
         var dt = new DateTime(2017, 1, 10, 10, 20, 2);
         var actual = dt.GetPersianWeekDayName();
-        Assert.AreEqual("سه شنبه", actual);
+        Assert.AreEqual("سه‌شنبه", actual);
     }
 
     [TestMethod]

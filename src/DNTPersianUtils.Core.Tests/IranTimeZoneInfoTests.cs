@@ -13,5 +13,11 @@ public class IranTimeZoneInfoTests
         var irTz = IranTimeZoneInfo.Instance;
         var isDaylightSavingTime = irTz.IsDaylightSavingTime(new DateTime(1402, 01, 13, new PersianCalendar()));
         Assert.IsFalse(isDaylightSavingTime);
+
+        isDaylightSavingTime = irTz.IsDaylightSavingTime(new DateTime(1401, 01, 13, new PersianCalendar()));
+        Assert.IsTrue(isDaylightSavingTime);
+
+        isDaylightSavingTime = irTz.IsDaylightSavingTime(new DateTime(1400, 01, 13, new PersianCalendar()));
+        Assert.IsTrue(isDaylightSavingTime);
     }
 }

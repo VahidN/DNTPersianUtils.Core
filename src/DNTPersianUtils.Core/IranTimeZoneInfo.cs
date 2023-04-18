@@ -82,12 +82,6 @@ public static class IranTimeZoneInfo
                                             R(637765920000000000, 638080416000000000, 36000000000,
                                               T(0, 3, 4, DayOfWeek.Tuesday),
                                               T(863999990000, 9, 3, DayOfWeek.Wednesday), 0),
-                                            R(638081280000000000, 638395776000000000, 36000000000,
-                                              T(0, 3, 4, DayOfWeek.Wednesday),
-                                              T(863999990000, 9, 3, DayOfWeek.Thursday), 0),
-                                            R(638396640000000000, 3155378112000000000, 36000000000,
-                                              T(0, 3, 3, DayOfWeek.Thursday),
-                                              T(863999990000, 9, 3, DayOfWeek.Friday), 0),
                                         });
     }
 

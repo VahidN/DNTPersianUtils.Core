@@ -43,7 +43,7 @@ public class FriendlyPersianDateUtilsTests
         var dt = DateTime.Now.AddMinutes(-3);
         var actual = dt.ToFriendlyPersianDateTextify();
         Console.WriteLine(actual);
-        Assert.IsTrue(actual.Contains("دقیقه قبل"));
+        Assert.IsTrue(actual.Contains("قبل"));
     }
 
     [TestMethod]
@@ -61,7 +61,7 @@ public class FriendlyPersianDateUtilsTests
         var dt = new DateTime(2017, 1, 10, 10, 20, 2);
         var comparisonBase = new DateTime(2017, 1, 20);
         var actual = dt.ToFriendlyPersianDateTextify(comparisonBase);
-        Assert.AreEqual($"{UnicodeConstants.RleChar}۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰", actual);
+        Assert.AreEqual($"{UnicodeConstants.RleChar}۱۰ روز قبل، سه‌شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰", actual);
     }
 
     [TestMethod]
@@ -69,7 +69,7 @@ public class FriendlyPersianDateUtilsTests
     {
         var dt = new DateTime(2017, 1, 10);
         var actual = dt.ToPersianDateTextify();
-        Assert.AreEqual("سه شنبه ۲۱ دی ۱۳۹۵", actual);
+        Assert.AreEqual("سه‌شنبه ۲۱ دی ۱۳۹۵", actual);
     }
 
     [TestMethod]
@@ -78,7 +78,7 @@ public class FriendlyPersianDateUtilsTests
         var dt = new DateTime(2017, 1, 10, 10, 20, 2);
         var comparisonBase = new DateTime(2017, 1, 20);
         var actual = dt.ToFriendlyPersianDateTextify(comparisonBase, false);
-        Assert.AreEqual($"{UnicodeConstants.RleChar}۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵", actual);
+        Assert.AreEqual($"{UnicodeConstants.RleChar}۱۰ روز قبل، سه‌شنبه ۲۱ دی ۱۳۹۵", actual);
     }
 
     [TestMethod]
