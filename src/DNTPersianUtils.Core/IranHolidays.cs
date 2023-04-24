@@ -48,7 +48,7 @@ public static class IranHolidays
     /// <summary>
     /// سال خاتمه تعاریف مناسبت‌های تعطیل در این کتابخانه
     /// </summary>
-    public const int EndYear = 1401;
+    public const int EndYear = 1402;
 
     private static readonly Lazy<ISet<IranHoliday>> _holidayProvider =
         new Lazy<ISet<IranHoliday>>(getIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
