@@ -649,7 +649,7 @@ public static class IslamicDateUtils
     ///     می‌کند
     /// </param>
     public static PersianDay ToPersianDay(this DateTime gregorian, bool convertToIranTimeZone = true) =>
-        gregorian.ToPersianYearMonthDay();
+        gregorian.ToPersianYearMonthDay(convertToIranTimeZone);
 
 #if NET6_0 || NET7_0
     /// <summary>
