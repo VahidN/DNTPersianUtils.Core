@@ -17,7 +17,7 @@ jobs:
       run: dotnet build ./src/DNTPersianUtils.Core/DNTPersianUtils.Core.csproj --configuration Release
 
     - name: Test DNTPersianUtils.Core lib
-      run: dotnet test ./src/DNTPersianUtils.Core.Tests/DNTPersianUtils.Core.Tests.csproj
+      run: dotnet test ./src/DNTPersianUtils.Core.Tests/DNTPersianUtils.Core.Tests.csproj --configuration Release
 
     - name: Push Package to NuGet.org
       if: github.event_name == 'push'

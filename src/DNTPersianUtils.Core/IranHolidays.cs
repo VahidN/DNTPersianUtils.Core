@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
+using static System.FormattableString;
 
 namespace DNTPersianUtils.Core;
 
 /// <summary>
 /// مناسبت‌های تعطیلات رسمی ایران
-/// از سال 1395 تا پایان سال 1398
 /// </summary>
 public static class IranHolidays
 {
@@ -40,6 +40,14 @@ public static class IranHolidays
     private const string ShahaadateHazrazteAsgari = "شهادت امام حسن‌عسکری و آغاز امامت حضرت ولی‌عصر(عج)";
     private const string ValaadateHazrazteMahdi = "ولادت حضرت قائم (عج)";
 
+    private static readonly Lazy<ISet<IranHoliday>> _holidayProvider =
+        new Lazy<ISet<IranHoliday>>(getIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
+
+    /// <summary>
+    /// مناسبت‌های تعطیلات رسمی ایران
+    /// </summary>
+    public static ISet<IranHoliday> Instance { get; } = _holidayProvider.Value;
+
     /// <summary>
     /// سال شروع تعاریف مناسبت‌های تعطیل در این کتابخانه
     /// </summary>
@@ -49,15 +57,6 @@ public static class IranHolidays
     /// سال خاتمه تعاریف مناسبت‌های تعطیل در این کتابخانه
     /// </summary>
     public const int EndYear = 1402;
-
-    private static readonly Lazy<ISet<IranHoliday>> _holidayProvider =
-        new Lazy<ISet<IranHoliday>>(getIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
-
-    /// <summary>
-    /// مناسبت‌های تعطیلات رسمی ایران
-    /// از سال 1395 تا پایان سال 1398
-    /// </summary>
-    public static ISet<IranHoliday> Instance { get; } = _holidayProvider.Value;
 
     private static HashSet<IranHoliday> getIranHolidays()
     {
@@ -1359,7 +1358,7 @@ public static class IranHolidays
         if (!(persianYear >= StartYear || persianYear <= EndYear))
         {
             throw new
-                ArgumentOutOfRangeException($"در اینجا فقط سال‌های {StartYear} تا {EndYear} پشتیبانی می‌شوند.");
+                ArgumentOutOfRangeException(Invariant($"در اینجا فقط سال‌های {StartYear} تا {EndYear} پشتیبانی می‌شوند."));
         }
 
         var persianYearRang = persianYear.GetPersianYearStartAndEndDates();
@@ -1380,7 +1379,7 @@ public static class IranHolidays
         if (!(persianYear >= StartYear || persianYear <= EndYear))
         {
             throw new
-                ArgumentOutOfRangeException($"در اینجا فقط سال‌های {StartYear} تا {EndYear} پشتیبانی می‌شوند.");
+                ArgumentOutOfRangeException(Invariant($"در اینجا فقط سال‌های {StartYear} تا {EndYear} پشتیبانی می‌شوند."));
         }
 
         var persianMonthRang = persianYear.GetPersianMonthStartAndEndDates(persianMonth);

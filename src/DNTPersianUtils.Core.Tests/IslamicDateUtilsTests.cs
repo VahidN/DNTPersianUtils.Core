@@ -683,4 +683,11 @@ public class IslamicDateUtilsTests
         var islamicDay = new DateTime(2018, 08, 31).ToIslamicDay();
         Assert.AreEqual(new IslamicDay(1439, 12, 19), islamicDay);
     }
+
+    [TestMethod]
+    public void VerifyToPersianDayWorks()
+    {
+        var persianDay = new DateTime(2018, 08, 31).ToPersianDay();
+        Assert.AreEqual(1397, persianDay.Year);
+    }
 }

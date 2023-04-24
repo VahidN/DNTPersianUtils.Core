@@ -83,7 +83,7 @@ public static class IslamicDateUtils
         1491, 29, 30, 29, 30, 29, 30, 30, 29, 30, 29, 30, 30,
     };
 
-    private static readonly Dictionary<int, long[]> _yearsMonthsInJd = new Dictionary<int, long[]>();
+    private static readonly Dictionary<int, long[]> _yearsMonthsInJd = new();
     private static readonly int _supportedYearsStart;
     private static readonly long[] _yearsStartJd;
     private static readonly long _jdSupportEnd;
@@ -649,7 +649,7 @@ public static class IslamicDateUtils
     ///     می‌کند
     /// </param>
     public static PersianDay ToPersianDay(this DateTime gregorian, bool convertToIranTimeZone = true) =>
-        JdnToPersianDay(ToJdn(gregorian, convertToIranTimeZone));
+        gregorian.ToPersianYearMonthDay();
 
 #if NET6_0 || NET7_0
     /// <summary>
