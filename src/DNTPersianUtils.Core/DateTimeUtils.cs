@@ -425,7 +425,7 @@ public static class DateTimeUtils
                 return dt;
             }
 
-            dt.AddDays(1);
+            dt = dt.AddDays(1);
         }
 
         var diff = (7 + (dt.DayOfWeek - dayOfWeek)) % 7;
@@ -475,7 +475,7 @@ public static class DateTimeUtils
                 return dt;
             }
 
-            dt.AddDays(-1);
+            dt = dt.AddDays(-1);
         }
 
         return dt.AddDays(DayOfWeek.Saturday - dt.DayOfWeek).Date;
@@ -507,4 +507,113 @@ public static class DateTimeUtils
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
         return GetNext(dt, dayOfWeek, includeToday);
     }
+
+    /// <summary>
+    ///     آيا به تعداد ثانيه‌ي مشخص شده از زمان ايجاد گذشته؟
+    /// </summary>
+    /// <param name="creationTime">زمان ايجاد</param>
+    /// <param name="seconds">تعداد ثانيه پس از ايجاد</param>
+    /// <param name="now">مبناي مقايسه</param>
+    /// <returns></returns>
+    public static bool HasExceeded(this DateTime creationTime, int seconds, DateTime now) =>
+        now > creationTime.AddSeconds(seconds);
+
+#if NET6_0 || NET7_0
+    /// <summary>
+    ///     آيا به تعداد ثانيه‌ي مشخص شده از زمان ايجاد گذشته؟
+    /// </summary>
+    /// <param name="creationTime">زمان ايجاد</param>
+    /// <param name="seconds">تعداد ثانيه پس از ايجاد</param>
+    /// <param name="now">مبناي مقايسه</param>
+    /// <returns></returns>
+    public static bool HasExceeded(this DateOnly creationTime, int seconds, DateOnly now) =>
+        HasExceeded(creationTime.ToDateTime(), seconds, now.ToDateTime());
+#endif
+
+    /// <summary>
+    ///     آيا به تعداد ثانيه‌ي مشخص شده از زمان ايجاد گذشته؟
+    /// </summary>
+    /// <param name="creationTime">زمان ايجاد</param>
+    /// <param name="seconds">تعداد ثانيه پس از ايجاد</param>
+    /// <param name="now">مبناي مقايسه</param>
+    /// <param name="dateTimeOffsetPart"></param>
+    /// <returns></returns>
+    public static bool HasExceeded(this DateTimeOffset creationTime, int seconds, DateTimeOffset now,
+                                   DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        => HasExceeded(creationTime.GetDateTimeOffsetPart(dateTimeOffsetPart), seconds,
+                       now.GetDateTimeOffsetPart(dateTimeOffsetPart));
+
+    /// <summary>
+    ///     بازگشت جمع ثانيه‌هاي طول عمر پس از ايجاد تاكنون
+    /// </summary>
+    /// <param name="creationTime">زمان ايجاد</param>
+    /// <param name="now">منباي مقايسه</param>
+    /// <returns></returns>
+    public static int GetLifetimeInSeconds(this DateTime creationTime, DateTime now) =>
+        (int)(now - creationTime).TotalSeconds;
+
+#if NET6_0 || NET7_0
+    /// <summary>
+    ///     بازگشت جمع ثانيه‌هاي طول عمر پس از ايجاد تاكنون
+    /// </summary>
+    /// <param name="creationTime">زمان ايجاد</param>
+    /// <param name="now">منباي مقايسه</param>
+    /// <returns></returns>
+    public static int GetLifetimeInSeconds(this DateOnly creationTime, DateOnly now) =>
+        GetLifetimeInSeconds(creationTime.ToDateTime(), now.ToDateTime());
+#endif
+
+    /// <summary>
+    ///     بازگشت جمع ثانيه‌هاي طول عمر پس از ايجاد تاكنون
+    /// </summary>
+    /// <param name="creationTime">زمان ايجاد</param>
+    /// <param name="now">منباي مقايسه</param>
+    /// <param name="dateTimeOffsetPart"></param>
+    /// <returns></returns>
+    public static int GetLifetimeInSeconds(this DateTimeOffset creationTime, DateTimeOffset now,
+                                           DateTimeOffsetPart dateTimeOffsetPart =
+                                               DateTimeOffsetPart.IranLocalDateTime) =>
+        GetLifetimeInSeconds(creationTime.GetDateTimeOffsetPart(dateTimeOffsetPart),
+                             now.GetDateTimeOffsetPart(dateTimeOffsetPart));
+
+    /// <summary>
+    ///     آيا منقضي شده‌است؟
+    /// </summary>
+    /// <param name="expirationTime">زمان انقضاء</param>
+    /// <param name="now">مبناي مقايسه</param>
+    /// <returns></returns>
+    public static bool HasExpired(this DateTime? expirationTime, DateTime now) =>
+        expirationTime.HasValue &&
+        expirationTime.Value.HasExpired(now);
+
+    /// <summary>
+    ///     آيا منقضي شده‌است؟
+    /// </summary>
+    /// <param name="expirationTime">زمان انقضاء</param>
+    /// <param name="now">مبناي مقايسه</param>
+    /// <returns></returns>
+    public static bool HasExpired(this DateTime expirationTime, DateTime now) => now > expirationTime;
+
+#if NET6_0 || NET7_0
+    /// <summary>
+    ///     آيا منقضي شده‌است؟
+    /// </summary>
+    /// <param name="expirationTime">زمان انقضاء</param>
+    /// <param name="now">مبناي مقايسه</param>
+    /// <returns></returns>
+    public static bool HasExpired(this DateOnly expirationTime, DateOnly now) =>
+        HasExpired(expirationTime.ToDateTime(), now.ToDateTime());
+#endif
+
+    /// <summary>
+    ///     آيا منقضي شده‌است؟
+    /// </summary>
+    /// <param name="expirationTime">زمان انقضاء</param>
+    /// <param name="now">مبناي مقايسه</param>
+    /// <param name="dateTimeOffsetPart"></param>
+    /// <returns></returns>
+    public static bool HasExpired(this DateTimeOffset expirationTime, DateTimeOffset now,
+                                  DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime) =>
+        HasExpired(expirationTime.GetDateTimeOffsetPart(dateTimeOffsetPart),
+                   now.GetDateTimeOffsetPart(dateTimeOffsetPart));
 }
