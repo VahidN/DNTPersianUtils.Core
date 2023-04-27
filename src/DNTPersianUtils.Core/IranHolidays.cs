@@ -1231,7 +1231,7 @@ public static class IranHolidays
     /// از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="date">تاریخ</param>
-    /// <param name="dateTimeOffsetPart"></param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static IEnumerable<string>? GetHolidays(this DateTimeOffset date,
                                                    DateTimeOffsetPart dateTimeOffsetPart =
                                                        DateTimeOffsetPart.IranLocalDateTime)
@@ -1276,7 +1276,7 @@ public static class IranHolidays
     /// از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="date">تاریخ</param>
-    /// <param name="dateTimeOffsetPart"></param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static bool IsHoliday(this DateTimeOffset date,
                                  DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
@@ -1336,7 +1336,7 @@ public static class IranHolidays
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
-    /// <param name="dateTimeOffsetPart"></param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns>روزهای کاری</returns>
     public static IEnumerable<DateTime> GetBusinessDays(this DateTimeOffset from, DateTimeOffset to,
                                                         DateTimeOffsetPart dateTimeOffsetPart =

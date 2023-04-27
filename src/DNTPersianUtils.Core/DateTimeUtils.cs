@@ -48,12 +48,14 @@ public static class DateTimeUtils
     ///     مبنای محاسبه هم اکنون
     /// </summary>
     /// <param name="birthday">تاریخ تولد</param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns>سن</returns>
-    public static int GetAge(this DateTimeOffset birthday)
+    public static int GetAge(this DateTimeOffset birthday,
+                             DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var birthdayDateTime = birthday.UtcDateTime;
         var now = DateTime.UtcNow;
-        return GetAge(birthdayDateTime, now);
+        return GetAge(birthdayDateTime, now, dateTimeOffsetPart);
     }
 
     /// <summary>
@@ -198,7 +200,7 @@ public static class DateTimeUtils
     ///     Converts a given <see cref="DateTime" /> to milliseconds from Epoch.
     /// </summary>
     /// <param name="dateTime">A given <see cref="DateTime" /></param>
-    /// <param name="dateTimeOffsetPart"></param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns>Milliseconds since Epoch</returns>
     public static long ToEpochMilliseconds(this DateTimeOffset dateTime,
                                            DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
@@ -568,7 +570,7 @@ public static class DateTimeUtils
     /// </summary>
     /// <param name="creationTime">زمان ايجاد</param>
     /// <param name="now">منباي مقايسه</param>
-    /// <param name="dateTimeOffsetPart"></param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns></returns>
     public static int GetLifetimeInSeconds(this DateTimeOffset creationTime, DateTimeOffset now,
                                            DateTimeOffsetPart dateTimeOffsetPart =
@@ -610,7 +612,7 @@ public static class DateTimeUtils
     /// </summary>
     /// <param name="expirationTime">زمان انقضاء</param>
     /// <param name="now">مبناي مقايسه</param>
-    /// <param name="dateTimeOffsetPart"></param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns></returns>
     public static bool HasExpired(this DateTimeOffset expirationTime, DateTimeOffset now,
                                   DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime) =>

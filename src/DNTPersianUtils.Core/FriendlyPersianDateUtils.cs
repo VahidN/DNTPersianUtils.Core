@@ -185,12 +185,15 @@ public static class FriendlyPersianDateUtils
     /// <param name="dt">تاریخ ورودی</param>
     /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
     /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns>نمایش دوستانه</returns>
     public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt, bool appendHhMm = true,
-                                                      bool includePersianDate = true)
+                                                      bool includePersianDate = true,
+                                                      DateTimeOffsetPart dateTimeOffsetPart =
+                                                          DateTimeOffsetPart.IranLocalDateTime)
     {
         var comparisonBase = DateTime.UtcNow.ToIranTimeZoneDateTime();
-        var iranLocalTime = dt.GetDateTimeOffsetPart(DateTimeOffsetPart.IranLocalDateTime);
+        var iranLocalTime = dt.GetDateTimeOffsetPart(dateTimeOffsetPart);
         return
             $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(iranLocalTime, comparisonBase, appendHhMm, false, includePersianDate).ToPersianNumbers()}";
     }
@@ -278,8 +281,11 @@ public static class FriendlyPersianDateUtils
     ///     مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
     /// </summary>
     /// <param name="dt">تاریخ ورودی</param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns>نمایش دوستانه</returns>
-    public static string ToFriendlyPersianDateTextify(this DateTimeOffset? dt)
+    public static string ToFriendlyPersianDateTextify(this DateTimeOffset? dt,
+                                                      DateTimeOffsetPart dateTimeOffsetPart =
+                                                          DateTimeOffsetPart.IranLocalDateTime)
     {
         if (dt == null)
         {
@@ -287,7 +293,7 @@ public static class FriendlyPersianDateUtils
         }
 
         var comparisonBase = DateTime.UtcNow.ToIranTimeZoneDateTime();
-        var iranLocalTime = dt.Value.GetDateTimeOffsetPart(DateTimeOffsetPart.IranLocalDateTime);
+        var iranLocalTime = dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart);
         return ToFriendlyPersianDateTextify(iranLocalTime, comparisonBase);
     }
 

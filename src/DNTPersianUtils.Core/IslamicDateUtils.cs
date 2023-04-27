@@ -559,7 +559,7 @@ public static class IslamicDateUtils
     ///     تبدیل تاریخ میلادی به قمری
     /// </summary>
     /// <param name="dt"></param>
-    /// <param name="dateTimeOffsetPart"></param>
+    /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns></returns>
     public static IslamicDay ToIslamicDay(this DateTimeOffset dt,
                                           DateTimeOffsetPart dateTimeOffsetPart =
