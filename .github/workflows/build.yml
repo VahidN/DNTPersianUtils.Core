@@ -22,3 +22,12 @@ jobs:
     - name: Push Package to NuGet.org
       if: github.event_name == 'push'
       run: dotnet nuget push **\*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate      
+
+    - run: dotnet tool update -g docfx
+    - run: docfx docs/docfx.json
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/_site
