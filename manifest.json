@@ -1,0 +1,730 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/DNTPersianUtils.Core/DNTPersianUtils.Core/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.DateTimeOffsetPart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.DateTimeOffsetPart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.DateTimeUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.DateTimeUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.DigitGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.DigitGroup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.EquinoxCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.EquinoxCalculator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.FriendlyPersianDateUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.HumanReadableInteger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.HumanReadableInteger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranCities.City.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranCities.City.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranCities.County.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranCities.County.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranCities.District.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranCities.District.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranCities.Iran.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranCities.Iran.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranCities.IranProvince.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranCities.IranProvince.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranCities.IranProvinceValue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranCities.IranProvinceValue-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranCities.Province.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranCities.Province.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranCities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranCities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranCodesUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranCodesUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranHoliday.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranHoliday.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranHolidays.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranHolidays.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranShebaUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranShebaUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranShetabUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranShetabUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranTimeZoneInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranTimeZoneInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IslamicDateUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IslamicDateUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IslamicDay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IslamicDay.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.Language.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.Language.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.NationalCodeUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.NationalCodeUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.NationalLegalCodeUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.NationalLegalCodeUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.Normalizer.AggressiveEditing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.Normalizer.AggressiveEditing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.Normalizer.FixDash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixDash.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.Normalizer.FixDiacritics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixDiacritics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.Normalizer.FixDots.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixDots.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.Normalizer.FixEnglishQuotes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixEnglishQuotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.Normalizer.FixHalfSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixHalfSpace.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.Normalizer.FixZwnj.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixZwnj.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.Normalizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.Normalizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.NumberWord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.NumberWord.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianCulture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianCulture.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianDateTimeUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianDateTimeUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianDay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianDay.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianKeyboard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianKeyboard.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianMonth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianMonth.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianMonthCalendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianMonthCalendar.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianNormalizerUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianNormalizerUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianNormalizers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianNormalizers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianNumbersUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianNumbersUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianStopwords.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianStopwords.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianWeek.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianWeek.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianYear.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianYear.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.RegexUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.RegexUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.SunEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.SunEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.TimeConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.TimeConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.UnicodeConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.UnicodeConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ValidIranShebaNumberAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ValidIranShebaNumberAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ValidIranShetabNumberAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ValidIranShetabNumberAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.ValidPersianDateTimeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.ValidPersianDateTimeAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.YeKe.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.YeKe.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
