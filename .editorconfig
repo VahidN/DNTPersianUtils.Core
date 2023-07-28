@@ -7,9 +7,13 @@ charset = utf-8-bom
 # MA0026 : Complete the task
 dotnet_diagnostic.MA0026.severity = suggestion
 dotnet_diagnostic.MA0002.severity = suggestion
+dotnet_diagnostic.MA0132.severity = suggestion
 
 # CA1510: use the new throw methods
 dotnet_diagnostic.CA1510.severity = suggestion
+
+# CA1819: Properties should not return arrays
+dotnet_diagnostic.CA1819.severity = suggestion
 
 # MA0023 : Add RegexOptions.ExplicitCapture to prevent capturing unneeded groups
 dotnet_diagnostic.MA0023.severity = suggestion
