@@ -755,6 +755,455 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.EquinoxCalculator.JulianToUtcDate
   nameWithType: EquinoxCalculator.JulianToUtcDate
+- uid: DNTPersianUtils.Core.FarsiDosExtensions
+  name: FarsiDosExtensions
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html
+  commentId: T:DNTPersianUtils.Core.FarsiDosExtensions
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions
+  nameWithType: FarsiDosExtensions
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(System.String)
+  name: ConvertCp1252StringToUnicode(string)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_ConvertCp1252StringToUnicode_System_String_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(System.String)
+  name.vb: ConvertCp1252StringToUnicode(String)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(string)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(String)
+  nameWithType: FarsiDosExtensions.ConvertCp1252StringToUnicode(string)
+  nameWithType.vb: FarsiDosExtensions.ConvertCp1252StringToUnicode(String)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode*
+  name: ConvertCp1252StringToUnicode
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_ConvertCp1252StringToUnicode_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode
+  nameWithType: FarsiDosExtensions.ConvertCp1252StringToUnicode
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.FinalUnicodeChars
+  name: FinalUnicodeChars
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_FinalUnicodeChars
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.FinalUnicodeChars
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.FinalUnicodeChars
+  nameWithType: FarsiDosExtensions.FinalUnicodeChars
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.GetLatinChar(System.Char)
+  name: GetLatinChar(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_GetLatinChar_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.GetLatinChar(System.Char)
+  name.vb: GetLatinChar(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.GetLatinChar(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.GetLatinChar(Char)
+  nameWithType: FarsiDosExtensions.GetLatinChar(char)
+  nameWithType.vb: FarsiDosExtensions.GetLatinChar(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.GetLatinChar*
+  name: GetLatinChar
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_GetLatinChar_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.GetLatinChar
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.GetLatinChar
+  nameWithType: FarsiDosExtensions.GetLatinChar
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.GetMirroredOrChar(System.Char)
+  name: GetMirroredOrChar(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_GetMirroredOrChar_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.GetMirroredOrChar(System.Char)
+  name.vb: GetMirroredOrChar(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.GetMirroredOrChar(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.GetMirroredOrChar(Char)
+  nameWithType: FarsiDosExtensions.GetMirroredOrChar(char)
+  nameWithType.vb: FarsiDosExtensions.GetMirroredOrChar(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.GetMirroredOrChar*
+  name: GetMirroredOrChar
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_GetMirroredOrChar_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.GetMirroredOrChar
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.GetMirroredOrChar
+  nameWithType: FarsiDosExtensions.GetMirroredOrChar
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IranSystemArabicLa
+  name: IranSystemArabicLa
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IranSystemArabicLa
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.IranSystemArabicLa
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IranSystemArabicLa
+  nameWithType: FarsiDosExtensions.IranSystemArabicLa
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IranSystemComma
+  name: IranSystemComma
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IranSystemComma
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.IranSystemComma
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IranSystemComma
+  nameWithType: FarsiDosExtensions.IranSystemComma
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IranSystemZero
+  name: IranSystemZero
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IranSystemZero
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.IranSystemZero
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IranSystemZero
+  nameWithType: FarsiDosExtensions.IranSystemZero
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsArabicUnicodeLa(System.Char,System.Nullable{System.Char})
+  name: IsArabicUnicodeLa(char, char?)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsArabicUnicodeLa_System_Char_System_Nullable_System_Char__
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsArabicUnicodeLa(System.Char,System.Nullable{System.Char})
+  name.vb: IsArabicUnicodeLa(Char, Char?)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsArabicUnicodeLa(char, char?)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsArabicUnicodeLa(Char, Char?)
+  nameWithType: FarsiDosExtensions.IsArabicUnicodeLa(char, char?)
+  nameWithType.vb: FarsiDosExtensions.IsArabicUnicodeLa(Char, Char?)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsArabicUnicodeLa*
+  name: IsArabicUnicodeLa
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsArabicUnicodeLa_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsArabicUnicodeLa
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsArabicUnicodeLa
+  nameWithType: FarsiDosExtensions.IsArabicUnicodeLa
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber(System.Char)
+  name: IsEnglishNumber(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsEnglishNumber_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber(System.Char)
+  name.vb: IsEnglishNumber(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber(Char)
+  nameWithType: FarsiDosExtensions.IsEnglishNumber(char)
+  nameWithType.vb: FarsiDosExtensions.IsEnglishNumber(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber(System.Nullable{System.Char})
+  name: IsEnglishNumber(char?)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsEnglishNumber_System_Nullable_System_Char__
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber(System.Nullable{System.Char})
+  name.vb: IsEnglishNumber(Char?)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber(char?)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber(Char?)
+  nameWithType: FarsiDosExtensions.IsEnglishNumber(char?)
+  nameWithType.vb: FarsiDosExtensions.IsEnglishNumber(Char?)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber*
+  name: IsEnglishNumber
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsEnglishNumber_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsEnglishNumber
+  nameWithType: FarsiDosExtensions.IsEnglishNumber
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(System.Char)
+  name: IsFinalIranSystemChar(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsFinalIranSystemChar_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(System.Char)
+  name.vb: IsFinalIranSystemChar(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(Char)
+  nameWithType: FarsiDosExtensions.IsFinalIranSystemChar(char)
+  nameWithType.vb: FarsiDosExtensions.IsFinalIranSystemChar(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(System.Nullable{System.Char})
+  name: IsFinalIranSystemChar(char?)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsFinalIranSystemChar_System_Nullable_System_Char__
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(System.Nullable{System.Char})
+  name.vb: IsFinalIranSystemChar(Char?)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(char?)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(Char?)
+  nameWithType: FarsiDosExtensions.IsFinalIranSystemChar(char?)
+  nameWithType.vb: FarsiDosExtensions.IsFinalIranSystemChar(Char?)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar*
+  name: IsFinalIranSystemChar
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsFinalIranSystemChar_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar
+  nameWithType: FarsiDosExtensions.IsFinalIranSystemChar
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalUnicodeChar(System.Nullable{System.Char})
+  name: IsFinalUnicodeChar(char?)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsFinalUnicodeChar_System_Nullable_System_Char__
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsFinalUnicodeChar(System.Nullable{System.Char})
+  name.vb: IsFinalUnicodeChar(Char?)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalUnicodeChar(char?)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalUnicodeChar(Char?)
+  nameWithType: FarsiDosExtensions.IsFinalUnicodeChar(char?)
+  nameWithType.vb: FarsiDosExtensions.IsFinalUnicodeChar(Char?)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalUnicodeChar*
+  name: IsFinalUnicodeChar
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsFinalUnicodeChar_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsFinalUnicodeChar
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsFinalUnicodeChar
+  nameWithType: FarsiDosExtensions.IsFinalUnicodeChar
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsHalfSpace(System.Char)
+  name: IsHalfSpace(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsHalfSpace_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsHalfSpace(System.Char)
+  name.vb: IsHalfSpace(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsHalfSpace(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsHalfSpace(Char)
+  nameWithType: FarsiDosExtensions.IsHalfSpace(char)
+  nameWithType.vb: FarsiDosExtensions.IsHalfSpace(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsHalfSpace*
+  name: IsHalfSpace
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsHalfSpace_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsHalfSpace
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsHalfSpace
+  nameWithType: FarsiDosExtensions.IsHalfSpace
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsInitialIranSystemChar(System.Nullable{System.Char})
+  name: IsInitialIranSystemChar(char?)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsInitialIranSystemChar_System_Nullable_System_Char__
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsInitialIranSystemChar(System.Nullable{System.Char})
+  name.vb: IsInitialIranSystemChar(Char?)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsInitialIranSystemChar(char?)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsInitialIranSystemChar(Char?)
+  nameWithType: FarsiDosExtensions.IsInitialIranSystemChar(char?)
+  nameWithType.vb: FarsiDosExtensions.IsInitialIranSystemChar(Char?)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsInitialIranSystemChar*
+  name: IsInitialIranSystemChar
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsInitialIranSystemChar_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsInitialIranSystemChar
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsInitialIranSystemChar
+  nameWithType: FarsiDosExtensions.IsInitialIranSystemChar
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemLatinNumericChar(System.Nullable{System.Char},System.Boolean)
+  name: IsIranSystemLatinNumericChar(char?, bool)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsIranSystemLatinNumericChar_System_Nullable_System_Char__System_Boolean_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemLatinNumericChar(System.Nullable{System.Char},System.Boolean)
+  name.vb: IsIranSystemLatinNumericChar(Char?, Boolean)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemLatinNumericChar(char?, bool)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemLatinNumericChar(Char?, Boolean)
+  nameWithType: FarsiDosExtensions.IsIranSystemLatinNumericChar(char?, bool)
+  nameWithType.vb: FarsiDosExtensions.IsIranSystemLatinNumericChar(Char?, Boolean)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemLatinNumericChar*
+  name: IsIranSystemLatinNumericChar
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsIranSystemLatinNumericChar_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemLatinNumericChar
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemLatinNumericChar
+  nameWithType: FarsiDosExtensions.IsIranSystemLatinNumericChar
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber(System.Char)
+  name: IsIranSystemNumber(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsIranSystemNumber_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber(System.Char)
+  name.vb: IsIranSystemNumber(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber(Char)
+  nameWithType: FarsiDosExtensions.IsIranSystemNumber(char)
+  nameWithType.vb: FarsiDosExtensions.IsIranSystemNumber(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber(System.Nullable{System.Char})
+  name: IsIranSystemNumber(char?)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsIranSystemNumber_System_Nullable_System_Char__
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber(System.Nullable{System.Char})
+  name.vb: IsIranSystemNumber(Char?)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber(char?)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber(Char?)
+  nameWithType: FarsiDosExtensions.IsIranSystemNumber(char?)
+  nameWithType.vb: FarsiDosExtensions.IsIranSystemNumber(Char?)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber*
+  name: IsIranSystemNumber
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsIranSystemNumber_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsIranSystemNumber
+  nameWithType: FarsiDosExtensions.IsIranSystemNumber
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinChar(System.Char,System.Boolean)
+  name: IsLatinChar(char, bool)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsLatinChar_System_Char_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsLatinChar(System.Char,System.Boolean)
+  name.vb: IsLatinChar(Char, Boolean)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinChar(char, bool)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinChar(Char, Boolean)
+  nameWithType: FarsiDosExtensions.IsLatinChar(char, bool)
+  nameWithType.vb: FarsiDosExtensions.IsLatinChar(Char, Boolean)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinChar*
+  name: IsLatinChar
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsLatinChar_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsLatinChar
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinChar
+  nameWithType: FarsiDosExtensions.IsLatinChar
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinNumericChar(System.Char,System.Boolean)
+  name: IsLatinNumericChar(char, bool)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsLatinNumericChar_System_Char_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsLatinNumericChar(System.Char,System.Boolean)
+  name.vb: IsLatinNumericChar(Char, Boolean)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinNumericChar(char, bool)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinNumericChar(Char, Boolean)
+  nameWithType: FarsiDosExtensions.IsLatinNumericChar(char, bool)
+  nameWithType.vb: FarsiDosExtensions.IsLatinNumericChar(Char, Boolean)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinNumericChar*
+  name: IsLatinNumericChar
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsLatinNumericChar_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsLatinNumericChar
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsLatinNumericChar
+  nameWithType: FarsiDosExtensions.IsLatinNumericChar
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis(System.Char)
+  name: IsParenthesis(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsParenthesis_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis(System.Char)
+  name.vb: IsParenthesis(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis(Char)
+  nameWithType: FarsiDosExtensions.IsParenthesis(char)
+  nameWithType.vb: FarsiDosExtensions.IsParenthesis(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis(System.Nullable{System.Char})
+  name: IsParenthesis(char?)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsParenthesis_System_Nullable_System_Char__
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis(System.Nullable{System.Char})
+  name.vb: IsParenthesis(Char?)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis(char?)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis(Char?)
+  nameWithType: FarsiDosExtensions.IsParenthesis(char?)
+  nameWithType.vb: FarsiDosExtensions.IsParenthesis(Char?)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis*
+  name: IsParenthesis
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsParenthesis_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsParenthesis
+  nameWithType: FarsiDosExtensions.IsParenthesis
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeArabicDiacritics(System.Char)
+  name: IsUnicodeArabicDiacritics(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsUnicodeArabicDiacritics_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeArabicDiacritics(System.Char)
+  name.vb: IsUnicodeArabicDiacritics(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeArabicDiacritics(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeArabicDiacritics(Char)
+  nameWithType: FarsiDosExtensions.IsUnicodeArabicDiacritics(char)
+  nameWithType.vb: FarsiDosExtensions.IsUnicodeArabicDiacritics(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeArabicDiacritics*
+  name: IsUnicodeArabicDiacritics
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsUnicodeArabicDiacritics_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeArabicDiacritics
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeArabicDiacritics
+  nameWithType: FarsiDosExtensions.IsUnicodeArabicDiacritics
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeEnglish(System.Char)
+  name: IsUnicodeEnglish(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsUnicodeEnglish_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeEnglish(System.Char)
+  name.vb: IsUnicodeEnglish(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeEnglish(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeEnglish(Char)
+  nameWithType: FarsiDosExtensions.IsUnicodeEnglish(char)
+  nameWithType.vb: FarsiDosExtensions.IsUnicodeEnglish(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeEnglish*
+  name: IsUnicodeEnglish
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsUnicodeEnglish_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeEnglish
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeEnglish
+  nameWithType: FarsiDosExtensions.IsUnicodeEnglish
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeFarsiOrArabic(System.Nullable{System.Char})
+  name: IsUnicodeFarsiOrArabic(char?)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsUnicodeFarsiOrArabic_System_Nullable_System_Char__
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeFarsiOrArabic(System.Nullable{System.Char})
+  name.vb: IsUnicodeFarsiOrArabic(Char?)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeFarsiOrArabic(char?)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeFarsiOrArabic(Char?)
+  nameWithType: FarsiDosExtensions.IsUnicodeFarsiOrArabic(char?)
+  nameWithType.vb: FarsiDosExtensions.IsUnicodeFarsiOrArabic(Char?)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeFarsiOrArabic*
+  name: IsUnicodeFarsiOrArabic
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsUnicodeFarsiOrArabic_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeFarsiOrArabic
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodeFarsiOrArabic
+  nameWithType: FarsiDosExtensions.IsUnicodeFarsiOrArabic
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodePersianNumber(System.Char)
+  name: IsUnicodePersianNumber(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsUnicodePersianNumber_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodePersianNumber(System.Char)
+  name.vb: IsUnicodePersianNumber(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodePersianNumber(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodePersianNumber(Char)
+  nameWithType: FarsiDosExtensions.IsUnicodePersianNumber(char)
+  nameWithType.vb: FarsiDosExtensions.IsUnicodePersianNumber(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodePersianNumber*
+  name: IsUnicodePersianNumber
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsUnicodePersianNumber_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodePersianNumber
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsUnicodePersianNumber
+  nameWithType: FarsiDosExtensions.IsUnicodePersianNumber
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar(System.Char)
+  name: IsWhiteChar(char)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsWhiteChar_System_Char_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar(System.Char)
+  name.vb: IsWhiteChar(Char)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar(char)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar(Char)
+  nameWithType: FarsiDosExtensions.IsWhiteChar(char)
+  nameWithType.vb: FarsiDosExtensions.IsWhiteChar(Char)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar(System.Nullable{System.Char})
+  name: IsWhiteChar(char?)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsWhiteChar_System_Nullable_System_Char__
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar(System.Nullable{System.Char})
+  name.vb: IsWhiteChar(Char?)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar(char?)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar(Char?)
+  nameWithType: FarsiDosExtensions.IsWhiteChar(char?)
+  nameWithType.vb: FarsiDosExtensions.IsWhiteChar(Char?)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar*
+  name: IsWhiteChar
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_IsWhiteChar_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.IsWhiteChar
+  nameWithType: FarsiDosExtensions.IsWhiteChar
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.ReverseStartAndEndSpaces(System.String)
+  name: ReverseStartAndEndSpaces(string)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_ReverseStartAndEndSpaces_System_String_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.ReverseStartAndEndSpaces(System.String)
+  name.vb: ReverseStartAndEndSpaces(String)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.ReverseStartAndEndSpaces(string)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.ReverseStartAndEndSpaces(String)
+  nameWithType: FarsiDosExtensions.ReverseStartAndEndSpaces(string)
+  nameWithType.vb: FarsiDosExtensions.ReverseStartAndEndSpaces(String)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.ReverseStartAndEndSpaces*
+  name: ReverseStartAndEndSpaces
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_ReverseStartAndEndSpaces_
+  commentId: Overload:DNTPersianUtils.Core.FarsiDosExtensions.ReverseStartAndEndSpaces
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.ReverseStartAndEndSpaces
+  nameWithType: FarsiDosExtensions.ReverseStartAndEndSpaces
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.Space
+  name: Space
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_Space
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.Space
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.Space
+  nameWithType: FarsiDosExtensions.Space
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeAlef
+  name: UnicodeAlef
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_UnicodeAlef
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.UnicodeAlef
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeAlef
+  nameWithType: FarsiDosExtensions.UnicodeAlef
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeFathatan
+  name: UnicodeFathatan
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_UnicodeFathatan
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.UnicodeFathatan
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeFathatan
+  nameWithType: FarsiDosExtensions.UnicodeFathatan
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeHamzaBelow
+  name: UnicodeHamzaBelow
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_UnicodeHamzaBelow
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.UnicodeHamzaBelow
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeHamzaBelow
+  nameWithType: FarsiDosExtensions.UnicodeHamzaBelow
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeHeh
+  name: UnicodeHeh
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_UnicodeHeh
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.UnicodeHeh
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeHeh
+  nameWithType: FarsiDosExtensions.UnicodeHeh
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeLam
+  name: UnicodeLam
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_UnicodeLam
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.UnicodeLam
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeLam
+  nameWithType: FarsiDosExtensions.UnicodeLam
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeTehMarbuta
+  name: UnicodeTehMarbuta
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_UnicodeTehMarbuta
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.UnicodeTehMarbuta
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeTehMarbuta
+  nameWithType: FarsiDosExtensions.UnicodeTehMarbuta
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeYe
+  name: UnicodeYe
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_UnicodeYe
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.UnicodeYe
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.UnicodeYe
+  nameWithType: FarsiDosExtensions.UnicodeYe
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.ZeroWidthNonJoiner
+  name: ZeroWidthNonJoiner
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_ZeroWidthNonJoiner
+  commentId: F:DNTPersianUtils.Core.FarsiDosExtensions.ZeroWidthNonJoiner
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.ZeroWidthNonJoiner
+  nameWithType: FarsiDosExtensions.ZeroWidthNonJoiner
 - uid: DNTPersianUtils.Core.FriendlyPersianDateUtils
   name: FriendlyPersianDateUtils
   href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html
@@ -2542,6 +2991,216 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.IranShetabUtils.IsValidIranShetabNumber
   nameWithType: IranShetabUtils.IsValidIranShetabNumber
+- uid: DNTPersianUtils.Core.IranSystemCharPosition
+  name: IranSystemCharPosition
+  href: api/DNTPersianUtils.Core.IranSystemCharPosition.html
+  commentId: T:DNTPersianUtils.Core.IranSystemCharPosition
+  fullName: DNTPersianUtils.Core.IranSystemCharPosition
+  nameWithType: IranSystemCharPosition
+- uid: DNTPersianUtils.Core.IranSystemCharPosition.Final
+  name: Final
+  href: api/DNTPersianUtils.Core.IranSystemCharPosition.html#DNTPersianUtils_Core_IranSystemCharPosition_Final
+  commentId: F:DNTPersianUtils.Core.IranSystemCharPosition.Final
+  fullName: DNTPersianUtils.Core.IranSystemCharPosition.Final
+  nameWithType: IranSystemCharPosition.Final
+- uid: DNTPersianUtils.Core.IranSystemCharPosition.Initial
+  name: Initial
+  href: api/DNTPersianUtils.Core.IranSystemCharPosition.html#DNTPersianUtils_Core_IranSystemCharPosition_Initial
+  commentId: F:DNTPersianUtils.Core.IranSystemCharPosition.Initial
+  fullName: DNTPersianUtils.Core.IranSystemCharPosition.Initial
+  nameWithType: IranSystemCharPosition.Initial
+- uid: DNTPersianUtils.Core.IranSystemCharPosition.Isolated
+  name: Isolated
+  href: api/DNTPersianUtils.Core.IranSystemCharPosition.html#DNTPersianUtils_Core_IranSystemCharPosition_Isolated
+  commentId: F:DNTPersianUtils.Core.IranSystemCharPosition.Isolated
+  fullName: DNTPersianUtils.Core.IranSystemCharPosition.Isolated
+  nameWithType: IranSystemCharPosition.Isolated
+- uid: DNTPersianUtils.Core.IranSystemCharPosition.Medial
+  name: Medial
+  href: api/DNTPersianUtils.Core.IranSystemCharPosition.html#DNTPersianUtils_Core_IranSystemCharPosition_Medial
+  commentId: F:DNTPersianUtils.Core.IranSystemCharPosition.Medial
+  fullName: DNTPersianUtils.Core.IranSystemCharPosition.Medial
+  nameWithType: IranSystemCharPosition.Medial
+- uid: DNTPersianUtils.Core.IranSystemData
+  name: IranSystemData
+  href: api/DNTPersianUtils.Core.IranSystemData.html
+  commentId: T:DNTPersianUtils.Core.IranSystemData
+  fullName: DNTPersianUtils.Core.IranSystemData
+  nameWithType: IranSystemData
+- uid: DNTPersianUtils.Core.IranSystemData.#ctor
+  name: IranSystemData()
+  href: api/DNTPersianUtils.Core.IranSystemData.html#DNTPersianUtils_Core_IranSystemData__ctor
+  commentId: M:DNTPersianUtils.Core.IranSystemData.#ctor
+  name.vb: New()
+  fullName: DNTPersianUtils.Core.IranSystemData.IranSystemData()
+  fullName.vb: DNTPersianUtils.Core.IranSystemData.New()
+  nameWithType: IranSystemData.IranSystemData()
+  nameWithType.vb: IranSystemData.New()
+- uid: DNTPersianUtils.Core.IranSystemData.#ctor(System.String,System.Byte[])
+  name: IranSystemData(string, byte[])
+  href: api/DNTPersianUtils.Core.IranSystemData.html#DNTPersianUtils_Core_IranSystemData__ctor_System_String_System_Byte___
+  commentId: M:DNTPersianUtils.Core.IranSystemData.#ctor(System.String,System.Byte[])
+  name.vb: New(String, Byte())
+  fullName: DNTPersianUtils.Core.IranSystemData.IranSystemData(string, byte[])
+  fullName.vb: DNTPersianUtils.Core.IranSystemData.New(String, Byte())
+  nameWithType: IranSystemData.IranSystemData(string, byte[])
+  nameWithType.vb: IranSystemData.New(String, Byte())
+- uid: DNTPersianUtils.Core.IranSystemData.#ctor*
+  name: IranSystemData
+  href: api/DNTPersianUtils.Core.IranSystemData.html#DNTPersianUtils_Core_IranSystemData__ctor_
+  commentId: Overload:DNTPersianUtils.Core.IranSystemData.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DNTPersianUtils.Core.IranSystemData.IranSystemData
+  fullName.vb: DNTPersianUtils.Core.IranSystemData.New
+  nameWithType: IranSystemData.IranSystemData
+  nameWithType.vb: IranSystemData.New
+- uid: DNTPersianUtils.Core.IranSystemData.Bytes
+  name: Bytes
+  href: api/DNTPersianUtils.Core.IranSystemData.html#DNTPersianUtils_Core_IranSystemData_Bytes
+  commentId: P:DNTPersianUtils.Core.IranSystemData.Bytes
+  fullName: DNTPersianUtils.Core.IranSystemData.Bytes
+  nameWithType: IranSystemData.Bytes
+- uid: DNTPersianUtils.Core.IranSystemData.Bytes*
+  name: Bytes
+  href: api/DNTPersianUtils.Core.IranSystemData.html#DNTPersianUtils_Core_IranSystemData_Bytes_
+  commentId: Overload:DNTPersianUtils.Core.IranSystemData.Bytes
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.IranSystemData.Bytes
+  nameWithType: IranSystemData.Bytes
+- uid: DNTPersianUtils.Core.IranSystemData.Text
+  name: Text
+  href: api/DNTPersianUtils.Core.IranSystemData.html#DNTPersianUtils_Core_IranSystemData_Text
+  commentId: P:DNTPersianUtils.Core.IranSystemData.Text
+  fullName: DNTPersianUtils.Core.IranSystemData.Text
+  nameWithType: IranSystemData.Text
+- uid: DNTPersianUtils.Core.IranSystemData.Text*
+  name: Text
+  href: api/DNTPersianUtils.Core.IranSystemData.html#DNTPersianUtils_Core_IranSystemData_Text_
+  commentId: Overload:DNTPersianUtils.Core.IranSystemData.Text
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.IranSystemData.Text
+  nameWithType: IranSystemData.Text
+- uid: DNTPersianUtils.Core.IranSystemTables
+  name: IranSystemTables
+  href: api/DNTPersianUtils.Core.IranSystemTables.html
+  commentId: T:DNTPersianUtils.Core.IranSystemTables
+  fullName: DNTPersianUtils.Core.IranSystemTables
+  nameWithType: IranSystemTables
+- uid: DNTPersianUtils.Core.IranSystemTables.FinalIranSystemChars
+  name: FinalIranSystemChars
+  href: api/DNTPersianUtils.Core.IranSystemTables.html#DNTPersianUtils_Core_IranSystemTables_FinalIranSystemChars
+  commentId: F:DNTPersianUtils.Core.IranSystemTables.FinalIranSystemChars
+  fullName: DNTPersianUtils.Core.IranSystemTables.FinalIranSystemChars
+  nameWithType: IranSystemTables.FinalIranSystemChars
+- uid: DNTPersianUtils.Core.IranSystemTables.InitialIranSystemChars
+  name: InitialIranSystemChars
+  href: api/DNTPersianUtils.Core.IranSystemTables.html#DNTPersianUtils_Core_IranSystemTables_InitialIranSystemChars
+  commentId: F:DNTPersianUtils.Core.IranSystemTables.InitialIranSystemChars
+  fullName: DNTPersianUtils.Core.IranSystemTables.InitialIranSystemChars
+  nameWithType: IranSystemTables.InitialIranSystemChars
+- uid: DNTPersianUtils.Core.IranSystemTables.IranSystemIndexToUnicodeTable
+  name: IranSystemIndexToUnicodeTable
+  href: api/DNTPersianUtils.Core.IranSystemTables.html#DNTPersianUtils_Core_IranSystemTables_IranSystemIndexToUnicodeTable
+  commentId: F:DNTPersianUtils.Core.IranSystemTables.IranSystemIndexToUnicodeTable
+  fullName: DNTPersianUtils.Core.IranSystemTables.IranSystemIndexToUnicodeTable
+  nameWithType: IranSystemTables.IranSystemIndexToUnicodeTable
+- uid: DNTPersianUtils.Core.IranSystemTables.IranSystemIndexToUnicodeTableLenght
+  name: IranSystemIndexToUnicodeTableLenght
+  href: api/DNTPersianUtils.Core.IranSystemTables.html#DNTPersianUtils_Core_IranSystemTables_IranSystemIndexToUnicodeTableLenght
+  commentId: F:DNTPersianUtils.Core.IranSystemTables.IranSystemIndexToUnicodeTableLenght
+  fullName: DNTPersianUtils.Core.IranSystemTables.IranSystemIndexToUnicodeTableLenght
+  nameWithType: IranSystemTables.IranSystemIndexToUnicodeTableLenght
+- uid: DNTPersianUtils.Core.IranSystemTables.Parenthesis
+  name: Parenthesis
+  href: api/DNTPersianUtils.Core.IranSystemTables.html#DNTPersianUtils_Core_IranSystemTables_Parenthesis
+  commentId: F:DNTPersianUtils.Core.IranSystemTables.Parenthesis
+  fullName: DNTPersianUtils.Core.IranSystemTables.Parenthesis
+  nameWithType: IranSystemTables.Parenthesis
+- uid: DNTPersianUtils.Core.IranSystemTables.UnicodeToIranSystemTable
+  name: UnicodeToIranSystemTable
+  href: api/DNTPersianUtils.Core.IranSystemTables.html#DNTPersianUtils_Core_IranSystemTables_UnicodeToIranSystemTable
+  commentId: F:DNTPersianUtils.Core.IranSystemTables.UnicodeToIranSystemTable
+  fullName: DNTPersianUtils.Core.IranSystemTables.UnicodeToIranSystemTable
+  nameWithType: IranSystemTables.UnicodeToIranSystemTable
+- uid: DNTPersianUtils.Core.IranSystemTables.WhiteChars
+  name: WhiteChars
+  href: api/DNTPersianUtils.Core.IranSystemTables.html#DNTPersianUtils_Core_IranSystemTables_WhiteChars
+  commentId: F:DNTPersianUtils.Core.IranSystemTables.WhiteChars
+  fullName: DNTPersianUtils.Core.IranSystemTables.WhiteChars
+  nameWithType: IranSystemTables.WhiteChars
+- uid: DNTPersianUtils.Core.IranSystemToUnicode
+  name: IranSystemToUnicode
+  href: api/DNTPersianUtils.Core.IranSystemToUnicode.html
+  commentId: T:DNTPersianUtils.Core.IranSystemToUnicode
+  fullName: DNTPersianUtils.Core.IranSystemToUnicode
+  nameWithType: IranSystemToUnicode
+- uid: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemBytesToUnicode(System.Byte[],System.Boolean,System.Boolean,System.Boolean)
+  name: FromIranSystemBytesToUnicode(byte[]?, bool, bool, bool)
+  href: api/DNTPersianUtils.Core.IranSystemToUnicode.html#DNTPersianUtils_Core_IranSystemToUnicode_FromIranSystemBytesToUnicode_System_Byte___System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemBytesToUnicode(System.Byte[],System.Boolean,System.Boolean,System.Boolean)
+  name.vb: FromIranSystemBytesToUnicode(Byte(), Boolean, Boolean, Boolean)
+  fullName: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemBytesToUnicode(byte[]?, bool, bool, bool)
+  fullName.vb: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemBytesToUnicode(Byte(), Boolean, Boolean, Boolean)
+  nameWithType: IranSystemToUnicode.FromIranSystemBytesToUnicode(byte[]?, bool, bool, bool)
+  nameWithType.vb: IranSystemToUnicode.FromIranSystemBytesToUnicode(Byte(), Boolean, Boolean, Boolean)
+- uid: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemBytesToUnicode*
+  name: FromIranSystemBytesToUnicode
+  href: api/DNTPersianUtils.Core.IranSystemToUnicode.html#DNTPersianUtils_Core_IranSystemToUnicode_FromIranSystemBytesToUnicode_
+  commentId: Overload:DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemBytesToUnicode
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemBytesToUnicode
+  nameWithType: IranSystemToUnicode.FromIranSystemBytesToUnicode
+- uid: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean,System.Boolean,System.Boolean)
+  name: FromIranSystemFileToUnicode(string, TextEncoding, bool, bool, bool)
+  href: api/DNTPersianUtils.Core.IranSystemToUnicode.html#DNTPersianUtils_Core_IranSystemToUnicode_FromIranSystemFileToUnicode_System_String_DNTPersianUtils_Core_TextEncoding_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean,System.Boolean,System.Boolean)
+  name.vb: FromIranSystemFileToUnicode(String, TextEncoding, Boolean, Boolean, Boolean)
+  fullName: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode(string, DNTPersianUtils.Core.TextEncoding, bool, bool, bool)
+  fullName.vb: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode(String, DNTPersianUtils.Core.TextEncoding, Boolean, Boolean, Boolean)
+  nameWithType: IranSystemToUnicode.FromIranSystemFileToUnicode(string, TextEncoding, bool, bool, bool)
+  nameWithType.vb: IranSystemToUnicode.FromIranSystemFileToUnicode(String, TextEncoding, Boolean, Boolean, Boolean)
+- uid: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode(System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean)
+  name: FromIranSystemFileToUnicode(string, int, bool, bool, bool)
+  href: api/DNTPersianUtils.Core.IranSystemToUnicode.html#DNTPersianUtils_Core_IranSystemToUnicode_FromIranSystemFileToUnicode_System_String_System_Int32_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode(System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean)
+  name.vb: FromIranSystemFileToUnicode(String, Integer, Boolean, Boolean, Boolean)
+  fullName: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode(string, int, bool, bool, bool)
+  fullName.vb: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode(String, Integer, Boolean, Boolean, Boolean)
+  nameWithType: IranSystemToUnicode.FromIranSystemFileToUnicode(string, int, bool, bool, bool)
+  nameWithType.vb: IranSystemToUnicode.FromIranSystemFileToUnicode(String, Integer, Boolean, Boolean, Boolean)
+- uid: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode*
+  name: FromIranSystemFileToUnicode
+  href: api/DNTPersianUtils.Core.IranSystemToUnicode.html#DNTPersianUtils_Core_IranSystemToUnicode_FromIranSystemFileToUnicode_
+  commentId: Overload:DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemFileToUnicode
+  nameWithType: IranSystemToUnicode.FromIranSystemFileToUnicode
+- uid: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean,System.Boolean,System.Boolean)
+  name: FromIranSystemToUnicode(string?, TextEncoding, bool, bool, bool)
+  href: api/DNTPersianUtils.Core.IranSystemToUnicode.html#DNTPersianUtils_Core_IranSystemToUnicode_FromIranSystemToUnicode_System_String_DNTPersianUtils_Core_TextEncoding_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean,System.Boolean,System.Boolean)
+  name.vb: FromIranSystemToUnicode(String, TextEncoding, Boolean, Boolean, Boolean)
+  fullName: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode(string?, DNTPersianUtils.Core.TextEncoding, bool, bool, bool)
+  fullName.vb: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode(String, DNTPersianUtils.Core.TextEncoding, Boolean, Boolean, Boolean)
+  nameWithType: IranSystemToUnicode.FromIranSystemToUnicode(string?, TextEncoding, bool, bool, bool)
+  nameWithType.vb: IranSystemToUnicode.FromIranSystemToUnicode(String, TextEncoding, Boolean, Boolean, Boolean)
+- uid: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode(System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean)
+  name: FromIranSystemToUnicode(string?, int, bool, bool, bool)
+  href: api/DNTPersianUtils.Core.IranSystemToUnicode.html#DNTPersianUtils_Core_IranSystemToUnicode_FromIranSystemToUnicode_System_String_System_Int32_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode(System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean)
+  name.vb: FromIranSystemToUnicode(String, Integer, Boolean, Boolean, Boolean)
+  fullName: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode(string?, int, bool, bool, bool)
+  fullName.vb: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode(String, Integer, Boolean, Boolean, Boolean)
+  nameWithType: IranSystemToUnicode.FromIranSystemToUnicode(string?, int, bool, bool, bool)
+  nameWithType.vb: IranSystemToUnicode.FromIranSystemToUnicode(String, Integer, Boolean, Boolean, Boolean)
+- uid: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode*
+  name: FromIranSystemToUnicode
+  href: api/DNTPersianUtils.Core.IranSystemToUnicode.html#DNTPersianUtils_Core_IranSystemToUnicode_FromIranSystemToUnicode_
+  commentId: Overload:DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.IranSystemToUnicode.FromIranSystemToUnicode
+  nameWithType: IranSystemToUnicode.FromIranSystemToUnicode
 - uid: DNTPersianUtils.Core.IranTimeZoneInfo
   name: IranTimeZoneInfo
   href: api/DNTPersianUtils.Core.IranTimeZoneInfo.html
@@ -5448,6 +6107,30 @@ references:
   commentId: F:DNTPersianUtils.Core.SunEvent.WinterSolstice
   fullName: DNTPersianUtils.Core.SunEvent.WinterSolstice
   nameWithType: SunEvent.WinterSolstice
+- uid: DNTPersianUtils.Core.TextEncoding
+  name: TextEncoding
+  href: api/DNTPersianUtils.Core.TextEncoding.html
+  commentId: T:DNTPersianUtils.Core.TextEncoding
+  fullName: DNTPersianUtils.Core.TextEncoding
+  nameWithType: TextEncoding
+- uid: DNTPersianUtils.Core.TextEncoding.ArabicWindows
+  name: ArabicWindows
+  href: api/DNTPersianUtils.Core.TextEncoding.html#DNTPersianUtils_Core_TextEncoding_ArabicWindows
+  commentId: F:DNTPersianUtils.Core.TextEncoding.ArabicWindows
+  fullName: DNTPersianUtils.Core.TextEncoding.ArabicWindows
+  nameWithType: TextEncoding.ArabicWindows
+- uid: DNTPersianUtils.Core.TextEncoding.CP1252
+  name: CP1252
+  href: api/DNTPersianUtils.Core.TextEncoding.html#DNTPersianUtils_Core_TextEncoding_CP1252
+  commentId: F:DNTPersianUtils.Core.TextEncoding.CP1252
+  fullName: DNTPersianUtils.Core.TextEncoding.CP1252
+  nameWithType: TextEncoding.CP1252
+- uid: DNTPersianUtils.Core.TextEncoding.DontChange
+  name: DontChange
+  href: api/DNTPersianUtils.Core.TextEncoding.html#DNTPersianUtils_Core_TextEncoding_DontChange
+  commentId: F:DNTPersianUtils.Core.TextEncoding.DontChange
+  fullName: DNTPersianUtils.Core.TextEncoding.DontChange
+  nameWithType: TextEncoding.DontChange
 - uid: DNTPersianUtils.Core.TimeConstants
   name: TimeConstants
   href: api/DNTPersianUtils.Core.TimeConstants.html
@@ -5534,6 +6217,44 @@ references:
   commentId: F:DNTPersianUtils.Core.UnicodeConstants.RleChar
   fullName: DNTPersianUtils.Core.UnicodeConstants.RleChar
   nameWithType: UnicodeConstants.RleChar
+- uid: DNTPersianUtils.Core.UnicodeToIranSystem
+  name: UnicodeToIranSystem
+  href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html
+  commentId: T:DNTPersianUtils.Core.UnicodeToIranSystem
+  fullName: DNTPersianUtils.Core.UnicodeToIranSystem
+  nameWithType: UnicodeToIranSystem
+- uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(System.String,System.Boolean)
+  name: FromUnicodeToIranSystem(string?, bool)
+  href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystem_System_String_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(System.String,System.Boolean)
+  name.vb: FromUnicodeToIranSystem(String, Boolean)
+  fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(string?, bool)
+  fullName.vb: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(String, Boolean)
+  nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystem(string?, bool)
+  nameWithType.vb: UnicodeToIranSystem.FromUnicodeToIranSystem(String, Boolean)
+- uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem*
+  name: FromUnicodeToIranSystem
+  href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystem_
+  commentId: Overload:DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem
+  nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystem
+- uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(System.String,System.Boolean)
+  name: FromUnicodeToIranSystemBytes(string?, bool)
+  href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystemBytes_System_String_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(System.String,System.Boolean)
+  name.vb: FromUnicodeToIranSystemBytes(String, Boolean)
+  fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(string?, bool)
+  fullName.vb: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(String, Boolean)
+  nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystemBytes(string?, bool)
+  nameWithType.vb: UnicodeToIranSystem.FromUnicodeToIranSystemBytes(String, Boolean)
+- uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes*
+  name: FromUnicodeToIranSystemBytes
+  href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystemBytes_
+  commentId: Overload:DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes
+  nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystemBytes
 - uid: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute
   name: ValidIranianMobileNumberAttribute
   href: api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html

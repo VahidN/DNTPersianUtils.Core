@@ -53,6 +53,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.FarsiDosExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.FarsiDosExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.FriendlyPersianDateUtils.yml",
       "output": {
         ".html": {
@@ -207,6 +217,46 @@
       "output": {
         ".html": {
           "relative_path": "api/DNTPersianUtils.Core.IranShetabUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranSystemCharPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranSystemCharPosition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranSystemData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranSystemData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranSystemTables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranSystemTables.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranSystemToUnicode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranSystemToUnicode.html"
         }
       },
       "version": ""
@@ -533,6 +583,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.TextEncoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.TextEncoding.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.TimeConstants.yml",
       "output": {
         ".html": {
@@ -547,6 +607,16 @@
       "output": {
         ".html": {
           "relative_path": "api/DNTPersianUtils.Core.UnicodeConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.UnicodeToIranSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.UnicodeToIranSystem.html"
         }
       },
       "version": ""
