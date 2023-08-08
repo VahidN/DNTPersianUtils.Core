@@ -49,27 +49,18 @@ references:
   commentId: F:DNTPersianUtils.Core.DateTimeUtils.Epoch
   fullName: DNTPersianUtils.Core.DateTimeUtils.Epoch
   nameWithType: DateTimeUtils.Epoch
-- uid: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly,System.DateOnly)
-  name: GetAge(DateOnly, DateOnly)
-  href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateOnly_System_DateOnly_
-  commentId: M:DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly,System.DateOnly)
-  fullName: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly, System.DateOnly)
-  nameWithType: DateTimeUtils.GetAge(DateOnly, DateOnly)
 - uid: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly)
   name: GetAge(DateOnly)
   href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateOnly_
   commentId: M:DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly)
   fullName: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly)
   nameWithType: DateTimeUtils.GetAge(DateOnly)
-- uid: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTime,System.DateTime)
-  name: GetAge(DateTime, DateTime)
-  href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateTime_System_DateTime_
-  commentId: M:DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTime,System.DateTime)
-  name.vb: GetAge(Date, Date)
-  fullName: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTime, System.DateTime)
-  fullName.vb: DNTPersianUtils.Core.DateTimeUtils.GetAge(Date, Date)
-  nameWithType: DateTimeUtils.GetAge(DateTime, DateTime)
-  nameWithType.vb: DateTimeUtils.GetAge(Date, Date)
+- uid: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly,System.DateOnly)
+  name: GetAge(DateOnly, DateOnly)
+  href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateOnly_System_DateOnly_
+  commentId: M:DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly,System.DateOnly)
+  fullName: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly, System.DateOnly)
+  nameWithType: DateTimeUtils.GetAge(DateOnly, DateOnly)
 - uid: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTime)
   name: GetAge(DateTime)
   href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateTime_
@@ -79,6 +70,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.DateTimeUtils.GetAge(Date)
   nameWithType: DateTimeUtils.GetAge(DateTime)
   nameWithType.vb: DateTimeUtils.GetAge(Date)
+- uid: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTime,System.DateTime)
+  name: GetAge(DateTime, DateTime)
+  href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateTime_System_DateTime_
+  commentId: M:DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTime,System.DateTime)
+  name.vb: GetAge(Date, Date)
+  fullName: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTime, System.DateTime)
+  fullName.vb: DNTPersianUtils.Core.DateTimeUtils.GetAge(Date, Date)
+  nameWithType: DateTimeUtils.GetAge(DateTime, DateTime)
+  nameWithType.vb: DateTimeUtils.GetAge(Date, Date)
 - uid: DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)
   name: GetAge(DateTimeOffset, DateTimeOffsetPart)
   href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_
@@ -761,15 +761,15 @@ references:
   commentId: T:DNTPersianUtils.Core.FarsiDosExtensions
   fullName: DNTPersianUtils.Core.FarsiDosExtensions
   nameWithType: FarsiDosExtensions
-- uid: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(System.String)
-  name: ConvertCp1252StringToUnicode(string)
-  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_ConvertCp1252StringToUnicode_System_String_
-  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(System.String)
-  name.vb: ConvertCp1252StringToUnicode(String)
-  fullName: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(string)
-  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(String)
-  nameWithType: FarsiDosExtensions.ConvertCp1252StringToUnicode(string)
-  nameWithType.vb: FarsiDosExtensions.ConvertCp1252StringToUnicode(String)
+- uid: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(System.String,DNTPersianUtils.Core.TextEncoding)
+  name: ConvertCp1252StringToUnicode(string, TextEncoding)
+  href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_ConvertCp1252StringToUnicode_System_String_DNTPersianUtils_Core_TextEncoding_
+  commentId: M:DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(System.String,DNTPersianUtils.Core.TextEncoding)
+  name.vb: ConvertCp1252StringToUnicode(String, TextEncoding)
+  fullName: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(string, DNTPersianUtils.Core.TextEncoding)
+  fullName.vb: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(String, DNTPersianUtils.Core.TextEncoding)
+  nameWithType: FarsiDosExtensions.ConvertCp1252StringToUnicode(string, TextEncoding)
+  nameWithType.vb: FarsiDosExtensions.ConvertCp1252StringToUnicode(String, TextEncoding)
 - uid: DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode*
   name: ConvertCp1252StringToUnicode
   href: api/DNTPersianUtils.Core.FarsiDosExtensions.html#DNTPersianUtils_Core_FarsiDosExtensions_ConvertCp1252StringToUnicode_
@@ -1279,6 +1279,21 @@ references:
   commentId: M:DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateOnly},System.DateOnly)
   fullName: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.DateOnly?, System.DateOnly)
   nameWithType: FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(DateOnly?, DateOnly)
+- uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: ToFriendlyPersianDateTextify(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToFriendlyPersianDateTextify_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(DateTimeOffset?, DateTimeOffsetPart)
+- uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateTimeOffset},System.DateTime,DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: ToFriendlyPersianDateTextify(DateTimeOffset?, DateTime, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToFriendlyPersianDateTextify_System_Nullable_System_DateTimeOffset__System_DateTime_DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateTimeOffset},System.DateTime,DNTPersianUtils.Core.DateTimeOffsetPart)
+  name.vb: ToFriendlyPersianDateTextify(DateTimeOffset?, Date, DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.DateTimeOffset?, System.DateTime, DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName.vb: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.DateTimeOffset?, Date, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(DateTimeOffset?, DateTime, DateTimeOffsetPart)
+  nameWithType.vb: FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(DateTimeOffset?, Date, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateTime},System.Boolean)
   name: ToFriendlyPersianDateTextify(DateTime?, bool)
   href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToFriendlyPersianDateTextify_System_Nullable_System_DateTime__System_Boolean_
@@ -1297,21 +1312,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(Date?, Date)
   nameWithType: FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(DateTime?, DateTime)
   nameWithType.vb: FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(Date?, Date)
-- uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: ToFriendlyPersianDateTextify(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToFriendlyPersianDateTextify_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(DateTimeOffset?, DateTimeOffsetPart)
-- uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateTimeOffset},System.DateTime,DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: ToFriendlyPersianDateTextify(DateTimeOffset?, DateTime, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToFriendlyPersianDateTextify_System_Nullable_System_DateTimeOffset__System_DateTime_DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.Nullable{System.DateTimeOffset},System.DateTime,DNTPersianUtils.Core.DateTimeOffsetPart)
-  name.vb: ToFriendlyPersianDateTextify(DateTimeOffset?, Date, DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.DateTimeOffset?, System.DateTime, DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName.vb: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(System.DateTimeOffset?, Date, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(DateTimeOffset?, DateTime, DateTimeOffsetPart)
-  nameWithType.vb: FriendlyPersianDateUtils.ToFriendlyPersianDateTextify(DateTimeOffset?, Date, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToFriendlyPersianDateTextify*
   name: ToFriendlyPersianDateTextify
   href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToFriendlyPersianDateTextify_
@@ -1358,6 +1358,12 @@ references:
   commentId: M:DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(System.Nullable{System.DateOnly})
   fullName: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(System.DateOnly?)
   nameWithType: FriendlyPersianDateUtils.ToPersianDateTextify(DateOnly?)
+- uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: ToPersianDateTextify(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToPersianDateTextify_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: FriendlyPersianDateUtils.ToPersianDateTextify(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(System.Nullable{System.DateTime})
   name: ToPersianDateTextify(DateTime?)
   href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToPersianDateTextify_System_Nullable_System_DateTime__
@@ -1367,12 +1373,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(Date?)
   nameWithType: FriendlyPersianDateUtils.ToPersianDateTextify(DateTime?)
   nameWithType.vb: FriendlyPersianDateUtils.ToPersianDateTextify(Date?)
-- uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: ToPersianDateTextify(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToPersianDateTextify_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: FriendlyPersianDateUtils.ToPersianDateTextify(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.FriendlyPersianDateUtils.ToPersianDateTextify*
   name: ToPersianDateTextify
   href: api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html#DNTPersianUtils_Core_FriendlyPersianDateUtils_ToPersianDateTextify_
@@ -1425,15 +1425,6 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDate
   nameWithType: GenericsPersianDateTimeUtils.FormatDateToLongPersianDate
-- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDate``1(``0)
-  name: FormatDateToLongPersianDate<TValue>(TValue?)
-  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToLongPersianDate__1___0_
-  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDate``1(``0)
-  name.vb: FormatDateToLongPersianDate(Of TValue)(TValue)
-  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDate<TValue>(TValue?)
-  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDate(Of TValue)(TValue)
-  nameWithType: GenericsPersianDateTimeUtils.FormatDateToLongPersianDate<TValue>(TValue?)
-  nameWithType.vb: GenericsPersianDateTimeUtils.FormatDateToLongPersianDate(Of TValue)(TValue)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDateTime*
   name: FormatDateToLongPersianDateTime
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToLongPersianDateTime_
@@ -1450,6 +1441,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDateTime(Of TValue)(TValue)
   nameWithType: GenericsPersianDateTimeUtils.FormatDateToLongPersianDateTime<TValue>(TValue?)
   nameWithType.vb: GenericsPersianDateTimeUtils.FormatDateToLongPersianDateTime(Of TValue)(TValue)
+- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDate``1(``0)
+  name: FormatDateToLongPersianDate<TValue>(TValue?)
+  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToLongPersianDate__1___0_
+  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDate``1(``0)
+  name.vb: FormatDateToLongPersianDate(Of TValue)(TValue)
+  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDate<TValue>(TValue?)
+  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToLongPersianDate(Of TValue)(TValue)
+  nameWithType: GenericsPersianDateTimeUtils.FormatDateToLongPersianDate<TValue>(TValue?)
+  nameWithType.vb: GenericsPersianDateTimeUtils.FormatDateToLongPersianDate(Of TValue)(TValue)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToPersianDateTime*
   name: FormatDateToPersianDateTime
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToPersianDateTime_
@@ -1473,15 +1473,6 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDate
   nameWithType: GenericsPersianDateTimeUtils.FormatDateToShortPersianDate
-- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDate``1(``0)
-  name: FormatDateToShortPersianDate<TValue>(TValue?)
-  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToShortPersianDate__1___0_
-  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDate``1(``0)
-  name.vb: FormatDateToShortPersianDate(Of TValue)(TValue)
-  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDate<TValue>(TValue?)
-  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDate(Of TValue)(TValue)
-  nameWithType: GenericsPersianDateTimeUtils.FormatDateToShortPersianDate<TValue>(TValue?)
-  nameWithType.vb: GenericsPersianDateTimeUtils.FormatDateToShortPersianDate(Of TValue)(TValue)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDateTime*
   name: FormatDateToShortPersianDateTime
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToShortPersianDateTime_
@@ -1498,6 +1489,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDateTime(Of TValue)(TValue)
   nameWithType: GenericsPersianDateTimeUtils.FormatDateToShortPersianDateTime<TValue>(TValue?)
   nameWithType.vb: GenericsPersianDateTimeUtils.FormatDateToShortPersianDateTime(Of TValue)(TValue)
+- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDate``1(``0)
+  name: FormatDateToShortPersianDate<TValue>(TValue?)
+  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToShortPersianDate__1___0_
+  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDate``1(``0)
+  name.vb: FormatDateToShortPersianDate(Of TValue)(TValue)
+  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDate<TValue>(TValue?)
+  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateToShortPersianDate(Of TValue)(TValue)
+  nameWithType: GenericsPersianDateTimeUtils.FormatDateToShortPersianDate<TValue>(TValue?)
+  nameWithType.vb: GenericsPersianDateTimeUtils.FormatDateToShortPersianDate(Of TValue)(TValue)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateValue*
   name: FormatDateValue
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateValue_
@@ -1514,6 +1514,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatDateValue(Of TValue)(TValue, String)
   nameWithType: GenericsPersianDateTimeUtils.FormatDateValue<TValue>(TValue?, string)
   nameWithType.vb: GenericsPersianDateTimeUtils.FormatDateValue(Of TValue)(TValue, String)
+- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly)
+  name: FormatValue(DateOnly)
+  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_DateOnly_
+  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly)
+  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly)
+  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateOnly)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly,System.String)
   name: FormatValue(DateOnly, string)
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_DateOnly_System_String_
@@ -1523,21 +1529,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly, String)
   nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateOnly, string)
   nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(DateOnly, String)
-- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly)
-  name: FormatValue(DateOnly)
-  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_DateOnly_
-  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly)
-  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly)
-  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateOnly)
-- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime,System.String)
-  name: FormatValue(DateTime, string)
-  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_DateTime_System_String_
-  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime,System.String)
-  name.vb: FormatValue(Date, String)
-  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime, string)
-  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(Date, String)
-  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTime, string)
-  nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(Date, String)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime)
   name: FormatValue(DateTime)
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_DateTime_
@@ -1547,6 +1538,21 @@ references:
   fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(Date)
   nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTime)
   nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(Date)
+- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime,System.String)
+  name: FormatValue(DateTime, string)
+  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_DateTime_System_String_
+  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime,System.String)
+  name.vb: FormatValue(Date, String)
+  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime, string)
+  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(Date, String)
+  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTime, string)
+  nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(Date, String)
+- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset)
+  name: FormatValue(DateTimeOffset)
+  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_DateTimeOffset_
+  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset)
+  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset)
+  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTimeOffset)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset,System.String)
   name: FormatValue(DateTimeOffset, string)
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_DateTimeOffset_System_String_
@@ -1556,12 +1562,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset, String)
   nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTimeOffset, string)
   nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(DateTimeOffset, String)
-- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset)
-  name: FormatValue(DateTimeOffset)
-  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_DateTimeOffset_
-  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset)
-  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset)
-  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTimeOffset)
+- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateOnly})
+  name: FormatValue(DateOnly?)
+  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateOnly__
+  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateOnly})
+  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly?)
+  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateOnly?)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateOnly},System.String)
   name: FormatValue(DateOnly?, string?)
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateOnly__System_String_
@@ -1571,30 +1577,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly?, String)
   nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateOnly?, string?)
   nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(DateOnly?, String)
-- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateOnly})
-  name: FormatValue(DateOnly?)
-  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateOnly__
-  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateOnly})
-  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateOnly?)
-  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateOnly?)
-- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTime},System.String)
-  name: FormatValue(DateTime?, string?)
-  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateTime__System_String_
-  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTime},System.String)
-  name.vb: FormatValue(Date?, String)
-  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime?, string?)
-  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(Date?, String)
-  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTime?, string?)
-  nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(Date?, String)
-- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTime})
-  name: FormatValue(DateTime?)
-  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateTime__
-  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTime})
-  name.vb: FormatValue(Date?)
-  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime?)
-  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(Date?)
-  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTime?)
-  nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(Date?)
+- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTimeOffset})
+  name: FormatValue(DateTimeOffset?)
+  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateTimeOffset__
+  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTimeOffset})
+  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset?)
+  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTimeOffset?)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTimeOffset},System.String)
   name: FormatValue(DateTimeOffset?, string)
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateTimeOffset__System_String_
@@ -1604,12 +1592,24 @@ references:
   fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset?, String)
   nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTimeOffset?, string)
   nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(DateTimeOffset?, String)
-- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTimeOffset})
-  name: FormatValue(DateTimeOffset?)
-  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateTimeOffset__
-  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTimeOffset})
-  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTimeOffset?)
-  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTimeOffset?)
+- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTime})
+  name: FormatValue(DateTime?)
+  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateTime__
+  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTime})
+  name.vb: FormatValue(Date?)
+  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime?)
+  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(Date?)
+  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTime?)
+  nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(Date?)
+- uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTime},System.String)
+  name: FormatValue(DateTime?, string?)
+  href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_System_Nullable_System_DateTime__System_String_
+  commentId: M:DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.Nullable{System.DateTime},System.String)
+  name.vb: FormatValue(Date?, String)
+  fullName: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(System.DateTime?, string?)
+  fullName.vb: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue(Date?, String)
+  nameWithType: GenericsPersianDateTimeUtils.FormatValue(DateTime?, string?)
+  nameWithType.vb: GenericsPersianDateTimeUtils.FormatValue(Date?, String)
 - uid: DNTPersianUtils.Core.GenericsPersianDateTimeUtils.FormatValue*
   name: FormatValue
   href: api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatValue_
@@ -2841,15 +2841,6 @@ references:
   commentId: M:DNTPersianUtils.Core.IranHolidays.GetBusinessDays(System.DateTimeOffset,System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)
   fullName: DNTPersianUtils.Core.IranHolidays.GetBusinessDays(System.DateTimeOffset, System.DateTimeOffset, DNTPersianUtils.Core.DateTimeOffsetPart)
   nameWithType: IranHolidays.GetBusinessDays(DateTimeOffset, DateTimeOffset, DateTimeOffsetPart)
-- uid: DNTPersianUtils.Core.IranHolidays.GetBusinessDays(System.Int32,System.Int32)
-  name: GetBusinessDays(int, int)
-  href: api/DNTPersianUtils.Core.IranHolidays.html#DNTPersianUtils_Core_IranHolidays_GetBusinessDays_System_Int32_System_Int32_
-  commentId: M:DNTPersianUtils.Core.IranHolidays.GetBusinessDays(System.Int32,System.Int32)
-  name.vb: GetBusinessDays(Integer, Integer)
-  fullName: DNTPersianUtils.Core.IranHolidays.GetBusinessDays(int, int)
-  fullName.vb: DNTPersianUtils.Core.IranHolidays.GetBusinessDays(Integer, Integer)
-  nameWithType: IranHolidays.GetBusinessDays(int, int)
-  nameWithType.vb: IranHolidays.GetBusinessDays(Integer, Integer)
 - uid: DNTPersianUtils.Core.IranHolidays.GetBusinessDays(System.Int32)
   name: GetBusinessDays(int)
   href: api/DNTPersianUtils.Core.IranHolidays.html#DNTPersianUtils_Core_IranHolidays_GetBusinessDays_System_Int32_
@@ -2859,6 +2850,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.IranHolidays.GetBusinessDays(Integer)
   nameWithType: IranHolidays.GetBusinessDays(int)
   nameWithType.vb: IranHolidays.GetBusinessDays(Integer)
+- uid: DNTPersianUtils.Core.IranHolidays.GetBusinessDays(System.Int32,System.Int32)
+  name: GetBusinessDays(int, int)
+  href: api/DNTPersianUtils.Core.IranHolidays.html#DNTPersianUtils_Core_IranHolidays_GetBusinessDays_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.IranHolidays.GetBusinessDays(System.Int32,System.Int32)
+  name.vb: GetBusinessDays(Integer, Integer)
+  fullName: DNTPersianUtils.Core.IranHolidays.GetBusinessDays(int, int)
+  fullName.vb: DNTPersianUtils.Core.IranHolidays.GetBusinessDays(Integer, Integer)
+  nameWithType: IranHolidays.GetBusinessDays(int, int)
+  nameWithType.vb: IranHolidays.GetBusinessDays(Integer, Integer)
 - uid: DNTPersianUtils.Core.IranHolidays.GetBusinessDays*
   name: GetBusinessDays
   href: api/DNTPersianUtils.Core.IranHolidays.html#DNTPersianUtils_Core_IranHolidays_GetBusinessDays_
@@ -3331,6 +3331,22 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.IslamicDateUtils.IslamicDayToPersianDay
   nameWithType: IslamicDateUtils.IslamicDayToPersianDay
+- uid: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri(System.Int64)
+  name: JdToHijri(long)
+  href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_JdToHijri_System_Int64_
+  commentId: M:DNTPersianUtils.Core.IslamicDateUtils.JdToHijri(System.Int64)
+  name.vb: JdToHijri(Long)
+  fullName: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri(long)
+  fullName.vb: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri(Long)
+  nameWithType: IslamicDateUtils.JdToHijri(long)
+  nameWithType.vb: IslamicDateUtils.JdToHijri(Long)
+- uid: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri*
+  name: JdToHijri
+  href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_JdToHijri_
+  commentId: Overload:DNTPersianUtils.Core.IslamicDateUtils.JdToHijri
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri
+  nameWithType: IslamicDateUtils.JdToHijri
 - uid: DNTPersianUtils.Core.IslamicDateUtils.JdnToGregorianDateTime(System.Int64)
   name: JdnToGregorianDateTime(long)
   href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_JdnToGregorianDateTime_System_Int64_
@@ -3395,22 +3411,6 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.IslamicDateUtils.JdnToPersianDay
   nameWithType: IslamicDateUtils.JdnToPersianDay
-- uid: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri(System.Int64)
-  name: JdToHijri(long)
-  href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_JdToHijri_System_Int64_
-  commentId: M:DNTPersianUtils.Core.IslamicDateUtils.JdToHijri(System.Int64)
-  name.vb: JdToHijri(Long)
-  fullName: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri(long)
-  fullName.vb: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri(Long)
-  nameWithType: IslamicDateUtils.JdToHijri(long)
-  nameWithType.vb: IslamicDateUtils.JdToHijri(Long)
-- uid: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri*
-  name: JdToHijri
-  href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_JdToHijri_
-  commentId: Overload:DNTPersianUtils.Core.IslamicDateUtils.JdToHijri
-  isSpec: "True"
-  fullName: DNTPersianUtils.Core.IslamicDateUtils.JdToHijri
-  nameWithType: IslamicDateUtils.JdToHijri
 - uid: DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn(System.Int64,System.Int64,System.Int64)
   name: JulianToJdn(long, long, long)
   href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_JulianToJdn_System_Int64_System_Int64_System_Int64_
@@ -4149,15 +4149,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(System.DateOnly?, Boolean)
   nameWithType: PersianCulture.GetPersianDayOfMonth(DateOnly?, bool)
   nameWithType.vb: PersianCulture.GetPersianDayOfMonth(DateOnly?, Boolean)
-- uid: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(System.Nullable{System.DateTime},System.Boolean)
-  name: GetPersianDayOfMonth(DateTime?, bool)
-  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianDayOfMonth_System_Nullable_System_DateTime__System_Boolean_
-  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(System.Nullable{System.DateTime},System.Boolean)
-  name.vb: GetPersianDayOfMonth(Date?, Boolean)
-  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(System.DateTime?, bool)
-  fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(Date?, Boolean)
-  nameWithType: PersianCulture.GetPersianDayOfMonth(DateTime?, bool)
-  nameWithType.vb: PersianCulture.GetPersianDayOfMonth(Date?, Boolean)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(System.Nullable{System.DateTimeOffset},System.Boolean,DNTPersianUtils.Core.DateTimeOffsetPart)
   name: GetPersianDayOfMonth(DateTimeOffset?, bool, DateTimeOffsetPart)
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianDayOfMonth_System_Nullable_System_DateTimeOffset__System_Boolean_DNTPersianUtils_Core_DateTimeOffsetPart_
@@ -4167,6 +4158,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(System.DateTimeOffset?, Boolean, DNTPersianUtils.Core.DateTimeOffsetPart)
   nameWithType: PersianCulture.GetPersianDayOfMonth(DateTimeOffset?, bool, DateTimeOffsetPart)
   nameWithType.vb: PersianCulture.GetPersianDayOfMonth(DateTimeOffset?, Boolean, DateTimeOffsetPart)
+- uid: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(System.Nullable{System.DateTime},System.Boolean)
+  name: GetPersianDayOfMonth(DateTime?, bool)
+  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianDayOfMonth_System_Nullable_System_DateTime__System_Boolean_
+  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(System.Nullable{System.DateTime},System.Boolean)
+  name.vb: GetPersianDayOfMonth(Date?, Boolean)
+  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(System.DateTime?, bool)
+  fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth(Date?, Boolean)
+  nameWithType: PersianCulture.GetPersianDayOfMonth(DateTime?, bool)
+  nameWithType.vb: PersianCulture.GetPersianDayOfMonth(Date?, Boolean)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianDayOfMonth*
   name: GetPersianDayOfMonth
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianDayOfMonth_
@@ -4210,15 +4210,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianMonth(System.DateOnly?, Boolean)
   nameWithType: PersianCulture.GetPersianMonth(DateOnly?, bool)
   nameWithType.vb: PersianCulture.GetPersianMonth(DateOnly?, Boolean)
-- uid: DNTPersianUtils.Core.PersianCulture.GetPersianMonth(System.Nullable{System.DateTime},System.Boolean)
-  name: GetPersianMonth(DateTime?, bool)
-  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianMonth_System_Nullable_System_DateTime__System_Boolean_
-  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianMonth(System.Nullable{System.DateTime},System.Boolean)
-  name.vb: GetPersianMonth(Date?, Boolean)
-  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianMonth(System.DateTime?, bool)
-  fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianMonth(Date?, Boolean)
-  nameWithType: PersianCulture.GetPersianMonth(DateTime?, bool)
-  nameWithType.vb: PersianCulture.GetPersianMonth(Date?, Boolean)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianMonth(System.Nullable{System.DateTimeOffset},System.Boolean,DNTPersianUtils.Core.DateTimeOffsetPart)
   name: GetPersianMonth(DateTimeOffset?, bool, DateTimeOffsetPart)
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianMonth_System_Nullable_System_DateTimeOffset__System_Boolean_DNTPersianUtils_Core_DateTimeOffsetPart_
@@ -4228,6 +4219,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianMonth(System.DateTimeOffset?, Boolean, DNTPersianUtils.Core.DateTimeOffsetPart)
   nameWithType: PersianCulture.GetPersianMonth(DateTimeOffset?, bool, DateTimeOffsetPart)
   nameWithType.vb: PersianCulture.GetPersianMonth(DateTimeOffset?, Boolean, DateTimeOffsetPart)
+- uid: DNTPersianUtils.Core.PersianCulture.GetPersianMonth(System.Nullable{System.DateTime},System.Boolean)
+  name: GetPersianMonth(DateTime?, bool)
+  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianMonth_System_Nullable_System_DateTime__System_Boolean_
+  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianMonth(System.Nullable{System.DateTime},System.Boolean)
+  name.vb: GetPersianMonth(Date?, Boolean)
+  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianMonth(System.DateTime?, bool)
+  fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianMonth(Date?, Boolean)
+  nameWithType: PersianCulture.GetPersianMonth(DateTime?, bool)
+  nameWithType.vb: PersianCulture.GetPersianMonth(Date?, Boolean)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianMonth*
   name: GetPersianMonth
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianMonth_
@@ -4325,6 +4325,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates(System.DateOnly?, Boolean)
   nameWithType: PersianCulture.GetPersianMonthStartAndEndDates(DateOnly?, bool)
   nameWithType.vb: PersianCulture.GetPersianMonthStartAndEndDates(DateOnly?, Boolean)
+- uid: DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: GetPersianMonthStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianMonthStartAndEndDates_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianCulture.GetPersianMonthStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates(System.Nullable{System.DateTime},System.Boolean)
   name: GetPersianMonthStartAndEndDates(DateTime?, bool)
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianMonthStartAndEndDates_System_Nullable_System_DateTime__System_Boolean_
@@ -4334,12 +4340,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates(Date?, Boolean)
   nameWithType: PersianCulture.GetPersianMonthStartAndEndDates(DateTime?, bool)
   nameWithType.vb: PersianCulture.GetPersianMonthStartAndEndDates(Date?, Boolean)
-- uid: DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: GetPersianMonthStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianMonthStartAndEndDates_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianCulture.GetPersianMonthStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianMonthStartAndEndDates*
   name: GetPersianMonthStartAndEndDates
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianMonthStartAndEndDates_
@@ -4395,6 +4395,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName(System.DateOnly?, Boolean)
   nameWithType: PersianCulture.GetPersianWeekDayName(DateOnly?, bool)
   nameWithType.vb: PersianCulture.GetPersianWeekDayName(DateOnly?, Boolean)
+- uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: GetPersianWeekDayName(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekDayName_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianCulture.GetPersianWeekDayName(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName(System.Nullable{System.DateTime},System.Boolean)
   name: GetPersianWeekDayName(DateTime?, bool)
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekDayName_System_Nullable_System_DateTime__System_Boolean_
@@ -4404,12 +4410,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName(Date?, Boolean)
   nameWithType: PersianCulture.GetPersianWeekDayName(DateTime?, bool)
   nameWithType.vb: PersianCulture.GetPersianWeekDayName(Date?, Boolean)
-- uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: GetPersianWeekDayName(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekDayName_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianCulture.GetPersianWeekDayName(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayName*
   name: GetPersianWeekDayName
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekDayName_
@@ -4459,6 +4459,12 @@ references:
   commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(System.Nullable{System.DateOnly})
   fullName: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(System.DateOnly?)
   nameWithType: PersianCulture.GetPersianWeekDayNumber(DateOnly?)
+- uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: GetPersianWeekDayNumber(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekDayNumber_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianCulture.GetPersianWeekDayNumber(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(System.Nullable{System.DateTime})
   name: GetPersianWeekDayNumber(DateTime?)
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekDayNumber_System_Nullable_System_DateTime__
@@ -4468,12 +4474,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(Date?)
   nameWithType: PersianCulture.GetPersianWeekDayNumber(DateTime?)
   nameWithType.vb: PersianCulture.GetPersianWeekDayNumber(Date?)
-- uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: GetPersianWeekDayNumber(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekDayNumber_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianCulture.GetPersianWeekDayNumber(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekDayNumber*
   name: GetPersianWeekDayNumber
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekDayNumber_
@@ -4523,6 +4523,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates(System.DateOnly?, Boolean)
   nameWithType: PersianCulture.GetPersianWeekStartAndEndDates(DateOnly?, bool)
   nameWithType.vb: PersianCulture.GetPersianWeekStartAndEndDates(DateOnly?, Boolean)
+- uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: GetPersianWeekStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekStartAndEndDates_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianCulture.GetPersianWeekStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates(System.Nullable{System.DateTime},System.Boolean)
   name: GetPersianWeekStartAndEndDates(DateTime?, bool)
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekStartAndEndDates_System_Nullable_System_DateTime__System_Boolean_
@@ -4532,12 +4538,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates(Date?, Boolean)
   nameWithType: PersianCulture.GetPersianWeekStartAndEndDates(DateTime?, bool)
   nameWithType.vb: PersianCulture.GetPersianWeekStartAndEndDates(Date?, Boolean)
-- uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: GetPersianWeekStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekStartAndEndDates_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianCulture.GetPersianWeekStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianWeekStartAndEndDates*
   name: GetPersianWeekStartAndEndDates
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianWeekStartAndEndDates_
@@ -4581,15 +4581,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianYear(System.DateOnly?, Boolean)
   nameWithType: PersianCulture.GetPersianYear(DateOnly?, bool)
   nameWithType.vb: PersianCulture.GetPersianYear(DateOnly?, Boolean)
-- uid: DNTPersianUtils.Core.PersianCulture.GetPersianYear(System.Nullable{System.DateTime},System.Boolean)
-  name: GetPersianYear(DateTime?, bool)
-  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianYear_System_Nullable_System_DateTime__System_Boolean_
-  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianYear(System.Nullable{System.DateTime},System.Boolean)
-  name.vb: GetPersianYear(Date?, Boolean)
-  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianYear(System.DateTime?, bool)
-  fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianYear(Date?, Boolean)
-  nameWithType: PersianCulture.GetPersianYear(DateTime?, bool)
-  nameWithType.vb: PersianCulture.GetPersianYear(Date?, Boolean)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianYear(System.Nullable{System.DateTimeOffset},System.Boolean,DNTPersianUtils.Core.DateTimeOffsetPart)
   name: GetPersianYear(DateTimeOffset?, bool, DateTimeOffsetPart)
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianYear_System_Nullable_System_DateTimeOffset__System_Boolean_DNTPersianUtils_Core_DateTimeOffsetPart_
@@ -4599,6 +4590,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianYear(System.DateTimeOffset?, Boolean, DNTPersianUtils.Core.DateTimeOffsetPart)
   nameWithType: PersianCulture.GetPersianYear(DateTimeOffset?, bool, DateTimeOffsetPart)
   nameWithType.vb: PersianCulture.GetPersianYear(DateTimeOffset?, Boolean, DateTimeOffsetPart)
+- uid: DNTPersianUtils.Core.PersianCulture.GetPersianYear(System.Nullable{System.DateTime},System.Boolean)
+  name: GetPersianYear(DateTime?, bool)
+  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianYear_System_Nullable_System_DateTime__System_Boolean_
+  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianYear(System.Nullable{System.DateTime},System.Boolean)
+  name.vb: GetPersianYear(Date?, Boolean)
+  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianYear(System.DateTime?, bool)
+  fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianYear(Date?, Boolean)
+  nameWithType: PersianCulture.GetPersianYear(DateTime?, bool)
+  nameWithType.vb: PersianCulture.GetPersianYear(Date?, Boolean)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianYear*
   name: GetPersianYear
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianYear_
@@ -4648,6 +4648,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates(System.DateOnly?, Boolean)
   nameWithType: PersianCulture.GetPersianYearStartAndEndDates(DateOnly?, bool)
   nameWithType.vb: PersianCulture.GetPersianYearStartAndEndDates(DateOnly?, Boolean)
+- uid: DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: GetPersianYearStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianYearStartAndEndDates_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianCulture.GetPersianYearStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates(System.Nullable{System.DateTime},System.Boolean)
   name: GetPersianYearStartAndEndDates(DateTime?, bool)
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianYearStartAndEndDates_System_Nullable_System_DateTime__System_Boolean_
@@ -4657,12 +4663,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates(Date?, Boolean)
   nameWithType: PersianCulture.GetPersianYearStartAndEndDates(DateTime?, bool)
   nameWithType.vb: PersianCulture.GetPersianYearStartAndEndDates(Date?, Boolean)
-- uid: DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: GetPersianYearStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianYearStartAndEndDates_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianCulture.GetPersianYearStartAndEndDates(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianCulture.GetPersianYearStartAndEndDates*
   name: GetPersianYearStartAndEndDates
   href: api/DNTPersianUtils.Core.PersianCulture.html#DNTPersianUtils_Core_PersianCulture_GetPersianYearStartAndEndDates_
@@ -4880,6 +4880,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString(System.DateOnly?, Boolean)
   nameWithType: PersianDateTimeUtils.ToLongPersianDateString(DateOnly?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToLongPersianDateString(DateOnly?, Boolean)
+- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: ToLongPersianDateString(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToLongPersianDateString_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianDateTimeUtils.ToLongPersianDateString(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString(System.Nullable{System.DateTime},System.Boolean)
   name: ToLongPersianDateString(DateTime?, bool)
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToLongPersianDateString_System_Nullable_System_DateTime__System_Boolean_
@@ -4889,12 +4895,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString(Date?, Boolean)
   nameWithType: PersianDateTimeUtils.ToLongPersianDateString(DateTime?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToLongPersianDateString(Date?, Boolean)
-- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: ToLongPersianDateString(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToLongPersianDateString_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianDateTimeUtils.ToLongPersianDateString(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateString*
   name: ToLongPersianDateString
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToLongPersianDateString_
@@ -4935,6 +4935,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString(System.DateOnly?, Boolean)
   nameWithType: PersianDateTimeUtils.ToLongPersianDateTimeString(DateOnly?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToLongPersianDateTimeString(DateOnly?, Boolean)
+- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: ToLongPersianDateTimeString(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToLongPersianDateTimeString_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianDateTimeUtils.ToLongPersianDateTimeString(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString(System.Nullable{System.DateTime},System.Boolean)
   name: ToLongPersianDateTimeString(DateTime?, bool)
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToLongPersianDateTimeString_System_Nullable_System_DateTime__System_Boolean_
@@ -4944,12 +4950,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString(Date?, Boolean)
   nameWithType: PersianDateTimeUtils.ToLongPersianDateTimeString(DateTime?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToLongPersianDateTimeString(Date?, Boolean)
-- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: ToLongPersianDateTimeString(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToLongPersianDateTimeString_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianDateTimeUtils.ToLongPersianDateTimeString(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToLongPersianDateTimeString*
   name: ToLongPersianDateTimeString
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToLongPersianDateTimeString_
@@ -5025,15 +5025,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.DateOnly?, String, Boolean)
   nameWithType: PersianDateTimeUtils.ToPersianDateTimeString(DateOnly?, string, bool)
   nameWithType.vb: PersianDateTimeUtils.ToPersianDateTimeString(DateOnly?, String, Boolean)
-- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.Nullable{System.DateTime},System.String,System.Boolean)
-  name: ToPersianDateTimeString(DateTime?, string, bool)
-  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianDateTimeString_System_Nullable_System_DateTime__System_String_System_Boolean_
-  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.Nullable{System.DateTime},System.String,System.Boolean)
-  name.vb: ToPersianDateTimeString(Date?, String, Boolean)
-  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.DateTime?, string, bool)
-  fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(Date?, String, Boolean)
-  nameWithType: PersianDateTimeUtils.ToPersianDateTimeString(DateTime?, string, bool)
-  nameWithType.vb: PersianDateTimeUtils.ToPersianDateTimeString(Date?, String, Boolean)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.Nullable{System.DateTimeOffset},System.String,System.Boolean,DNTPersianUtils.Core.DateTimeOffsetPart)
   name: ToPersianDateTimeString(DateTimeOffset?, string, bool, DateTimeOffsetPart)
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianDateTimeString_System_Nullable_System_DateTimeOffset__System_String_System_Boolean_DNTPersianUtils_Core_DateTimeOffsetPart_
@@ -5043,6 +5034,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.DateTimeOffset?, String, Boolean, DNTPersianUtils.Core.DateTimeOffsetPart)
   nameWithType: PersianDateTimeUtils.ToPersianDateTimeString(DateTimeOffset?, string, bool, DateTimeOffsetPart)
   nameWithType.vb: PersianDateTimeUtils.ToPersianDateTimeString(DateTimeOffset?, String, Boolean, DateTimeOffsetPart)
+- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.Nullable{System.DateTime},System.String,System.Boolean)
+  name: ToPersianDateTimeString(DateTime?, string, bool)
+  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianDateTimeString_System_Nullable_System_DateTime__System_String_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.Nullable{System.DateTime},System.String,System.Boolean)
+  name.vb: ToPersianDateTimeString(Date?, String, Boolean)
+  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.DateTime?, string, bool)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(Date?, String, Boolean)
+  nameWithType: PersianDateTimeUtils.ToPersianDateTimeString(DateTime?, string, bool)
+  nameWithType.vb: PersianDateTimeUtils.ToPersianDateTimeString(Date?, String, Boolean)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString*
   name: ToPersianDateTimeString
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianDateTimeString_
@@ -5083,6 +5083,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay(System.DateOnly?, Boolean)
   nameWithType: PersianDateTimeUtils.ToPersianYearMonthDay(DateOnly?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToPersianYearMonthDay(DateOnly?, Boolean)
+- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: ToPersianYearMonthDay(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianYearMonthDay_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianDateTimeUtils.ToPersianYearMonthDay(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay(System.Nullable{System.DateTime},System.Boolean)
   name: ToPersianYearMonthDay(DateTime?, bool)
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianYearMonthDay_System_Nullable_System_DateTime__System_Boolean_
@@ -5092,12 +5098,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay(Date?, Boolean)
   nameWithType: PersianDateTimeUtils.ToPersianYearMonthDay(DateTime?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToPersianYearMonthDay(Date?, Boolean)
-- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: ToPersianYearMonthDay(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianYearMonthDay_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianDateTimeUtils.ToPersianYearMonthDay(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianYearMonthDay*
   name: ToPersianYearMonthDay
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianYearMonthDay_
@@ -5138,6 +5138,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString(System.DateOnly?, Boolean)
   nameWithType: PersianDateTimeUtils.ToShortPersianDateString(DateOnly?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToShortPersianDateString(DateOnly?, Boolean)
+- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: ToShortPersianDateString(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToShortPersianDateString_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianDateTimeUtils.ToShortPersianDateString(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString(System.Nullable{System.DateTime},System.Boolean)
   name: ToShortPersianDateString(DateTime?, bool)
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToShortPersianDateString_System_Nullable_System_DateTime__System_Boolean_
@@ -5147,12 +5153,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString(Date?, Boolean)
   nameWithType: PersianDateTimeUtils.ToShortPersianDateString(DateTime?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToShortPersianDateString(Date?, Boolean)
-- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: ToShortPersianDateString(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToShortPersianDateString_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianDateTimeUtils.ToShortPersianDateString(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateString*
   name: ToShortPersianDateString
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToShortPersianDateString_
@@ -5193,6 +5193,12 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString(System.DateOnly?, Boolean)
   nameWithType: PersianDateTimeUtils.ToShortPersianDateTimeString(DateOnly?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToShortPersianDateTimeString(DateOnly?, Boolean)
+- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  name: ToShortPersianDateTimeString(DateTimeOffset?, DateTimeOffsetPart)
+  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToShortPersianDateTimeString_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
+  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
+  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
+  nameWithType: PersianDateTimeUtils.ToShortPersianDateTimeString(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString(System.Nullable{System.DateTime},System.Boolean)
   name: ToShortPersianDateTimeString(DateTime?, bool)
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToShortPersianDateTimeString_System_Nullable_System_DateTime__System_Boolean_
@@ -5202,12 +5208,6 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString(Date?, Boolean)
   nameWithType: PersianDateTimeUtils.ToShortPersianDateTimeString(DateTime?, bool)
   nameWithType.vb: PersianDateTimeUtils.ToShortPersianDateTimeString(Date?, Boolean)
-- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  name: ToShortPersianDateTimeString(DateTimeOffset?, DateTimeOffsetPart)
-  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToShortPersianDateTimeString_System_Nullable_System_DateTimeOffset__DNTPersianUtils_Core_DateTimeOffsetPart_
-  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString(System.Nullable{System.DateTimeOffset},DNTPersianUtils.Core.DateTimeOffsetPart)
-  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString(System.DateTimeOffset?, DNTPersianUtils.Core.DateTimeOffsetPart)
-  nameWithType: PersianDateTimeUtils.ToShortPersianDateTimeString(DateTimeOffset?, DateTimeOffsetPart)
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToShortPersianDateTimeString*
   name: ToShortPersianDateTimeString
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToShortPersianDateTimeString_
@@ -5484,6 +5484,28 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.PersianMonthCalendar.CreatePersianMonthCalendar
   nameWithType: PersianMonthCalendar.CreatePersianMonthCalendar
+- uid: DNTPersianUtils.Core.PersianNormalizerUtils
+  name: PersianNormalizerUtils
+  href: api/DNTPersianUtils.Core.PersianNormalizerUtils.html
+  commentId: T:DNTPersianUtils.Core.PersianNormalizerUtils
+  fullName: DNTPersianUtils.Core.PersianNormalizerUtils
+  nameWithType: PersianNormalizerUtils
+- uid: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText(System.String,DNTPersianUtils.Core.PersianNormalizers)
+  name: NormalizePersianText(string, PersianNormalizers)
+  href: api/DNTPersianUtils.Core.PersianNormalizerUtils.html#DNTPersianUtils_Core_PersianNormalizerUtils_NormalizePersianText_System_String_DNTPersianUtils_Core_PersianNormalizers_
+  commentId: M:DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText(System.String,DNTPersianUtils.Core.PersianNormalizers)
+  name.vb: NormalizePersianText(String, PersianNormalizers)
+  fullName: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText(string, DNTPersianUtils.Core.PersianNormalizers)
+  fullName.vb: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText(String, DNTPersianUtils.Core.PersianNormalizers)
+  nameWithType: PersianNormalizerUtils.NormalizePersianText(string, PersianNormalizers)
+  nameWithType.vb: PersianNormalizerUtils.NormalizePersianText(String, PersianNormalizers)
+- uid: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText*
+  name: NormalizePersianText
+  href: api/DNTPersianUtils.Core.PersianNormalizerUtils.html#DNTPersianUtils_Core_PersianNormalizerUtils_NormalizePersianText_
+  commentId: Overload:DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText
+  nameWithType: PersianNormalizerUtils.NormalizePersianText
 - uid: DNTPersianUtils.Core.PersianNormalizers
   name: PersianNormalizers
   href: api/DNTPersianUtils.Core.PersianNormalizers.html
@@ -5574,28 +5596,6 @@ references:
   commentId: F:DNTPersianUtils.Core.PersianNormalizers.RemoveOutsideInsideSpacing
   fullName: DNTPersianUtils.Core.PersianNormalizers.RemoveOutsideInsideSpacing
   nameWithType: PersianNormalizers.RemoveOutsideInsideSpacing
-- uid: DNTPersianUtils.Core.PersianNormalizerUtils
-  name: PersianNormalizerUtils
-  href: api/DNTPersianUtils.Core.PersianNormalizerUtils.html
-  commentId: T:DNTPersianUtils.Core.PersianNormalizerUtils
-  fullName: DNTPersianUtils.Core.PersianNormalizerUtils
-  nameWithType: PersianNormalizerUtils
-- uid: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText(System.String,DNTPersianUtils.Core.PersianNormalizers)
-  name: NormalizePersianText(string, PersianNormalizers)
-  href: api/DNTPersianUtils.Core.PersianNormalizerUtils.html#DNTPersianUtils_Core_PersianNormalizerUtils_NormalizePersianText_System_String_DNTPersianUtils_Core_PersianNormalizers_
-  commentId: M:DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText(System.String,DNTPersianUtils.Core.PersianNormalizers)
-  name.vb: NormalizePersianText(String, PersianNormalizers)
-  fullName: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText(string, DNTPersianUtils.Core.PersianNormalizers)
-  fullName.vb: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText(String, DNTPersianUtils.Core.PersianNormalizers)
-  nameWithType: PersianNormalizerUtils.NormalizePersianText(string, PersianNormalizers)
-  nameWithType.vb: PersianNormalizerUtils.NormalizePersianText(String, PersianNormalizers)
-- uid: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText*
-  name: NormalizePersianText
-  href: api/DNTPersianUtils.Core.PersianNormalizerUtils.html#DNTPersianUtils_Core_PersianNormalizerUtils_NormalizePersianText_
-  commentId: Overload:DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText
-  isSpec: "True"
-  fullName: DNTPersianUtils.Core.PersianNormalizerUtils.NormalizePersianText
-  nameWithType: PersianNormalizerUtils.NormalizePersianText
 - uid: DNTPersianUtils.Core.PersianNumbersUtils
   name: PersianNumbersUtils
   href: api/DNTPersianUtils.Core.PersianNumbersUtils.html
@@ -5964,15 +5964,6 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.AllowWhitespace
   nameWithType: ShouldContainOnlyPersianLettersAttribute.AllowWhitespace
-- uid: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.html#DNTPersianUtils_Core_ShouldContainOnlyPersianLettersAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ShouldContainOnlyPersianLettersAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ShouldContainOnlyPersianLettersAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(System.Object)
   name: IsValid(object?)
   href: api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.html#DNTPersianUtils_Core_ShouldContainOnlyPersianLettersAttribute_IsValid_System_Object_
@@ -5982,6 +5973,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(Object)
   nameWithType: ShouldContainOnlyPersianLettersAttribute.IsValid(object?)
   nameWithType.vb: ShouldContainOnlyPersianLettersAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.html#DNTPersianUtils_Core_ShouldContainOnlyPersianLettersAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ShouldContainOnlyPersianLettersAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ShouldContainOnlyPersianLettersAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.IsValid*
   name: IsValid
   href: api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.html#DNTPersianUtils_Core_ShouldContainOnlyPersianLettersAttribute_IsValid_
@@ -6008,15 +6008,6 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.AllowWhitespace
   nameWithType: ShouldContainOnlyPersianNumbersAttribute.AllowWhitespace
-- uid: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.html#DNTPersianUtils_Core_ShouldContainOnlyPersianNumbersAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ShouldContainOnlyPersianNumbersAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ShouldContainOnlyPersianNumbersAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(System.Object)
   name: IsValid(object?)
   href: api/DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.html#DNTPersianUtils_Core_ShouldContainOnlyPersianNumbersAttribute_IsValid_System_Object_
@@ -6026,6 +6017,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(Object)
   nameWithType: ShouldContainOnlyPersianNumbersAttribute.IsValid(object?)
   nameWithType.vb: ShouldContainOnlyPersianNumbersAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.html#DNTPersianUtils_Core_ShouldContainOnlyPersianNumbersAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ShouldContainOnlyPersianNumbersAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ShouldContainOnlyPersianNumbersAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid*
   name: IsValid
   href: api/DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.html#DNTPersianUtils_Core_ShouldContainOnlyPersianNumbersAttribute_IsValid_
@@ -6052,15 +6052,6 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.AllowWhitespace
   nameWithType: ShouldContainPersianLettersOrNumbersAttribute.AllowWhitespace
-- uid: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.html#DNTPersianUtils_Core_ShouldContainPersianLettersOrNumbersAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ShouldContainPersianLettersOrNumbersAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ShouldContainPersianLettersOrNumbersAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(System.Object)
   name: IsValid(object?)
   href: api/DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.html#DNTPersianUtils_Core_ShouldContainPersianLettersOrNumbersAttribute_IsValid_System_Object_
@@ -6070,6 +6061,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(Object)
   nameWithType: ShouldContainPersianLettersOrNumbersAttribute.IsValid(object?)
   nameWithType.vb: ShouldContainPersianLettersOrNumbersAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.html#DNTPersianUtils_Core_ShouldContainPersianLettersOrNumbersAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ShouldContainPersianLettersOrNumbersAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ShouldContainPersianLettersOrNumbersAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.IsValid*
   name: IsValid
   href: api/DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.html#DNTPersianUtils_Core_ShouldContainPersianLettersOrNumbersAttribute_IsValid_
@@ -6223,15 +6223,15 @@ references:
   commentId: T:DNTPersianUtils.Core.UnicodeToIranSystem
   fullName: DNTPersianUtils.Core.UnicodeToIranSystem
   nameWithType: UnicodeToIranSystem
-- uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(System.String,System.Boolean)
-  name: FromUnicodeToIranSystem(string?, bool)
-  href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystem_System_String_System_Boolean_
-  commentId: M:DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(System.String,System.Boolean)
-  name.vb: FromUnicodeToIranSystem(String, Boolean)
-  fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(string?, bool)
-  fullName.vb: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(String, Boolean)
-  nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystem(string?, bool)
-  nameWithType.vb: UnicodeToIranSystem.FromUnicodeToIranSystem(String, Boolean)
+- uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean)
+  name: FromUnicodeToIranSystem(string?, TextEncoding, bool)
+  href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystem_System_String_DNTPersianUtils_Core_TextEncoding_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean)
+  name.vb: FromUnicodeToIranSystem(String, TextEncoding, Boolean)
+  fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(string?, DNTPersianUtils.Core.TextEncoding, bool)
+  fullName.vb: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(String, DNTPersianUtils.Core.TextEncoding, Boolean)
+  nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystem(string?, TextEncoding, bool)
+  nameWithType.vb: UnicodeToIranSystem.FromUnicodeToIranSystem(String, TextEncoding, Boolean)
 - uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem*
   name: FromUnicodeToIranSystem
   href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystem_
@@ -6239,15 +6239,15 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem
   nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystem
-- uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(System.String,System.Boolean)
-  name: FromUnicodeToIranSystemBytes(string?, bool)
-  href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystemBytes_System_String_System_Boolean_
-  commentId: M:DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(System.String,System.Boolean)
-  name.vb: FromUnicodeToIranSystemBytes(String, Boolean)
-  fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(string?, bool)
-  fullName.vb: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(String, Boolean)
-  nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystemBytes(string?, bool)
-  nameWithType.vb: UnicodeToIranSystem.FromUnicodeToIranSystemBytes(String, Boolean)
+- uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean)
+  name: FromUnicodeToIranSystemBytes(string?, TextEncoding, bool)
+  href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystemBytes_System_String_DNTPersianUtils_Core_TextEncoding_System_Boolean_
+  commentId: M:DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean)
+  name.vb: FromUnicodeToIranSystemBytes(String, TextEncoding, Boolean)
+  fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(string?, DNTPersianUtils.Core.TextEncoding, bool)
+  fullName.vb: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(String, DNTPersianUtils.Core.TextEncoding, Boolean)
+  nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystemBytes(string?, TextEncoding, bool)
+  nameWithType.vb: UnicodeToIranSystem.FromUnicodeToIranSystemBytes(String, TextEncoding, Boolean)
 - uid: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes*
   name: FromUnicodeToIranSystemBytes
   href: api/DNTPersianUtils.Core.UnicodeToIranSystem.html#DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystemBytes_
@@ -6255,176 +6255,12 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes
   nameWithType: UnicodeToIranSystem.FromUnicodeToIranSystemBytes
-- uid: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute
-  name: ValidIranianMobileNumberAttribute
-  href: api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html
-  commentId: T:DNTPersianUtils.Core.ValidIranianMobileNumberAttribute
-  fullName: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute
-  nameWithType: ValidIranianMobileNumberAttribute
-- uid: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html#DNTPersianUtils_Core_ValidIranianMobileNumberAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidIranianMobileNumberAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ValidIranianMobileNumberAttribute.IsValid(Object, ValidationContext)
-- uid: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(System.Object)
-  name: IsValid(object?)
-  href: api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html#DNTPersianUtils_Core_ValidIranianMobileNumberAttribute_IsValid_System_Object_
-  commentId: M:DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(System.Object)
-  name.vb: IsValid(Object)
-  fullName: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(object?)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(Object)
-  nameWithType: ValidIranianMobileNumberAttribute.IsValid(object?)
-  nameWithType.vb: ValidIranianMobileNumberAttribute.IsValid(Object)
-- uid: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid*
-  name: IsValid
-  href: api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html#DNTPersianUtils_Core_ValidIranianMobileNumberAttribute_IsValid_
-  commentId: Overload:DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid
-  isSpec: "True"
-  fullName: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid
-  nameWithType: ValidIranianMobileNumberAttribute.IsValid
-- uid: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute
-  name: ValidIranianNationalCodeAttribute
-  href: api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html
-  commentId: T:DNTPersianUtils.Core.ValidIranianNationalCodeAttribute
-  fullName: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute
-  nameWithType: ValidIranianNationalCodeAttribute
-- uid: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalCodeAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidIranianNationalCodeAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ValidIranianNationalCodeAttribute.IsValid(Object, ValidationContext)
-- uid: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(System.Object)
-  name: IsValid(object?)
-  href: api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalCodeAttribute_IsValid_System_Object_
-  commentId: M:DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(System.Object)
-  name.vb: IsValid(Object)
-  fullName: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(object?)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(Object)
-  nameWithType: ValidIranianNationalCodeAttribute.IsValid(object?)
-  nameWithType.vb: ValidIranianNationalCodeAttribute.IsValid(Object)
-- uid: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid*
-  name: IsValid
-  href: api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalCodeAttribute_IsValid_
-  commentId: Overload:DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid
-  isSpec: "True"
-  fullName: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid
-  nameWithType: ValidIranianNationalCodeAttribute.IsValid
-- uid: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute
-  name: ValidIranianNationalLegalCodeAttribute
-  href: api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html
-  commentId: T:DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute
-  fullName: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute
-  nameWithType: ValidIranianNationalLegalCodeAttribute
-- uid: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalLegalCodeAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidIranianNationalLegalCodeAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ValidIranianNationalLegalCodeAttribute.IsValid(Object, ValidationContext)
-- uid: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(System.Object)
-  name: IsValid(object?)
-  href: api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalLegalCodeAttribute_IsValid_System_Object_
-  commentId: M:DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(System.Object)
-  name.vb: IsValid(Object)
-  fullName: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(object?)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(Object)
-  nameWithType: ValidIranianNationalLegalCodeAttribute.IsValid(object?)
-  nameWithType.vb: ValidIranianNationalLegalCodeAttribute.IsValid(Object)
-- uid: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid*
-  name: IsValid
-  href: api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalLegalCodeAttribute_IsValid_
-  commentId: Overload:DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid
-  isSpec: "True"
-  fullName: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid
-  nameWithType: ValidIranianNationalLegalCodeAttribute.IsValid
-- uid: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute
-  name: ValidIranianPhoneNumberAttribute
-  href: api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html
-  commentId: T:DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute
-  fullName: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute
-  nameWithType: ValidIranianPhoneNumberAttribute
-- uid: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html#DNTPersianUtils_Core_ValidIranianPhoneNumberAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidIranianPhoneNumberAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ValidIranianPhoneNumberAttribute.IsValid(Object, ValidationContext)
-- uid: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(System.Object)
-  name: IsValid(object?)
-  href: api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html#DNTPersianUtils_Core_ValidIranianPhoneNumberAttribute_IsValid_System_Object_
-  commentId: M:DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(System.Object)
-  name.vb: IsValid(Object)
-  fullName: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(object?)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(Object)
-  nameWithType: ValidIranianPhoneNumberAttribute.IsValid(object?)
-  nameWithType.vb: ValidIranianPhoneNumberAttribute.IsValid(Object)
-- uid: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid*
-  name: IsValid
-  href: api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html#DNTPersianUtils_Core_ValidIranianPhoneNumberAttribute_IsValid_
-  commentId: Overload:DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid
-  isSpec: "True"
-  fullName: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid
-  nameWithType: ValidIranianPhoneNumberAttribute.IsValid
-- uid: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute
-  name: ValidIranianPostalCodeAttribute
-  href: api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html
-  commentId: T:DNTPersianUtils.Core.ValidIranianPostalCodeAttribute
-  fullName: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute
-  nameWithType: ValidIranianPostalCodeAttribute
-- uid: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianPostalCodeAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidIranianPostalCodeAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ValidIranianPostalCodeAttribute.IsValid(Object, ValidationContext)
-- uid: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(System.Object)
-  name: IsValid(object?)
-  href: api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianPostalCodeAttribute_IsValid_System_Object_
-  commentId: M:DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(System.Object)
-  name.vb: IsValid(Object)
-  fullName: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(object?)
-  fullName.vb: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(Object)
-  nameWithType: ValidIranianPostalCodeAttribute.IsValid(object?)
-  nameWithType.vb: ValidIranianPostalCodeAttribute.IsValid(Object)
-- uid: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid*
-  name: IsValid
-  href: api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianPostalCodeAttribute_IsValid_
-  commentId: Overload:DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid
-  isSpec: "True"
-  fullName: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid
-  nameWithType: ValidIranianPostalCodeAttribute.IsValid
 - uid: DNTPersianUtils.Core.ValidIranShebaNumberAttribute
   name: ValidIranShebaNumberAttribute
   href: api/DNTPersianUtils.Core.ValidIranShebaNumberAttribute.html
   commentId: T:DNTPersianUtils.Core.ValidIranShebaNumberAttribute
   fullName: DNTPersianUtils.Core.ValidIranShebaNumberAttribute
   nameWithType: ValidIranShebaNumberAttribute
-- uid: DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ValidIranShebaNumberAttribute.html#DNTPersianUtils_Core_ValidIranShebaNumberAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidIranShebaNumberAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ValidIranShebaNumberAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(System.Object)
   name: IsValid(object?)
   href: api/DNTPersianUtils.Core.ValidIranShebaNumberAttribute.html#DNTPersianUtils_Core_ValidIranShebaNumberAttribute_IsValid_System_Object_
@@ -6434,6 +6270,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(Object)
   nameWithType: ValidIranShebaNumberAttribute.IsValid(object?)
   nameWithType.vb: ValidIranShebaNumberAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ValidIranShebaNumberAttribute.html#DNTPersianUtils_Core_ValidIranShebaNumberAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidIranShebaNumberAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ValidIranShebaNumberAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ValidIranShebaNumberAttribute.IsValid*
   name: IsValid
   href: api/DNTPersianUtils.Core.ValidIranShebaNumberAttribute.html#DNTPersianUtils_Core_ValidIranShebaNumberAttribute_IsValid_
@@ -6447,15 +6292,6 @@ references:
   commentId: T:DNTPersianUtils.Core.ValidIranShetabNumberAttribute
   fullName: DNTPersianUtils.Core.ValidIranShetabNumberAttribute
   nameWithType: ValidIranShetabNumberAttribute
-- uid: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ValidIranShetabNumberAttribute.html#DNTPersianUtils_Core_ValidIranShetabNumberAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidIranShetabNumberAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ValidIranShetabNumberAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(System.Object)
   name: IsValid(object?)
   href: api/DNTPersianUtils.Core.ValidIranShetabNumberAttribute.html#DNTPersianUtils_Core_ValidIranShetabNumberAttribute_IsValid_System_Object_
@@ -6465,6 +6301,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(Object)
   nameWithType: ValidIranShetabNumberAttribute.IsValid(object?)
   nameWithType.vb: ValidIranShetabNumberAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ValidIranShetabNumberAttribute.html#DNTPersianUtils_Core_ValidIranShetabNumberAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidIranShetabNumberAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ValidIranShetabNumberAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid*
   name: IsValid
   href: api/DNTPersianUtils.Core.ValidIranShetabNumberAttribute.html#DNTPersianUtils_Core_ValidIranShetabNumberAttribute_IsValid_
@@ -6472,21 +6317,167 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.ValidIranShetabNumberAttribute.IsValid
   nameWithType: ValidIranShetabNumberAttribute.IsValid
+- uid: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute
+  name: ValidIranianMobileNumberAttribute
+  href: api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html
+  commentId: T:DNTPersianUtils.Core.ValidIranianMobileNumberAttribute
+  fullName: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute
+  nameWithType: ValidIranianMobileNumberAttribute
+- uid: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(System.Object)
+  name: IsValid(object?)
+  href: api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html#DNTPersianUtils_Core_ValidIranianMobileNumberAttribute_IsValid_System_Object_
+  commentId: M:DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(System.Object)
+  name.vb: IsValid(Object)
+  fullName: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(object?)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(Object)
+  nameWithType: ValidIranianMobileNumberAttribute.IsValid(object?)
+  nameWithType.vb: ValidIranianMobileNumberAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html#DNTPersianUtils_Core_ValidIranianMobileNumberAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidIranianMobileNumberAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ValidIranianMobileNumberAttribute.IsValid(Object, ValidationContext)
+- uid: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid*
+  name: IsValid
+  href: api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html#DNTPersianUtils_Core_ValidIranianMobileNumberAttribute_IsValid_
+  commentId: Overload:DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.IsValid
+  nameWithType: ValidIranianMobileNumberAttribute.IsValid
+- uid: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute
+  name: ValidIranianNationalCodeAttribute
+  href: api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html
+  commentId: T:DNTPersianUtils.Core.ValidIranianNationalCodeAttribute
+  fullName: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute
+  nameWithType: ValidIranianNationalCodeAttribute
+- uid: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(System.Object)
+  name: IsValid(object?)
+  href: api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalCodeAttribute_IsValid_System_Object_
+  commentId: M:DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(System.Object)
+  name.vb: IsValid(Object)
+  fullName: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(object?)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(Object)
+  nameWithType: ValidIranianNationalCodeAttribute.IsValid(object?)
+  nameWithType.vb: ValidIranianNationalCodeAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalCodeAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidIranianNationalCodeAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ValidIranianNationalCodeAttribute.IsValid(Object, ValidationContext)
+- uid: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid*
+  name: IsValid
+  href: api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalCodeAttribute_IsValid_
+  commentId: Overload:DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.IsValid
+  nameWithType: ValidIranianNationalCodeAttribute.IsValid
+- uid: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute
+  name: ValidIranianNationalLegalCodeAttribute
+  href: api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html
+  commentId: T:DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute
+  fullName: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute
+  nameWithType: ValidIranianNationalLegalCodeAttribute
+- uid: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(System.Object)
+  name: IsValid(object?)
+  href: api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalLegalCodeAttribute_IsValid_System_Object_
+  commentId: M:DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(System.Object)
+  name.vb: IsValid(Object)
+  fullName: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(object?)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(Object)
+  nameWithType: ValidIranianNationalLegalCodeAttribute.IsValid(object?)
+  nameWithType.vb: ValidIranianNationalLegalCodeAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalLegalCodeAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidIranianNationalLegalCodeAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ValidIranianNationalLegalCodeAttribute.IsValid(Object, ValidationContext)
+- uid: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid*
+  name: IsValid
+  href: api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianNationalLegalCodeAttribute_IsValid_
+  commentId: Overload:DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.IsValid
+  nameWithType: ValidIranianNationalLegalCodeAttribute.IsValid
+- uid: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute
+  name: ValidIranianPhoneNumberAttribute
+  href: api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html
+  commentId: T:DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute
+  fullName: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute
+  nameWithType: ValidIranianPhoneNumberAttribute
+- uid: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(System.Object)
+  name: IsValid(object?)
+  href: api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html#DNTPersianUtils_Core_ValidIranianPhoneNumberAttribute_IsValid_System_Object_
+  commentId: M:DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(System.Object)
+  name.vb: IsValid(Object)
+  fullName: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(object?)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(Object)
+  nameWithType: ValidIranianPhoneNumberAttribute.IsValid(object?)
+  nameWithType.vb: ValidIranianPhoneNumberAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html#DNTPersianUtils_Core_ValidIranianPhoneNumberAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidIranianPhoneNumberAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ValidIranianPhoneNumberAttribute.IsValid(Object, ValidationContext)
+- uid: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid*
+  name: IsValid
+  href: api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html#DNTPersianUtils_Core_ValidIranianPhoneNumberAttribute_IsValid_
+  commentId: Overload:DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.IsValid
+  nameWithType: ValidIranianPhoneNumberAttribute.IsValid
+- uid: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute
+  name: ValidIranianPostalCodeAttribute
+  href: api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html
+  commentId: T:DNTPersianUtils.Core.ValidIranianPostalCodeAttribute
+  fullName: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute
+  nameWithType: ValidIranianPostalCodeAttribute
+- uid: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(System.Object)
+  name: IsValid(object?)
+  href: api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianPostalCodeAttribute_IsValid_System_Object_
+  commentId: M:DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(System.Object)
+  name.vb: IsValid(Object)
+  fullName: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(object?)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(Object)
+  nameWithType: ValidIranianPostalCodeAttribute.IsValid(object?)
+  nameWithType.vb: ValidIranianPostalCodeAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianPostalCodeAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidIranianPostalCodeAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ValidIranianPostalCodeAttribute.IsValid(Object, ValidationContext)
+- uid: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid*
+  name: IsValid
+  href: api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html#DNTPersianUtils_Core_ValidIranianPostalCodeAttribute_IsValid_
+  commentId: Overload:DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.IsValid
+  nameWithType: ValidIranianPostalCodeAttribute.IsValid
 - uid: DNTPersianUtils.Core.ValidPersianDateTimeAttribute
   name: ValidPersianDateTimeAttribute
   href: api/DNTPersianUtils.Core.ValidPersianDateTimeAttribute.html
   commentId: T:DNTPersianUtils.Core.ValidPersianDateTimeAttribute
   fullName: DNTPersianUtils.Core.ValidPersianDateTimeAttribute
   nameWithType: ValidPersianDateTimeAttribute
-- uid: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(object?, ValidationContext)
-  href: api/DNTPersianUtils.Core.ValidPersianDateTimeAttribute.html#DNTPersianUtils_Core_ValidPersianDateTimeAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name.vb: IsValid(Object, ValidationContext)
-  fullName: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName.vb: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidPersianDateTimeAttribute.IsValid(object?, ValidationContext)
-  nameWithType.vb: ValidPersianDateTimeAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(System.Object)
   name: IsValid(object?)
   href: api/DNTPersianUtils.Core.ValidPersianDateTimeAttribute.html#DNTPersianUtils_Core_ValidPersianDateTimeAttribute_IsValid_System_Object_
@@ -6496,6 +6487,15 @@ references:
   fullName.vb: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(Object)
   nameWithType: ValidPersianDateTimeAttribute.IsValid(object?)
   nameWithType.vb: ValidPersianDateTimeAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ValidPersianDateTimeAttribute.html#DNTPersianUtils_Core_ValidPersianDateTimeAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidPersianDateTimeAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ValidPersianDateTimeAttribute.IsValid(Object, ValidationContext)
 - uid: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid*
   name: IsValid
   href: api/DNTPersianUtils.Core.ValidPersianDateTimeAttribute.html#DNTPersianUtils_Core_ValidPersianDateTimeAttribute_IsValid_

@@ -556,9 +556,9 @@
 
   <a id="DNTPersianUtils_Core_FarsiDosExtensions_ConvertCp1252StringToUnicode_" data-uid="DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode*"></a>
 
-  <h3 id="DNTPersianUtils_Core_FarsiDosExtensions_ConvertCp1252StringToUnicode_System_String_" data-uid="DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(System.String)">
-  ConvertCp1252StringToUnicode(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DNTPersianUtils_Core_FarsiDosExtensions_ConvertCp1252StringToUnicode_System_String_DNTPersianUtils_Core_TextEncoding_" data-uid="DNTPersianUtils.Core.FarsiDosExtensions.ConvertCp1252StringToUnicode(System.String,DNTPersianUtils.Core.TextEncoding)">
+  ConvertCp1252StringToUnicode(string, TextEncoding)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>تبديل انكدينگ يك رشته با فرمت داس به رشته‌اي يونيكد</p>
@@ -566,12 +566,14 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IranSystemData ConvertCp1252StringToUnicode(this string farsiDosString)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IranSystemData ConvertCp1252StringToUnicode(this string farsiDosString, TextEncoding outputCodepage)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>farsiDosString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>outputCodepage</code> <a class="xref" href="DNTPersianUtils.Core.TextEncoding.html">TextEncoding</a></dt>
     <dd></dd>
   </dl>
 
@@ -782,7 +784,7 @@
 
   <h3 id="DNTPersianUtils_Core_FarsiDosExtensions_IsFinalIranSystemChar_System_Char_" data-uid="DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(System.Char)">
   IsFinalIranSystemChar(char)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L285"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>در كدپيج ايران سيستم، حروف بر اساس محل قرارگيري آن‌ها در واژه تعريف مي‌شوند.
@@ -820,7 +822,7 @@
 
   <h3 id="DNTPersianUtils_Core_FarsiDosExtensions_IsFinalIranSystemChar_System_Nullable_System_Char__" data-uid="DNTPersianUtils.Core.FarsiDosExtensions.IsFinalIranSystemChar(System.Nullable{System.Char})">
   IsFinalIranSystemChar(char?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L294"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>در كدپيج ايران سيستم، حروف بر اساس محل قرارگيري آن‌ها در واژه تعريف مي‌شوند.
@@ -932,7 +934,7 @@
 
   <h3 id="DNTPersianUtils_Core_FarsiDosExtensions_IsInitialIranSystemChar_System_Nullable_System_Char__" data-uid="DNTPersianUtils.Core.FarsiDosExtensions.IsInitialIranSystemChar(System.Nullable{System.Char})">
   IsInitialIranSystemChar(char?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>در كدپيج ايران سيستم، حروف بر اساس محل قرارگيري آن‌ها در واژه تعريف مي‌شوند.
@@ -1457,7 +1459,7 @@
 
   <h3 id="DNTPersianUtils_Core_FarsiDosExtensions_ReverseStartAndEndSpaces_System_String_" data-uid="DNTPersianUtils.Core.FarsiDosExtensions.ReverseStartAndEndSpaces(System.String)">
   ReverseStartAndEndSpaces(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/FarsiDosExtensions.cs/#L302"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>در كدپيج ايران سيستم، محل قرارگيري فواصل ابتدا و انتهاي حروف بايد تغيير كند و معكوس شود!</p>

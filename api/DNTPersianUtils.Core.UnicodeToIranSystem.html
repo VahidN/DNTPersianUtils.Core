@@ -83,7 +83,7 @@
 
   <h1 id="DNTPersianUtils_Core_UnicodeToIranSystem" data-uid="DNTPersianUtils.Core.UnicodeToIranSystem" class="text-break">
     Class UnicodeToIranSystem
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/UnicodeToIranSystem.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/UnicodeToIranSystem.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,8 +149,8 @@
 
   <a id="DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystem_" data-uid="DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem*"></a>
 
-  <h3 id="DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystem_System_String_System_Boolean_" data-uid="DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(System.String,System.Boolean)">
-  FromUnicodeToIranSystem(string?, bool)
+  <h3 id="DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystem_System_String_DNTPersianUtils_Core_TextEncoding_System_Boolean_" data-uid="DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystem(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean)">
+  FromUnicodeToIranSystem(string?, TextEncoding, bool)
   <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/UnicodeToIranSystem.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -159,13 +159,16 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string FromUnicodeToIranSystem(this string? unicodeString, bool convertNumbersToIranSystem = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string FromUnicodeToIranSystem(this string? unicodeString, TextEncoding outputCodepage = TextEncoding.CP1252, bool convertNumbersToIranSystem = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>unicodeString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>يك متن متداول فارسي يونيكد</p>
+</dd>
+    <dt><code>outputCodepage</code> <a class="xref" href="DNTPersianUtils.Core.TextEncoding.html">TextEncoding</a></dt>
+    <dd><p>كدپيج خروجي</p>
 </dd>
     <dt><code>convertNumbersToIranSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>آيا اعداد هم به ايران سيستم تبديل شوند؟</p>
@@ -193,9 +196,9 @@
 
   <a id="DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystemBytes_" data-uid="DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes*"></a>
 
-  <h3 id="DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystemBytes_System_String_System_Boolean_" data-uid="DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(System.String,System.Boolean)">
-  FromUnicodeToIranSystemBytes(string?, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/UnicodeToIranSystem.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DNTPersianUtils_Core_UnicodeToIranSystem_FromUnicodeToIranSystemBytes_System_String_DNTPersianUtils_Core_TextEncoding_System_Boolean_" data-uid="DNTPersianUtils.Core.UnicodeToIranSystem.FromUnicodeToIranSystemBytes(System.String,DNTPersianUtils.Core.TextEncoding,System.Boolean)">
+  FromUnicodeToIranSystemBytes(string?, TextEncoding, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/UnicodeToIranSystem.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>تبديلگر يك متن فارسي يونيكد، به فارسي داس ايران سيستم</p>
@@ -203,13 +206,16 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static byte[] FromUnicodeToIranSystemBytes(this string? unicodeString, bool convertNumbersToIranSystem = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public static byte[] FromUnicodeToIranSystemBytes(this string? unicodeString, TextEncoding outputCodepage = TextEncoding.CP1252, bool convertNumbersToIranSystem = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>unicodeString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>يك متن متداول فارسي يونيكد</p>
+</dd>
+    <dt><code>outputCodepage</code> <a class="xref" href="DNTPersianUtils.Core.TextEncoding.html">TextEncoding</a></dt>
+    <dd><p>كدپيج خروجي</p>
 </dd>
     <dt><code>convertNumbersToIranSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>آيا اعداد هم به ايران سيستم تبديل شوند؟</p>
@@ -239,7 +245,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/UnicodeToIranSystem.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/FarsiDos/UnicodeToIranSystem.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
         
