@@ -247,9 +247,11 @@ public static class FarsiDosExtensions
     ///     تبديل انكدينگ يك رشته با فرمت داس به رشته‌اي يونيكد
     /// </summary>
     /// <param name="farsiDosString"></param>
+    /// <param name="outputCodepage"></param>
     /// <returns></returns>
     public static IranSystemData ConvertCp1252StringToUnicode(
-        this string farsiDosString)
+        this string farsiDosString,
+        TextEncoding outputCodepage)
     {
         if (farsiDosString == null)
         {
@@ -257,7 +259,9 @@ public static class FarsiDosExtensions
         }
 
         var dstEncoding = Encoding.Unicode;
-        var srcEncoding = Encoding.GetEncoding(1252);
+        var srcEncoding = outputCodepage == TextEncoding.DontChange
+                              ? Encoding.GetEncoding(1252)
+                              : Encoding.GetEncoding((int)outputCodepage);
         var bytes = farsiDosString.ToCharArray().Select(c => (byte)c).ToArray();
         var unicodeContent = Encoding.Convert(srcEncoding, dstEncoding, bytes);
         return new IranSystemData(dstEncoding.GetString(unicodeContent), bytes);

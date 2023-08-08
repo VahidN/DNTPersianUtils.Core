@@ -52,7 +52,7 @@ PM> Install-Package DNTPersianUtils.Core
 |تبدیل تاریخ میلادی به قمری|new DateTime(2018, 08, 31).ToIslamicDay()|new IslamicDay(1439, 12, 19)|
 |تبدیل تاریخ شمسی به قمری|IslamicDateUtils.PersianDayToIslamicDay(1397, 6, 9)|new IslamicDay(1439, 12, 19)|
 |تبدیل ايران سيستم به يونيكد|"(‘®õø¢‘“) üî¤ðþ› é÷¬".FromIranSystemToUnicode()|"صنف جیگرکی (بادوامضاء)"|
-|تبدیل يونيكد به ايران سيستم|"صنف جیگرکی (بادوامضاء)".FromUnicodeToIranSystem(false)|"(‘®õø¢‘“) üî¤ðþ› é÷¬"|
+|تبدیل يونيكد به ايران سيستم|"صنف جیگرکی (بادوامضاء)".FromUnicodeToIranSystem()|"(‘®õø¢‘“) üî¤ðþ› é÷¬"|
 
 اعتبارسنج‌ها
 -----------------

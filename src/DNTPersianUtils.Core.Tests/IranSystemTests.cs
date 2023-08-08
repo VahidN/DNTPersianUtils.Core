@@ -21,7 +21,7 @@ public class IranSystemTests
     [DataRow("(پرانتز)")]
     public void Test_Multiple_Words_Can_Be_Converted(string input)
     {
-        var result = input.FromUnicodeToIranSystem(false);
+        var result = input.FromUnicodeToIranSystem(convertNumbersToIranSystem: false);
         var actual = result.FromIranSystemToUnicode();
         Assert.AreEqual(input, actual);
     }
@@ -49,7 +49,7 @@ public class IranSystemTests
     public void Test_Real_IranSystem_Data_Can_Be_Converted(string iranSystem, string unicode)
     {
         Assert.AreEqual(unicode, iranSystem.FromIranSystemToUnicode());
-        Assert.AreEqual(iranSystem, unicode.FromUnicodeToIranSystem(false));
+        Assert.AreEqual(iranSystem, unicode.FromUnicodeToIranSystem(convertNumbersToIranSystem: false));
     }
 
     [DataTestMethod]
@@ -82,7 +82,7 @@ public class IranSystemTests
     [DataRow("توسّط", "توسط")]
     public void Test_Diacritics_Can_Be_Ignored(string input, string expected)
     {
-        var result = input.FromUnicodeToIranSystem(false);
+        var result = input.FromUnicodeToIranSystem(convertNumbersToIranSystem: false);
         var actual = result.FromIranSystemToUnicode();
         Assert.AreEqual(expected, actual);
     }
@@ -105,7 +105,7 @@ public class IranSystemTests
     [DataRow("نامنطبق")]
     public void Test_Half_Space_Items_Can_Be_Converted(string input)
     {
-        var result = input.FromUnicodeToIranSystem(false);
+        var result = input.FromUnicodeToIranSystem(convertNumbersToIranSystem: false);
         var actual = result.FromIranSystemToUnicode();
         Assert.AreEqual(input, actual);
     }
@@ -122,14 +122,14 @@ public class IranSystemTests
     [DataRow("۲- نشان الف و ب")]
     public void Test_ToIranSystem_Works_With_Mixed_English_And_Numbers(string input)
     {
-        var result = input.FromUnicodeToIranSystem(false);
+        var result = input.FromUnicodeToIranSystem(convertNumbersToIranSystem: false);
         var actual = result.FromIranSystemToUnicode();
         Assert.AreEqual(input, actual);
     }
 
     [DataTestMethod]
     [DataRow("¢ُںُ", "محمد")]
-    [DataRow(" éٍî", "کلاف")]
+    [DataRow("éٍî", "کلاف")]
     [DataRow("éٍîéٍî", "کلاف‌کلاف")]
     [DataRow("¢ّ¤،¤¨", "سرخرود")]
     [DataRow("ù÷¨ںَگ", "الحسنه")]
@@ -138,13 +138,14 @@ public class IranSystemTests
     public void Test_ArabicWindows_Can_Be_Converted(string iranSystem1256, string unicode)
     {
         Assert.AreEqual(unicode, iranSystem1256.FromIranSystemToUnicode(TextEncoding.ArabicWindows));
+        Assert.AreEqual(iranSystem1256, unicode.FromUnicodeToIranSystem(TextEncoding.ArabicWindows, false));
     }
 
     [DataTestMethod]
     [DataRow("سطر یک" + "\n" + "سطر دو")]
     public void Test_Multipe_Lines_Can_Be_Converted(string input)
     {
-        var result = input.FromUnicodeToIranSystem(false);
+        var result = input.FromUnicodeToIranSystem(convertNumbersToIranSystem: false);
         var actual = result.FromIranSystemToUnicode();
         Assert.AreEqual(input, actual);
     }

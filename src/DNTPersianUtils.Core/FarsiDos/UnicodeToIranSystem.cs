@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Text;
 
@@ -20,19 +19,23 @@ public static class UnicodeToIranSystem
     ///     تبديلگر يك متن فارسي يونيكد، به فارسي داس ايران سيستم
     /// </summary>
     /// <param name="unicodeString">يك متن متداول فارسي يونيكد</param>
+    /// <param name="outputCodepage">كدپيج خروجي</param>
     /// <param name="convertNumbersToIranSystem">آيا اعداد هم به ايران سيستم تبديل شوند؟</param>
     /// <returns>
     ///     خروجي اين متد، فارسي داس ايران سيستم است و نيازي به تبديل خاصي ندارد.
     ///     همچنين خروجي اين متد را تريم نكنيد؛ چون سبب تخريب و حذف كاراكترهاي داس مي‌شود.
     ///     براي مثال واژه‌ي «ماهرخ» پس از تبديل، ختم به «آ صفر» مي‌شود كه اگر آن‌را تريم كنيد، اين «آ صفر» حذف خواهد شد!
     /// </returns>
-    public static string FromUnicodeToIranSystem(this string? unicodeString, bool convertNumbersToIranSystem = true) =>
-        ConvertUnicodeToIranSystem(unicodeString, convertNumbersToIranSystem).Text;
+    public static string FromUnicodeToIranSystem(this string? unicodeString,
+                                                 TextEncoding outputCodepage = TextEncoding.CP1252,
+                                                 bool convertNumbersToIranSystem = true) =>
+        ConvertUnicodeToIranSystem(unicodeString, convertNumbersToIranSystem, outputCodepage).Text;
 
     /// <summary>
     ///     تبديلگر يك متن فارسي يونيكد، به فارسي داس ايران سيستم
     /// </summary>
     /// <param name="unicodeString">يك متن متداول فارسي يونيكد</param>
+    /// <param name="outputCodepage">كدپيج خروجي</param>
     /// <param name="convertNumbersToIranSystem">آيا اعداد هم به ايران سيستم تبديل شوند؟</param>
     /// <returns>
     ///     خروجي اين متد، فارسي داس ايران سيستم است و نيازي به تبديل خاصي ندارد.
@@ -40,12 +43,14 @@ public static class UnicodeToIranSystem
     ///     براي مثال واژه‌ي «ماهرخ» پس از تبديل، ختم به «آ صفر» مي‌شود كه اگر آن‌را تريم كنيد، اين «آ صفر» حذف خواهد شد!
     /// </returns>
     public static byte[] FromUnicodeToIranSystemBytes(this string? unicodeString,
+                                                      TextEncoding outputCodepage = TextEncoding.CP1252,
                                                       bool convertNumbersToIranSystem = true)
-        => ConvertUnicodeToIranSystem(unicodeString, convertNumbersToIranSystem).Bytes;
+        => ConvertUnicodeToIranSystem(unicodeString, convertNumbersToIranSystem, outputCodepage).Bytes;
 
     private static IranSystemData ConvertUnicodeToIranSystem(
         string? unicodeString,
-        bool convertNumbersToIranSystem)
+        bool convertNumbersToIranSystem,
+        TextEncoding outputCodepage)
     {
         if (string.IsNullOrWhiteSpace(unicodeString))
         {
@@ -85,7 +90,7 @@ public static class UnicodeToIranSystem
 
         returnValue.Insert(0, englishString.ToString().ReverseStartAndEndSpaces());
         returnValue = returnValue.FixIranSystemLa();
-        return returnValue.ToString().Trim(' ').ConvertCp1252StringToUnicode();
+        return returnValue.ToString().Trim(' ').ConvertCp1252StringToUnicode(outputCodepage);
     }
 
 
@@ -160,16 +165,6 @@ public static class UnicodeToIranSystem
         return IranSystemTables.UnicodeToIranSystemTable.TryGetValue(current, out var iranSystemTable)
                    ? iranSystemTable[(int)pos]
                    : current;
-    }
-
-    private static string FixIranSystemLa1(this string result)
-    {
-        const char ﺎ = (char)145;
-        const char ﻟ = (char)243;
-        const char ﻻ = FarsiDosExtensions.IranSystemArabicLa;
-        return result.Replace((ﺎ + ﻟ).ToString(CultureInfo.InvariantCulture),
-                              ﻻ.ToString(),
-                              StringComparison.Ordinal);
     }
 
     private static StringBuilder FixIranSystemLa(this StringBuilder result)
