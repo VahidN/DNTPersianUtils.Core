@@ -1,5 +1,4 @@
 {
-  "homepages": [],
   "source_base_path": "D:/a/DNTPersianUtils.Core/DNTPersianUtils.Core/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -543,6 +542,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.SeoUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.SeoUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.yml",
       "output": {
         ".html": {
@@ -791,7 +800,6 @@
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"
