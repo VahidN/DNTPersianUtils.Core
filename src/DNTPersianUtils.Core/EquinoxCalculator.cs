@@ -15,7 +15,7 @@ public static class EquinoxCalculator
     /// <summary>
     ///     Are two float numbers equal?
     /// </summary>
-    public static bool ApproxEquals(double d1, double d2)
+    public static bool ApproxEquals(this double d1, double d2)
     {
         const double epsilon = 2.2204460492503131E-16;
         if (d1 == d2)
@@ -117,7 +117,7 @@ public static class EquinoxCalculator
                now.Second == vernalEquinoxDateTime.Second;
     }
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Is given date start of a new year?
     /// </summary>

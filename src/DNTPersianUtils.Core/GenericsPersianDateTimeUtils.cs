@@ -46,7 +46,7 @@ public static class GenericsPersianDateTimeUtils
                {
                    DateTime dateTimeValue =>
                        dateTimeValue == default ? null : dateTimeValue.ToPersianYearMonthDay(convertToIranTimeZone),
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue =>
                        dateOnlyValue == default ? null : dateOnlyValue.ToPersianYearMonthDay(convertToIranTimeZone),
 #endif
@@ -67,7 +67,7 @@ public static class GenericsPersianDateTimeUtils
                {
                    DateTime dateTimeValue =>
                        dateTimeValue == default ? default : (TValue)(object)dateTimeValue.Date.Add(timeSpan),
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue =>
                        dateOnlyValue == default ? default : (TValue)(object)dateOnlyValue.AddDays(timeSpan.Days),
 #endif
@@ -89,7 +89,7 @@ public static class GenericsPersianDateTimeUtils
                {
                    DateTime dateTimeValue =>
                        dateTimeValue == default ? default : dateTimeValue.TimeOfDay,
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue =>
                        dateOnlyValue == default ? default : dateOnlyValue.ToDateTime().TimeOfDay,
 #endif
@@ -107,7 +107,7 @@ public static class GenericsPersianDateTimeUtils
         return value switch
                {
                    DateTime dateTimeValue => dateTimeValue == default,
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue => dateOnlyValue == default,
 #endif
                    DateTimeOffset dateTimeOffsetValue => dateTimeOffsetValue == default,
@@ -122,7 +122,7 @@ public static class GenericsPersianDateTimeUtils
     {
         var targetType = Nullable.GetUnderlyingType(typeof(T)) ?? typeof(T);
         return targetType == typeof(DateTime) || targetType == typeof(DateTimeOffset)
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                                               || targetType == typeof(DateOnly)
 #endif
             ;
@@ -141,7 +141,7 @@ public static class GenericsPersianDateTimeUtils
         return value switch
                {
                    DateTime dateTimeValue => FormatValue(dateTimeValue, dateFormat),
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue => FormatValue(dateOnlyValue, dateFormat),
 #endif
                    DateTimeOffset dateTimeOffsetValue => FormatValue(dateTimeOffsetValue, dateFormat),
@@ -159,7 +159,7 @@ public static class GenericsPersianDateTimeUtils
                {
                    DateTime dateTimeValue =>
                        dateTimeValue == default ? string.Empty : dateTimeValue.ToShortPersianDateString(),
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue =>
                        dateOnlyValue == default ? string.Empty : dateOnlyValue.ToShortPersianDateString(),
 #endif
@@ -184,7 +184,7 @@ public static class GenericsPersianDateTimeUtils
                        dateTimeValue == default
                            ? string.Empty
                            : dateTimeValue.ToPersianDateTimeString(format, convertToIranTimeZone),
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue =>
                        dateOnlyValue == default
                            ? string.Empty
@@ -210,7 +210,7 @@ public static class GenericsPersianDateTimeUtils
                {
                    DateTime dateTimeValue =>
                        dateTimeValue == default ? string.Empty : dateTimeValue.ToLongPersianDateString(),
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue =>
                        dateOnlyValue == default ? string.Empty : dateOnlyValue.ToLongPersianDateString(),
 #endif
@@ -231,7 +231,7 @@ public static class GenericsPersianDateTimeUtils
                {
                    DateTime dateTimeValue =>
                        dateTimeValue == default ? string.Empty : dateTimeValue.ToLongPersianDateTimeString(),
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue =>
                        dateOnlyValue == default ? string.Empty : dateOnlyValue.ToLongPersianDateTimeString(),
 #endif
@@ -254,7 +254,7 @@ public static class GenericsPersianDateTimeUtils
                {
                    DateTime dateTimeValue =>
                        dateTimeValue == default ? string.Empty : dateTimeValue.ToShortPersianDateTimeString(),
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
                    DateOnly dateOnlyValue =>
                        dateOnlyValue == default ? string.Empty : dateOnlyValue.ToShortPersianDateTimeString(),
 #endif
@@ -274,7 +274,7 @@ public static class GenericsPersianDateTimeUtils
     public static string FormatValue(this DateTime value)
         => FormatDateTimeValueCore(value, null);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Formats the provided <paramref name="value" /> as a <see cref="string" />.
     /// </summary>
@@ -293,7 +293,7 @@ public static class GenericsPersianDateTimeUtils
     public static string FormatValue(this DateTime value, string format)
         => FormatDateTimeValueCore(value, format);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Formats the provided <paramref name="value" /> as a <see cref="string" />.
     /// </summary>
@@ -312,7 +312,7 @@ public static class GenericsPersianDateTimeUtils
     public static string? FormatValue(this DateTime? value)
         => FormatNullableDateTimeValueCore(value, null);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Formats the provided <paramref name="value" /> as a <see cref="string" />.
     /// </summary>
@@ -331,7 +331,7 @@ public static class GenericsPersianDateTimeUtils
     public static string? FormatValue(this DateTime? value, string? format)
         => FormatNullableDateTimeValueCore(value, format);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Formats the provided <paramref name="value" /> as a <see cref="string" />.
     /// </summary>
@@ -387,7 +387,7 @@ public static class GenericsPersianDateTimeUtils
     /// <returns>true if conversion is successful, otherwise false.</returns>
     public static bool TryParsePersianDateToDateTimeOrDateTimeOffset<TValue>(
         this string? persianDate,
-#if NET5_0 || NETSTANDARD2_1 || NET6_0 || NET7_0
+#if NET5_0 || NETSTANDARD2_1 || NET6_0 || NET7_0 || NET8_0
         [MaybeNullWhen(false)]
 #endif
         out TValue? result,
@@ -429,7 +429,7 @@ public static class GenericsPersianDateTimeUtils
                 result = (TValue)(object)dt;
                 return true;
             }
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
 
             if (targetType == typeof(DateOnly))
             {
@@ -471,7 +471,7 @@ public static class GenericsPersianDateTimeUtils
     public static bool TryParseDateTimeOrDateTimeOffset<TValue>(
         this string? value,
         string format,
-#if NET5_0 || NETSTANDARD2_1 || NET6_0 || NET7_0
+#if NET5_0 || NETSTANDARD2_1 || NET6_0 || NET7_0 || NET8_0
         [MaybeNullWhen(false)]
 #endif
         out TValue? result)
@@ -487,7 +487,7 @@ public static class GenericsPersianDateTimeUtils
         {
             return TryParseDateTimeOffset(value, format, out result);
         }
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
 
         if (targetType == typeof(DateOnly))
         {
@@ -510,7 +510,7 @@ public static class GenericsPersianDateTimeUtils
     private static bool TryParseDateTime<TValue>(
         this string? value,
         string format,
-#if NET5_0 || NETSTANDARD2_1 || NET6_0 || NET7_0
+#if NET5_0 || NETSTANDARD2_1 || NET6_0 || NET7_0 || NET8_0
         [MaybeNullWhen(false)]
 #endif
         out TValue? result)
@@ -526,7 +526,7 @@ public static class GenericsPersianDateTimeUtils
         return false;
     }
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Attempts to convert a value to a DateOnly.
     /// </summary>
@@ -563,7 +563,7 @@ public static class GenericsPersianDateTimeUtils
     private static bool TryParseDateTimeOffset<TValue>(
         this string? value,
         string format,
-#if NET5_0 || NETSTANDARD2_1 || NET6_0 || NET7_0
+#if NET5_0 || NETSTANDARD2_1 || NET6_0 || NET7_0 || NET8_0
         [MaybeNullWhen(false)]
 #endif
         out TValue? result)
@@ -588,7 +588,7 @@ public static class GenericsPersianDateTimeUtils
     public static bool TryConvertToDateTime(this object? obj, out DateTime value) =>
         ConvertToDateTimeCore(obj, out value);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Attempts to convert a value to a <see cref="DateOnly" />.
     /// </summary>
@@ -609,7 +609,7 @@ public static class GenericsPersianDateTimeUtils
     public static bool TryConvertToDateTime(this object? obj, string format, out DateTime value) =>
         ConvertToDateTimeCore(obj, format, out value);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Attempts to convert a value to a <see cref="DateOnly" />.
     /// </summary>
@@ -630,7 +630,7 @@ public static class GenericsPersianDateTimeUtils
     public static bool TryConvertToNullableDateTime(this object? obj, out DateTime? value) =>
         ConvertToNullableDateTimeCore(obj, out value);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Attempts to convert a value to a nullable <see cref="DateOnly" />.
     /// </summary>
@@ -651,7 +651,7 @@ public static class GenericsPersianDateTimeUtils
     public static bool TryConvertToNullableDateTime(this object? obj, string format, out DateTime? value) =>
         ConvertToNullableDateTimeCore(obj, format, out value);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Attempts to convert a value to a nullable <see cref="DateOnly" />.
     /// </summary>
@@ -776,7 +776,7 @@ public static class GenericsPersianDateTimeUtils
         return value.ToString(CultureInfo.InvariantCulture);
     }
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     private static string FormatDateOnlyValueCore(this DateOnly value, string? format) =>
         value.ToDateTime().FormatDateTimeValueCore(format);
 #endif
@@ -796,7 +796,7 @@ public static class GenericsPersianDateTimeUtils
         return value.Value.ToString(CultureInfo.InvariantCulture);
     }
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     private static string? FormatNullableDateOnlyValueCore(this DateOnly? value, string? format) =>
         value.ToDateTime().FormatNullableDateTimeValueCore(format);
 #endif
@@ -829,7 +829,7 @@ public static class GenericsPersianDateTimeUtils
     private static bool ConvertToDateTimeCore(this object? obj, out DateTime value) =>
         ConvertToDateTimeCore(obj, null, out value);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     private static bool ConvertToDateOnlyCore(this object? obj, out DateOnly value) =>
         ConvertToDateOnlyCore(obj, null, out value);
 #endif
@@ -862,7 +862,7 @@ public static class GenericsPersianDateTimeUtils
         return false;
     }
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     private static bool ConvertToDateOnlyCore(this object? obj, string? format, out DateOnly value)
     {
         var text = (string?)obj;
@@ -895,7 +895,7 @@ public static class GenericsPersianDateTimeUtils
     private static bool ConvertToNullableDateTimeCore(this object? obj, out DateTime? value) =>
         ConvertToNullableDateTimeCore(obj, null, out value);
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     private static bool ConvertToNullableDateOnlyCore(this object? obj, out DateOnly? value) =>
         ConvertToNullableDateOnlyCore(obj, null, out value);
 #endif
@@ -928,7 +928,7 @@ public static class GenericsPersianDateTimeUtils
         return false;
     }
 
-#if NET6_0 || NET7_0
+#if NET6_0 || NET7_0 || NET8_0
     private static bool ConvertToNullableDateOnlyCore(this object? obj, string? format, out DateOnly? value)
     {
         var text = (string?)obj;

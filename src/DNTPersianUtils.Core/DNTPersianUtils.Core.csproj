@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <Description>DNTPersianUtils.Core is a collection of Persian helper extension methods.</Description>
-        <VersionPrefix>5.8.0</VersionPrefix>
+        <VersionPrefix>5.8.1</VersionPrefix>
         <Authors>Vahid Nasiri</Authors>
-        <TargetFrameworks>net7.0;net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
+        <TargetFrameworks>net8.0;net7.0;net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
         <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">net5.0;netstandard2.1;netstandard1.3;netstandard2.0</TargetFrameworks>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <AssemblyName>DNTPersianUtils.Core</AssemblyName>
@@ -41,13 +41,13 @@
         <ReportAnalyzer>true</ReportAnalyzer>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Meziantou.Analyzer" Version="2.0.77">
+        <PackageReference Include="Meziantou.Analyzer" Version="2.0.110">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
     </ItemGroup>
 
     <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
@@ -102,5 +102,10 @@
     <ItemGroup Condition=" '$(TargetFramework)' == 'net7.0' "></ItemGroup>
     <PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0' ">
         <DefineConstants>NET7_0</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' "></ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+        <DefineConstants>NET8_0</DefineConstants>
     </PropertyGroup>
 </Project>

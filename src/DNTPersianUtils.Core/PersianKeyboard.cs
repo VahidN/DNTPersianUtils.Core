@@ -42,100 +42,36 @@ public static class PersianKeyboard
                     break;
 
                 case '[':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '}';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ج';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '}' : 'ج';
                     break;
 
                 case ']':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '{';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'چ';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '{' : 'چ';
                     break;
 
                 case '\\':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '|';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ژ';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '|' : 'ژ';
                     break;
 
                 case '`':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ى';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'پ';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ى' : 'پ';
                     break;
 
-                case ';':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = ':';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ک';
-                    }
-
+                case ';':                    
+                    dataChars[i] = isShiftPressedAtCaretPosition ? ':' : 'ک';
                     break;
 
                 case '\'':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '"';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'گ';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '"' : 'گ'; 
                     break;
 
                 case ',':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ؤ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'و';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ؤ' : 'و';
                     break;
 
                 case 'a':
                 case 'A':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'َ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ش';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'َ' : 'ش';
                     break;
 
                 case '?':
@@ -144,210 +80,82 @@ public static class PersianKeyboard
 
                 case 'b':
                 case 'B':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'إ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ذ';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'إ' : 'ذ';
                     break;
 
                 case 'c':
                 case 'C':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '‍';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ز';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '‍' : 'ز';
                     break;
 
                 case 'd':
                 case 'D':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ِ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ی';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ِ' : 'ی';
                     break;
 
                 case 'e':
                 case 'E':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ٍ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ث';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ٍ' : 'ث';
                     break;
 
                 case 'f':
                 case 'F':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ّ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ب';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ّ' : 'ب';
                     break;
 
                 case 'g':
                 case 'G':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ْ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ل';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ْ' : 'ل';
                     break;
 
                 case 'h':
                 case 'H':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'آ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ا';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'آ' : 'ا';
                     break;
 
                 case 'i':
                 case 'I':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ة';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ه';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ة' : 'ه';
                     break;
 
                 case 'j':
                 case 'J':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ـ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ت';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ـ' : 'ت';
                     break;
 
                 case 'k':
                 case 'K':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '»';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ن';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '»' : 'ن';
                     break;
 
                 case 'l':
                 case 'L':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '«';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'م';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '«' : 'م';
                     break;
 
                 case 'm':
                 case 'M':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ء';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ئ';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ء' : 'ئ';
                     break;
 
                 case 'n':
                 case 'N':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'أ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'د';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'أ' : 'د';
                     break;
 
                 case 'o':
                 case 'O':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '×';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'خ';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '×' : 'خ';
                     break;
 
                 case 'p':
                 case 'P':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '÷';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ح';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '÷' : 'ح';
                     break;
 
                 case 'q':
                 case 'Q':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ً';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ض';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ً' : 'ض';
                     break;
 
                 case 'r':
@@ -365,106 +173,42 @@ public static class PersianKeyboard
 
                 case 's':
                 case 'S':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ُ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'س';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ُ' : 'س';
                     break;
 
                 case 't':
                 case 'T':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '،';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ف';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '،' : 'ف';
                     break;
 
                 case 'u':
                 case 'U':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '\\';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ع';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '\\' : 'ع';
                     break;
 
                 case 'v':
                 case 'V':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ی';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ر';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ی' : 'ر';
                     break;
 
                 case 'w':
                 case 'W':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = 'ٌ';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ص';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? 'ٌ' : 'ص';
                     break;
 
                 case 'x':
                 case 'X':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '[';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ط';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '[' : 'ط';
                     break;
 
                 case 'y':
                 case 'Y':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = '؛';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'غ';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? '؛' : 'غ';
                     break;
 
                 case 'z':
                 case 'Z':
-                    if (isShiftPressedAtCaretPosition)
-                    {
-                        dataChars[i] = ']';
-                    }
-                    else
-                    {
-                        dataChars[i] = 'ظ';
-                    }
-
+                    dataChars[i] = isShiftPressedAtCaretPosition ? ']' : 'ظ';
                     break;
 
                 case '0':
