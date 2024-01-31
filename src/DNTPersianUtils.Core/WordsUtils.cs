@@ -79,4 +79,41 @@ public static class WordsUtils
 
         return formatted.Trim();
     }
+
+    /// <summary>
+    ///     اگر متن خالي است، سه نقطه را بازگشت مي‌دهد
+    /// </summary>
+    /// <param name="data"></param>
+    /// <returns></returns>
+    public static string ReturnDotsIfEmpty(this string? data)
+        => string.IsNullOrWhiteSpace(data) ? "..." : data;
+
+    /// <summary>
+    ///     خلاصه ابتدايي يك متن را به طول مشخص شده بازگشت مي‌دهد
+    /// </summary>
+    /// <param name="data"></param>
+    /// <param name="charLength"></param>
+    /// <returns></returns>
+    public static string GetBriefDescription(this string? data, int charLength)
+    {
+        if (string.IsNullOrWhiteSpace(data))
+        {
+            return "...";
+        }
+
+        if (data.Length < charLength)
+        {
+            return ReturnDotsIfEmpty(data.StripHtmlTags());
+        }
+
+        data = data.StripHtmlTags();
+
+        return data.Length < charLength
+            ? data.ReturnDotsIfEmpty()
+#if NET6_0 || NET7_0 || NET8_0
+            : string.Concat(data.AsSpan(0, charLength - 7), " ...");
+#else
+            : string.Concat(data.Substring(0, charLength - 7), " ...");
+#endif
+    }
 }

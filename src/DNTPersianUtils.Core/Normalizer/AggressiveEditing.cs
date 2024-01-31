@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -18,64 +19,58 @@ public static class AggressiveEditing
     private static readonly Regex _matchCleanupSpacingAndLineBreaks1 =
         new(@"[ ]+", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchCleanupSpacingAndLineBreaks2 =
-        new("([\n]+)[   ‌]*", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
+    private static readonly Regex _matchCleanupSpacingAndLineBreaks2 = new("([\n]+)[   ‌]*",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
     private static readonly Regex _matchRemoveAllKashida =
         new("ـ+", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing1 =
-        new(@"[   ‌]*(\()\s*([^)]+?)\s*?(\))[   ‌]*", RegexOptions.Compiled | RegexOptions.IgnoreCase,
-            RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing1 = new(@"[   ‌]*(\()\s*([^)]+?)\s*?(\))[   ‌]*",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing10 =
-        new(@"(\{)\s*([^)]+?)\s*?(\})", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing10 = new(@"(\{)\s*([^)]+?)\s*?(\})",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing11 =
-        new(@"(“)\s*([^)]+?)\s*?(”)", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing11 = new(@"(“)\s*([^)]+?)\s*?(”)",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing12 =
-        new(@"(«)\s*([^)]+?)\s*?(»)", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing12 = new(@"(«)\s*([^)]+?)\s*?(»)",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing2 =
-        new(@"[   ‌]*(\[)\s*([^)]+?)\s*?(\])[   ‌]*", RegexOptions.Compiled | RegexOptions.IgnoreCase,
-            RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing2 = new(@"[   ‌]*(\[)\s*([^)]+?)\s*?(\])[   ‌]*",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing3 =
-        new(@"[   ‌]*(\{)\s*([^)]+?)\s*?(\})[   ‌]*", RegexOptions.Compiled | RegexOptions.IgnoreCase,
-            RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing3 = new(@"[   ‌]*(\{)\s*([^)]+?)\s*?(\})[   ‌]*",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing4 =
-        new(@"[   ‌]*(“)\s*([^)]+?)\s*?(”)[   ‌]*", RegexOptions.Compiled | RegexOptions.IgnoreCase,
-            RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing4 = new(@"[   ‌]*(“)\s*([^)]+?)\s*?(”)[   ‌]*",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing5 =
-        new(@"[   ‌]*(«)\s*([^)]+?)\s*?(»)[   ‌]*", RegexOptions.Compiled | RegexOptions.IgnoreCase,
-            RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing5 = new(@"[   ‌]*(«)\s*([^)]+?)\s*?(»)[   ‌]*",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing6 =
-        new(@"[ ?  ]*([:;,??.?!]{1})[ ?  ]*", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing6 = new(@"[ ?  ]*([:;,??.?!]{1})[ ?  ]*",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing7 =
-        new(@"([0-9]+):\s+([0-9]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing7 = new(@"([0-9]+):\s+([0-9]+)",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing8 =
-        new(@"(\()\s*([^)]+?)\s*?(\))", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing8 = new(@"(\()\s*([^)]+?)\s*?(\))",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchRemoveOutsideInsideSpacing9 =
-        new(@"(\[)\s*([^)]+?)\s*?(\])", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
+    private static readonly Regex _matchRemoveOutsideInsideSpacing9 = new(@"(\[)\s*([^)]+?)\s*?(\])",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
     private static readonly Regex _matchHexadecimalSymbols = new("[\x00-\x08\x0B\x0C\x0E-\x1F]",
-                                                                 RegexOptions.Compiled | RegexOptions.IgnoreCase,
-                                                                 RegexUtils.MatchTimeout);
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
     /// <summary>
     ///     Removes all kashida
     /// </summary>
     /// <param name="text">Text to process</param>
     /// <returns>Processed Text</returns>
-    public static string NormalizeAllKashida(this string text) =>
-        _matchRemoveAllKashida.Replace(text, "").NormalizeUnderLines();
+    public static string NormalizeAllKashida(this string text)
+        => _matchRemoveAllKashida.Replace(text, "").NormalizeUnderLines();
 
     /// <summary>
     ///     Replaces more than one ! or ? mark with just one
@@ -86,6 +81,7 @@ public static class AggressiveEditing
     {
         var phase1 = _matchCleanupExtraMarks1.Replace(text, "$1");
         var phase2 = _matchCleanupExtraMarks2.Replace(phase1, "$1");
+
         return phase2;
     }
 
@@ -128,6 +124,7 @@ public static class AggressiveEditing
     {
         var phase1 = _matchCleanupSpacingAndLineBreaks1.Replace(text, " ");
         var phase2 = _matchCleanupSpacingAndLineBreaks2.Replace(phase1, "$1");
+
         return phase2.Trim();
     }
 
@@ -147,14 +144,24 @@ public static class AggressiveEditing
         const char chr8204 = (char)8204; //‌=8204
 
         return text.Replace(chr1600.ToString(), "", StringComparison.OrdinalIgnoreCase)
-                   .Replace(chr8204.ToString(), "", StringComparison.OrdinalIgnoreCase);
+            .Replace(chr8204.ToString(), "", StringComparison.OrdinalIgnoreCase);
     }
+
+    /// <summary>
+    ///     Cleans punctuation marks
+    /// </summary>
+    /// <param name="text"></param>
+    /// <returns></returns>
+    public static string RemovePunctuation(this string? text)
+        => string.IsNullOrWhiteSpace(text)
+            ? string.Empty
+            : new string(text.Where(c => !char.IsPunctuation(c)).ToArray());
 
     /// <summary>
     ///     There are a lot of symbols which can't be in xml code.
     /// </summary>
-    public static string RemoveHexadecimalSymbols(this string? txt) =>
-        string.IsNullOrWhiteSpace(txt) ? string.Empty : _matchHexadecimalSymbols.Replace(txt, string.Empty);
+    public static string RemoveHexadecimalSymbols(this string? txt)
+        => string.IsNullOrWhiteSpace(txt) ? string.Empty : _matchHexadecimalSymbols.Replace(txt, string.Empty);
 
     /// <summary>
     ///     تبدیل یک متن عربی اسکی به یونیکد
@@ -169,6 +176,7 @@ public static class AggressiveEditing
         var latin = Encoding.GetEncoding("ISO-8859-1");
         var bytes = latin.GetBytes(text); // get the bytes for your ANSI string
         var arabic = Encoding.GetEncoding("Windows-1256"); // decode it using the correct encoding
+
         return arabic.GetString(bytes);
     }
 }

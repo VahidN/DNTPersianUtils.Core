@@ -9,7 +9,7 @@ namespace DNTPersianUtils.Core;
 public static class NationalCodeUtils
 {
     /// <summary>
-    ///     If string is a number returns true
+    ///     آيا ورودي تمام عددي است؟
     /// </summary>
     public static bool IsNumber(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
@@ -24,6 +24,26 @@ public static class NationalCodeUtils
 
         return data.ToEnglishNumbers().All(char.IsDigit);
     }
+
+    /// <summary>
+    ///     آيا ورودي تمام عددي است؟
+    /// </summary>
+    public static bool IsNumeric(
+#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+        [NotNullWhen(true)]
+#endif
+        this string? data)
+        => data.IsNumber();
+
+    /// <summary>
+    ///     آيا ورودي حاوي اعداد است؟
+    /// </summary>
+    public static bool ContainsNumber(
+#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+        [NotNullWhen(true)]
+#endif
+        this string? inputText)
+        => !string.IsNullOrWhiteSpace(inputText) && inputText.ToEnglishNumbers().Any(char.IsDigit);
 
     /// <summary>
     ///     Validate IR National Code
