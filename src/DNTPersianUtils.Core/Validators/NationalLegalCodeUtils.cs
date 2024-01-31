@@ -1,4 +1,6 @@
-﻿namespace DNTPersianUtils.Core;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace DNTPersianUtils.Core;
 
 /// <summary>
 ///     Validate IR National Legal Code
@@ -11,7 +13,11 @@ public static class NationalLegalCodeUtils
     /// </summary>
     /// <param name="nationalLegalCode">National Legal Code</param>
     /// <returns></returns>
-    public static bool IsValidIranianNationalLegalCode(this string? nationalLegalCode)
+    public static bool IsValidIranianNationalLegalCode(
+#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+        [NotNullWhen(true)]
+#endif
+        this string? nationalLegalCode)
     {
         if (string.IsNullOrWhiteSpace(nationalLegalCode))
         {
@@ -22,7 +28,8 @@ public static class NationalLegalCodeUtils
         const int initialZeros = 3;
         const int nationalLegalCodeLength = 11;
 
-        if (nationalLegalCode.Length < nationalLegalCodeLength - initialZeros || nationalLegalCode.Length > nationalLegalCodeLength)
+        if (nationalLegalCode.Length < nationalLegalCodeLength - initialZeros ||
+            nationalLegalCode.Length > nationalLegalCodeLength)
         {
             return false;
         }
@@ -35,9 +42,14 @@ public static class NationalLegalCodeUtils
         }
 
         var beforeControlNumber = (int)char.GetNumericValue(nationalLegalCode[9]) + 2;
-        int[] coefficientStatic = { 29, 27, 23, 19, 17, 29, 27, 23, 19, 17 };
+
+        int[] coefficientStatic =
+        {
+            29, 27, 23, 19, 17, 29, 27, 23, 19, 17
+        };
 
         var sum = 0;
+
         for (var i = 0; i < nationalLegalCode.Length - 1; i++)
         {
             sum += ((int)char.GetNumericValue(nationalLegalCode[i]) + beforeControlNumber) * coefficientStatic[i];

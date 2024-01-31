@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Text.RegularExpressions;
 
 namespace DNTPersianUtils.Core;
 
@@ -7,14 +8,18 @@ namespace DNTPersianUtils.Core;
 /// </summary>
 public static class IranShebaUtils
 {
-    private static readonly Regex _matchIranSheba =
-        new(@"IR[0-9]{24}", RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
+    private static readonly Regex _matchIranSheba = new(@"IR[0-9]{24}", RegexOptions.Compiled | RegexOptions.IgnoreCase,
+        RegexUtils.MatchTimeout);
 
     /// <summary>
     ///     Validate IBAN (International Bank Account Number, Sheba)
     /// </summary>
     /// <param name="iban">International Bank Account Number, Sheba</param>
-    public static bool IsValidIranShebaNumber(this string? iban)
+    public static bool IsValidIranShebaNumber(
+#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+        [NotNullWhen(true)]
+#endif
+        this string? iban)
     {
         if (string.IsNullOrEmpty(iban))
         {
@@ -40,6 +45,7 @@ public static class IranShebaUtils
 
         var checksum = 0;
         var ibanLength = iban.Length;
+
         for (var charIndex = 0; charIndex < ibanLength; charIndex++)
         {
             if (iban[charIndex] == ' ')
@@ -49,6 +55,7 @@ public static class IranShebaUtils
 
             int value;
             var c = iban[(charIndex + 4) % ibanLength];
+
             if (c >= '0' && c <= '9')
             {
                 value = c - '0';

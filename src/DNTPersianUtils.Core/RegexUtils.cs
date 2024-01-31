@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
 
 namespace DNTPersianUtils.Core;
@@ -16,24 +17,28 @@ public static class RegexUtils
     private static readonly Regex _matchAllTags =
         new(@"<(.|\n)*?>", RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
-    private static readonly Regex _matchArabicHebrew =
-        new(@"[\u0600-\u06FF,\u0590-\u05FF,«,»]", RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
+    private static readonly Regex _matchArabicHebrew = new(@"[\u0600-\u06FF,\u0590-\u05FF,«,»]",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
-    private static readonly Regex _matchOnlyPersianNumbersRange =
-        new(@"^[\u06F0-\u06F9]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
+    private static readonly Regex _matchOnlyPersianNumbersRange = new(@"^[\u06F0-\u06F9]+$",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
-    private static readonly Regex _matchOnlyPersianLetters =
-        new(@"^[\\s,\u06A9\u06AF\u06C0\u06CC\u060C,\u062A\u062B\u062C\u062D\u062E\u062F,\u063A\u064A\u064B\u064C\u064D\u064E,\u064F\u067E\u0670\u0686\u0698\u200C,\u0621-\u0629\u0630-\u0639\u0641-\u0654]+$",
-            RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
+    private static readonly Regex _matchOnlyPersianLetters = new(
+        @"^[\\s,\u06A9\u06AF\u06C0\u06CC\u060C,\u062A\u062B\u062C\u062D\u062E\u062F,\u063A\u064A\u064B\u064C\u064D\u064E,\u064F\u067E\u0670\u0686\u0698\u200C,\u0621-\u0629\u0630-\u0639\u0641-\u0654]+$",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
-    internal static readonly Regex _hasHalfSpaces =
-        new(@"\u200B|\u200C|\u200E|\u200F",
-            RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
+    internal static readonly Regex _hasHalfSpaces = new(@"\u200B|\u200C|\u200E|\u200F",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
     /// <summary>
     ///     آیا عبارت مدنظر حاوی حروف و اعداد فارسی است؟
     /// </summary>
-    public static bool ContainsFarsi(this string? txt, bool allowWhitespace = false)
+    public static bool ContainsFarsi(
+#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+        [NotNullWhen(true)]
+#endif
+        this string? txt,
+        bool allowWhitespace = false)
     {
         if (string.IsNullOrEmpty(txt))
         {
@@ -41,6 +46,7 @@ public static class RegexUtils
         }
 
         var input = txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase);
+
         if (allowWhitespace)
         {
             input = input.RemoveAllWhitespaces();
@@ -52,7 +58,12 @@ public static class RegexUtils
     /// <summary>
     ///     آیا عبارت مدنظر فقط حاوی حروف فارسی است؟
     /// </summary>
-    public static bool ContainsOnlyFarsiLetters(this string? txt, bool allowWhitespace = false)
+    public static bool ContainsOnlyFarsiLetters(
+#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+        [NotNullWhen(true)]
+#endif
+        this string? txt,
+        bool allowWhitespace = false)
     {
         if (string.IsNullOrEmpty(txt))
         {
@@ -60,6 +71,7 @@ public static class RegexUtils
         }
 
         var input = txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase);
+
         if (allowWhitespace)
         {
             input = input.RemoveAllWhitespaces();
@@ -84,8 +96,8 @@ public static class RegexUtils
     /// <summary>
     ///     حذف تگ‌های یک عبارت
     /// </summary>
-    public static string StripHtmlTags(this string? text) =>
-        string.IsNullOrEmpty(text)
+    public static string StripHtmlTags(this string? text)
+        => string.IsNullOrEmpty(text)
             ? string.Empty
             : _matchAllTags.Replace(text, " ").Replace("&nbsp;", " ", StringComparison.OrdinalIgnoreCase);
 
@@ -114,7 +126,12 @@ public static class RegexUtils
     /// <summary>
     ///     آیا عبارت مدنظر فقط حاوی اعداد فارسی است؟
     /// </summary>
-    public static bool ContainsOnlyPersianNumbers(this string? text, bool allowWhitespace = false)
+    public static bool ContainsOnlyPersianNumbers(
+#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+        [NotNullWhen(true)]
+#endif
+        this string? text,
+        bool allowWhitespace = false)
     {
         if (string.IsNullOrEmpty(text))
         {
@@ -122,6 +139,7 @@ public static class RegexUtils
         }
 
         var input = text.StripHtmlTags();
+
         if (allowWhitespace)
         {
             input = input.RemoveAllWhitespaces();
