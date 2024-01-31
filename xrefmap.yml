@@ -3704,6 +3704,22 @@ references:
   commentId: T:DNTPersianUtils.Core.NationalCodeUtils
   fullName: DNTPersianUtils.Core.NationalCodeUtils
   nameWithType: NationalCodeUtils
+- uid: DNTPersianUtils.Core.NationalCodeUtils.ContainsNumber(System.String)
+  name: ContainsNumber(string?)
+  href: api/DNTPersianUtils.Core.NationalCodeUtils.html#DNTPersianUtils_Core_NationalCodeUtils_ContainsNumber_System_String_
+  commentId: M:DNTPersianUtils.Core.NationalCodeUtils.ContainsNumber(System.String)
+  name.vb: ContainsNumber(String)
+  fullName: DNTPersianUtils.Core.NationalCodeUtils.ContainsNumber(string?)
+  fullName.vb: DNTPersianUtils.Core.NationalCodeUtils.ContainsNumber(String)
+  nameWithType: NationalCodeUtils.ContainsNumber(string?)
+  nameWithType.vb: NationalCodeUtils.ContainsNumber(String)
+- uid: DNTPersianUtils.Core.NationalCodeUtils.ContainsNumber*
+  name: ContainsNumber
+  href: api/DNTPersianUtils.Core.NationalCodeUtils.html#DNTPersianUtils_Core_NationalCodeUtils_ContainsNumber_
+  commentId: Overload:DNTPersianUtils.Core.NationalCodeUtils.ContainsNumber
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.NationalCodeUtils.ContainsNumber
+  nameWithType: NationalCodeUtils.ContainsNumber
 - uid: DNTPersianUtils.Core.NationalCodeUtils.IsNumber(System.String)
   name: IsNumber(string?)
   href: api/DNTPersianUtils.Core.NationalCodeUtils.html#DNTPersianUtils_Core_NationalCodeUtils_IsNumber_System_String_
@@ -3720,6 +3736,22 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.NationalCodeUtils.IsNumber
   nameWithType: NationalCodeUtils.IsNumber
+- uid: DNTPersianUtils.Core.NationalCodeUtils.IsNumeric(System.String)
+  name: IsNumeric(string?)
+  href: api/DNTPersianUtils.Core.NationalCodeUtils.html#DNTPersianUtils_Core_NationalCodeUtils_IsNumeric_System_String_
+  commentId: M:DNTPersianUtils.Core.NationalCodeUtils.IsNumeric(System.String)
+  name.vb: IsNumeric(String)
+  fullName: DNTPersianUtils.Core.NationalCodeUtils.IsNumeric(string?)
+  fullName.vb: DNTPersianUtils.Core.NationalCodeUtils.IsNumeric(String)
+  nameWithType: NationalCodeUtils.IsNumeric(string?)
+  nameWithType.vb: NationalCodeUtils.IsNumeric(String)
+- uid: DNTPersianUtils.Core.NationalCodeUtils.IsNumeric*
+  name: IsNumeric
+  href: api/DNTPersianUtils.Core.NationalCodeUtils.html#DNTPersianUtils_Core_NationalCodeUtils_IsNumeric_
+  commentId: Overload:DNTPersianUtils.Core.NationalCodeUtils.IsNumeric
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.NationalCodeUtils.IsNumeric
+  nameWithType: NationalCodeUtils.IsNumeric
 - uid: DNTPersianUtils.Core.NationalCodeUtils.IsValidIranianNationalCode(System.String)
   name: IsValidIranianNationalCode(string?)
   href: api/DNTPersianUtils.Core.NationalCodeUtils.html#DNTPersianUtils_Core_NationalCodeUtils_IsValidIranianNationalCode_System_String_
@@ -3882,6 +3914,22 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.Normalizer.AggressiveEditing.RemoveHexadecimalSymbols
   nameWithType: AggressiveEditing.RemoveHexadecimalSymbols
+- uid: DNTPersianUtils.Core.Normalizer.AggressiveEditing.RemovePunctuation(System.String)
+  name: RemovePunctuation(string?)
+  href: api/DNTPersianUtils.Core.Normalizer.AggressiveEditing.html#DNTPersianUtils_Core_Normalizer_AggressiveEditing_RemovePunctuation_System_String_
+  commentId: M:DNTPersianUtils.Core.Normalizer.AggressiveEditing.RemovePunctuation(System.String)
+  name.vb: RemovePunctuation(String)
+  fullName: DNTPersianUtils.Core.Normalizer.AggressiveEditing.RemovePunctuation(string?)
+  fullName.vb: DNTPersianUtils.Core.Normalizer.AggressiveEditing.RemovePunctuation(String)
+  nameWithType: AggressiveEditing.RemovePunctuation(string?)
+  nameWithType.vb: AggressiveEditing.RemovePunctuation(String)
+- uid: DNTPersianUtils.Core.Normalizer.AggressiveEditing.RemovePunctuation*
+  name: RemovePunctuation
+  href: api/DNTPersianUtils.Core.Normalizer.AggressiveEditing.html#DNTPersianUtils_Core_Normalizer_AggressiveEditing_RemovePunctuation_
+  commentId: Overload:DNTPersianUtils.Core.Normalizer.AggressiveEditing.RemovePunctuation
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.Normalizer.AggressiveEditing.RemovePunctuation
+  nameWithType: AggressiveEditing.RemovePunctuation
 - uid: DNTPersianUtils.Core.Normalizer.FixDash
   name: FixDash
   href: api/DNTPersianUtils.Core.Normalizer.FixDash.html
@@ -6531,6 +6579,101 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.ValidPersianDateTimeAttribute.IsValid
   nameWithType: ValidPersianDateTimeAttribute.IsValid
+- uid: DNTPersianUtils.Core.WordsUtils
+  name: WordsUtils
+  href: api/DNTPersianUtils.Core.WordsUtils.html
+  commentId: T:DNTPersianUtils.Core.WordsUtils
+  fullName: DNTPersianUtils.Core.WordsUtils
+  nameWithType: WordsUtils
+- uid: DNTPersianUtils.Core.WordsUtils.GetBriefDescription(System.String,System.Int32)
+  name: GetBriefDescription(string?, int)
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_GetBriefDescription_System_String_System_Int32_
+  commentId: M:DNTPersianUtils.Core.WordsUtils.GetBriefDescription(System.String,System.Int32)
+  name.vb: GetBriefDescription(String, Integer)
+  fullName: DNTPersianUtils.Core.WordsUtils.GetBriefDescription(string?, int)
+  fullName.vb: DNTPersianUtils.Core.WordsUtils.GetBriefDescription(String, Integer)
+  nameWithType: WordsUtils.GetBriefDescription(string?, int)
+  nameWithType.vb: WordsUtils.GetBriefDescription(String, Integer)
+- uid: DNTPersianUtils.Core.WordsUtils.GetBriefDescription*
+  name: GetBriefDescription
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_GetBriefDescription_
+  commentId: Overload:DNTPersianUtils.Core.WordsUtils.GetBriefDescription
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.WordsUtils.GetBriefDescription
+  nameWithType: WordsUtils.GetBriefDescription
+- uid: DNTPersianUtils.Core.WordsUtils.MinReadTime(System.String,System.Int32)
+  name: MinReadTime(string?, int)
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_MinReadTime_System_String_System_Int32_
+  commentId: M:DNTPersianUtils.Core.WordsUtils.MinReadTime(System.String,System.Int32)
+  name.vb: MinReadTime(String, Integer)
+  fullName: DNTPersianUtils.Core.WordsUtils.MinReadTime(string?, int)
+  fullName.vb: DNTPersianUtils.Core.WordsUtils.MinReadTime(String, Integer)
+  nameWithType: WordsUtils.MinReadTime(string?, int)
+  nameWithType.vb: WordsUtils.MinReadTime(String, Integer)
+- uid: DNTPersianUtils.Core.WordsUtils.MinReadTime*
+  name: MinReadTime
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_MinReadTime_
+  commentId: Overload:DNTPersianUtils.Core.WordsUtils.MinReadTime
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.WordsUtils.MinReadTime
+  nameWithType: WordsUtils.MinReadTime
+- uid: DNTPersianUtils.Core.WordsUtils.MinReadTimeToString(System.Int32)
+  name: MinReadTimeToString(int)
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_MinReadTimeToString_System_Int32_
+  commentId: M:DNTPersianUtils.Core.WordsUtils.MinReadTimeToString(System.Int32)
+  name.vb: MinReadTimeToString(Integer)
+  fullName: DNTPersianUtils.Core.WordsUtils.MinReadTimeToString(int)
+  fullName.vb: DNTPersianUtils.Core.WordsUtils.MinReadTimeToString(Integer)
+  nameWithType: WordsUtils.MinReadTimeToString(int)
+  nameWithType.vb: WordsUtils.MinReadTimeToString(Integer)
+- uid: DNTPersianUtils.Core.WordsUtils.MinReadTimeToString(System.String,System.Int32)
+  name: MinReadTimeToString(string?, int)
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_MinReadTimeToString_System_String_System_Int32_
+  commentId: M:DNTPersianUtils.Core.WordsUtils.MinReadTimeToString(System.String,System.Int32)
+  name.vb: MinReadTimeToString(String, Integer)
+  fullName: DNTPersianUtils.Core.WordsUtils.MinReadTimeToString(string?, int)
+  fullName.vb: DNTPersianUtils.Core.WordsUtils.MinReadTimeToString(String, Integer)
+  nameWithType: WordsUtils.MinReadTimeToString(string?, int)
+  nameWithType.vb: WordsUtils.MinReadTimeToString(String, Integer)
+- uid: DNTPersianUtils.Core.WordsUtils.MinReadTimeToString*
+  name: MinReadTimeToString
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_MinReadTimeToString_
+  commentId: Overload:DNTPersianUtils.Core.WordsUtils.MinReadTimeToString
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.WordsUtils.MinReadTimeToString
+  nameWithType: WordsUtils.MinReadTimeToString
+- uid: DNTPersianUtils.Core.WordsUtils.ReturnDotsIfEmpty(System.String)
+  name: ReturnDotsIfEmpty(string?)
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_ReturnDotsIfEmpty_System_String_
+  commentId: M:DNTPersianUtils.Core.WordsUtils.ReturnDotsIfEmpty(System.String)
+  name.vb: ReturnDotsIfEmpty(String)
+  fullName: DNTPersianUtils.Core.WordsUtils.ReturnDotsIfEmpty(string?)
+  fullName.vb: DNTPersianUtils.Core.WordsUtils.ReturnDotsIfEmpty(String)
+  nameWithType: WordsUtils.ReturnDotsIfEmpty(string?)
+  nameWithType.vb: WordsUtils.ReturnDotsIfEmpty(String)
+- uid: DNTPersianUtils.Core.WordsUtils.ReturnDotsIfEmpty*
+  name: ReturnDotsIfEmpty
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_ReturnDotsIfEmpty_
+  commentId: Overload:DNTPersianUtils.Core.WordsUtils.ReturnDotsIfEmpty
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.WordsUtils.ReturnDotsIfEmpty
+  nameWithType: WordsUtils.ReturnDotsIfEmpty
+- uid: DNTPersianUtils.Core.WordsUtils.WordsCount(System.String)
+  name: WordsCount(string?)
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_WordsCount_System_String_
+  commentId: M:DNTPersianUtils.Core.WordsUtils.WordsCount(System.String)
+  name.vb: WordsCount(String)
+  fullName: DNTPersianUtils.Core.WordsUtils.WordsCount(string?)
+  fullName.vb: DNTPersianUtils.Core.WordsUtils.WordsCount(String)
+  nameWithType: WordsUtils.WordsCount(string?)
+  nameWithType.vb: WordsUtils.WordsCount(String)
+- uid: DNTPersianUtils.Core.WordsUtils.WordsCount*
+  name: WordsCount
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_WordsCount_
+  commentId: Overload:DNTPersianUtils.Core.WordsUtils.WordsCount
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.WordsUtils.WordsCount
+  nameWithType: WordsUtils.WordsCount
 - uid: DNTPersianUtils.Core.YeKe
   name: YeKe
   href: api/DNTPersianUtils.Core.YeKe.html
