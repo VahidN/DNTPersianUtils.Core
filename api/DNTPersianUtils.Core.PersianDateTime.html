@@ -1,0 +1,1259 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PersianDateTime </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PersianDateTime ">
+      
+      <meta name="description" content="ساختاري بيانگر تاريخ و زمان شمسي">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VahidN/DNTPersianUtils.Core/new/master/apiSpec/new?filename=DNTPersianUtils_Core_PersianDateTime.md&amp;value=---%0Auid%3A%20DNTPersianUtils.Core.PersianDateTime%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DNTPersianUtils.Core.PersianDateTime">
+
+
+
+  <h1 id="DNTPersianUtils_Core_PersianDateTime" data-uid="DNTPersianUtils.Core.PersianDateTime" class="text-break">
+Class PersianDateTime  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DNTPersianUtils.html">DNTPersianUtils</a>.<a class="xref" href="DNTPersianUtils.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DNTPersianUtils.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>ساختاري بيانگر تاريخ و زمان شمسي</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PersianDateTime : IEqualityComparer&lt;PersianDateTime&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PersianDateTime</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;<a class="xref" href="DNTPersianUtils.Core.PersianDateTime.html">PersianDateTime</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_ConvertNumberToText__1___0_DNTPersianUtils_Core_Language_">GenericsPersianDateTimeUtils.ConvertNumberToText&lt;TValue&gt;(TValue?, Language)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_ConvertToPersianDay__1___0_System_Boolean_DNTPersianUtils_Core_DateTimeOffsetPart_">GenericsPersianDateTimeUtils.ConvertToPersianDay&lt;TValue&gt;(TValue?, bool, DateTimeOffsetPart)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToLongPersianDateTime__1___0_">GenericsPersianDateTimeUtils.FormatDateToLongPersianDateTime&lt;TValue&gt;(TValue?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToLongPersianDate__1___0_">GenericsPersianDateTimeUtils.FormatDateToLongPersianDate&lt;TValue&gt;(TValue?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToPersianDateTime__1___0_System_String_System_Boolean_DNTPersianUtils_Core_DateTimeOffsetPart_">GenericsPersianDateTimeUtils.FormatDateToPersianDateTime&lt;TValue&gt;(TValue?, string, bool, DateTimeOffsetPart)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToShortPersianDateTime__1___0_">GenericsPersianDateTimeUtils.FormatDateToShortPersianDateTime&lt;TValue&gt;(TValue?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateToShortPersianDate__1___0_">GenericsPersianDateTimeUtils.FormatDateToShortPersianDate&lt;TValue&gt;(TValue?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_FormatDateValue__1___0_System_String_">GenericsPersianDateTimeUtils.FormatDateValue&lt;TValue&gt;(TValue?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_GetTimeOfDayPart__1___0_">GenericsPersianDateTimeUtils.GetTimeOfDayPart&lt;TValue&gt;(TValue?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_IsDateTimeOrDateTimeOffsetType__1___0_">GenericsPersianDateTimeUtils.IsDateTimeOrDateTimeOffsetType&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_IsNullOrDefaultDateTimeOrDateTimeOffset__1___0_">GenericsPersianDateTimeUtils.IsNullOrDefaultDateTimeOrDateTimeOffset&lt;TValue&gt;(TValue?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_UpdateTimeOfDayPart__1___0_System_TimeSpan_">GenericsPersianDateTimeUtils.UpdateTimeOfDayPart&lt;TValue&gt;(TValue?, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToDateOnly_System_Object_System_DateOnly__">GenericsPersianDateTimeUtils.TryConvertToDateOnly(object?, out DateOnly)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToDateOnly_System_Object_System_String_System_DateOnly__">GenericsPersianDateTimeUtils.TryConvertToDateOnly(object?, string, out DateOnly)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToDateTime_System_Object_System_DateTime__">GenericsPersianDateTimeUtils.TryConvertToDateTime(object?, out DateTime)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToDateTime_System_Object_System_String_System_DateTime__">GenericsPersianDateTimeUtils.TryConvertToDateTime(object?, string, out DateTime)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToDateTimeOffset_System_Object_System_DateTimeOffset__">GenericsPersianDateTimeUtils.TryConvertToDateTimeOffset(object?, out DateTimeOffset)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToDateTimeOffset_System_Object_System_String_System_DateTimeOffset__">GenericsPersianDateTimeUtils.TryConvertToDateTimeOffset(object?, string, out DateTimeOffset)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToNullableDateOnly_System_Object_System_Nullable_System_DateOnly___">GenericsPersianDateTimeUtils.TryConvertToNullableDateOnly(object?, out DateOnly?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToNullableDateOnly_System_Object_System_String_System_Nullable_System_DateOnly___">GenericsPersianDateTimeUtils.TryConvertToNullableDateOnly(object?, string, out DateOnly?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToNullableDateTime_System_Object_System_Nullable_System_DateTime___">GenericsPersianDateTimeUtils.TryConvertToNullableDateTime(object?, out DateTime?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToNullableDateTime_System_Object_System_String_System_Nullable_System_DateTime___">GenericsPersianDateTimeUtils.TryConvertToNullableDateTime(object?, string, out DateTime?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToNullableDateTimeOffset_System_Object_System_Nullable_System_DateTimeOffset___">GenericsPersianDateTimeUtils.TryConvertToNullableDateTimeOffset(object?, out DateTimeOffset?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html#DNTPersianUtils_Core_GenericsPersianDateTimeUtils_TryConvertToNullableDateTimeOffset_System_Object_System_String_System_Nullable_System_DateTimeOffset___">GenericsPersianDateTimeUtils.TryConvertToNullableDateTimeOffset(object?, string, out DateTimeOffset?)</a>
+  </div>
+  <div>
+      <a class="xref" href="DNTPersianUtils.Core.YeKe.html#DNTPersianUtils_Core_YeKe_ApplyCorrectYeKe_System_Object_">YeKe.ApplyCorrectYeKe(object?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime__ctor_" data-uid="DNTPersianUtils.Core.PersianDateTime.#ctor*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime__ctor_System_Int32_System_Int32_System_Int32_" data-uid="DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32)">
+  PersianDateTime(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>اجزای تاريخ و زمان شمسی</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersianDateTime(int year, int month, int day)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>year</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>month</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>day</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime__ctor_" data-uid="DNTPersianUtils.Core.PersianDateTime.#ctor*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime__ctor_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+  PersianDateTime(int, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>اجزای تاريخ و زمان شمسی</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersianDateTime(int year, int month, int day, int hour, int minute)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>year</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>month</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>day</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>hour</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>minute</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime__ctor_" data-uid="DNTPersianUtils.Core.PersianDateTime.#ctor*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime__ctor_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+  PersianDateTime(int, int, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>اجزای تاريخ و زمان شمسی</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersianDateTime(int year, int month, int day, int hour, int minute, int second)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>year</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>month</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>day</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>hour</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>minute</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>second</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime__ctor_" data-uid="DNTPersianUtils.Core.PersianDateTime.#ctor*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime__ctor_System_String_" data-uid="DNTPersianUtils.Core.PersianDateTime.#ctor(System.String)">
+  PersianDateTime(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>اجزای تاريخ و زمان شمسی</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersianDateTime(string? persianDateTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>persianDateTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_DateOnly_" data-uid="DNTPersianUtils.Core.PersianDateTime.DateOnly*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_DateOnly" data-uid="DNTPersianUtils.Core.PersianDateTime.DateOnly">
+  DateOnly
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>بيانگر تاريخ جاري شمسي به ميلادي. اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateOnly? DateOnly { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dateonly">DateOnly</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_DateTime_" data-uid="DNTPersianUtils.Core.PersianDateTime.DateTime*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_DateTime" data-uid="DNTPersianUtils.Core.PersianDateTime.DateTime">
+  DateTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>بيانگر تاريخ و زمان جاري شمسي به ميلادي. اگر تاريخ و زمان غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? DateTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_DateTimeOffset_" data-uid="DNTPersianUtils.Core.PersianDateTime.DateTimeOffset*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_DateTimeOffset" data-uid="DNTPersianUtils.Core.PersianDateTime.DateTimeOffset">
+  DateTimeOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>بيانگر تاريخ و زمان جاري شمسي به ميلادي. اگر تاريخ و زمان غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? DateTimeOffset { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_DateTimeUtc_" data-uid="DNTPersianUtils.Core.PersianDateTime.DateTimeUtc*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_DateTimeUtc" data-uid="DNTPersianUtils.Core.PersianDateTime.DateTimeUtc">
+  DateTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>بيانگر تاريخ و زمان جاري شمسي به ميلادي. اگر تاريخ و زمان غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? DateTimeUtc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_Day_" data-uid="DNTPersianUtils.Core.PersianDateTime.Day*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_Day" data-uid="DNTPersianUtils.Core.PersianDateTime.Day">
+  Day
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>روز شمسی
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Day { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_Holidays_" data-uid="DNTPersianUtils.Core.PersianDateTime.Holidays*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_Holidays" data-uid="DNTPersianUtils.Core.PersianDateTime.Holidays">
+  Holidays
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>در صورت تعطیل رسمی تاريخ شمسي جاري بودن، با عناوین مناسبت‌ها مقدار دهی خواهد شد
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt;? Holidays { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_Hour_" data-uid="DNTPersianUtils.Core.PersianDateTime.Hour*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_Hour" data-uid="DNTPersianUtils.Core.PersianDateTime.Hour">
+  Hour
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ساعت
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Hour { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_IsHoliday_" data-uid="DNTPersianUtils.Core.PersianDateTime.IsHoliday*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_IsHoliday" data-uid="DNTPersianUtils.Core.PersianDateTime.IsHoliday">
+  IsHoliday
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>آيا تاريخ جاري، تعطیل رسمی است؟</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsHoliday { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_IsValidDateTime_" data-uid="DNTPersianUtils.Core.PersianDateTime.IsValidDateTime*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_IsValidDateTime" data-uid="DNTPersianUtils.Core.PersianDateTime.IsValidDateTime">
+  IsValidDateTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>آيا تاريخ و زمان جاري شمسي معتبر است؟</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValidDateTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_Minute_" data-uid="DNTPersianUtils.Core.PersianDateTime.Minute*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_Minute" data-uid="DNTPersianUtils.Core.PersianDateTime.Minute">
+  Minute
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>دقيقه
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Minute { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_Month_" data-uid="DNTPersianUtils.Core.PersianDateTime.Month*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_Month" data-uid="DNTPersianUtils.Core.PersianDateTime.Month">
+  Month
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ماه شمسی
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Month { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_MonthName_" data-uid="DNTPersianUtils.Core.PersianDateTime.MonthName*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_MonthName" data-uid="DNTPersianUtils.Core.PersianDateTime.MonthName">
+  MonthName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>نام فارسی ماه‌ شمسی
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? MonthName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_PersianMonth_" data-uid="DNTPersianUtils.Core.PersianDateTime.PersianMonth*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_PersianMonth" data-uid="DNTPersianUtils.Core.PersianDateTime.PersianMonth">
+  PersianMonth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>تاریخ روزهای ابتدا و انتهای ماه شمسی را بازگشت می‌دهد
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersianMonth? PersianMonth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DNTPersianUtils.Core.PersianMonth.html">PersianMonth</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_PersianMonthDayNumberName_" data-uid="DNTPersianUtils.Core.PersianDateTime.PersianMonthDayNumberName*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_PersianMonthDayNumberName" data-uid="DNTPersianUtils.Core.PersianDateTime.PersianMonthDayNumberName">
+  PersianMonthDayNumberName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>عدد به حروف روز شمسی مانند يكم، دوم
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? PersianMonthDayNumberName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_PersianWeek_" data-uid="DNTPersianUtils.Core.PersianDateTime.PersianWeek*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_PersianWeek" data-uid="DNTPersianUtils.Core.PersianDateTime.PersianWeek">
+  PersianWeek
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>تاریخ روزهای ابتدا و انتهای هفته شمسی را بازگشت می‌دهد
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersianWeek? PersianWeek { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DNTPersianUtils.Core.PersianWeek.html">PersianWeek</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_PersianYear_" data-uid="DNTPersianUtils.Core.PersianDateTime.PersianYear*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_PersianYear" data-uid="DNTPersianUtils.Core.PersianDateTime.PersianYear">
+  PersianYear
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>سال شمسی معادل را محاسبه کرده و سپس
+تاریخ روزهای ابتدا و انتهای آن سال شمسی را بازگشت می‌دهد
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersianYear? PersianYear { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DNTPersianUtils.Core.PersianYear.html">PersianYear</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_Second_" data-uid="DNTPersianUtils.Core.PersianDateTime.Second*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_Second" data-uid="DNTPersianUtils.Core.PersianDateTime.Second">
+  Second
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ثانيه
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Second { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_WeekDayName_" data-uid="DNTPersianUtils.Core.PersianDateTime.WeekDayName*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_WeekDayName" data-uid="DNTPersianUtils.Core.PersianDateTime.WeekDayName">
+  WeekDayName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>دریافت معادل فارسی نام روز هفته‌ی میلادی
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? WeekDayName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_WeekDayNumber_" data-uid="DNTPersianUtils.Core.PersianDateTime.WeekDayNumber*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_WeekDayNumber" data-uid="DNTPersianUtils.Core.PersianDateTime.WeekDayNumber">
+  WeekDayNumber
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>دریافت معادل عدد شمسی نام روز هفته‌ی میلادی؛ شروع شده از عدد یک.
+برای مثال سان‌دی معادل روز 2 هفته شمسی است
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? WeekDayNumber { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_Year_" data-uid="DNTPersianUtils.Core.PersianDateTime.Year*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_Year" data-uid="DNTPersianUtils.Core.PersianDateTime.Year">
+  Year
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>سال شمسی
+اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Year { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_Equals_" data-uid="DNTPersianUtils.Core.PersianDateTime.Equals*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_Equals_DNTPersianUtils_Core_PersianDateTime_DNTPersianUtils_Core_PersianDateTime_" data-uid="DNTPersianUtils.Core.PersianDateTime.Equals(DNTPersianUtils.Core.PersianDateTime,DNTPersianUtils.Core.PersianDateTime)">
+  Equals(PersianDateTime?, PersianDateTime?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified objects are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(PersianDateTime? x, PersianDateTime? y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="DNTPersianUtils.Core.PersianDateTime.html">PersianDateTime</a></dt>
+    <dd><p>The first object of type <code class="paramref">T</code> to compare.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="DNTPersianUtils.Core.PersianDateTime.html">PersianDateTime</a></dt>
+    <dd><p>The second object of type <code class="paramref">T</code> to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified objects are equal; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_Equals_" data-uid="DNTPersianUtils.Core.PersianDateTime.Equals*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_Equals_System_Object_" data-uid="DNTPersianUtils.Core.PersianDateTime.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Equals</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_GetHashCode_" data-uid="DNTPersianUtils.Core.PersianDateTime.GetHashCode*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_GetHashCode" data-uid="DNTPersianUtils.Core.PersianDateTime.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GetHashCode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_GetHashCode_" data-uid="DNTPersianUtils.Core.PersianDateTime.GetHashCode*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_GetHashCode_DNTPersianUtils_Core_PersianDateTime_" data-uid="DNTPersianUtils.Core.PersianDateTime.GetHashCode(DNTPersianUtils.Core.PersianDateTime)">
+  GetHashCode(PersianDateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a hash code for the specified object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetHashCode(PersianDateTime obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="DNTPersianUtils.Core.PersianDateTime.html">PersianDateTime</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> for which a hash code is to be returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the specified object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The type of <code class="paramref">obj</code> is a reference type and <code class="paramref">obj</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="DNTPersianUtils_Core_PersianDateTime_ToString_" data-uid="DNTPersianUtils.Core.PersianDateTime.ToString*"></a>
+
+  <h3 id="DNTPersianUtils_Core_PersianDateTime_ToString" data-uid="DNTPersianUtils.Core.PersianDateTime.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ToString()</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/PersianDateTime.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          © <a href='https://www.dntips.ir/'>dntips.ir</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

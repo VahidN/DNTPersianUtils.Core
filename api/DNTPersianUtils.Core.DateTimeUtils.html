@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="DNTPersianUtils_Core_DateTimeUtils" data-uid="DNTPersianUtils.Core.DateTimeUtils" class="text-break">
-Class DateTimeUtils  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class DateTimeUtils  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -156,7 +156,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_Epoch" data-uid="DNTPersianUtils.Core.DateTimeUtils.Epoch">
   Epoch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Epoch represented as DateTime</p>
@@ -187,7 +187,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IranStandardTime" data-uid="DNTPersianUtils.Core.DateTimeUtils.IranStandardTime">
   IranStandardTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Iran Standard Time</p>
@@ -223,7 +223,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly)">
   GetAge(DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>محاسبه سن
@@ -263,7 +263,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateOnly_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateOnly,System.DateOnly)">
   GetAge(DateOnly, DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>محاسبه سن</p>
@@ -305,7 +305,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTime)">
   GetAge(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>محاسبه سن
@@ -345,7 +345,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateTime_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTime,System.DateTime)">
   GetAge(DateTime, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>محاسبه سن</p>
@@ -387,7 +387,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   GetAge(DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>محاسبه سن
@@ -430,7 +430,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetAge_System_DateTimeOffset_System_DateTime_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetAge(System.DateTimeOffset,System.DateTime,DNTPersianUtils.Core.DateTimeOffsetPart)">
   GetAge(DateTimeOffset, DateTime, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>محاسبه سن</p>
@@ -475,7 +475,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetDateTimeOffsetPart_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetDateTimeOffsetPart(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   GetDateTimeOffsetPart(DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>دریافت جزء زمانی ویژه‌ی این وهله</p>
@@ -514,7 +514,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetEndOfDay_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetEndOfDay(System.DateOnly)">
   GetEndOfDay(DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L427"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retruns the end of the day</p>
@@ -551,7 +551,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetEndOfDay_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetEndOfDay(System.DateTime)">
   GetEndOfDay(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L420"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retruns the end of the day</p>
@@ -588,7 +588,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetEndOfDay_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetEndOfDay(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   GetEndOfDay(DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L434"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retruns the end of the day</p>
@@ -627,7 +627,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetLifetimeInSeconds_System_DateOnly_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetLifetimeInSeconds(System.DateOnly,System.DateOnly)">
   GetLifetimeInSeconds(DateOnly, DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L600"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L601"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>بازگشت جمع ثانيه‌هاي طول عمر پس از ايجاد تاكنون</p>
@@ -668,7 +668,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetLifetimeInSeconds_System_DateTime_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetLifetimeInSeconds(System.DateTime,System.DateTime)">
   GetLifetimeInSeconds(DateTime, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L590"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L591"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>بازگشت جمع ثانيه‌هاي طول عمر پس از ايجاد تاكنون</p>
@@ -709,7 +709,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetLifetimeInSeconds_System_DateTimeOffset_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetLifetimeInSeconds(System.DateTimeOffset,System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   GetLifetimeInSeconds(DateTimeOffset, DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L611"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L612"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>بازگشت جمع ثانيه‌هاي طول عمر پس از ايجاد تاكنون</p>
@@ -753,7 +753,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetNext_System_DateOnly_System_DayOfWeek_System_Boolean_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetNext(System.DateOnly,System.DayOfWeek,System.Boolean)">
   GetNext(DateOnly, DayOfWeek, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L525"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L526"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>برای نمونه تاریخ جمعه‌ی بعدی را باز می‌گرداند</p>
@@ -797,7 +797,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetNext_System_DateTime_System_DayOfWeek_System_Boolean_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetNext(System.DateTime,System.DayOfWeek,System.Boolean)">
   GetNext(DateTime, DayOfWeek, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L503"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>برای نمونه تاریخ جمعه‌ی بعدی را باز می‌گرداند</p>
@@ -841,7 +841,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetNext_System_DateTimeOffset_System_DayOfWeek_System_Boolean_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetNext(System.DateTimeOffset,System.DayOfWeek,System.Boolean,DNTPersianUtils.Core.DateTimeOffsetPart)">
   GetNext(DateTimeOffset, DayOfWeek, bool, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L537"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L538"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>برای نمونه تاریخ جمعه‌ی بعدی را باز می‌گرداند</p>
@@ -888,7 +888,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetNow_System_DateTimeKind_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetNow(System.DateTimeKind)">
   GetNow(DateTimeKind)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>بازگشت زمان جاری با توجه به نوع زمان</p>
@@ -927,7 +927,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetPrevious_System_DateOnly_System_DayOfWeek_System_Boolean_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetPrevious(System.DateOnly,System.DayOfWeek,System.Boolean)">
   GetPrevious(DateOnly, DayOfWeek, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L473"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L474"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>برای نمونه تاریخ جمعه‌ی قبلی را باز می‌گرداند</p>
@@ -971,7 +971,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetPrevious_System_DateTime_System_DayOfWeek_System_Boolean_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetPrevious(System.DateTime,System.DayOfWeek,System.Boolean)">
   GetPrevious(DateTime, DayOfWeek, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L449"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>برای نمونه تاریخ جمعه‌ی قبلی را باز می‌گرداند</p>
@@ -1015,7 +1015,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetPrevious_System_DateTimeOffset_System_DayOfWeek_System_Boolean_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetPrevious(System.DateTimeOffset,System.DayOfWeek,System.Boolean,DNTPersianUtils.Core.DateTimeOffsetPart)">
   GetPrevious(DateTimeOffset, DayOfWeek, bool, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L485"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L486"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>برای نمونه تاریخ جمعه‌ی قبلی را باز می‌گرداند</p>
@@ -1062,7 +1062,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetStartOfDay_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetStartOfDay(System.DateOnly)">
   GetStartOfDay(DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L402"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retruns Date which is the start of the day</p>
@@ -1099,7 +1099,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetStartOfDay_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetStartOfDay(System.DateTime)">
   GetStartOfDay(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L395"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retruns dt.Date which is the start of the day</p>
@@ -1136,7 +1136,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_GetStartOfDay_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.GetStartOfDay(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   GetStartOfDay(DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L409"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retruns dateTime.Date which is the start of the day</p>
@@ -1175,7 +1175,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_HasExceeded_System_DateOnly_System_Int32_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.HasExceeded(System.DateOnly,System.Int32,System.DateOnly)">
   HasExceeded(DateOnly, int, DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L565"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L566"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>آيا به تعداد ثانيه‌ي مشخص شده از زمان ايجاد گذشته؟</p>
@@ -1219,7 +1219,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_HasExceeded_System_DateTime_System_Int32_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.HasExceeded(System.DateTime,System.Int32,System.DateTime)">
   HasExceeded(DateTime, int, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L554"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L555"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>آيا به تعداد ثانيه‌ي مشخص شده از زمان ايجاد گذشته؟</p>
@@ -1263,7 +1263,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_HasExceeded_System_DateTimeOffset_System_Int32_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.HasExceeded(System.DateTimeOffset,System.Int32,System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   HasExceeded(DateTimeOffset, int, DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L577"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L578"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>آيا به تعداد ثانيه‌ي مشخص شده از زمان ايجاد گذشته؟</p>
@@ -1309,7 +1309,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_HasExpired_System_DateOnly_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.HasExpired(System.DateOnly,System.DateOnly)">
   HasExpired(DateOnly, DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L647"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L648"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>آيا منقضي شده‌است؟</p>
@@ -1350,7 +1350,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_HasExpired_System_DateTime_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.HasExpired(System.DateTime,System.DateTime)">
   HasExpired(DateTime, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L637"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L638"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>آيا منقضي شده‌است؟</p>
@@ -1391,7 +1391,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_HasExpired_System_DateTimeOffset_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.HasExpired(System.DateTimeOffset,System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   HasExpired(DateTimeOffset, DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L658"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L659"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>آيا منقضي شده‌است؟</p>
@@ -1435,7 +1435,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_HasExpired_System_Nullable_System_DateTime__System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.HasExpired(System.Nullable{System.DateTime},System.DateTime)">
   HasExpired(DateTime?, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L623"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L624"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>آيا منقضي شده‌است؟</p>
@@ -1476,7 +1476,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsBetween_System_DateTime_System_DateTime_System_DateTime_System_Boolean_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsBetween(System.DateTime,System.DateTime,System.DateTime,System.Boolean)">
   IsBetween(DateTime, DateTime, DateTime, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L254"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks the given date is between the two provided dates</p>
@@ -1519,7 +1519,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsBetween_System_DateTimeOffset_System_DateTimeOffset_System_DateTimeOffset_System_Boolean_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsBetween(System.DateTimeOffset,System.DateTimeOffset,System.DateTimeOffset,System.Boolean,DNTPersianUtils.Core.DateTimeOffsetPart)">
   IsBetween(DateTimeOffset, DateTimeOffset, DateTimeOffset, bool, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L262"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks the given date is between the two provided dates</p>
@@ -1560,11 +1560,57 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="DNTPersianUtils_Core_DateTimeUtils_IsBetween_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsBetween*"></a>
+
+  <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsBetween__1___0___0___0_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsBetween``1(``0,``0,``0)">
+  IsBetween&lt;T&gt;(T, T, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L676"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>آيا مقدار مدنظر بين دو مقدار مشخص و يا مساوي آن‌ها قرار مي‌گيرد؟</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsBetween&lt;T&gt;(this T value, T lowest, T highest) where T : IComparable</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>lowest</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>highest</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="DNTPersianUtils_Core_DateTimeUtils_IsLastDayOfTheMonth_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsLastDayOfTheMonth*"></a>
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsLastDayOfTheMonth_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsLastDayOfTheMonth(System.DateOnly)">
   IsLastDayOfTheMonth(DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L285"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns whether the given date is the last day of the month</p>
@@ -1601,7 +1647,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsLastDayOfTheMonth_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsLastDayOfTheMonth(System.DateTime)">
   IsLastDayOfTheMonth(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns whether the given date is the last day of the month</p>
@@ -1638,7 +1684,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsLastDayOfTheMonth_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsLastDayOfTheMonth(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   IsLastDayOfTheMonth(DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns whether the given date is the last day of the month</p>
@@ -1677,7 +1723,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsLeapYear_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsLeapYear(System.DateOnly)">
   IsLeapYear(DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L335"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines if a given year is a LeapYear or not.</p>
@@ -1714,7 +1760,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsLeapYear_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsLeapYear(System.DateTime)">
   IsLeapYear(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines if a given year is a LeapYear or not.</p>
@@ -1751,7 +1797,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsLeapYear_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsLeapYear(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   IsLeapYear(DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L341"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines if a given year is a LeapYear or not.</p>
@@ -1786,11 +1832,49 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="DNTPersianUtils_Core_DateTimeUtils_IsValidTimeValue_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsValidTimeValue*"></a>
+
+  <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsValidTimeValue_System_String_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsValidTimeValue(System.String)">
+  IsValidTimeValue(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>آيا زمان وارد شده معتبر است؟</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidTimeValue(this string inputTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inputTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>زمان وارد شده مانند 10:12:1</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="DNTPersianUtils_Core_DateTimeUtils_IsWeekend_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsWeekend*"></a>
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsWeekend_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsWeekend(System.DateOnly)">
   IsWeekend(DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L310"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns whether the given date falls in a weekend</p>
@@ -1827,7 +1911,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsWeekend_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsWeekend(System.DateTime)">
   IsWeekend(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L303"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns whether the given date falls in a weekend</p>
@@ -1864,7 +1948,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_IsWeekend_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.IsWeekend(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   IsWeekend(DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns whether the given date falls in a weekend</p>
@@ -1903,7 +1987,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToDateOnly_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToDateOnly(System.DateTime)">
   ToDateOnly(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>تبديل به ابتداي روز ساختار جديد</p>
@@ -1941,7 +2025,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToDateOnly_System_Nullable_System_DateTime__" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToDateOnly(System.Nullable{System.DateTime})">
   ToDateOnly(DateTime?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>تبديل به ابتداي روز ساختار جديد</p>
@@ -1979,7 +2063,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToDateTime_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToDateTime(System.DateOnly)">
   ToDateTime(DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>تبديل به ابتداي روز ساختار قبلي</p>
@@ -2017,7 +2101,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToDateTime_System_Nullable_System_DateOnly__" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToDateTime(System.Nullable{System.DateOnly})">
   ToDateTime(DateOnly?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>تبديل به ابتداي روز ساختار قبلي</p>
@@ -2055,7 +2139,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToDateTimeOffset_System_DateOnly_System_Double_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToDateTimeOffset(System.DateOnly,System.Double)">
   ToDateTimeOffset(DateOnly, double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L388"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a Date to a DateTimeOffset</p>
@@ -2096,7 +2180,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToDateTimeOffset_System_DateOnly_System_TimeSpan_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToDateTimeOffset(System.DateOnly,System.TimeSpan)">
   ToDateTimeOffset(DateOnly, TimeSpan)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a Date to a DateTimeOffset</p>
@@ -2137,7 +2221,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToDateTimeOffset_System_DateTime_System_Double_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToDateTimeOffset(System.DateTime,System.Double)">
   ToDateTimeOffset(DateTime, double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a DateTime to a DateTimeOffset</p>
@@ -2178,7 +2262,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToDateTimeOffset_System_DateTime_System_TimeSpan_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToDateTimeOffset(System.DateTime,System.TimeSpan)">
   ToDateTimeOffset(DateTime, TimeSpan)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L354"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a DateTime to a DateTimeOffset</p>
@@ -2219,7 +2303,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToEpochMilliseconds_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToEpochMilliseconds(System.DateOnly)">
   ToEpochMilliseconds(DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L201"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dateonly">DateOnly</a> to milliseconds from Epoch.</p>
@@ -2258,7 +2342,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToEpochMilliseconds_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToEpochMilliseconds(System.DateTime)">
   ToEpochMilliseconds(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> to milliseconds from Epoch.</p>
@@ -2297,7 +2381,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToEpochMilliseconds_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToEpochMilliseconds(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   ToEpochMilliseconds(DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> to milliseconds from Epoch.</p>
@@ -2339,7 +2423,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToEpochSeconds_System_DateOnly_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToEpochSeconds(System.DateOnly)">
   ToEpochSeconds(DateOnly)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dateonly">DateOnly</a> to seconds from Epoch.</p>
@@ -2378,7 +2462,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToEpochSeconds_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToEpochSeconds(System.DateTime)">
   ToEpochSeconds(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> to seconds from Epoch.</p>
@@ -2417,7 +2501,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToEpochSeconds_System_DateTimeOffset_DNTPersianUtils_Core_DateTimeOffsetPart_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToEpochSeconds(System.DateTimeOffset,DNTPersianUtils.Core.DateTimeOffsetPart)">
   ToEpochSeconds(DateTimeOffset, DateTimeOffsetPart)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> to seconds from Epoch.</p>
@@ -2458,7 +2542,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToIranTimeZoneDateTime_System_DateTime_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToIranTimeZoneDateTime(System.DateTime)">
   ToIranTimeZoneDateTime(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>تبدیل منطقه زمانی این وهله به منطقه زمانی ایران</p>
@@ -2495,7 +2579,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DNTPersianUtils_Core_DateTimeUtils_ToIranTimeZoneDateTimeOffset_System_DateTimeOffset_" data-uid="DNTPersianUtils.Core.DateTimeUtils.ToIranTimeZoneDateTimeOffset(System.DateTimeOffset)">
   ToIranTimeZoneDateTimeOffset(DateTimeOffset)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>تبدیل منطقه زمانی این وهله به منطقه زمانی ایران</p>
@@ -2532,7 +2616,7 @@ Class DateTimeUtils  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/DateTimeUtils.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -381,6 +381,15 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.DateTimeUtils.IsBetween
   nameWithType: DateTimeUtils.IsBetween
+- uid: DNTPersianUtils.Core.DateTimeUtils.IsBetween``1(``0,``0,``0)
+  name: IsBetween<T>(T, T, T)
+  href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_IsBetween__1___0___0___0_
+  commentId: M:DNTPersianUtils.Core.DateTimeUtils.IsBetween``1(``0,``0,``0)
+  name.vb: IsBetween(Of T)(T, T, T)
+  fullName: DNTPersianUtils.Core.DateTimeUtils.IsBetween<T>(T, T, T)
+  fullName.vb: DNTPersianUtils.Core.DateTimeUtils.IsBetween(Of T)(T, T, T)
+  nameWithType: DateTimeUtils.IsBetween<T>(T, T, T)
+  nameWithType.vb: DateTimeUtils.IsBetween(Of T)(T, T, T)
 - uid: DNTPersianUtils.Core.DateTimeUtils.IsLastDayOfTheMonth(System.DateOnly)
   name: IsLastDayOfTheMonth(DateOnly)
   href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_IsLastDayOfTheMonth_System_DateOnly_
@@ -437,6 +446,22 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.DateTimeUtils.IsLeapYear
   nameWithType: DateTimeUtils.IsLeapYear
+- uid: DNTPersianUtils.Core.DateTimeUtils.IsValidTimeValue(System.String)
+  name: IsValidTimeValue(string)
+  href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_IsValidTimeValue_System_String_
+  commentId: M:DNTPersianUtils.Core.DateTimeUtils.IsValidTimeValue(System.String)
+  name.vb: IsValidTimeValue(String)
+  fullName: DNTPersianUtils.Core.DateTimeUtils.IsValidTimeValue(string)
+  fullName.vb: DNTPersianUtils.Core.DateTimeUtils.IsValidTimeValue(String)
+  nameWithType: DateTimeUtils.IsValidTimeValue(string)
+  nameWithType.vb: DateTimeUtils.IsValidTimeValue(String)
+- uid: DNTPersianUtils.Core.DateTimeUtils.IsValidTimeValue*
+  name: IsValidTimeValue
+  href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_IsValidTimeValue_
+  commentId: Overload:DNTPersianUtils.Core.DateTimeUtils.IsValidTimeValue
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.DateTimeUtils.IsValidTimeValue
+  nameWithType: DateTimeUtils.IsValidTimeValue
 - uid: DNTPersianUtils.Core.DateTimeUtils.IsWeekend(System.DateOnly)
   name: IsWeekend(DateOnly)
   href: api/DNTPersianUtils.Core.DateTimeUtils.html#DNTPersianUtils_Core_DateTimeUtils_IsWeekend_System_DateOnly_
@@ -4809,6 +4834,375 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.PersianCulture.ShortPersianDayWeekNames
   nameWithType: PersianCulture.ShortPersianDayWeekNames
+- uid: DNTPersianUtils.Core.PersianDateTime
+  name: PersianDateTime
+  href: api/DNTPersianUtils.Core.PersianDateTime.html
+  commentId: T:DNTPersianUtils.Core.PersianDateTime
+  fullName: DNTPersianUtils.Core.PersianDateTime
+  nameWithType: PersianDateTime
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32)
+  name: PersianDateTime(int, int, int)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32)
+  name.vb: New(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(Integer, Integer, Integer)
+  nameWithType: PersianDateTime.PersianDateTime(int, int, int)
+  nameWithType.vb: PersianDateTime.New(Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: PersianDateTime(int, int, int, int, int)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name.vb: New(Integer, Integer, Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(int, int, int, int, int)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(Integer, Integer, Integer, Integer, Integer)
+  nameWithType: PersianDateTime.PersianDateTime(int, int, int, int, int)
+  nameWithType.vb: PersianDateTime.New(Integer, Integer, Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: PersianDateTime(int, int, int, int, int, int)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name.vb: New(Integer, Integer, Integer, Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(int, int, int, int, int, int)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(Integer, Integer, Integer, Integer, Integer, Integer)
+  nameWithType: PersianDateTime.PersianDateTime(int, int, int, int, int, int)
+  nameWithType.vb: PersianDateTime.New(Integer, Integer, Integer, Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.String)
+  name: PersianDateTime(string?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_String_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.String)
+  name.vb: New(String)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(string?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(String)
+  nameWithType: PersianDateTime.PersianDateTime(string?)
+  nameWithType.vb: PersianDateTime.New(String)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor*
+  name: PersianDateTime
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New
+  nameWithType: PersianDateTime.PersianDateTime
+  nameWithType.vb: PersianDateTime.New
+- uid: DNTPersianUtils.Core.PersianDateTime.DateOnly
+  name: DateOnly
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_DateOnly
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.DateOnly
+  fullName: DNTPersianUtils.Core.PersianDateTime.DateOnly
+  nameWithType: PersianDateTime.DateOnly
+- uid: DNTPersianUtils.Core.PersianDateTime.DateOnly*
+  name: DateOnly
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_DateOnly_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.DateOnly
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.DateOnly
+  nameWithType: PersianDateTime.DateOnly
+- uid: DNTPersianUtils.Core.PersianDateTime.DateTime
+  name: DateTime
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_DateTime
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.DateTime
+  fullName: DNTPersianUtils.Core.PersianDateTime.DateTime
+  nameWithType: PersianDateTime.DateTime
+- uid: DNTPersianUtils.Core.PersianDateTime.DateTime*
+  name: DateTime
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_DateTime_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.DateTime
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.DateTime
+  nameWithType: PersianDateTime.DateTime
+- uid: DNTPersianUtils.Core.PersianDateTime.DateTimeOffset
+  name: DateTimeOffset
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_DateTimeOffset
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.DateTimeOffset
+  fullName: DNTPersianUtils.Core.PersianDateTime.DateTimeOffset
+  nameWithType: PersianDateTime.DateTimeOffset
+- uid: DNTPersianUtils.Core.PersianDateTime.DateTimeOffset*
+  name: DateTimeOffset
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_DateTimeOffset_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.DateTimeOffset
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.DateTimeOffset
+  nameWithType: PersianDateTime.DateTimeOffset
+- uid: DNTPersianUtils.Core.PersianDateTime.DateTimeUtc
+  name: DateTimeUtc
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_DateTimeUtc
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.DateTimeUtc
+  fullName: DNTPersianUtils.Core.PersianDateTime.DateTimeUtc
+  nameWithType: PersianDateTime.DateTimeUtc
+- uid: DNTPersianUtils.Core.PersianDateTime.DateTimeUtc*
+  name: DateTimeUtc
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_DateTimeUtc_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.DateTimeUtc
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.DateTimeUtc
+  nameWithType: PersianDateTime.DateTimeUtc
+- uid: DNTPersianUtils.Core.PersianDateTime.Day
+  name: Day
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Day
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.Day
+  fullName: DNTPersianUtils.Core.PersianDateTime.Day
+  nameWithType: PersianDateTime.Day
+- uid: DNTPersianUtils.Core.PersianDateTime.Day*
+  name: Day
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Day_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.Day
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.Day
+  nameWithType: PersianDateTime.Day
+- uid: DNTPersianUtils.Core.PersianDateTime.Equals(DNTPersianUtils.Core.PersianDateTime,DNTPersianUtils.Core.PersianDateTime)
+  name: Equals(PersianDateTime?, PersianDateTime?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Equals_DNTPersianUtils_Core_PersianDateTime_DNTPersianUtils_Core_PersianDateTime_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.Equals(DNTPersianUtils.Core.PersianDateTime,DNTPersianUtils.Core.PersianDateTime)
+  name.vb: Equals(PersianDateTime, PersianDateTime)
+  fullName: DNTPersianUtils.Core.PersianDateTime.Equals(DNTPersianUtils.Core.PersianDateTime?, DNTPersianUtils.Core.PersianDateTime?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.Equals(DNTPersianUtils.Core.PersianDateTime, DNTPersianUtils.Core.PersianDateTime)
+  nameWithType: PersianDateTime.Equals(PersianDateTime?, PersianDateTime?)
+  nameWithType.vb: PersianDateTime.Equals(PersianDateTime, PersianDateTime)
+- uid: DNTPersianUtils.Core.PersianDateTime.Equals(System.Object)
+  name: Equals(object?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Equals_System_Object_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: DNTPersianUtils.Core.PersianDateTime.Equals(object?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.Equals(Object)
+  nameWithType: PersianDateTime.Equals(object?)
+  nameWithType.vb: PersianDateTime.Equals(Object)
+- uid: DNTPersianUtils.Core.PersianDateTime.Equals*
+  name: Equals
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Equals_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.Equals
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.Equals
+  nameWithType: PersianDateTime.Equals
+- uid: DNTPersianUtils.Core.PersianDateTime.GetHashCode
+  name: GetHashCode()
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_GetHashCode
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.GetHashCode
+  fullName: DNTPersianUtils.Core.PersianDateTime.GetHashCode()
+  nameWithType: PersianDateTime.GetHashCode()
+- uid: DNTPersianUtils.Core.PersianDateTime.GetHashCode(DNTPersianUtils.Core.PersianDateTime)
+  name: GetHashCode(PersianDateTime)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_GetHashCode_DNTPersianUtils_Core_PersianDateTime_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.GetHashCode(DNTPersianUtils.Core.PersianDateTime)
+  fullName: DNTPersianUtils.Core.PersianDateTime.GetHashCode(DNTPersianUtils.Core.PersianDateTime)
+  nameWithType: PersianDateTime.GetHashCode(PersianDateTime)
+- uid: DNTPersianUtils.Core.PersianDateTime.GetHashCode*
+  name: GetHashCode
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_GetHashCode_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.GetHashCode
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.GetHashCode
+  nameWithType: PersianDateTime.GetHashCode
+- uid: DNTPersianUtils.Core.PersianDateTime.Holidays
+  name: Holidays
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Holidays
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.Holidays
+  fullName: DNTPersianUtils.Core.PersianDateTime.Holidays
+  nameWithType: PersianDateTime.Holidays
+- uid: DNTPersianUtils.Core.PersianDateTime.Holidays*
+  name: Holidays
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Holidays_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.Holidays
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.Holidays
+  nameWithType: PersianDateTime.Holidays
+- uid: DNTPersianUtils.Core.PersianDateTime.Hour
+  name: Hour
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Hour
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.Hour
+  fullName: DNTPersianUtils.Core.PersianDateTime.Hour
+  nameWithType: PersianDateTime.Hour
+- uid: DNTPersianUtils.Core.PersianDateTime.Hour*
+  name: Hour
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Hour_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.Hour
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.Hour
+  nameWithType: PersianDateTime.Hour
+- uid: DNTPersianUtils.Core.PersianDateTime.IsHoliday
+  name: IsHoliday
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_IsHoliday
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.IsHoliday
+  fullName: DNTPersianUtils.Core.PersianDateTime.IsHoliday
+  nameWithType: PersianDateTime.IsHoliday
+- uid: DNTPersianUtils.Core.PersianDateTime.IsHoliday*
+  name: IsHoliday
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_IsHoliday_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.IsHoliday
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.IsHoliday
+  nameWithType: PersianDateTime.IsHoliday
+- uid: DNTPersianUtils.Core.PersianDateTime.IsValidDateTime
+  name: IsValidDateTime
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_IsValidDateTime
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.IsValidDateTime
+  fullName: DNTPersianUtils.Core.PersianDateTime.IsValidDateTime
+  nameWithType: PersianDateTime.IsValidDateTime
+- uid: DNTPersianUtils.Core.PersianDateTime.IsValidDateTime*
+  name: IsValidDateTime
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_IsValidDateTime_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.IsValidDateTime
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.IsValidDateTime
+  nameWithType: PersianDateTime.IsValidDateTime
+- uid: DNTPersianUtils.Core.PersianDateTime.Minute
+  name: Minute
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Minute
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.Minute
+  fullName: DNTPersianUtils.Core.PersianDateTime.Minute
+  nameWithType: PersianDateTime.Minute
+- uid: DNTPersianUtils.Core.PersianDateTime.Minute*
+  name: Minute
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Minute_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.Minute
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.Minute
+  nameWithType: PersianDateTime.Minute
+- uid: DNTPersianUtils.Core.PersianDateTime.Month
+  name: Month
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Month
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.Month
+  fullName: DNTPersianUtils.Core.PersianDateTime.Month
+  nameWithType: PersianDateTime.Month
+- uid: DNTPersianUtils.Core.PersianDateTime.Month*
+  name: Month
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Month_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.Month
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.Month
+  nameWithType: PersianDateTime.Month
+- uid: DNTPersianUtils.Core.PersianDateTime.MonthName
+  name: MonthName
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_MonthName
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.MonthName
+  fullName: DNTPersianUtils.Core.PersianDateTime.MonthName
+  nameWithType: PersianDateTime.MonthName
+- uid: DNTPersianUtils.Core.PersianDateTime.MonthName*
+  name: MonthName
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_MonthName_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.MonthName
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.MonthName
+  nameWithType: PersianDateTime.MonthName
+- uid: DNTPersianUtils.Core.PersianDateTime.PersianMonth
+  name: PersianMonth
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_PersianMonth
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.PersianMonth
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianMonth
+  nameWithType: PersianDateTime.PersianMonth
+- uid: DNTPersianUtils.Core.PersianDateTime.PersianMonth*
+  name: PersianMonth
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_PersianMonth_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.PersianMonth
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianMonth
+  nameWithType: PersianDateTime.PersianMonth
+- uid: DNTPersianUtils.Core.PersianDateTime.PersianMonthDayNumberName
+  name: PersianMonthDayNumberName
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_PersianMonthDayNumberName
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.PersianMonthDayNumberName
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianMonthDayNumberName
+  nameWithType: PersianDateTime.PersianMonthDayNumberName
+- uid: DNTPersianUtils.Core.PersianDateTime.PersianMonthDayNumberName*
+  name: PersianMonthDayNumberName
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_PersianMonthDayNumberName_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.PersianMonthDayNumberName
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianMonthDayNumberName
+  nameWithType: PersianDateTime.PersianMonthDayNumberName
+- uid: DNTPersianUtils.Core.PersianDateTime.PersianWeek
+  name: PersianWeek
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_PersianWeek
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.PersianWeek
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianWeek
+  nameWithType: PersianDateTime.PersianWeek
+- uid: DNTPersianUtils.Core.PersianDateTime.PersianWeek*
+  name: PersianWeek
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_PersianWeek_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.PersianWeek
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianWeek
+  nameWithType: PersianDateTime.PersianWeek
+- uid: DNTPersianUtils.Core.PersianDateTime.PersianYear
+  name: PersianYear
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_PersianYear
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.PersianYear
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianYear
+  nameWithType: PersianDateTime.PersianYear
+- uid: DNTPersianUtils.Core.PersianDateTime.PersianYear*
+  name: PersianYear
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_PersianYear_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.PersianYear
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianYear
+  nameWithType: PersianDateTime.PersianYear
+- uid: DNTPersianUtils.Core.PersianDateTime.Second
+  name: Second
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Second
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.Second
+  fullName: DNTPersianUtils.Core.PersianDateTime.Second
+  nameWithType: PersianDateTime.Second
+- uid: DNTPersianUtils.Core.PersianDateTime.Second*
+  name: Second
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Second_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.Second
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.Second
+  nameWithType: PersianDateTime.Second
+- uid: DNTPersianUtils.Core.PersianDateTime.ToString
+  name: ToString()
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_ToString
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.ToString
+  fullName: DNTPersianUtils.Core.PersianDateTime.ToString()
+  nameWithType: PersianDateTime.ToString()
+- uid: DNTPersianUtils.Core.PersianDateTime.ToString*
+  name: ToString
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_ToString_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.ToString
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.ToString
+  nameWithType: PersianDateTime.ToString
+- uid: DNTPersianUtils.Core.PersianDateTime.WeekDayName
+  name: WeekDayName
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_WeekDayName
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.WeekDayName
+  fullName: DNTPersianUtils.Core.PersianDateTime.WeekDayName
+  nameWithType: PersianDateTime.WeekDayName
+- uid: DNTPersianUtils.Core.PersianDateTime.WeekDayName*
+  name: WeekDayName
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_WeekDayName_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.WeekDayName
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.WeekDayName
+  nameWithType: PersianDateTime.WeekDayName
+- uid: DNTPersianUtils.Core.PersianDateTime.WeekDayNumber
+  name: WeekDayNumber
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_WeekDayNumber
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.WeekDayNumber
+  fullName: DNTPersianUtils.Core.PersianDateTime.WeekDayNumber
+  nameWithType: PersianDateTime.WeekDayNumber
+- uid: DNTPersianUtils.Core.PersianDateTime.WeekDayNumber*
+  name: WeekDayNumber
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_WeekDayNumber_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.WeekDayNumber
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.WeekDayNumber
+  nameWithType: PersianDateTime.WeekDayNumber
+- uid: DNTPersianUtils.Core.PersianDateTime.Year
+  name: Year
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Year
+  commentId: P:DNTPersianUtils.Core.PersianDateTime.Year
+  fullName: DNTPersianUtils.Core.PersianDateTime.Year
+  nameWithType: PersianDateTime.Year
+- uid: DNTPersianUtils.Core.PersianDateTime.Year*
+  name: Year
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_Year_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.Year
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTime.Year
+  nameWithType: PersianDateTime.Year
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils
   name: PersianDateTimeUtils
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html
@@ -5037,6 +5431,22 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateOnly
   nameWithType: PersianDateTimeUtils.ToPersianDateOnly
+- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTime(System.String,System.Int32)
+  name: ToPersianDateTime(string?, int)
+  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianDateTime_System_String_System_Int32_
+  commentId: M:DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTime(System.String,System.Int32)
+  name.vb: ToPersianDateTime(String, Integer)
+  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTime(string?, int)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTime(String, Integer)
+  nameWithType: PersianDateTimeUtils.ToPersianDateTime(string?, int)
+  nameWithType.vb: PersianDateTimeUtils.ToPersianDateTime(String, Integer)
+- uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTime*
+  name: ToPersianDateTime
+  href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianDateTime_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTime
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTime
+  nameWithType: PersianDateTimeUtils.ToPersianDateTime
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils.ToPersianDateTimeString(System.DateOnly,System.String,System.Boolean)
   name: ToPersianDateTimeString(DateOnly, string, bool)
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html#DNTPersianUtils_Core_PersianDateTimeUtils_ToPersianDateTimeString_System_DateOnly_System_String_System_Boolean_
