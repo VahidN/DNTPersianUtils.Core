@@ -1,12 +1,7 @@
 ﻿DNTPersianUtils.Core
 =======
 
-
-<p>
-  <a href="https://github.com/VahidN/DNTPersianUtils.Core">
-     <img alt="GitHub Actions status" src="https://github.com/VahidN/DNTPersianUtils.Core/workflows/.NET%20Core%20Build/badge.svg">
-  </a>
-</p>
+[![DNTPersianUtils.Core](https://github.com/VahidN/DNTPersianUtils.Core/workflows/.NET%20Core%20Build/badge.svg)](https://github.com/VahidN/DNTPersianUtils.Core)
 
 <div dir="rtl">
 DNTPersianUtils.Core کتابخانه‌ای است متشکل از متدهای الحاقی کمکی جهت کار با فرهنگ فارسی، در برنامه‌های مبتنی بر NET Core. و همچنین NET 4.x.

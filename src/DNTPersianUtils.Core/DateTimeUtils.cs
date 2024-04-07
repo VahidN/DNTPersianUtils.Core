@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
@@ -660,4 +661,19 @@ public static class DateTimeUtils
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         => HasExpired(expirationTime.GetDateTimeOffsetPart(dateTimeOffsetPart),
             now.GetDateTimeOffsetPart(dateTimeOffsetPart));
+
+    /// <summary>
+    ///     آيا زمان وارد شده معتبر است؟
+    /// </summary>
+    /// <param name="inputTime">زمان وارد شده مانند 10:12:1</param>
+    /// <returns></returns>
+    public static bool IsValidTimeValue(this string inputTime)
+        => TimeSpan.TryParse(inputTime, out _);
+
+    /// <summary>
+    ///     آيا مقدار مدنظر بين دو مقدار مشخص و يا مساوي آن‌ها قرار مي‌گيرد؟
+    /// </summary>
+    public static bool IsBetween<T>(this T value, T lowest, T highest)
+        where T : IComparable
+        => Comparer<T>.Default.Compare(lowest, value) <= 0 && Comparer<T>.Default.Compare(highest, value) >= 0;
 }
