@@ -35,7 +35,101 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// <summary>
     ///     اجزای تاريخ و زمان شمسی
     /// </summary>
+    public PersianDateTime(DateTime? dateTime)
+    {
+        var persianYearMonthDay = dateTime.ToPersianYearMonthDay();
+        IsValidDateTime = persianYearMonthDay is not null;
+
+        if (!IsValidDateTime)
+        {
+            return;
+        }
+
+        Year = persianYearMonthDay!.Year;
+        Month = persianYearMonthDay!.Month;
+        Day = persianYearMonthDay!.Day;
+        Hour = dateTime!.Value.Hour;
+        Minute = dateTime!.Value.Minute;
+        Second = dateTime!.Value.Second;
+    }
+
+    /// <summary>
+    ///     اجزای تاريخ و زمان شمسی
+    /// </summary>
+    public PersianDateTime(DateTime dateTime)
+    {
+        var persianYearMonthDay = dateTime.ToPersianYearMonthDay();
+        IsValidDateTime = true;
+
+        Year = persianYearMonthDay!.Year;
+        Month = persianYearMonthDay!.Month;
+        Day = persianYearMonthDay!.Day;
+        Hour = dateTime.Hour;
+        Minute = dateTime.Minute;
+        Second = dateTime.Second;
+    }
+
+    /// <summary>
+    ///     اجزای تاريخ و زمان شمسی
+    /// </summary>
+    public PersianDateTime(DateTimeOffset? dateTimeOffset)
+    {
+        var persianYearMonthDay = dateTimeOffset.ToPersianYearMonthDay();
+        IsValidDateTime = persianYearMonthDay is not null;
+
+        if (!IsValidDateTime)
+        {
+            return;
+        }
+
+        Year = persianYearMonthDay!.Year;
+        Month = persianYearMonthDay!.Month;
+        Day = persianYearMonthDay!.Day;
+        Hour = dateTimeOffset!.Value.Hour;
+        Minute = dateTimeOffset!.Value.Minute;
+        Second = dateTimeOffset!.Value.Second;
+    }
+
+    /// <summary>
+    ///     اجزای تاريخ و زمان شمسی
+    /// </summary>
+    public PersianDateTime(DateTimeOffset dateTimeOffset)
+    {
+        var persianYearMonthDay = dateTimeOffset.ToPersianYearMonthDay();
+        IsValidDateTime = true;
+
+        Year = persianYearMonthDay!.Year;
+        Month = persianYearMonthDay!.Month;
+        Day = persianYearMonthDay!.Day;
+        Hour = dateTimeOffset.Hour;
+        Minute = dateTimeOffset.Minute;
+        Second = dateTimeOffset.Second;
+    }
+
+    /// <summary>
+    ///     اجزای تاريخ و زمان شمسی
+    /// </summary>
     public PersianDateTime(int year, int month, int day)
+    {
+        IsValidDateTime = IsValidInstance(year, month, day, 0, 0, 0);
+
+        if (!IsValidDateTime)
+        {
+            return;
+        }
+
+        Year = year;
+        Month = month;
+        Day = day;
+        Hour = 0;
+        Minute = 0;
+        Second = 0;
+    }
+
+    /// <summary>
+    ///     اجزای تاريخ و زمان شمسی
+    /// </summary>
+    public PersianDateTime(int? year, int? month, int? day)
     {
         IsValidDateTime = IsValidInstance(year, month, day, 0, 0, 0);
 
@@ -75,7 +169,47 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// <summary>
     ///     اجزای تاريخ و زمان شمسی
     /// </summary>
+    public PersianDateTime(int? year, int? month, int? day, int? hour, int? minute, int? second)
+    {
+        IsValidDateTime = IsValidInstance(year, month, day, hour, minute, second);
+
+        if (!IsValidDateTime)
+        {
+            return;
+        }
+
+        Year = year;
+        Month = month;
+        Day = day;
+        Hour = hour;
+        Minute = minute;
+        Second = second;
+    }
+
+    /// <summary>
+    ///     اجزای تاريخ و زمان شمسی
+    /// </summary>
     public PersianDateTime(int year, int month, int day, int hour, int minute)
+    {
+        IsValidDateTime = IsValidInstance(year, month, day, hour, minute, 0);
+
+        if (!IsValidDateTime)
+        {
+            return;
+        }
+
+        Year = year;
+        Month = month;
+        Day = day;
+        Hour = hour;
+        Minute = minute;
+        Second = 0;
+    }
+
+    /// <summary>
+    ///     اجزای تاريخ و زمان شمسی
+    /// </summary>
+    public PersianDateTime(int? year, int? month, int? day, int? hour, int? minute)
     {
         IsValidDateTime = IsValidInstance(year, month, day, hour, minute, 0);
 
@@ -258,12 +392,22 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     }
 
     /// <inheritdoc />
-    public int GetHashCode(PersianDateTime obj)
-        => GetCurrentHashCode(obj);
+    public int GetHashCode(PersianDateTime obj) => GetCurrentHashCode(obj);
 
-    private static bool IsValidInstance(int year, int month, int day, int hour, int minute, int second)
-        => hour.IsBetween(0, 23) && minute.IsBetween(0, 59) && second.IsBetween(0, 59) &&
-           year.IsValidPersianDate(month, day);
+    private static bool IsValidInstance(int? year, int? month, int? day, int? hour, int? minute, int? second)
+    {
+        if (!year.HasValue || !month.HasValue || !day.HasValue)
+        {
+            return false;
+        }
+
+        hour ??= 0;
+        minute ??= 0;
+        second ??= 0;
+
+        return hour.Value.IsBetween(0, 23) && minute.Value.IsBetween(0, 59) && second.Value.IsBetween(0, 59) &&
+               year.Value.IsValidPersianDate(month.Value, day.Value);
+    }
 
     /// <summary>
     ///     ToString()
@@ -294,8 +438,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     ///     GetHashCode
     /// </summary>
     /// <returns></returns>
-    public override int GetHashCode()
-        => GetCurrentHashCode(this);
+    public override int GetHashCode() => GetCurrentHashCode(this);
 
     private int GetCurrentHashCode(PersianDateTime day)
     {
@@ -313,4 +456,79 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
             return hash;
         }
     }
+
+    /// <summary>
+    ///     Returns a PersianDateTime.
+    /// </summary>
+    public static implicit operator PersianDateTime(string? persianDateTime) => new(persianDateTime);
+
+    /// <summary>
+    ///     Returns a PersianDateTime.
+    /// </summary>
+    public static implicit operator PersianDateTime(DateTime? dateTime) => new(dateTime);
+
+    /// <summary>
+    ///     Returns a PersianDateTime.
+    /// </summary>
+    public static implicit operator PersianDateTime(DateTime dateTime) => new(dateTime);
+
+    /// <summary>
+    ///     Returns a PersianDateTime.
+    /// </summary>
+    public static implicit operator PersianDateTime(DateTimeOffset? dateTimeOffset) => new(dateTimeOffset);
+
+    /// <summary>
+    ///     Returns a PersianDateTime.
+    /// </summary>
+    public static implicit operator PersianDateTime(DateTimeOffset dateTimeOffset) => new(dateTimeOffset);
+
+#if NET6_0 || NET7_0 || NET8_0
+
+    /// <summary>
+    ///     Returns a PersianDateTime.
+    /// </summary>
+    public static implicit operator PersianDateTime(DateOnly? dateOnly) => new(dateOnly);
+
+    /// <summary>
+    ///     Returns a PersianDateTime.
+    /// </summary>
+    public static implicit operator PersianDateTime(DateOnly dateOnly) => new(dateOnly);
+
+    /// <summary>
+    ///     اجزای تاريخ و زمان شمسی
+    /// </summary>
+    public PersianDateTime(DateOnly? dateOnly)
+    {
+        var persianYearMonthDay = dateOnly.ToPersianYearMonthDay();
+        IsValidDateTime = persianYearMonthDay is not null;
+
+        if (!IsValidDateTime)
+        {
+            return;
+        }
+
+        Year = persianYearMonthDay!.Year;
+        Month = persianYearMonthDay!.Month;
+        Day = persianYearMonthDay!.Day;
+        Hour = 0;
+        Minute = 0;
+        Second = 0;
+    }
+
+    /// <summary>
+    ///     اجزای تاريخ و زمان شمسی
+    /// </summary>
+    public PersianDateTime(DateOnly dateOnly)
+    {
+        var persianYearMonthDay = dateOnly.ToPersianYearMonthDay();
+        IsValidDateTime = true;
+
+        Year = persianYearMonthDay!.Year;
+        Month = persianYearMonthDay!.Month;
+        Day = persianYearMonthDay!.Day;
+        Hour = 0;
+        Minute = 0;
+        Second = 0;
+    }
+#endif
 }
