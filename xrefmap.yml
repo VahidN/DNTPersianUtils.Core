@@ -4840,6 +4840,33 @@ references:
   commentId: T:DNTPersianUtils.Core.PersianDateTime
   fullName: DNTPersianUtils.Core.PersianDateTime
   nameWithType: PersianDateTime
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.DateOnly)
+  name: PersianDateTime(DateOnly)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_DateOnly_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.DateOnly)
+  name.vb: New(DateOnly)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(System.DateOnly)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(System.DateOnly)
+  nameWithType: PersianDateTime.PersianDateTime(DateOnly)
+  nameWithType.vb: PersianDateTime.New(DateOnly)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.DateTime)
+  name: PersianDateTime(DateTime)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_DateTime_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.DateTime)
+  name.vb: New(Date)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(System.DateTime)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(Date)
+  nameWithType: PersianDateTime.PersianDateTime(DateTime)
+  nameWithType.vb: PersianDateTime.New(Date)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.DateTimeOffset)
+  name: PersianDateTime(DateTimeOffset)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_DateTimeOffset_
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.DateTimeOffset)
+  name.vb: New(DateTimeOffset)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(System.DateTimeOffset)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(System.DateTimeOffset)
+  nameWithType: PersianDateTime.PersianDateTime(DateTimeOffset)
+  nameWithType.vb: PersianDateTime.New(DateTimeOffset)
 - uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Int32,System.Int32,System.Int32)
   name: PersianDateTime(int, int, int)
   href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Int32_System_Int32_System_Int32_
@@ -4867,6 +4894,60 @@ references:
   fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(Integer, Integer, Integer, Integer, Integer, Integer)
   nameWithType: PersianDateTime.PersianDateTime(int, int, int, int, int, int)
   nameWithType.vb: PersianDateTime.New(Integer, Integer, Integer, Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.DateOnly})
+  name: PersianDateTime(DateOnly?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Nullable_System_DateOnly__
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.DateOnly})
+  name.vb: New(DateOnly?)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(System.DateOnly?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(System.DateOnly?)
+  nameWithType: PersianDateTime.PersianDateTime(DateOnly?)
+  nameWithType.vb: PersianDateTime.New(DateOnly?)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.DateTimeOffset})
+  name: PersianDateTime(DateTimeOffset?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Nullable_System_DateTimeOffset__
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.DateTimeOffset})
+  name.vb: New(DateTimeOffset?)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(System.DateTimeOffset?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(System.DateTimeOffset?)
+  nameWithType: PersianDateTime.PersianDateTime(DateTimeOffset?)
+  nameWithType.vb: PersianDateTime.New(DateTimeOffset?)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.DateTime})
+  name: PersianDateTime(DateTime?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Nullable_System_DateTime__
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.DateTime})
+  name.vb: New(Date?)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(System.DateTime?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(Date?)
+  nameWithType: PersianDateTime.PersianDateTime(DateTime?)
+  nameWithType.vb: PersianDateTime.New(Date?)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: PersianDateTime(int?, int?, int?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: New(Integer?, Integer?, Integer?)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(int?, int?, int?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(Integer?, Integer?, Integer?)
+  nameWithType: PersianDateTime.PersianDateTime(int?, int?, int?)
+  nameWithType.vb: PersianDateTime.New(Integer?, Integer?, Integer?)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: PersianDateTime(int?, int?, int?, int?, int?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: New(Integer?, Integer?, Integer?, Integer?, Integer?)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(int?, int?, int?, int?, int?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(Integer?, Integer?, Integer?, Integer?, Integer?)
+  nameWithType: PersianDateTime.PersianDateTime(int?, int?, int?, int?, int?)
+  nameWithType.vb: PersianDateTime.New(Integer?, Integer?, Integer?, Integer?, Integer?)
+- uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: PersianDateTime(int?, int?, int?, int?, int?, int?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: New(Integer?, Integer?, Integer?, Integer?, Integer?, Integer?)
+  fullName: DNTPersianUtils.Core.PersianDateTime.PersianDateTime(int?, int?, int?, int?, int?, int?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.New(Integer?, Integer?, Integer?, Integer?, Integer?, Integer?)
+  nameWithType: PersianDateTime.PersianDateTime(int?, int?, int?, int?, int?, int?)
+  nameWithType.vb: PersianDateTime.New(Integer?, Integer?, Integer?, Integer?, Integer?, Integer?)
 - uid: DNTPersianUtils.Core.PersianDateTime.#ctor(System.String)
   name: PersianDateTime(string?)
   href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime__ctor_System_String_
@@ -5203,6 +5284,79 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.PersianDateTime.Year
   nameWithType: PersianDateTime.Year
+- uid: DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.DateOnly)~DNTPersianUtils.Core.PersianDateTime
+  name: implicit operator PersianDateTime(DateOnly)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_op_Implicit_System_DateOnly__DNTPersianUtils_Core_PersianDateTime
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.DateOnly)~DNTPersianUtils.Core.PersianDateTime
+  name.vb: CType(DateOnly)
+  fullName: DNTPersianUtils.Core.PersianDateTime.implicit operator DNTPersianUtils.Core.PersianDateTime(System.DateOnly)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.CType(System.DateOnly)
+  nameWithType: PersianDateTime.implicit operator PersianDateTime(DateOnly)
+  nameWithType.vb: PersianDateTime.CType(DateOnly)
+- uid: DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.DateTime)~DNTPersianUtils.Core.PersianDateTime
+  name: implicit operator PersianDateTime(DateTime)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_op_Implicit_System_DateTime__DNTPersianUtils_Core_PersianDateTime
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.DateTime)~DNTPersianUtils.Core.PersianDateTime
+  name.vb: CType(Date)
+  fullName: DNTPersianUtils.Core.PersianDateTime.implicit operator DNTPersianUtils.Core.PersianDateTime(System.DateTime)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.CType(Date)
+  nameWithType: PersianDateTime.implicit operator PersianDateTime(DateTime)
+  nameWithType.vb: PersianDateTime.CType(Date)
+- uid: DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.DateTimeOffset)~DNTPersianUtils.Core.PersianDateTime
+  name: implicit operator PersianDateTime(DateTimeOffset)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_op_Implicit_System_DateTimeOffset__DNTPersianUtils_Core_PersianDateTime
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.DateTimeOffset)~DNTPersianUtils.Core.PersianDateTime
+  name.vb: CType(DateTimeOffset)
+  fullName: DNTPersianUtils.Core.PersianDateTime.implicit operator DNTPersianUtils.Core.PersianDateTime(System.DateTimeOffset)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.CType(System.DateTimeOffset)
+  nameWithType: PersianDateTime.implicit operator PersianDateTime(DateTimeOffset)
+  nameWithType.vb: PersianDateTime.CType(DateTimeOffset)
+- uid: DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.Nullable{System.DateOnly})~DNTPersianUtils.Core.PersianDateTime
+  name: implicit operator PersianDateTime(DateOnly?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_op_Implicit_System_Nullable_System_DateOnly___DNTPersianUtils_Core_PersianDateTime
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.Nullable{System.DateOnly})~DNTPersianUtils.Core.PersianDateTime
+  name.vb: CType(DateOnly?)
+  fullName: DNTPersianUtils.Core.PersianDateTime.implicit operator DNTPersianUtils.Core.PersianDateTime(System.DateOnly?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.CType(System.DateOnly?)
+  nameWithType: PersianDateTime.implicit operator PersianDateTime(DateOnly?)
+  nameWithType.vb: PersianDateTime.CType(DateOnly?)
+- uid: DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.Nullable{System.DateTimeOffset})~DNTPersianUtils.Core.PersianDateTime
+  name: implicit operator PersianDateTime(DateTimeOffset?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_op_Implicit_System_Nullable_System_DateTimeOffset___DNTPersianUtils_Core_PersianDateTime
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.Nullable{System.DateTimeOffset})~DNTPersianUtils.Core.PersianDateTime
+  name.vb: CType(DateTimeOffset?)
+  fullName: DNTPersianUtils.Core.PersianDateTime.implicit operator DNTPersianUtils.Core.PersianDateTime(System.DateTimeOffset?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.CType(System.DateTimeOffset?)
+  nameWithType: PersianDateTime.implicit operator PersianDateTime(DateTimeOffset?)
+  nameWithType.vb: PersianDateTime.CType(DateTimeOffset?)
+- uid: DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.Nullable{System.DateTime})~DNTPersianUtils.Core.PersianDateTime
+  name: implicit operator PersianDateTime(DateTime?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_op_Implicit_System_Nullable_System_DateTime___DNTPersianUtils_Core_PersianDateTime
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.Nullable{System.DateTime})~DNTPersianUtils.Core.PersianDateTime
+  name.vb: CType(Date?)
+  fullName: DNTPersianUtils.Core.PersianDateTime.implicit operator DNTPersianUtils.Core.PersianDateTime(System.DateTime?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.CType(Date?)
+  nameWithType: PersianDateTime.implicit operator PersianDateTime(DateTime?)
+  nameWithType.vb: PersianDateTime.CType(Date?)
+- uid: DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.String)~DNTPersianUtils.Core.PersianDateTime
+  name: implicit operator PersianDateTime(string?)
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_op_Implicit_System_String__DNTPersianUtils_Core_PersianDateTime
+  commentId: M:DNTPersianUtils.Core.PersianDateTime.op_Implicit(System.String)~DNTPersianUtils.Core.PersianDateTime
+  name.vb: CType(String)
+  fullName: DNTPersianUtils.Core.PersianDateTime.implicit operator DNTPersianUtils.Core.PersianDateTime(string?)
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.CType(String)
+  nameWithType: PersianDateTime.implicit operator PersianDateTime(string?)
+  nameWithType.vb: PersianDateTime.CType(String)
+- uid: DNTPersianUtils.Core.PersianDateTime.op_Implicit*
+  name: implicit operator
+  href: api/DNTPersianUtils.Core.PersianDateTime.html#DNTPersianUtils_Core_PersianDateTime_op_Implicit_
+  commentId: Overload:DNTPersianUtils.Core.PersianDateTime.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: DNTPersianUtils.Core.PersianDateTime.implicit operator
+  fullName.vb: DNTPersianUtils.Core.PersianDateTime.CType
+  nameWithType: PersianDateTime.implicit operator
+  nameWithType.vb: PersianDateTime.CType
 - uid: DNTPersianUtils.Core.PersianDateTimeUtils
   name: PersianDateTimeUtils
   href: api/DNTPersianUtils.Core.PersianDateTimeUtils.html
