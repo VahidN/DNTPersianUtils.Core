@@ -6673,6 +6673,37 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.IsValid
   nameWithType: ShouldContainOnlyPersianNumbersAttribute.IsValid
+- uid: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute
+  name: ShouldContainPersianLettersAttribute
+  href: api/DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.html
+  commentId: T:DNTPersianUtils.Core.ShouldContainPersianLettersAttribute
+  fullName: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute
+  nameWithType: ShouldContainPersianLettersAttribute
+- uid: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid(System.Object)
+  name: IsValid(object?)
+  href: api/DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.html#DNTPersianUtils_Core_ShouldContainPersianLettersAttribute_IsValid_System_Object_
+  commentId: M:DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid(System.Object)
+  name.vb: IsValid(Object)
+  fullName: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid(object?)
+  fullName.vb: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid(Object)
+  nameWithType: ShouldContainPersianLettersAttribute.IsValid(object?)
+  nameWithType.vb: ShouldContainPersianLettersAttribute.IsValid(Object)
+- uid: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.html#DNTPersianUtils_Core_ShouldContainPersianLettersAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ShouldContainPersianLettersAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: ShouldContainPersianLettersAttribute.IsValid(Object, ValidationContext)
+- uid: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid*
+  name: IsValid
+  href: api/DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.html#DNTPersianUtils_Core_ShouldContainPersianLettersAttribute_IsValid_
+  commentId: Overload:DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.IsValid
+  nameWithType: ShouldContainPersianLettersAttribute.IsValid
 - uid: DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute
   name: ShouldContainPersianLettersOrNumbersAttribute
   href: api/DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.html
