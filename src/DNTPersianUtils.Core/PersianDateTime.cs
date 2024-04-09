@@ -181,9 +181,9 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
         Year = year;
         Month = month;
         Day = day;
-        Hour = hour;
-        Minute = minute;
-        Second = second;
+        Hour = hour ?? 0;
+        Minute = minute ?? 0;
+        Second = second ?? 0;
     }
 
     /// <summary>
@@ -221,8 +221,8 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
         Year = year;
         Month = month;
         Day = day;
-        Hour = hour;
-        Minute = minute;
+        Hour = hour ?? 0;
+        Minute = minute ?? 0;
         Second = 0;
     }
 
