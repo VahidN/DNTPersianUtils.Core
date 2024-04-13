@@ -6563,15 +6563,31 @@ references:
   commentId: T:DNTPersianUtils.Core.SeoUtils
   fullName: DNTPersianUtils.Core.SeoUtils
   nameWithType: SeoUtils
-- uid: DNTPersianUtils.Core.SeoUtils.GetPostSlug(System.String,System.Collections.Generic.ISet{System.Char})
-  name: GetPostSlug(string, ISet<char>?)
-  href: api/DNTPersianUtils.Core.SeoUtils.html#DNTPersianUtils_Core_SeoUtils_GetPostSlug_System_String_System_Collections_Generic_ISet_System_Char__
-  commentId: M:DNTPersianUtils.Core.SeoUtils.GetPostSlug(System.String,System.Collections.Generic.ISet{System.Char})
-  name.vb: GetPostSlug(String, ISet(Of Char))
-  fullName: DNTPersianUtils.Core.SeoUtils.GetPostSlug(string, System.Collections.Generic.ISet<char>?)
-  fullName.vb: DNTPersianUtils.Core.SeoUtils.GetPostSlug(String, System.Collections.Generic.ISet(Of Char))
-  nameWithType: SeoUtils.GetPostSlug(string, ISet<char>?)
-  nameWithType.vb: SeoUtils.GetPostSlug(String, ISet(Of Char))
+- uid: DNTPersianUtils.Core.SeoUtils.GetCleanedTag(System.String,System.Collections.Generic.ISet{System.Char},System.Boolean,System.Char)
+  name: GetCleanedTag(string?, ISet<char>?, bool, char)
+  href: api/DNTPersianUtils.Core.SeoUtils.html#DNTPersianUtils_Core_SeoUtils_GetCleanedTag_System_String_System_Collections_Generic_ISet_System_Char__System_Boolean_System_Char_
+  commentId: M:DNTPersianUtils.Core.SeoUtils.GetCleanedTag(System.String,System.Collections.Generic.ISet{System.Char},System.Boolean,System.Char)
+  name.vb: GetCleanedTag(String, ISet(Of Char), Boolean, Char)
+  fullName: DNTPersianUtils.Core.SeoUtils.GetCleanedTag(string?, System.Collections.Generic.ISet<char>?, bool, char)
+  fullName.vb: DNTPersianUtils.Core.SeoUtils.GetCleanedTag(String, System.Collections.Generic.ISet(Of Char), Boolean, Char)
+  nameWithType: SeoUtils.GetCleanedTag(string?, ISet<char>?, bool, char)
+  nameWithType.vb: SeoUtils.GetCleanedTag(String, ISet(Of Char), Boolean, Char)
+- uid: DNTPersianUtils.Core.SeoUtils.GetCleanedTag*
+  name: GetCleanedTag
+  href: api/DNTPersianUtils.Core.SeoUtils.html#DNTPersianUtils_Core_SeoUtils_GetCleanedTag_
+  commentId: Overload:DNTPersianUtils.Core.SeoUtils.GetCleanedTag
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.SeoUtils.GetCleanedTag
+  nameWithType: SeoUtils.GetCleanedTag
+- uid: DNTPersianUtils.Core.SeoUtils.GetPostSlug(System.String,System.Collections.Generic.ISet{System.Char},System.Boolean,System.Char)
+  name: GetPostSlug(string?, ISet<char>?, bool, char)
+  href: api/DNTPersianUtils.Core.SeoUtils.html#DNTPersianUtils_Core_SeoUtils_GetPostSlug_System_String_System_Collections_Generic_ISet_System_Char__System_Boolean_System_Char_
+  commentId: M:DNTPersianUtils.Core.SeoUtils.GetPostSlug(System.String,System.Collections.Generic.ISet{System.Char},System.Boolean,System.Char)
+  name.vb: GetPostSlug(String, ISet(Of Char), Boolean, Char)
+  fullName: DNTPersianUtils.Core.SeoUtils.GetPostSlug(string?, System.Collections.Generic.ISet<char>?, bool, char)
+  fullName.vb: DNTPersianUtils.Core.SeoUtils.GetPostSlug(String, System.Collections.Generic.ISet(Of Char), Boolean, Char)
+  nameWithType: SeoUtils.GetPostSlug(string?, ISet<char>?, bool, char)
+  nameWithType.vb: SeoUtils.GetPostSlug(String, ISet(Of Char), Boolean, Char)
 - uid: DNTPersianUtils.Core.SeoUtils.GetPostSlug*
   name: GetPostSlug
   href: api/DNTPersianUtils.Core.SeoUtils.html#DNTPersianUtils_Core_SeoUtils_GetPostSlug_
@@ -6585,6 +6601,12 @@ references:
   commentId: F:DNTPersianUtils.Core.SeoUtils.PersianSlugReplacements
   fullName: DNTPersianUtils.Core.SeoUtils.PersianSlugReplacements
   nameWithType: SeoUtils.PersianSlugReplacements
+- uid: DNTPersianUtils.Core.SeoUtils.PersianTagReplacements
+  name: PersianTagReplacements
+  href: api/DNTPersianUtils.Core.SeoUtils.html#DNTPersianUtils_Core_SeoUtils_PersianTagReplacements
+  commentId: F:DNTPersianUtils.Core.SeoUtils.PersianTagReplacements
+  fullName: DNTPersianUtils.Core.SeoUtils.PersianTagReplacements
+  nameWithType: SeoUtils.PersianTagReplacements
 - uid: DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute
   name: ShouldContainOnlyPersianLettersAttribute
   href: api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.html
