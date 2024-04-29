@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 
 namespace DNTPersianUtils.Core;
 
@@ -13,20 +12,7 @@ public static class DateTimeUtils
     /// <summary>
     ///     Iran Standard Time
     /// </summary>
-    public static readonly TimeZoneInfo IranStandardTime = TimeZoneInfo.GetSystemTimeZones().FirstOrDefault(timeZoneInfo
-                                                               => timeZoneInfo.StandardName.Contains("Iran",
-                                                                      StringComparison.OrdinalIgnoreCase) ||
-                                                                  timeZoneInfo.StandardName.Contains("Tehran",
-                                                                      StringComparison.OrdinalIgnoreCase) ||
-                                                                  timeZoneInfo.Id.Contains("Iran",
-                                                                      StringComparison.OrdinalIgnoreCase) ||
-                                                                  timeZoneInfo.Id.Contains("Tehran",
-                                                                      StringComparison.OrdinalIgnoreCase)) ??
-#if !NETSTANDARD1_3
-                                                           IranTimeZoneInfo.Instance;
-#else
-        throw new PlatformNotSupportedException($"This OS[{System.Runtime.InteropServices.RuntimeInformation.OSDescription}] doesn't support IranStandardTime.");
-#endif
+    public static readonly TimeZoneInfo IranStandardTime = IranTimeZoneInfo.Instance;
 
     /// <summary>
     ///     Epoch represented as DateTime
@@ -80,45 +66,6 @@ public static class DateTimeUtils
         return age;
     }
 
-#if NET6_0 || NET7_0 || NET8_0
-    /// <summary>
-    ///     تبديل به ابتداي روز ساختار قبلي
-    /// </summary>
-    /// <param name="date">تاريخ مدنظر</param>
-    public static DateTime ToDateTime(this DateOnly date)
-        => date.ToDateTime(new TimeOnly(0, 0));
-
-    /// <summary>
-    ///     تبديل به ابتداي روز ساختار جديد
-    /// </summary>
-    /// <param name="dateTime">تاريخ مدنظر</param>
-    public static DateOnly ToDateOnly(this DateTime dateTime)
-        => DateOnly.FromDateTime(dateTime);
-
-    /// <summary>
-    ///     تبديل به ابتداي روز ساختار قبلي
-    /// </summary>
-    /// <param name="date">تاريخ مدنظر</param>
-    public static DateTime? ToDateTime(this DateOnly? date)
-        => date?.ToDateTime(new TimeOnly(0, 0));
-
-    /// <summary>
-    ///     تبديل به ابتداي روز ساختار جديد
-    /// </summary>
-    /// <param name="dateTime">تاريخ مدنظر</param>
-    public static DateOnly? ToDateOnly(this DateTime? dateTime)
-        => dateTime is null ? null : DateOnly.FromDateTime(dateTime.Value);
-
-    /// <summary>
-    ///     محاسبه سن
-    /// </summary>
-    /// <param name="birthday">تاریخ تولد</param>
-    /// <param name="comparisonBase">مبنای محاسبه مانند هم اکنون</param>
-    /// <returns>سن</returns>
-    public static int GetAge(this DateOnly birthday, DateOnly comparisonBase)
-        => birthday.ToDateTime().GetAge(comparisonBase.ToDateTime());
-#endif
-
     /// <summary>
     ///     محاسبه سن
     ///     مبنای محاسبه هم اکنون
@@ -139,8 +86,7 @@ public static class DateTimeUtils
     /// </summary>
     /// <param name="birthday">تاریخ تولد</param>
     /// <returns>سن</returns>
-    public static int GetAge(this DateOnly birthday)
-        => birthday.ToDateTime().GetAge();
+    public static int GetAge(this DateOnly birthday) => birthday.ToDateTime().GetAge();
 #endif
     /// <summary>
     ///     دریافت جزء زمانی ویژه‌ی این وهله
@@ -198,8 +144,7 @@ public static class DateTimeUtils
     /// </summary>
     /// <param name="date">A given <see cref="DateOnly" /></param>
     /// <returns>Milliseconds since Epoch</returns>
-    public static long ToEpochMilliseconds(this DateOnly date)
-        => date.ToDateTime().ToEpochMilliseconds();
+    public static long ToEpochMilliseconds(this DateOnly date) => date.ToDateTime().ToEpochMilliseconds();
 #endif
 
     /// <summary>
@@ -221,8 +166,7 @@ public static class DateTimeUtils
     /// </summary>
     /// <param name="dateTime">A given <see cref="DateTime" /></param>
     /// <returns>The Unix time stamp</returns>
-    public static long ToEpochSeconds(this DateTime dateTime)
-        => dateTime.ToEpochMilliseconds() / 1000;
+    public static long ToEpochSeconds(this DateTime dateTime) => dateTime.ToEpochMilliseconds() / 1000;
 
 #if NET6_0 || NET7_0 || NET8_0
     /// <summary>
@@ -230,8 +174,7 @@ public static class DateTimeUtils
     /// </summary>
     /// <param name="date">A given <see cref="DateOnly" /></param>
     /// <returns>The Unix time stamp</returns>
-    public static long ToEpochSeconds(this DateOnly date)
-        => date.ToDateTime().ToEpochSeconds();
+    public static long ToEpochSeconds(this DateOnly date) => date.ToDateTime().ToEpochSeconds();
 #endif
 
     /// <summary>
@@ -282,8 +225,7 @@ public static class DateTimeUtils
     /// <summary>
     ///     Returns whether the given date is the last day of the month
     /// </summary>
-    public static bool IsLastDayOfTheMonth(this DateOnly date)
-        => date.ToDateTime().IsLastDayOfTheMonth();
+    public static bool IsLastDayOfTheMonth(this DateOnly date) => date.ToDateTime().IsLastDayOfTheMonth();
 #endif
 
     /// <summary>
@@ -307,8 +249,7 @@ public static class DateTimeUtils
     /// <summary>
     ///     Returns whether the given date falls in a weekend
     /// </summary>
-    public static bool IsWeekend(this DateOnly date)
-        => date.ToDateTime().IsWeekend();
+    public static bool IsWeekend(this DateOnly date) => date.ToDateTime().IsWeekend();
 #endif
 
     /// <summary>
@@ -325,15 +266,13 @@ public static class DateTimeUtils
     /// <summary>
     ///     Determines if a given year is a LeapYear or not.
     /// </summary>
-    public static bool IsLeapYear(this DateTime value)
-        => DateTime.DaysInMonth(value.Year, 2) == 29;
+    public static bool IsLeapYear(this DateTime value) => DateTime.DaysInMonth(value.Year, 2) == 29;
 
 #if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Determines if a given year is a LeapYear or not.
     /// </summary>
-    public static bool IsLeapYear(this DateOnly date)
-        => date.ToDateTime().IsLeapYear();
+    public static bool IsLeapYear(this DateOnly date) => date.ToDateTime().IsLeapYear();
 #endif
     /// <summary>
     ///     Determines if a given year is a LeapYear or not.
@@ -392,15 +331,13 @@ public static class DateTimeUtils
     /// <summary>
     ///     Retruns dt.Date which is the start of the day
     /// </summary>
-    public static DateTime GetStartOfDay(this DateTime dt)
-        => dt.Date;
+    public static DateTime GetStartOfDay(this DateTime dt) => dt.Date;
 
 #if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Retruns Date which is the start of the day
     /// </summary>
-    public static DateTime GetStartOfDay(this DateOnly date)
-        => date.ToDateTime().GetStartOfDay();
+    public static DateTime GetStartOfDay(this DateOnly date) => date.ToDateTime().GetStartOfDay();
 #endif
 
     /// <summary>
@@ -417,15 +354,13 @@ public static class DateTimeUtils
     /// <summary>
     ///     Retruns the end of the day
     /// </summary>
-    public static DateTime GetEndOfDay(this DateTime dt)
-        => dt.Date.AddTicks(-1).AddDays(1);
+    public static DateTime GetEndOfDay(this DateTime dt) => dt.Date.AddTicks(-1).AddDays(1);
 
 #if NET6_0 || NET7_0 || NET8_0
     /// <summary>
     ///     Retruns the end of the day
     /// </summary>
-    public static DateTime GetEndOfDay(this DateOnly date)
-        => date.ToDateTime().GetEndOfDay();
+    public static DateTime GetEndOfDay(this DateOnly date) => date.ToDateTime().GetEndOfDay();
 #endif
 
     /// <summary>
@@ -635,8 +570,7 @@ public static class DateTimeUtils
     /// <param name="expirationTime">زمان انقضاء</param>
     /// <param name="now">مبناي مقايسه</param>
     /// <returns></returns>
-    public static bool HasExpired(this DateTime expirationTime, DateTime now)
-        => now > expirationTime;
+    public static bool HasExpired(this DateTime expirationTime, DateTime now) => now > expirationTime;
 
 #if NET6_0 || NET7_0 || NET8_0
     /// <summary>
@@ -667,8 +601,7 @@ public static class DateTimeUtils
     /// </summary>
     /// <param name="inputTime">زمان وارد شده مانند 10:12:1</param>
     /// <returns></returns>
-    public static bool IsValidTimeValue(this string inputTime)
-        => TimeSpan.TryParse(inputTime, out _);
+    public static bool IsValidTimeValue(this string inputTime) => TimeSpan.TryParse(inputTime, out _);
 
     /// <summary>
     ///     آيا مقدار مدنظر بين دو مقدار مشخص و يا مساوي آن‌ها قرار مي‌گيرد؟
@@ -676,4 +609,40 @@ public static class DateTimeUtils
     public static bool IsBetween<T>(this T value, T lowest, T highest)
         where T : IComparable
         => Comparer<T>.Default.Compare(lowest, value) <= 0 && Comparer<T>.Default.Compare(highest, value) >= 0;
+
+#if NET6_0 || NET7_0 || NET8_0
+    /// <summary>
+    ///     تبديل به ابتداي روز ساختار قبلي
+    /// </summary>
+    /// <param name="date">تاريخ مدنظر</param>
+    public static DateTime ToDateTime(this DateOnly date) => date.ToDateTime(new TimeOnly(0, 0));
+
+    /// <summary>
+    ///     تبديل به ابتداي روز ساختار جديد
+    /// </summary>
+    /// <param name="dateTime">تاريخ مدنظر</param>
+    public static DateOnly ToDateOnly(this DateTime dateTime) => DateOnly.FromDateTime(dateTime);
+
+    /// <summary>
+    ///     تبديل به ابتداي روز ساختار قبلي
+    /// </summary>
+    /// <param name="date">تاريخ مدنظر</param>
+    public static DateTime? ToDateTime(this DateOnly? date) => date?.ToDateTime(new TimeOnly(0, 0));
+
+    /// <summary>
+    ///     تبديل به ابتداي روز ساختار جديد
+    /// </summary>
+    /// <param name="dateTime">تاريخ مدنظر</param>
+    public static DateOnly? ToDateOnly(this DateTime? dateTime)
+        => dateTime is null ? null : DateOnly.FromDateTime(dateTime.Value);
+
+    /// <summary>
+    ///     محاسبه سن
+    /// </summary>
+    /// <param name="birthday">تاریخ تولد</param>
+    /// <param name="comparisonBase">مبنای محاسبه مانند هم اکنون</param>
+    /// <returns>سن</returns>
+    public static int GetAge(this DateOnly birthday, DateOnly comparisonBase)
+        => birthday.ToDateTime().GetAge(comparisonBase.ToDateTime());
+#endif
 }
