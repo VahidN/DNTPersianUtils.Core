@@ -39,7 +39,8 @@ public static class IranHolidays
     private const string MelliShodaneNaft = "روز ملی شدن صنعت نفت ایران";
     private const string ShahaadateHazrazteAsgari = "شهادت امام حسن‌عسکری و آغاز امامت حضرت ولی‌عصر(عج)";
     private const string ValaadateHazrazteMahdi = "ولادت حضرت قائم (عج)";
-	private const string RoozeAkhareSaal = "آخرین روز سال";
+    private const string RoozeAkhareSaal = "آخرین روز سال";
+    private const string ShahadataPresidentRaeesi = "عزای عمومی شهادت رییس جمهور";
 
     private static readonly Lazy<ISet<IranHoliday>> _holidayProvider =
         new Lazy<ISet<IranHoliday>>(getIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
@@ -1225,6 +1226,12 @@ public static class IranHolidays
                            {
                                Holiday = persianCalendar.ToDateTime(1403, 02, 15, 0, 0, 0, 0),
                                Description = ShahaadatEmaamJafar
+                           },
+				   
+                           new IranHoliday
+                           {
+                               Holiday = persianCalendar.ToDateTime(1403, 03, 02, 0, 0, 0, 0),
+                               Description = ShahadataPresidentRaeesi
                            },
 						   
                            new IranHoliday
