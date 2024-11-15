@@ -111,7 +111,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// </summary>
     public PersianDateTime(int year, int month, int day)
     {
-        IsValidDateTime = IsValidInstance(year, month, day, 0, 0, 0);
+        IsValidDateTime = IsValidInstance(year, month, day, hour: 0, minute: 0, second: 0);
 
         if (!IsValidDateTime)
         {
@@ -131,7 +131,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// </summary>
     public PersianDateTime(int? year, int? month, int? day)
     {
-        IsValidDateTime = IsValidInstance(year, month, day, 0, 0, 0);
+        IsValidDateTime = IsValidInstance(year, month, day, hour: 0, minute: 0, second: 0);
 
         if (!IsValidDateTime)
         {
@@ -191,7 +191,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// </summary>
     public PersianDateTime(int year, int month, int day, int hour, int minute)
     {
-        IsValidDateTime = IsValidInstance(year, month, day, hour, minute, 0);
+        IsValidDateTime = IsValidInstance(year, month, day, hour, minute, second: 0);
 
         if (!IsValidDateTime)
         {
@@ -211,7 +211,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// </summary>
     public PersianDateTime(int? year, int? month, int? day, int? hour, int? minute)
     {
-        IsValidDateTime = IsValidInstance(year, month, day, hour, minute, 0);
+        IsValidDateTime = IsValidInstance(year, month, day, hour, minute, second: 0);
 
         if (!IsValidDateTime)
         {
@@ -265,16 +265,25 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// <summary>
     ///     آيا تاريخ و زمان جاري شمسي معتبر است؟
     /// </summary>
-#if NET6_0 || NET7_0 || NET8_0
-    [MemberNotNullWhen(true, nameof(Year)), MemberNotNullWhen(true, nameof(Month)),
-     MemberNotNullWhen(true, nameof(Day)), MemberNotNullWhen(true, nameof(Hour)),
-     MemberNotNullWhen(true, nameof(Minute)), MemberNotNullWhen(true, nameof(Second)),
-     MemberNotNullWhen(true, nameof(DateTime)), MemberNotNullWhen(true, nameof(DateTimeUtc)),
-     MemberNotNullWhen(true, nameof(DateTimeOffset)), MemberNotNullWhen(true, nameof(DateOnly)),
-     MemberNotNullWhen(true, nameof(Holidays)), MemberNotNullWhen(true, nameof(PersianWeek)),
-     MemberNotNullWhen(true, nameof(PersianMonth)), MemberNotNullWhen(true, nameof(PersianYear)),
-     MemberNotNullWhen(true, nameof(PersianMonthDayNumberName)), MemberNotNullWhen(true, nameof(WeekDayName)),
-     MemberNotNullWhen(true, nameof(WeekDayNumber)), MemberNotNullWhen(true, nameof(MonthName))]
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+    [MemberNotNullWhen(returnValue: true, nameof(Year))]
+    [MemberNotNullWhen(returnValue: true, nameof(Month))]
+    [MemberNotNullWhen(returnValue: true, nameof(Day))]
+    [MemberNotNullWhen(returnValue: true, nameof(Hour))]
+    [MemberNotNullWhen(returnValue: true, nameof(Minute))]
+    [MemberNotNullWhen(returnValue: true, nameof(Second))]
+    [MemberNotNullWhen(returnValue: true, nameof(DateTime))]
+    [MemberNotNullWhen(returnValue: true, nameof(DateTimeUtc))]
+    [MemberNotNullWhen(returnValue: true, nameof(DateTimeOffset))]
+    [MemberNotNullWhen(returnValue: true, nameof(DateOnly))]
+    [MemberNotNullWhen(returnValue: true, nameof(Holidays))]
+    [MemberNotNullWhen(returnValue: true, nameof(PersianWeek))]
+    [MemberNotNullWhen(returnValue: true, nameof(PersianMonth))]
+    [MemberNotNullWhen(returnValue: true, nameof(PersianYear))]
+    [MemberNotNullWhen(returnValue: true, nameof(PersianMonthDayNumberName))]
+    [MemberNotNullWhen(returnValue: true, nameof(WeekDayName))]
+    [MemberNotNullWhen(returnValue: true, nameof(WeekDayNumber))]
+    [MemberNotNullWhen(returnValue: true, nameof(MonthName))]
 #endif
     public bool IsValidDateTime { get; }
 
@@ -284,7 +293,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     public DateTime? DateTime => !IsValidDateTime
         ? null
         : new PersianCalendar().ToDateTime(Year!.Value, Month!.Value, Day!.Value, Hour!.Value, Minute!.Value,
-            Second!.Value, 0);
+            Second!.Value, millisecond: 0);
 
     /// <summary>
     ///     بيانگر تاريخ و زمان جاري شمسي به ميلادي. اگر تاريخ و زمان غيرمعتبر باشد، نال بازگشت مي‌دهد.
@@ -298,7 +307,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
         ? null
         : new DateTimeOffset(DateTime.Value, DateTimeUtils.IranStandardTime.BaseUtcOffset);
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
     /// <summary>
     ///     بيانگر تاريخ جاري شمسي به ميلادي. اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.
     /// </summary>
@@ -372,12 +381,12 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
             return true;
         }
 
-        if (ReferenceEquals(x, null))
+        if (ReferenceEquals(x, objB: null))
         {
             return false;
         }
 
-        if (ReferenceEquals(y, null))
+        if (ReferenceEquals(y, objB: null))
         {
             return false;
         }
@@ -405,8 +414,8 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
         minute ??= 0;
         second ??= 0;
 
-        return hour.Value.IsBetween(0, 23) && minute.Value.IsBetween(0, 59) && second.Value.IsBetween(0, 59) &&
-               year.Value.IsValidPersianDate(month.Value, day.Value);
+        return hour.Value.IsBetween(lowest: 0, highest: 23) && minute.Value.IsBetween(lowest: 0, highest: 59) &&
+               second.Value.IsBetween(lowest: 0, highest: 59) && year.Value.IsValidPersianDate(month.Value, day.Value);
     }
 
     /// <summary>
@@ -416,7 +425,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
         => !IsValidDateTime
             ? ""
             : Invariant(
-                $"{Year!.Value}/{Month!.Value.ToString("00", CultureInfo.InvariantCulture)}/{Day!.Value.ToString("00", CultureInfo.InvariantCulture)} {Hour!.Value:00}:{Minute!.Value:00}:{Second!.Value:00}");
+                $"{Year!.Value}/{Month!.Value.ToString(format: "00", CultureInfo.InvariantCulture)}/{Day!.Value.ToString(format: "00", CultureInfo.InvariantCulture)} {Hour!.Value:00}:{Minute!.Value:00}:{Second!.Value:00}");
 
     /// <summary>
     ///     Equals
@@ -482,7 +491,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// </summary>
     public static implicit operator PersianDateTime(DateTimeOffset dateTimeOffset) => new(dateTimeOffset);
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
 
     /// <summary>
     ///     Returns a PersianDateTime.

@@ -94,7 +94,7 @@ public static class SeoUtils
     /// <param name="replacementChar">در اينجا ليستي از حروف خاص، با - جايگزين خواهند شد</param>
     /// <returns></returns>
     public static string? GetPostSlug(
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
         [NotNullIfNotNull(nameof(postTitle))]
 #endif
         this string? postTitle,
@@ -159,7 +159,7 @@ public static class SeoUtils
     /// <param name="replacementChar">در اينجا ليستي از حروف خاص، با _ جايگزين خواهند شد</param>
     /// <returns></returns>
     public static string? GetCleanedTag(
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
         [NotNullIfNotNull(nameof(tag))]
 #endif
         this string? tag,

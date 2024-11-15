@@ -9,6 +9,25 @@ dotnet_diagnostic.MA0026.severity = suggestion
 dotnet_diagnostic.MA0002.severity = suggestion
 dotnet_diagnostic.MA0132.severity = suggestion
 
+dotnet_diagnostic.IDE0005.severity = none
+dotnet_diagnostic.IDE0055.severity = none
+dotnet_diagnostic.IDE0160.severity = none
+dotnet_diagnostic.IDE0022.severity = none
+dotnet_diagnostic.IDE0021.severity = none
+dotnet_diagnostic.IDE0008.severity = none
+dotnet_diagnostic.IDE0061.severity = none
+dotnet_diagnostic.IDE0023.severity = none
+dotnet_diagnostic.IDE0051.severity = suggestion 
+dotnet_diagnostic.IDE0052.severity = suggestion 
+dotnet_diagnostic.IDE0058.severity = suggestion 
+dotnet_diagnostic.IDE0046.severity = suggestion
+dotnet_diagnostic.IDE0048.severity = suggestion
+dotnet_diagnostic.IDE0010.severity = suggestion
+dotnet_diagnostic.IDE0045.severity = suggestion
+dotnet_diagnostic.IDE0130.severity = suggestion
+dotnet_diagnostic.IDE0072.severity = suggestion
+
+
 # CA1510: use the new throw methods
 dotnet_diagnostic.CA1510.severity = suggestion
 

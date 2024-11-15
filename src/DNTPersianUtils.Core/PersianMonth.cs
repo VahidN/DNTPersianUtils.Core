@@ -12,7 +12,7 @@ public class PersianMonth
         /// </summary>
         public DateTime StartDate { set; get; }
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
         /// <summary>
         ///     اولین روز ماه شمسی
         /// </summary>
@@ -30,7 +30,7 @@ public class PersianMonth
         /// </summary>
         public DateTime EndDate { set; get; }
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
         /// <summary>
         ///     آخرین روز ماه شمسی
         /// </summary>

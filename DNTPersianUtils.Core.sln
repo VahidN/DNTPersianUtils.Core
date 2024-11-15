@@ -11,14 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.PerformanceTests", "src\DNTPersianUtils.Core.PerformanceTests\DNTPersianUtils.Core.PerformanceTests.csproj", "{77775D88-9D5E-41FA-A973-D58CBCED0C59}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DNTPersianUtils.Core.BlazorWasmTests", "DNTPersianUtils.Core.BlazorWasmTests", "{90E30657-5329-4D51-83F0-09DB091F42DF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.BlazorWasmTests.Client", "src\DNTPersianUtils.Core.BlazorWasmTests\Client\DNTPersianUtils.Core.BlazorWasmTests.Client.csproj", "{37CF80DD-9096-4B39-901A-E9A12BAF92B4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.BlazorWasmTests.Server", "src\DNTPersianUtils.Core.BlazorWasmTests\Server\DNTPersianUtils.Core.BlazorWasmTests.Server.csproj", "{8ADF07C2-8548-4138-9D0C-6010A67490D0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNTPersianUtils.Core.BlazorWasmTests.Shared", "src\DNTPersianUtils.Core.BlazorWasmTests\Shared\DNTPersianUtils.Core.BlazorWasmTests.Shared.csproj", "{E1B7DA60-8427-44CF-A0EF-2010F3E5A5DB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,26 +32,10 @@ Global
 		{77775D88-9D5E-41FA-A973-D58CBCED0C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77775D88-9D5E-41FA-A973-D58CBCED0C59}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{77775D88-9D5E-41FA-A973-D58CBCED0C59}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{37CF80DD-9096-4B39-901A-E9A12BAF92B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37CF80DD-9096-4B39-901A-E9A12BAF92B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37CF80DD-9096-4B39-901A-E9A12BAF92B4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{37CF80DD-9096-4B39-901A-E9A12BAF92B4}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{8ADF07C2-8548-4138-9D0C-6010A67490D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8ADF07C2-8548-4138-9D0C-6010A67490D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8ADF07C2-8548-4138-9D0C-6010A67490D0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{8ADF07C2-8548-4138-9D0C-6010A67490D0}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{E1B7DA60-8427-44CF-A0EF-2010F3E5A5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1B7DA60-8427-44CF-A0EF-2010F3E5A5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1B7DA60-8427-44CF-A0EF-2010F3E5A5DB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1B7DA60-8427-44CF-A0EF-2010F3E5A5DB}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{02A0462F-D985-486E-A049-9948EB3B7B99} = {CEC39275-6504-4F01-9E0D-057D5770BD59}
 		{38F8E90F-7520-43A4-8D4B-DEEEB9DD2A66} = {CEC39275-6504-4F01-9E0D-057D5770BD59}
 		{77775D88-9D5E-41FA-A973-D58CBCED0C59} = {CEC39275-6504-4F01-9E0D-057D5770BD59}
-		{90E30657-5329-4D51-83F0-09DB091F42DF} = {CEC39275-6504-4F01-9E0D-057D5770BD59}
-		{37CF80DD-9096-4B39-901A-E9A12BAF92B4} = {90E30657-5329-4D51-83F0-09DB091F42DF}
-		{8ADF07C2-8548-4138-9D0C-6010A67490D0} = {90E30657-5329-4D51-83F0-09DB091F42DF}
-		{E1B7DA60-8427-44CF-A0EF-2010F3E5A5DB} = {90E30657-5329-4D51-83F0-09DB091F42DF}
 	EndGlobalSection
 EndGlobal

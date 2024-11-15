@@ -16,71 +16,39 @@ public static class IslamicDateUtils
     // https://github.com/ilius/starcal/blob/master/scal3/cal_types/hijri-monthes.json
     private static readonly int[] hijriMonths =
     {
-        1427, 30, 29, 29, 30, 29, 30, 30, 30, 30, 29, 29, 30,
-        1428, 29, 30, 29, 29, 29, 30, 30, 29, 30, 30, 30, 29,
-        1429, 30, 29, 30, 29, 29, 29, 30, 30, 29, 30, 30, 29,
-        1430, 30, 30, 29, 29, 30, 29, 30, 29, 29, 30, 30, 29,
-        1431, 30, 30, 29, 30, 29, 30, 29, 30, 29, 29, 30, 29,
-        1432, 30, 30, 29, 30, 30, 30, 29, 29, 30, 29, 30, 29,
-        1433, 29, 30, 29, 30, 30, 30, 29, 30, 29, 30, 29, 30,
-        1434, 29, 29, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29,
-        1435, 29, 30, 29, 30, 29, 30, 29, 30, 30, 30, 29, 30,
-        1436, 29, 30, 29, 29, 30, 29, 30, 29, 30, 29, 30, 30,
-        1437, 29, 30, 30, 29, 30, 29, 29, 30, 29, 29, 30, 30,
-        1438, 29, 30, 30, 30, 29, 30, 29, 29, 30, 29, 29, 30,
-        1439, 29, 30, 30, 30, 30, 29, 30, 29, 29, 30, 29, 29,
-        1440, 30, 29, 30, 30, 30, 29, 29, 30, 29, 30, 29, 29,
-        1441, 30, 29, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29,
-        1442, 29, 30, 29, 30, 29, 30, 29, 30, 30, 29, 30, 29,
-        1443, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30,
-        1444, 29, 30, 29, 30, 30, 29, 29, 30, 29, 30, 29, 30,
-        1445, 29, 30, 30, 30, 29, 30, 29, 29, 30, 29, 29, 30,
-        1446, 29, 30, 30, 30, 29, 30, 30, 29, 29, 30, 29, 29,
-        1447, 30, 29, 30, 30, 30, 29, 30, 29, 30, 29, 30, 29,
-        1448, 29, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29, 30,
-        1449, 29, 29, 30, 29, 30, 29, 30, 30, 29, 30, 30, 29,
-        1450, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30, 30, 29,
-        1451, 30, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30, 29,
-        1452, 30, 30, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30,
-        1453, 29, 30, 30, 30, 29, 29, 30, 29, 30, 29, 30, 29,
-        1454, 29, 30, 30, 30, 29, 30, 29, 30, 29, 30, 29, 30,
-        1455, 29, 29, 30, 30, 29, 30, 29, 30, 30, 29, 30, 29,
-        1456, 30, 29, 29, 30, 29, 30, 29, 30, 30, 30, 29, 30,
-        1457, 29, 30, 29, 29, 30, 29, 29, 30, 30, 29, 30, 30,
-        1458, 30, 29, 30, 29, 29, 30, 29, 29, 30, 30, 29, 30,
-        1459, 30, 30, 29, 30, 29, 29, 30, 29, 29, 30, 30, 29,
-        1460, 30, 30, 29, 30, 29, 30, 29, 30, 29, 29, 30, 30,
-        1461, 29, 30, 29, 30, 30, 29, 30, 29, 30, 29, 30, 29,
-        1462, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30, 29, 30,
-        1463, 29, 30, 29, 29, 30, 29, 30, 30, 29, 30, 30, 29,
-        1464, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30, 30, 30,
-        1465, 29, 30, 29, 30, 29, 29, 30, 29, 29, 30, 30, 30,
-        1466, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30,
-        1467, 30, 29, 30, 30, 29, 30, 29, 29, 30, 29, 30, 29,
-        1468, 30, 29, 30, 30, 29, 30, 29, 30, 29, 30, 29, 30,
-        1469, 29, 29, 30, 30, 29, 30, 30, 29, 30, 30, 29, 29,
-        1470, 30, 29, 29, 30, 30, 29, 30, 29, 30, 30, 30, 29,
-        1471, 29, 30, 29, 29, 30, 29, 30, 30, 29, 30, 30, 29,
-        1472, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30, 30, 29,
-        1473, 30, 29, 30, 30, 29, 30, 29, 29, 30, 29, 30, 29,
-        1474, 30, 30, 29, 30, 30, 29, 30, 29, 29, 30, 29, 30,
-        1475, 29, 30, 29, 30, 30, 30, 29, 30, 29, 29, 30, 29,
-        1476, 29, 30, 29, 30, 30, 30, 29, 30, 30, 29, 29, 30,
-        1477, 29, 29, 30, 29, 30, 30, 29, 30, 30, 30, 29, 29,
-        1478, 30, 29, 29, 30, 29, 30, 30, 29, 30, 30, 29, 30,
-        1479, 29, 30, 29, 29, 30, 29, 30, 29, 30, 30, 29, 30,
-        1480, 29, 30, 30, 29, 29, 30, 29, 30, 29, 30, 29, 30,
-        1481, 29, 30, 30, 29, 30, 30, 29, 30, 29, 29, 30, 29,
-        1482, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29, 29, 30,
-        1483, 29, 29, 30, 30, 29, 30, 30, 30, 29, 30, 29, 29,
-        1484, 30, 29, 29, 30, 30, 29, 30, 30, 29, 30, 30, 29,
-        1485, 29, 30, 29, 29, 30, 30, 29, 30, 29, 30, 30, 30,
-        1486, 29, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30,
-        1487, 29, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30, 30,
-        1488, 29, 30, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30,
-        1489, 29, 30, 30, 30, 29, 30, 29, 30, 29, 29, 30, 29,
-        1490, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29, 29, 30,
-        1491, 29, 30, 29, 30, 29, 30, 30, 29, 30, 29, 30, 30,
+        1427, 30, 29, 29, 30, 29, 30, 30, 30, 30, 29, 29, 30, 1428, 29, 30, 29, 29, 29, 30, 30, 29, 30, 30, 30, 29,
+        1429, 30, 29, 30, 29, 29, 29, 30, 30, 29, 30, 30, 29, 1430, 30, 30, 29, 29, 30, 29, 30, 29, 29, 30, 30, 29,
+        1431, 30, 30, 29, 30, 29, 30, 29, 30, 29, 29, 30, 29, 1432, 30, 30, 29, 30, 30, 30, 29, 29, 30, 29, 30, 29,
+        1433, 29, 30, 29, 30, 30, 30, 29, 30, 29, 30, 29, 30, 1434, 29, 29, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29,
+        1435, 29, 30, 29, 30, 29, 30, 29, 30, 30, 30, 29, 30, 1436, 29, 30, 29, 29, 30, 29, 30, 29, 30, 29, 30, 30,
+        1437, 29, 30, 30, 29, 30, 29, 29, 30, 29, 29, 30, 30, 1438, 29, 30, 30, 30, 29, 30, 29, 29, 30, 29, 29, 30,
+        1439, 29, 30, 30, 30, 30, 29, 30, 29, 29, 30, 29, 29, 1440, 30, 29, 30, 30, 30, 29, 29, 30, 29, 30, 29, 29,
+        1441, 30, 29, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29, 1442, 29, 30, 29, 30, 29, 30, 29, 30, 30, 29, 30, 29,
+        1443, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30, 1444, 29, 30, 29, 30, 30, 29, 29, 30, 29, 30, 29, 30,
+        1445, 29, 30, 30, 30, 29, 30, 29, 29, 30, 29, 29, 30, 1446, 29, 30, 30, 30, 29, 30, 30, 29, 29, 30, 29, 29,
+        1447, 30, 29, 30, 30, 30, 29, 30, 29, 30, 29, 30, 29, 1448, 29, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29, 30,
+        1449, 29, 29, 30, 29, 30, 29, 30, 30, 29, 30, 30, 29, 1450, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30, 30, 29,
+        1451, 30, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30, 29, 1452, 30, 30, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30,
+        1453, 29, 30, 30, 30, 29, 29, 30, 29, 30, 29, 30, 29, 1454, 29, 30, 30, 30, 29, 30, 29, 30, 29, 30, 29, 30,
+        1455, 29, 29, 30, 30, 29, 30, 29, 30, 30, 29, 30, 29, 1456, 30, 29, 29, 30, 29, 30, 29, 30, 30, 30, 29, 30,
+        1457, 29, 30, 29, 29, 30, 29, 29, 30, 30, 29, 30, 30, 1458, 30, 29, 30, 29, 29, 30, 29, 29, 30, 30, 29, 30,
+        1459, 30, 30, 29, 30, 29, 29, 30, 29, 29, 30, 30, 29, 1460, 30, 30, 29, 30, 29, 30, 29, 30, 29, 29, 30, 30,
+        1461, 29, 30, 29, 30, 30, 29, 30, 29, 30, 29, 30, 29, 1462, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30, 29, 30,
+        1463, 29, 30, 29, 29, 30, 29, 30, 30, 29, 30, 30, 29, 1464, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30, 30, 30,
+        1465, 29, 30, 29, 30, 29, 29, 30, 29, 29, 30, 30, 30, 1466, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30, 29, 30,
+        1467, 30, 29, 30, 30, 29, 30, 29, 29, 30, 29, 30, 29, 1468, 30, 29, 30, 30, 29, 30, 29, 30, 29, 30, 29, 30,
+        1469, 29, 29, 30, 30, 29, 30, 30, 29, 30, 30, 29, 29, 1470, 30, 29, 29, 30, 30, 29, 30, 29, 30, 30, 30, 29,
+        1471, 29, 30, 29, 29, 30, 29, 30, 30, 29, 30, 30, 29, 1472, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30, 30, 29,
+        1473, 30, 29, 30, 30, 29, 30, 29, 29, 30, 29, 30, 29, 1474, 30, 30, 29, 30, 30, 29, 30, 29, 29, 30, 29, 30,
+        1475, 29, 30, 29, 30, 30, 30, 29, 30, 29, 29, 30, 29, 1476, 29, 30, 29, 30, 30, 30, 29, 30, 30, 29, 29, 30,
+        1477, 29, 29, 30, 29, 30, 30, 29, 30, 30, 30, 29, 29, 1478, 30, 29, 29, 30, 29, 30, 30, 29, 30, 30, 29, 30,
+        1479, 29, 30, 29, 29, 30, 29, 30, 29, 30, 30, 29, 30, 1480, 29, 30, 30, 29, 29, 30, 29, 30, 29, 30, 29, 30,
+        1481, 29, 30, 30, 29, 30, 30, 29, 30, 29, 29, 30, 29, 1482, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29, 29, 30,
+        1483, 29, 29, 30, 30, 29, 30, 30, 30, 29, 30, 29, 29, 1484, 30, 29, 29, 30, 30, 29, 30, 30, 29, 30, 30, 29,
+        1485, 29, 30, 29, 29, 30, 30, 29, 30, 29, 30, 30, 30, 1486, 29, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30,
+        1487, 29, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30, 30, 1488, 29, 30, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30,
+        1489, 29, 30, 30, 30, 29, 30, 29, 30, 29, 29, 30, 29, 1490, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29, 29, 30,
+        1491, 29, 30, 29, 30, 29, 30, 30, 29, 30, 29, 30, 30
     };
 
     private static readonly Dictionary<int, long[]> _yearsMonthsInJd = new();
@@ -91,24 +59,28 @@ public static class IslamicDateUtils
     /// <summary>
     ///     ایده گرفته شده از: https://github.com/ebraminio/DroidPersianCalendar
     /// </summary>
-    [SuppressMessage("Microsoft.Usage",
-                        "CA1810:Initialize all static fields in 'IslamicDateUtils' when those fields are declared and remove the explicit static constructor",
-                        Justification = "The code will become very ugly!")]
-    [SuppressMessage("Microsoft.Usage",
-                        "S3963:Initialize all static fields in 'IslamicDateUtils' when those fields are declared and remove the explicit static constructor",
-                        Justification = "The code will become very ugly!")]
+    [SuppressMessage(category: "Microsoft.Usage",
+        checkId:
+        "CA1810:Initialize all static fields in 'IslamicDateUtils' when those fields are declared and remove the explicit static constructor",
+        Justification = "The code will become very ugly!")]
+    [SuppressMessage(category: "Microsoft.Usage",
+        checkId:
+        "S3963:Initialize all static fields in 'IslamicDateUtils' when those fields are declared and remove the explicit static constructor",
+        Justification = "The code will become very ugly!")]
     static IslamicDateUtils()
     {
         var years = (int)Math.Ceiling((float)hijriMonths.Length / 13);
         _yearsStartJd = new long[years];
         _supportedYearsStart = hijriMonths[0];
         var jd = JdSupportStart;
+
         for (var y = 0; y < years; ++y)
         {
             var year = hijriMonths[y * 13];
 
             _yearsStartJd[y] = jd;
             var months = new long[12];
+
             for (var m = 1; m < 13 && y * 13 + m < hijriMonths.Length; ++m)
             {
                 months[m - 1] = jd;
@@ -132,7 +104,7 @@ public static class IslamicDateUtils
     {
         if (_yearsMonthsInJd == null)
         {
-            throw new InvalidOperationException("yearsMonthsInJd is null.");
+            throw new InvalidOperationException(message: "yearsMonthsInJd is null.");
         }
 
         if (!_yearsMonthsInJd.TryGetValue(year, out var months))
@@ -141,6 +113,7 @@ public static class IslamicDateUtils
         }
 
         var calculatedDay = months[month - 1];
+
         if (calculatedDay == 0)
         {
             return -1;
@@ -152,6 +125,7 @@ public static class IslamicDateUtils
     private static int search(long[] array, long r)
     {
         var i = 0;
+
         while (i < array.Length && array[i] < r)
         {
             ++i;
@@ -175,19 +149,25 @@ public static class IslamicDateUtils
         var yearIndex = search(_yearsStartJd, jd);
         var year = yearIndex + _supportedYearsStart - 1;
         var yearMonths = _yearsMonthsInJd[year];
+
         if (yearMonths == null)
         {
             return default;
         }
 
         var month = search(yearMonths, jd);
+
         if (yearMonths[month - 1] == 0)
         {
             return default;
         }
 
         var day = (int)(jd - yearMonths[month - 1]);
-        return new[] { year, month, day };
+
+        return new[]
+        {
+            year, month, day
+        };
     }
 
     /// <summary>
@@ -197,7 +177,7 @@ public static class IslamicDateUtils
     /// <returns></returns>
     public static PersianDay JdnToPersianDay(long jdn)
     {
-        var depoch = jdn - PersianDayToJdn(475, 1, 1);
+        var depoch = jdn - PersianDayToJdn(year: 475, month: 1, day: 1);
         var cycle = depoch / 1029983;
         var cyear = depoch % 1029983;
         long ycycle;
@@ -211,18 +191,19 @@ public static class IslamicDateUtils
         {
             aux1 = cyear / 366;
             aux2 = cyear % 366;
-            ycycle = (long)Math.Floor((2134 * aux1 + 2816 * aux2 + 2815) / 1028522d)
-                     + aux1 + 1;
+            ycycle = (long)Math.Floor((2134 * aux1 + 2816 * aux2 + 2815) / 1028522d) + aux1 + 1;
         }
 
         int year, month, day;
         year = (int)(ycycle + 2820 * cycle + 474);
+
         if (year <= 0)
         {
             year = year - 1;
         }
 
-        var yday = jdn - PersianDayToJdn(year, 1, 1) + 1;
+        var yday = jdn - PersianDayToJdn(year, month: 1, day: 1) + 1;
+
         if (yday <= 186)
         {
             month = (int)Math.Ceiling(yday / 31d);
@@ -232,7 +213,8 @@ public static class IslamicDateUtils
             month = (int)Math.Ceiling((yday - 6) / 30d);
         }
 
-        day = (int)(jdn - PersianDayToJdn(year, month, 1)) + 1;
+        day = (int)(jdn - PersianDayToJdn(year, month, day: 1)) + 1;
+
         return new PersianDay(year, month, day);
     }
 
@@ -248,6 +230,7 @@ public static class IslamicDateUtils
         const long PERSIAN_EPOCH = 1948321; // The JDN of 1 Farvardin 1
 
         long epbase;
+
         if (year >= 0)
         {
             epbase = year - 474;
@@ -260,6 +243,7 @@ public static class IslamicDateUtils
         var epyear = 474 + epbase % 2820;
 
         long mdays;
+
         if (month <= 7)
         {
             mdays = (month - 1) * 31;
@@ -269,8 +253,8 @@ public static class IslamicDateUtils
             mdays = (month - 1) * 30 + 6;
         }
 
-        return day + mdays + (epyear * 682 - 110) / 2816 + (epyear - 1) * 365
-               + epbase / 2820 * 1029983 + (PERSIAN_EPOCH - 1);
+        return day + mdays + (epyear * 682 - 110) / 2816 + (epyear - 1) * 365 + epbase / 2820 * 1029983 +
+               (PERSIAN_EPOCH - 1);
     }
 
     /// <summary>
@@ -339,12 +323,10 @@ public static class IslamicDateUtils
         // parameters for Makkah: for a new moon to be visible after sunset on
         // a the same day in which it started, it has to have started before
         // (SUNSET-MINAGE)-TIMZ=3 A.M. local time.
-        const float TIMZ = 3f,
-                    MINAGE = 13.5f,
-                    SUNSET = 19.5f, // approximate
-                    TIMDIF = SUNSET - MINAGE;
+        const float TIMZ = 3f, MINAGE = 13.5f, SUNSET = 19.5f, // approximate
+            TIMDIF = SUNSET - MINAGE;
 
-        var jd = toMoonPhase(n, 0);
+        var jd = toMoonPhase(n, nph: 0);
         var d = (long)Math.Floor(jd);
 
         var tf = jd - d;
@@ -355,6 +337,7 @@ public static class IslamicDateUtils
         } // new moon starts before noon
 
         tf = (tf - 0.5) * 24 + TIMZ; // local time
+
         if (tf > TIMDIF)
         {
             return jd + 1d; // age at sunset < min for visiblity
@@ -366,6 +349,7 @@ public static class IslamicDateUtils
     private static double toMoonPhase(long n, int nph)
     {
         const double RPD = 1.74532925199433E-02; // radians per degree
+
         // (pi/180)
 
         double xtra;
@@ -374,56 +358,46 @@ public static class IslamicDateUtils
         var T = k / 1236.85;
         var t2 = T * T;
         var t3 = t2 * T;
-        var jd = 2415020.75933 + 29.53058868 * k - 0.0001178 * t2
-                                                 - 0.000000155 * t3 + 0.00033
-                 * Math.Sin(RPD * (166.56 + 132.87 * T - 0.009173 * t2));
+
+        var jd = 2415020.75933 + 29.53058868 * k - 0.0001178 * t2 - 0.000000155 * t3 +
+                 0.00033 * Math.Sin(RPD * (166.56 + 132.87 * T - 0.009173 * t2));
 
         // Sun's mean anomaly
-        var sa = RPD
-                 * (359.2242 + 29.10535608 * k - 0.0000333 * t2 - 0.00000347 * t3);
+        var sa = RPD * (359.2242 + 29.10535608 * k - 0.0000333 * t2 - 0.00000347 * t3);
 
         // Moon's mean anomaly
-        var ma = RPD
-                 * (306.0253 + 385.81691806 * k + 0.0107306 * t2 + 0.00001236 * t3);
+        var ma = RPD * (306.0253 + 385.81691806 * k + 0.0107306 * t2 + 0.00001236 * t3);
 
         // Moon's argument of latitude
-        var tf = RPD
-                 * 2d
-                 * (21.2964 + 390.67050646 * k - 0.0016528 * t2 - 0.00000239 * t3);
+        var tf = RPD * 2d * (21.2964 + 390.67050646 * k - 0.0016528 * t2 - 0.00000239 * t3);
 
         // should reduce to interval 0-1.0 before calculating further
         switch (nph)
         {
             case 0:
             case 2:
-                xtra = (0.1734 - 0.000393 * T) * Math.Sin(sa) + 0.0021
-                       * Math.Sin(sa * 2) - 0.4068 * Math.Sin(ma) + 0.0161
-                       * Math.Sin(2 * ma) - 0.0004 * Math.Sin(3 * ma) + 0.0104
-                       * Math.Sin(tf) - 0.0051 * Math.Sin(sa + ma) - 0.0074
-                       * Math.Sin(sa - ma) + 0.0004 * Math.Sin(tf + sa) - 0.0004
-                       * Math.Sin(tf - sa) - 0.0006 * Math.Sin(tf + ma) + 0.001
-                       * Math.Sin(tf - ma) + 0.0005 * Math.Sin(sa + 2 * ma);
+                xtra = (0.1734 - 0.000393 * T) * Math.Sin(sa) + 0.0021 * Math.Sin(sa * 2) - 0.4068 * Math.Sin(ma) +
+                       0.0161 * Math.Sin(2 * ma) - 0.0004 * Math.Sin(3 * ma) + 0.0104 * Math.Sin(tf) -
+                       0.0051 * Math.Sin(sa + ma) - 0.0074 * Math.Sin(sa - ma) + 0.0004 * Math.Sin(tf + sa) -
+                       0.0004 * Math.Sin(tf - sa) - 0.0006 * Math.Sin(tf + ma) + 0.001 * Math.Sin(tf - ma) +
+                       0.0005 * Math.Sin(sa + 2 * ma);
+
                 break;
             case 1:
             case 3:
-                xtra = (0.1721 - 0.0004 * T) * Math.Sin(sa) + 0.0021
-                       * Math.Sin(sa * 2) - 0.628 * Math.Sin(ma) + 0.0089
-                       * Math.Sin(2 * ma) - 0.0004 * Math.Sin(3 * ma) + 0.0079
-                       * Math.Sin(tf) - 0.0119 * Math.Sin(sa + ma) - 0.0047
-                       * Math.Sin(sa - ma) + 0.0003 * Math.Sin(tf + sa) - 0.0004
-                       * Math.Sin(tf - sa) - 0.0006 * Math.Sin(tf + ma) + 0.0021
-                       * Math.Sin(tf - ma) + 0.0003 * Math.Sin(sa + 2 * ma)
-                       + 0.0004 * Math.Sin(sa - 2 * ma) - 0.0003
-                       * Math.Sin(2 * sa + ma);
+                xtra = (0.1721 - 0.0004 * T) * Math.Sin(sa) + 0.0021 * Math.Sin(sa * 2) - 0.628 * Math.Sin(ma) +
+                    0.0089 * Math.Sin(2 * ma) - 0.0004 * Math.Sin(3 * ma) + 0.0079 * Math.Sin(tf) -
+                    0.0119 * Math.Sin(sa + ma) - 0.0047 * Math.Sin(sa - ma) + 0.0003 * Math.Sin(tf + sa) -
+                    0.0004 * Math.Sin(tf - sa) - 0.0006 * Math.Sin(tf + ma) + 0.0021 * Math.Sin(tf - ma) +
+                    0.0003 * Math.Sin(sa + 2 * ma) + 0.0004 * Math.Sin(sa - 2 * ma) - 0.0003 * Math.Sin(2 * sa + ma);
+
                 if (nph == 1)
                 {
-                    xtra = xtra + 0.0028 - 0.0004 * Math.Cos(sa) + 0.0003
-                           * Math.Cos(ma);
+                    xtra = xtra + 0.0028 - 0.0004 * Math.Cos(sa) + 0.0003 * Math.Cos(ma);
                 }
                 else
                 {
-                    xtra = xtra - 0.0028 + 0.0004 * Math.Cos(sa) - 0.0003
-                           * Math.Cos(ma);
+                    xtra = xtra - 0.0028 + 0.0004 * Math.Cos(sa) - 0.0003 * Math.Cos(ma);
                 }
 
                 break;
@@ -443,6 +417,7 @@ public static class IslamicDateUtils
     public static IslamicDay JdnToIslamicDay(long jd)
     {
         var tableResult = JdToHijri(jd);
+
         if (tableResult != null)
         {
             return new IslamicDay(tableResult[0], tableResult[1], tableResult[2]);
@@ -453,15 +428,17 @@ public static class IslamicDateUtils
         var month = gregorian.Month;
         var day = gregorian.Day;
 
-        var k = (long)Math.Floor(0.6 + (year + (month % 2 == 0 ? month : month - 1) / 12d
-                                             + day / 365f - 1900) * 12.3685);
+        var k = (long)Math.Floor(
+            0.6 + (year + (month % 2 == 0 ? month : month - 1) / 12d + day / 365f - 1900) * 12.3685);
 
         double mjd;
+
         do
         {
             mjd = visibility(k);
             k = k - 1;
-        } while (mjd > jd - 0.5);
+        }
+        while (mjd > jd - 0.5);
 
         k = k + 1;
         var hm = k - 1048;
@@ -507,6 +484,7 @@ public static class IslamicDateUtils
         l = j / 11;
         var month = (int)(j + 2 - 12 * l);
         var year = (int)(100 * (n - 49) + i + l);
+
         return new DateTime(year, month, day);
     }
 
@@ -539,10 +517,10 @@ public static class IslamicDateUtils
     ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
     ///     می‌کند
     /// </param>
-    public static IslamicDay ToIslamicDay(this DateTime gregorian, bool convertToIranTimeZone = true) =>
-        JdnToIslamicDay(ToJdn(gregorian, convertToIranTimeZone));
+    public static IslamicDay ToIslamicDay(this DateTime gregorian, bool convertToIranTimeZone = true)
+        => JdnToIslamicDay(ToJdn(gregorian, convertToIranTimeZone));
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به قمری
     /// </summary>
@@ -551,8 +529,8 @@ public static class IslamicDateUtils
     ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
     ///     می‌کند
     /// </param>
-    public static IslamicDay ToIslamicDay(this DateOnly gregorian, bool convertToIranTimeZone = true) =>
-        gregorian.ToDateTime().ToIslamicDay(convertToIranTimeZone);
+    public static IslamicDay ToIslamicDay(this DateOnly gregorian, bool convertToIranTimeZone = true)
+        => gregorian.ToDateTime().ToIslamicDay(convertToIranTimeZone);
 #endif
 
     /// <summary>
@@ -562,9 +540,8 @@ public static class IslamicDateUtils
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns></returns>
     public static IslamicDay ToIslamicDay(this DateTimeOffset dt,
-                                          DateTimeOffsetPart dateTimeOffsetPart =
-                                              DateTimeOffsetPart.IranLocalDateTime) =>
-        ToIslamicDay(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        => ToIslamicDay(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به قمری
@@ -573,8 +550,8 @@ public static class IslamicDateUtils
     /// <param name="month">ماه میلادی</param>
     /// <param name="day">روز میلادی</param>
     /// <returns></returns>
-    public static IslamicDay GregorianToIslamicDay(int year, int month, int day) =>
-        JdnToIslamicDay(GregorianToJdn(year, month, day));
+    public static IslamicDay GregorianToIslamicDay(int year, int month, int day)
+        => JdnToIslamicDay(GregorianToJdn(year, month, day));
 
     /// <summary>
     ///     To Jdn
@@ -594,7 +571,7 @@ public static class IslamicDateUtils
         return GregorianToJdn(gregorian.Year, gregorian.Month, gregorian.Day);
     }
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
     /// <summary>
     ///     To Jdn
     /// </summary>
@@ -603,8 +580,8 @@ public static class IslamicDateUtils
     ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
     ///     می‌کند
     /// </param>
-    public static long ToJdn(this DateOnly gregorian, bool convertToIranTimeZone = true) =>
-        gregorian.ToDateTime().ToJdn(convertToIranTimeZone);
+    public static long ToJdn(this DateOnly gregorian, bool convertToIranTimeZone = true)
+        => gregorian.ToDateTime().ToJdn(convertToIranTimeZone);
 #endif
 
     /// <summary>
@@ -616,14 +593,11 @@ public static class IslamicDateUtils
     /// <returns></returns>
     public static long GregorianToJdn(long lYear, long lMonth, long lDay)
     {
-        if (lYear > 1582
-            || (lYear == 1582 && lMonth > 10)
-            || (lYear == 1582 && lMonth == 10 && lDay > 14))
+        if (lYear > 1582 || (lYear == 1582 && lMonth > 10) || (lYear == 1582 && lMonth == 10 && lDay > 14))
         {
-            return 1461 * (lYear + 4800 + (lMonth - 14) / 12) / 4
-                   + 367 * (lMonth - 2 - 12 * ((lMonth - 14) / 12)) / 12
-                   - 3 * ((lYear + 4900 + (lMonth - 14) / 12) / 100) / 4
-                   + lDay - 32075;
+            return 1461 * (lYear + 4800 + (lMonth - 14) / 12) / 4 +
+                367 * (lMonth - 2 - 12 * ((lMonth - 14) / 12)) / 12 -
+                3 * ((lYear + 4900 + (lMonth - 14) / 12) / 100) / 4 + lDay - 32075;
         }
 
         return JulianToJdn(lYear, lMonth, lDay);
@@ -636,9 +610,8 @@ public static class IslamicDateUtils
     /// <param name="lMonth"></param>
     /// <param name="lDay"></param>
     /// <returns></returns>
-    public static long JulianToJdn(long lYear, long lMonth, long lDay) =>
-        367 * lYear - 7 * (lYear + 5001 + (lMonth - 9) / 7) / 4
-        + 275 * lMonth / 9 + lDay + 1729777;
+    public static long JulianToJdn(long lYear, long lMonth, long lDay)
+        => 367 * lYear - 7 * (lYear + 5001 + (lMonth - 9) / 7) / 4 + 275 * lMonth / 9 + lDay + 1729777;
 
     /// <summary>
     ///     To PersianDay
@@ -648,10 +621,10 @@ public static class IslamicDateUtils
     ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
     ///     می‌کند
     /// </param>
-    public static PersianDay ToPersianDay(this DateTime gregorian, bool convertToIranTimeZone = true) =>
-        gregorian.ToPersianYearMonthDay(convertToIranTimeZone);
+    public static PersianDay ToPersianDay(this DateTime gregorian, bool convertToIranTimeZone = true)
+        => gregorian.ToPersianYearMonthDay(convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
     /// <summary>
     ///     To PersianDay
     /// </summary>
@@ -660,8 +633,8 @@ public static class IslamicDateUtils
     ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
     ///     می‌کند
     /// </param>
-    public static PersianDay ToPersianDay(this DateOnly gregorian, bool convertToIranTimeZone = true) =>
-        gregorian.ToDateTime().ToPersianDay(convertToIranTimeZone);
+    public static PersianDay ToPersianDay(this DateOnly gregorian, bool convertToIranTimeZone = true)
+        => gregorian.ToDateTime().ToPersianDay(convertToIranTimeZone);
 #endif
 
     /// <summary>
@@ -669,16 +642,16 @@ public static class IslamicDateUtils
     /// </summary>
     /// <param name="islamic"></param>
     /// <returns></returns>
-    public static DateTime IslamicDayToGregorian(this IslamicDay islamic) =>
-        JdnToGregorianDateTime(IslamicDayToJdn(islamic));
+    public static DateTime IslamicDayToGregorian(this IslamicDay islamic)
+        => JdnToGregorianDateTime(IslamicDayToJdn(islamic));
 
     /// <summary>
     ///     IslamicDay To PersianDay
     /// </summary>
     /// <param name="islamic"></param>
     /// <returns></returns>
-    public static PersianDay IslamicDayToPersianDay(this IslamicDay islamic) =>
-        JdnToPersianDay(IslamicDayToJdn(islamic));
+    public static PersianDay IslamicDayToPersianDay(this IslamicDay islamic)
+        => JdnToPersianDay(IslamicDayToJdn(islamic));
 
     /// <summary>
     ///     IslamicDay To PersianDay
@@ -687,24 +660,24 @@ public static class IslamicDateUtils
     /// <param name="month">ماه قمری</param>
     /// <param name="day">روز قمری</param>
     /// <returns></returns>
-    public static PersianDay IslamicDayToPersianDay(this int year, int month, int day) =>
-        JdnToPersianDay(IslamicDayToJdn(year, month, day));
+    public static PersianDay IslamicDayToPersianDay(this int year, int month, int day)
+        => JdnToPersianDay(IslamicDayToJdn(year, month, day));
 
     /// <summary>
     ///     PersianDay To Gregorian
     /// </summary>
     /// <param name="persian"></param>
     /// <returns></returns>
-    public static DateTime PersianDayToGregorian(this PersianDay persian) =>
-        JdnToGregorianDateTime(PersianDayToJdn(persian));
+    public static DateTime PersianDayToGregorian(this PersianDay persian)
+        => JdnToGregorianDateTime(PersianDayToJdn(persian));
 
     /// <summary>
     ///     تبدیل تاریخ شمسی به قمری
     /// </summary>
     /// <param name="persian">روز شمسی</param>
     /// <returns></returns>
-    public static IslamicDay PersianDayToIslamicDay(this PersianDay persian) =>
-        JdnToIslamicDay(PersianDayToJdn(persian));
+    public static IslamicDay PersianDayToIslamicDay(this PersianDay persian)
+        => JdnToIslamicDay(PersianDayToJdn(persian));
 
     /// <summary>
     ///     تبدیل تاریخ شمسی به قمری
@@ -713,6 +686,6 @@ public static class IslamicDateUtils
     /// <param name="month">ماه شمسی</param>
     /// <param name="day">روز شمسی</param>
     /// <returns></returns>
-    public static IslamicDay PersianDayToIslamicDay(int year, int month, int day) =>
-        JdnToIslamicDay(PersianDayToJdn(year, month, day));
+    public static IslamicDay PersianDayToIslamicDay(int year, int month, int day)
+        => JdnToIslamicDay(PersianDayToJdn(year, month, day));
 }

@@ -24,9 +24,9 @@ public static class WordsUtils
         }
 
         text = text.CleanTags().Trim();
-        text = text.Replace("\t", " ", StringComparison.Ordinal);
-        text = text.Replace("\n", " ", StringComparison.Ordinal);
-        text = text.Replace("\r", " ", StringComparison.Ordinal);
+        text = text.Replace(oldValue: "\t", newValue: " ", StringComparison.Ordinal);
+        text = text.Replace(oldValue: "\n", newValue: " ", StringComparison.Ordinal);
+        text = text.Replace(oldValue: "\r", newValue: " ", StringComparison.Ordinal);
 
         var words = text.Split(_separator, StringSplitOptions.RemoveEmptyEntries);
 
@@ -34,7 +34,7 @@ public static class WordsUtils
     }
 
     private static string CleanTags(this string data)
-        => data.Replace("\n", "\n ", StringComparison.Ordinal).StripHtmlTags();
+        => data.Replace(oldValue: "\n", newValue: "\n ", StringComparison.Ordinal).StripHtmlTags();
 
     /// <summary>
     ///     خواندن يك متن چند دقيقه طول مي‌كشد؟
@@ -61,15 +61,15 @@ public static class WordsUtils
 
     private static string ToReadableString(this TimeSpan span)
     {
-        var formatted = string.Format(CultureInfo.InvariantCulture, "{0}{1}{2}{3}",
+        var formatted = string.Format(CultureInfo.InvariantCulture, format: "{0}{1}{2}{3}",
             span.Duration().Days > 0 ? $"{span.Days.NumberToText(Language.Persian)} روز و " : string.Empty,
             span.Duration().Hours > 0 ? $"{span.Hours.NumberToText(Language.Persian)} ساعت و " : string.Empty,
             span.Duration().Minutes > 0 ? $"{span.Minutes.NumberToText(Language.Persian)} دقیقه و " : string.Empty,
             span.Duration().Seconds > 0 ? $"{span.Seconds.NumberToText(Language.Persian)} ثانیه" : string.Empty);
 
-        if (formatted.EndsWith("و ", StringComparison.Ordinal))
+        if (formatted.EndsWith(value: "و ", StringComparison.Ordinal))
         {
-            formatted = formatted.Substring(0, formatted.Length - 2);
+            formatted = formatted.Substring(startIndex: 0, formatted.Length - 2);
         }
 
         if (string.IsNullOrEmpty(formatted))
@@ -85,8 +85,7 @@ public static class WordsUtils
     /// </summary>
     /// <param name="data"></param>
     /// <returns></returns>
-    public static string ReturnDotsIfEmpty(this string? data)
-        => string.IsNullOrWhiteSpace(data) ? "..." : data;
+    public static string ReturnDotsIfEmpty(this string? data) => string.IsNullOrWhiteSpace(data) ? "..." : data;
 
     /// <summary>
     ///     خلاصه ابتدايي يك متن را به طول مشخص شده بازگشت مي‌دهد
@@ -110,8 +109,8 @@ public static class WordsUtils
 
         return data.Length < charLength
             ? data.ReturnDotsIfEmpty()
-#if NET6_0 || NET7_0 || NET8_0
-            : string.Concat(data.AsSpan(0, charLength - 7), " ...");
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+            : string.Concat(data.AsSpan(start: 0, charLength - 7), str1: " ...");
 #else
             : string.Concat(data.Substring(0, charLength - 7), " ...");
 #endif

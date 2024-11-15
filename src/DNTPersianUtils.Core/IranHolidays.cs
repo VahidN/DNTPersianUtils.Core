@@ -8,7 +8,7 @@ using static System.FormattableString;
 namespace DNTPersianUtils.Core;
 
 /// <summary>
-/// مناسبت‌های تعطیلات رسمی ایران
+///     مناسبت‌های تعطیلات رسمی ایران
 /// </summary>
 public static class IranHolidays
 {
@@ -42,1298 +42,1569 @@ public static class IranHolidays
     private const string RoozeAkhareSaal = "آخرین روز سال";
     private const string ShahadataPresidentRaeesi = "عزای عمومی شهادت رییس جمهور";
 
-    private static readonly Lazy<ISet<IranHoliday>> _holidayProvider =
-        new Lazy<ISet<IranHoliday>>(getIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
-
     /// <summary>
-    /// مناسبت‌های تعطیلات رسمی ایران
-    /// </summary>
-    public static ISet<IranHoliday> Instance { get; } = _holidayProvider.Value;
-
-    /// <summary>
-    /// سال شروع تعاریف مناسبت‌های تعطیل در این کتابخانه
+    ///     سال شروع تعاریف مناسبت‌های تعطیل در این کتابخانه
     /// </summary>
     public const int StartYear = 1395;
 
     /// <summary>
-    /// سال خاتمه تعاریف مناسبت‌های تعطیل در این کتابخانه
+    ///     سال خاتمه تعاریف مناسبت‌های تعطیل در این کتابخانه
     /// </summary>
     public const int EndYear = 1403;
+
+    private static readonly Lazy<ISet<IranHoliday>> _holidayProvider =
+        new(getIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
+
+    /// <summary>
+    ///     مناسبت‌های تعطیلات رسمی ایران
+    /// </summary>
+    public static ISet<IranHoliday> Instance { get; } = _holidayProvider.Value;
 
     private static HashSet<IranHoliday> getIranHolidays()
     {
         var persianCalendar = new PersianCalendar();
+
         var holidays = new HashSet<IranHoliday>
-                       {
-                           // ----------------------- سال 1395
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 1, 1, 0, 0, 0, 0),
-                               Description = Salenow
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 1, 2, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 1, 3, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 1, 4, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 1, 12, 0, 0, 0, 0),
-                               Description = RoozeJomhoori
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 1, 13, 0, 0, 0, 0),
-                               Description = Sizdah
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 2, 2, 0, 0, 0, 0),
-                               Description = RoozePedar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 2, 16, 0, 0, 0, 0),
-                               Description = Mabas
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 3, 2, 0, 0, 0, 0),
-                               Description = NimehShabaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 3, 14, 0, 0, 0, 0),
-                               Description = RehlateEmaam
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 3, 15, 0, 0, 0, 0),
-                               Description = PaanzdaheKhordaad
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 4, 7, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAli
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 4, 16, 0, 0, 0, 0),
-                               Description = EideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 4, 17, 0, 0, 0, 0),
-                               Description = TatilBeMonaasebateEideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 5, 9, 0, 0, 0, 0),
-                               Description = ShahaadatEmaamJafar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 6, 22, 0, 0, 0, 0),
-                               Description = EideGhorbaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 6, 30, 0, 0, 0, 0),
-                               Description = EideGhadir
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 7, 20, 0, 0, 0, 0),
-                               Description = Taasooa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 7, 21, 0, 0, 0, 0),
-                               Description = Aashooraa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 8, 30, 0, 0, 0, 0),
-                               Description = Arbaein
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 9, 8, 0, 0, 0, 0),
-                               Description = RehlateRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 9, 10, 0, 0, 0, 0),
-                               Description = ShahaadateEmaamReza
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 9, 27, 0, 0, 0, 0),
-                               Description = TavallodeRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 10, 5, 0, 0, 0, 0),
-                               Description = TavallodeMasih
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 11, 22, 0, 0, 0, 0),
-                               Description = PiroozieEnghelaab
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 12, 12, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteZahraa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1395, 12, 29, 0, 0, 0, 0),
-                               Description = MelliShodaneNaft
-                           },
+        {
+            // ----------------------- سال 1395
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 1, day: 1, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 1, day: 2, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 1, day: 3, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 1, day: 4, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 1, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 1, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 2, day: 2, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 2, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 3, day: 2, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = NimehShabaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 3, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateEmaam
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 3, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PaanzdaheKhordaad
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 4, day: 7, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAli
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 4, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 4, day: 17, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 5, day: 9, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 6, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 6, day: 30, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhadir
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 7, day: 20, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 7, day: 21, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 8, day: 30, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 9, day: 8, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 9, day: 10, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 9, day: 27, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 10, day: 5, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeMasih
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 12, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1395, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = MelliShodaneNaft
+            },
 
-                           // ----------------------- سال 1396
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 1, 1, 0, 0, 0, 0),
-                               Description = Salenow
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 1, 2, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 1, 3, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 1, 4, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 1, 12, 0, 0, 0, 0),
-                               Description = RoozeJomhoori
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 1, 13, 0, 0, 0, 0),
-                               Description = Sizdah
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 1, 22, 0, 0, 0, 0),
-                               Description = RoozePedar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 2, 5, 0, 0, 0, 0),
-                               Description = Mabas
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 2, 22, 0, 0, 0, 0),
-                               Description = NimehShabaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 3, 14, 0, 0, 0, 0),
-                               Description = RehlateEmaam
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 3, 15, 0, 0, 0, 0),
-                               Description = PaanzdaheKhordaad
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 3, 26, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAli
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 4, 5, 0, 0, 0, 0),
-                               Description = EideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 4, 6, 0, 0, 0, 0),
-                               Description = TatilBeMonaasebateEideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 4, 29, 0, 0, 0, 0),
-                               Description = ShahaadatEmaamJafar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 6, 10, 0, 0, 0, 0),
-                               Description = EideGhorbaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 6, 18, 0, 0, 0, 0),
-                               Description = EideGhadir
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 7, 8, 0, 0, 0, 0),
-                               Description = Taasooa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 7, 9, 0, 0, 0, 0),
-                               Description = Aashooraa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 8, 18, 0, 0, 0, 0),
-                               Description = Arbaein
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 8, 26, 0, 0, 0, 0),
-                               Description = RehlateRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 8, 28, 0, 0, 0, 0),
-                               Description = ShahaadateEmaamReza
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 9, 6, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAsgari
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 9, 15, 0, 0, 0, 0),
-                               Description = TavallodeRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 11, 22, 0, 0, 0, 0),
-                               Description = PiroozieEnghelaab
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 12, 1, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteZahraa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1396, 12, 29, 0, 0, 0, 0),
-                               Description = MelliShodaneNaft
-                           },
+            // ----------------------- سال 1396
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 1, day: 1, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 1, day: 2, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 1, day: 3, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 1, day: 4, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 1, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 1, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 1, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 2, day: 5, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 2, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = NimehShabaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 3, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateEmaam
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 3, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PaanzdaheKhordaad
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 3, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAli
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 4, day: 5, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 4, day: 6, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 4, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 6, day: 10, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 6, day: 18, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhadir
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 7, day: 8, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 7, day: 9, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 8, day: 18, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 8, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 8, day: 28, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 9, day: 6, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAsgari
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 9, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 12, day: 1, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1396, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = MelliShodaneNaft
+            },
 
-                           // ----------------------- سال 1397
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 1, 1, 0, 0, 0, 0),
-                               Description = Salenow
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 1, 2, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 1, 3, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 1, 4, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 1, 11, 0, 0, 0, 0),
-                               Description = RoozePedar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 1, 12, 0, 0, 0, 0),
-                               Description = RoozeJomhoori
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 1, 13, 0, 0, 0, 0),
-                               Description = Sizdah
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 1, 25, 0, 0, 0, 0),
-                               Description = Mabas
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 2, 12, 0, 0, 0, 0),
-                               Description = NimehShabaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 3, 14, 0, 0, 0, 0),
-                               Description = RehlateEmaam
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 3, 15, 0, 0, 0, 0),
-                               Description = PaanzdaheKhordaad
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 3, 16, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAli
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 3, 25, 0, 0, 0, 0),
-                               Description = EideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 3, 26, 0, 0, 0, 0),
-                               Description = TatilBeMonaasebateEideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 4, 18, 0, 0, 0, 0),
-                               Description = ShahaadatEmaamJafar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 5, 31, 0, 0, 0, 0),
-                               Description = EideGhorbaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 6, 8, 0, 0, 0, 0),
-                               Description = EideGhadir
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 6, 28, 0, 0, 0, 0),
-                               Description = Taasooa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 6, 29, 0, 0, 0, 0),
-                               Description = Aashooraa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 8, 8, 0, 0, 0, 0),
-                               Description = Arbaein
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 8, 16, 0, 0, 0, 0),
-                               Description = RehlateRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 8, 17, 0, 0, 0, 0),
-                               Description = ShahaadateEmaamReza
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 8, 25, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAsgari
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 9, 4, 0, 0, 0, 0),
-                               Description = TavallodeRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 11, 20, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteZahraa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 11, 22, 0, 0, 0, 0),
-                               Description = PiroozieEnghelaab
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1397, 12, 29, 0, 0, 0, 0),
-                               Description = $"{MelliShodaneNaft}؛ {RoozePedar}"
-                           },
+            // ----------------------- سال 1397
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 1, day: 1, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 1, day: 2, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 1, day: 3, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 1, day: 4, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 1, day: 11, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 1, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 1, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 1, day: 25, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 2, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = NimehShabaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 3, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateEmaam
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 3, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PaanzdaheKhordaad
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 3, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAli
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 3, day: 25, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 3, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 4, day: 18, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 5, day: 31, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 6, day: 8, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhadir
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 6, day: 28, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 6, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 8, day: 8, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 8, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 8, day: 17, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 8, day: 25, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAsgari
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 9, day: 4, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 11, day: 20, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1397, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = $"{MelliShodaneNaft}؛ {RoozePedar}"
+            },
 
-                           // ----------------------- سال 1398
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 1, 1, 0, 0, 0, 0),
-                               Description = Salenow
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 1, 2, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 1, 3, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 1, 4, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 1, 12, 0, 0, 0, 0),
-                               Description = RoozeJomhoori
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 1, 13, 0, 0, 0, 0),
-                               Description = Sizdah
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 1, 14, 0, 0, 0, 0),
-                               Description = Mabas
-                           },
+            // ----------------------- سال 1398
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 1, day: 1, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 1, day: 2, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 1, day: 3, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 1, day: 4, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 1, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 1, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 1, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 2, 1, 0, 0, 0, 0),
-                               Description = NimehShabaan
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 2, day: 1, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = NimehShabaan
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 3, 6, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAli
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 3, 14, 0, 0, 0, 0),
-                               Description = RehlateEmaam
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 3, 15, 0, 0, 0, 0),
-                               Description = $"{PaanzdaheKhordaad} و {EideFetr}"
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 3, 16, 0, 0, 0, 0),
-                               Description = TatilBeMonaasebateEideFetr
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 3, day: 6, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAli
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 3, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateEmaam
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 3, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = $"{PaanzdaheKhordaad} و {EideFetr}"
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 3, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 4, 8, 0, 0, 0, 0),
-                               Description = ShahaadatEmaamJafar
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 4, day: 8, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 5, 21, 0, 0, 0, 0),
-                               Description = EideGhorbaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 5, 29, 0, 0, 0, 0),
-                               Description = EideGhadir
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 5, day: 21, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 5, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhadir
+            },
 
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 6, day: 18, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 6, day: 19, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 6, 18, 0, 0, 0, 0),
-                               Description = Taasooa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 6, 19, 0, 0, 0, 0),
-                               Description = Aashooraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 7, day: 27, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 7, 27, 0, 0, 0, 0),
-                               Description = Arbaein
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 8, day: 5, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 8, day: 7, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 8, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAsgari
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 8, day: 24, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 8, 5, 0, 0, 0, 0),
-                               Description = RehlateRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 8, 7, 0, 0, 0, 0),
-                               Description = ShahaadateEmaamReza
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 8, 15, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAsgari
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 8, 24, 0, 0, 0, 0),
-                               Description = TavallodeRasool
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 11, day: 9, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 11, 9, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteZahraa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 11, 22, 0, 0, 0, 0),
-                               Description = PiroozieEnghelaab
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 12, day: 18, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1398, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = $"{MelliShodaneNaft}؛ {RoozePedar}"
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 12, 18, 0, 0, 0, 0),
-                               Description = RoozePedar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1398, 12, 29, 0, 0, 0, 0),
-                               Description = $"{MelliShodaneNaft}؛ {RoozePedar}"
-                           },
+            // ----------------------- سال 1399
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 1, day: 1, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 1, day: 2, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 1, day: 3, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = $"{Nowrooz} و {Mabas}"
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 1, day: 4, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 1, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 1, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 1, day: 21, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = NimehShabaan
+            },
 
-                           // ----------------------- سال 1399
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 1, 1, 0, 0, 0, 0),
-                               Description = Salenow
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 1, 2, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 1, 3, 0, 0, 0, 0),
-                               Description = $"{Nowrooz} و {Mabas}"
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 1, 4, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 1, 12, 0, 0, 0, 0),
-                               Description = RoozeJomhoori
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 1, 13, 0, 0, 0, 0),
-                               Description = Sizdah
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 1, 21, 0, 0, 0, 0),
-                               Description = NimehShabaan
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 2, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAli
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 2, 26, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAli
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 3, day: 4, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 3, day: 5, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 3, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateEmaam
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 3, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PaanzdaheKhordaad
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 3, day: 28, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 3, 4, 0, 0, 0, 0),
-                               Description = EideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 3, 5, 0, 0, 0, 0),
-                               Description = TatilBeMonaasebateEideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 3, 14, 0, 0, 0, 0),
-                               Description = RehlateEmaam
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 3, 15, 0, 0, 0, 0),
-                               Description = PaanzdaheKhordaad
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 3, 28, 0, 0, 0, 0),
-                               Description = ShahaadatEmaamJafar
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 5, day: 10, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 5, day: 18, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhadir
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 5, 10, 0, 0, 0, 0),
-                               Description = EideGhorbaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 5, 18, 0, 0, 0, 0),
-                               Description = EideGhadir
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 6, day: 8, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 6, day: 9, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 6, 8, 0, 0, 0, 0),
-                               Description = Taasooa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 6, 9, 0, 0, 0, 0),
-                               Description = Aashooraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 7, day: 17, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 7, day: 25, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 7, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 7, 17, 0, 0, 0, 0),
-                               Description = Arbaein
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 7, 25, 0, 0, 0, 0),
-                               Description = RehlateRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 7, 26, 0, 0, 0, 0),
-                               Description = ShahaadateEmaamReza
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 8, day: 4, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAsgari
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 8, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 8, 4, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAsgari
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 8, 13, 0, 0, 0, 0),
-                               Description = TavallodeRasool
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 10, day: 28, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 10, 28, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteZahraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 11, 22, 0, 0, 0, 0),
-                               Description = PiroozieEnghelaab
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 12, day: 7, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 12, day: 21, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1399, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = MelliShodaneNaft
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 12, 7, 0, 0, 0, 0),
-                               Description = RoozePedar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 12, 21, 0, 0, 0, 0),
-                               Description = Mabas
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1399, 12, 29, 0, 0, 0, 0),
-                               Description = MelliShodaneNaft
-                           },
+            // ----------------------- سال 1400
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 01, day: 01, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 01, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 01, day: 03, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 01, day: 04, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 01, day: 09, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = NimehShabaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 01, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 01, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah
+            },
 
-                           // ----------------------- سال 1400
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 01, 01, 0, 0, 0, 0),
-                               Description = Salenow
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 01, 02, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 01, 03, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 01, 04, 0, 0, 0, 0),
-                               Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 01, 09, 0, 0, 0, 0),
-                               Description = NimehShabaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 01, 12, 0, 0, 0, 0),
-                               Description = RoozeJomhoori
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 01, 13, 0, 0, 0, 0),
-                               Description = Sizdah
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 02, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAli
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 02, day: 23, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 02, day: 24, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 02, 14, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAli
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 02, 23, 0, 0, 0, 0),
-                               Description = EideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 02, 24, 0, 0, 0, 0),
-                               Description = TatilBeMonaasebateEideFetr
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 03, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateEmaam
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 03, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PaanzdaheKhordaad
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 03, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 03, 14, 0, 0, 0, 0),
-                               Description = RehlateEmaam
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 03, 15, 0, 0, 0, 0),
-                               Description = PaanzdaheKhordaad
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 03, 16, 0, 0, 0, 0),
-                               Description = ShahaadatEmaamJafar
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 04, day: 30, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 04, 30, 0, 0, 0, 0),
-                               Description = EideGhorbaan
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 05, day: 07, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhadir
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 05, day: 27, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 05, day: 28, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 05, 07, 0, 0, 0, 0),
-                               Description = EideGhadir
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 05, 27, 0, 0, 0, 0),
-                               Description = Taasooa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 05, 28, 0, 0, 0, 0),
-                               Description = Aashooraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 07, day: 05, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 07, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 07, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 07, day: 23, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAsgari
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 07, 05, 0, 0, 0, 0),
-                               Description = Arbaein
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 07, 13, 0, 0, 0, 0),
-                               Description = RehlateRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 07, 15, 0, 0, 0, 0),
-                               Description = ShahaadateEmaamReza
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 07, 23, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAsgari
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 08, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 08, 02, 0, 0, 0, 0),
-                               Description = TavallodeRasool
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 10, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 10, 16, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteZahraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 11, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 11, 22, 0, 0, 0, 0),
-                               Description = PiroozieEnghelaab
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 11, 26, 0, 0, 0, 0),
-                               Description = RoozePedar
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 12, day: 10, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 12, day: 27, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ValaadateHazrazteMahdi
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1400, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = MelliShodaneNaft
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 12, 10, 0, 0, 0, 0),
-                               Description = Mabas
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 12, 27, 0, 0, 0, 0),
-                               Description = ValaadateHazrazteMahdi
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1400, 12, 29, 0, 0, 0, 0),
-                               Description = MelliShodaneNaft
-                           },
+            // ----------------------- سال 1401
 
-                           // ----------------------- سال 1401
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 01, day: 01, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 01, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 01, day: 03, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 01, day: 04, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 01, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 01, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 01, 01, 0, 0, 0, 0), Description = Salenow
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 01, 02, 0, 0, 0, 0), Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 01, 03, 0, 0, 0, 0), Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 01, 04, 0, 0, 0, 0), Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 01, 12, 0, 0, 0, 0),
-                               Description = RoozeJomhoori
-                           },
-                           new IranHoliday
-                           { Holiday = persianCalendar.ToDateTime(1401, 01, 13, 0, 0, 0, 0), Description = Sizdah },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 02, day: 03, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAli
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 02, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 02, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 02, 03, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAli
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 02, 13, 0, 0, 0, 0),
-                               Description = EideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 02, 14, 0, 0, 0, 0),
-                               Description = TatilBeMonaasebateEideFetr
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 03, day: 06, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 03, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateEmaam
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 03, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PaanzdaheKhordaad
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 03, 06, 0, 0, 0, 0),
-                               Description = ShahaadatEmaamJafar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 03, 14, 0, 0, 0, 0),
-                               Description = RehlateEmaam
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 03, 15, 0, 0, 0, 0),
-                               Description = PaanzdaheKhordaad
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 04, day: 19, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 04, day: 27, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhadir
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 04, 19, 0, 0, 0, 0),
-                               Description = EideGhorbaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 04, 27, 0, 0, 0, 0),
-                               Description = EideGhadir
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 05, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 05, day: 17, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 05, 16, 0, 0, 0, 0), Description = Taasooa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 05, 17, 0, 0, 0, 0),
-                               Description = Aashooraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 06, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 06, 26, 0, 0, 0, 0), Description = Arbaein
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 07, day: 03, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 07, day: 05, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 07, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAsgari
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 07, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 07, 03, 0, 0, 0, 0),
-                               Description = RehlateRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 07, 05, 0, 0, 0, 0),
-                               Description = ShahaadateEmaamReza
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 07, 13, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAsgari
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 07, 22, 0, 0, 0, 0),
-                               Description = TavallodeRasool
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 10, day: 06, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 10, 06, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteZahraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 11, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 11, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 11, 15, 0, 0, 0, 0),
-                               Description = RoozePedar
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 11, 22, 0, 0, 0, 0),
-                               Description = PiroozieEnghelaab
-                           },
-                           new IranHoliday
-                           { Holiday = persianCalendar.ToDateTime(1401, 11, 29, 0, 0, 0, 0), Description = Mabas },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 12, day: 17, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ValaadateHazrazteMahdi
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1401, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = MelliShodaneNaft
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 12, 17, 0, 0, 0, 0),
-                               Description = ValaadateHazrazteMahdi
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1401, 12, 29, 0, 0, 0, 0),
-                               Description = MelliShodaneNaft
-                           },
+            // ----------------------- سال 1402				
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 01, day: 01, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 01, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 01, day: 03, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 01, day: 04, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 01, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 01, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 01, day: 23, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAli
+            },
 
-                           // ----------------------- سال 1402				
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 01, 01, 0, 0, 0, 0), Description = Salenow
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 01, 02, 0, 0, 0, 0), Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 01, 03, 0, 0, 0, 0), Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 01, 04, 0, 0, 0, 0), Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 01, 12, 0, 0, 0, 0),
-                               Description = RoozeJomhoori
-                           },
-                           new IranHoliday
-                           { Holiday = persianCalendar.ToDateTime(1402, 01, 13, 0, 0, 0, 0), Description = Sizdah },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 01, 23, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAli
-                           },
-						   
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 02, 02, 0, 0, 0, 0),
-                               Description = EideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 02, 03, 0, 0, 0, 0),
-                               Description = TatilBeMonaasebateEideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 02, 26, 0, 0, 0, 0),
-                               Description = ShahaadatEmaamJafar
-                           },
-						   
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 03, 14, 0, 0, 0, 0),
-                               Description = RehlateEmaam
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 03, 15, 0, 0, 0, 0),
-                               Description = PaanzdaheKhordaad
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 02, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 02, day: 03, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 02, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 04, 08, 0, 0, 0, 0),
-                               Description = EideGhorbaan
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 04, 16, 0, 0, 0, 0),
-                               Description = EideGhadir
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 03, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateEmaam
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 03, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PaanzdaheKhordaad
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 05, 05, 0, 0, 0, 0), Description = Taasooa
-                           },
-						   
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 05, 06, 0, 0, 0, 0),
-                               Description = Aashooraa
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 06, 15, 0, 0, 0, 0), Description = Arbaein
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 06, 23, 0, 0, 0, 0),
-                               Description = RehlateRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 06, 25, 0, 0, 0, 0),
-                               Description = ShahaadateEmaamReza
-                           },
-						   
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 07, 02, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAsgari
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 07, 11, 0, 0, 0, 0),
-                               Description = TavallodeRasool
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 04, day: 08, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 04, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhadir
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 09, 26, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteZahraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 05, day: 05, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 11, 05, 0, 0, 0, 0),
-                               Description = RoozePedar
-                           },
-                           new IranHoliday
-                           { Holiday = persianCalendar.ToDateTime(1402, 11, 19, 0, 0, 0, 0), Description = Mabas },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 11, 22, 0, 0, 0, 0),
-                               Description = PiroozieEnghelaab
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 05, day: 06, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 06, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 06, day: 23, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 06, day: 25, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 12, 06, 0, 0, 0, 0),
-                               Description = ValaadateHazrazteMahdi
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1402, 12, 29, 0, 0, 0, 0),
-                               Description = MelliShodaneNaft
-                           },
-						   
-                           // ----------------------- سال 1403				
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 01, 01, 0, 0, 0, 0), Description = Salenow
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 01, 02, 0, 0, 0, 0), Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 01, 03, 0, 0, 0, 0), Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 01, 04, 0, 0, 0, 0), Description = Nowrooz
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 01, 12, 0, 0, 0, 0),
-                               Description = RoozeJomhoori
-                           },
-                           new IranHoliday
-                           { 
-                               Holiday = persianCalendar.ToDateTime(1403, 01, 13, 0, 0, 0, 0), 
-                               Description = Sizdah + "؛ "+ ShahaadateHazrazteAli
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 01, 22, 0, 0, 0, 0),
-                               Description = EideFetr
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 01, 23, 0, 0, 0, 0),
-                               Description = TatilBeMonaasebateEideFetr
-                           },
-						   
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 02, 15, 0, 0, 0, 0),
-                               Description = ShahaadatEmaamJafar
-                           },
-				   
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 03, 02, 0, 0, 0, 0),
-                               Description = ShahadataPresidentRaeesi
-                           },
-						   
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 03, 14, 0, 0, 0, 0),
-                               Description = RehlateEmaam
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 03, 15, 0, 0, 0, 0),
-                               Description = PaanzdaheKhordaad
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 03, 28, 0, 0, 0, 0),
-                               Description = EideGhorbaan
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 07, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAsgari
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 07, day: 11, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 04, 05, 0, 0, 0, 0),
-                               Description = EideGhadir
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 04, 25, 0, 0, 0, 0), 
-                               Description = Taasooa
-                           },						   
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 04, 26, 0, 0, 0, 0),
-                               Description = Aashooraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 09, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 06, 04, 0, 0, 0, 0), 
-                               Description = Arbaein
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 06, 12, 0, 0, 0, 0),
-                               Description = RehlateRasool
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 06, 14, 0, 0, 0, 0),
-                               Description = ShahaadateEmaamReza
-                           },						   
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 06, 22, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteAsgari
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 06, 31, 0, 0, 0, 0),
-                               Description = TavallodeRasool
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 11, day: 05, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 11, day: 19, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 09, 15, 0, 0, 0, 0),
-                               Description = ShahaadateHazrazteZahraa
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 12, day: 06, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ValaadateHazrazteMahdi
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1402, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = MelliShodaneNaft
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 10, 25, 0, 0, 0, 0),
-                               Description = RoozePedar
-                           },
+            // ----------------------- سال 1403				
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 01, day: 01, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 01, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 01, day: 03, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 01, day: 04, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 01, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 01, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah + "؛ " + ShahaadateHazrazteAli
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 01, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 01, day: 23, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
 
-                           new IranHoliday
-                           { 
-                               Holiday = persianCalendar.ToDateTime(1403, 11, 09, 0, 0, 0, 0), 
-                               Description = Mabas 
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 11, 22, 0, 0, 0, 0),
-                               Description = PiroozieEnghelaab
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 11, 26, 0, 0, 0, 0),
-                               Description = ValaadateHazrazteMahdi
-                           },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 02, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
 
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 12, 29, 0, 0, 0, 0),
-                               Description = MelliShodaneNaft
-                           },
-                           new IranHoliday
-                           {
-                               Holiday = persianCalendar.ToDateTime(1403, 12, 30, 0, 0, 0, 0),
-                               Description = RoozeAkhareSaal
-                           },		   
-						   
-                           // ----------------------- سال 1403				
-						   
-                       };
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 03, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahadataPresidentRaeesi
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 03, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateEmaam
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 03, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PaanzdaheKhordaad
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 03, day: 28, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 04, day: 05, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhadir
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 04, day: 25, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 04, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 06, day: 04, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 06, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 06, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 06, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAsgari
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 06, day: 31, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 09, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 10, day: 25, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 11, day: 09, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 11, day: 26, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ValaadateHazrazteMahdi
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = MelliShodaneNaft
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1403, month: 12, day: 30, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeAkhareSaal
+            }
+
+            // ----------------------- سال 1403				
+        };
 
         addFridays(holidays);
 
@@ -1341,11 +1612,14 @@ public static class IranHolidays
     }
 
     /// <summary>
-    /// لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
-    /// از سال 1395 تا پایان سال 1398
+    ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="date">تاریخ</param>
-    /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+    /// <param name="convertToIranTimeZone">
+    ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
+    ///     می‌کند
+    /// </param>
     public static IEnumerable<string>? GetHolidays(this DateTime date, bool convertToIranTimeZone = true)
     {
         if (date.Kind == DateTimeKind.Utc && convertToIranTimeZone)
@@ -1354,46 +1628,50 @@ public static class IranHolidays
         }
 
         var result = Instance.Where(x => x.Holiday.Year == date.Year &&
-                                         x.Holiday.Month == date.Month &&
-                                         x.Holiday.Day == date.Day)
-                             .Select(x => x.Description)
-                             .ToList();
+                                         x.Holiday.Month == date.Month && x.Holiday.Day == date.Day)
+            .Select(x => x.Description)
+            .ToList();
+
         return result.Count > 0 ? result : null;
     }
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
     /// <summary>
-    /// لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
-    /// از سال 1395 تا پایان سال 1398
+    ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="date">تاریخ</param>
-    /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+    /// <param name="convertToIranTimeZone">
+    ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
+    ///     می‌کند
+    /// </param>
     public static IEnumerable<string>? GetHolidays(this DateOnly date, bool convertToIranTimeZone = true)
-    {
-        return date.ToDateTime().GetHolidays(convertToIranTimeZone);
-    }
+        => date.ToDateTime().GetHolidays(convertToIranTimeZone);
 #endif
 
     /// <summary>
-    /// لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
-    /// از سال 1395 تا پایان سال 1398
+    ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static IEnumerable<string>? GetHolidays(this DateTimeOffset date,
-                                                   DateTimeOffsetPart dateTimeOffsetPart =
-                                                       DateTimeOffsetPart.IranLocalDateTime)
+        DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var fromDt = date.GetDateTimeOffsetPart(dateTimeOffsetPart);
+
         return GetHolidays(fromDt);
     }
 
     /// <summary>
-    /// تشخیص تعطیلات رسمی ایران
-    /// از سال 1395 تا پایان سال 1398
+    ///     تشخیص تعطیلات رسمی ایران
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="date">تاریخ</param>
-    /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+    /// <param name="convertToIranTimeZone">
+    ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
+    ///     می‌کند
+    /// </param>
     public static bool IsHoliday(this DateTime date, bool convertToIranTimeZone = true)
     {
         if (date.Kind == DateTimeKind.Utc && convertToIranTimeZone)
@@ -1402,46 +1680,51 @@ public static class IranHolidays
         }
 
         return Instance.Any(x => x.Holiday.Year == date.Year &&
-                                 x.Holiday.Month == date.Month &&
-                                 x.Holiday.Day == date.Day);
+                                 x.Holiday.Month == date.Month && x.Holiday.Day == date.Day);
     }
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
     /// <summary>
-    /// تشخیص تعطیلات رسمی ایران
-    /// از سال 1395 تا پایان سال 1398
+    ///     تشخیص تعطیلات رسمی ایران
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="date">تاریخ</param>
-    /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+    /// <param name="convertToIranTimeZone">
+    ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
+    ///     می‌کند
+    /// </param>
     public static bool IsHoliday(this DateOnly date, bool convertToIranTimeZone = true)
-    {
-        return date.ToDateTime().IsHoliday(convertToIranTimeZone);
-    }
+        => date.ToDateTime().IsHoliday(convertToIranTimeZone);
 #endif
 
     /// <summary>
-    /// تشخیص تعطیلات رسمی ایران
-    /// از سال 1395 تا پایان سال 1398
+    ///     تشخیص تعطیلات رسمی ایران
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static bool IsHoliday(this DateTimeOffset date,
-                                 DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+        DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var fromDt = date.GetDateTimeOffsetPart(dateTimeOffsetPart);
+
         return IsHoliday(fromDt);
     }
 
     /// <summary>
-    /// دریافت لیست روزهای کاری ایران در یک بازه زمانی
-    /// از سال 1395 تا پایان سال 1398
+    ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
-    /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+    /// <param name="convertToIranTimeZone">
+    ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
+    ///     می‌کند
+    /// </param>
     /// <returns>روزهای کاری</returns>
-    public static IEnumerable<DateTime> GetBusinessDays(this DateTime from, DateTime to,
-                                                        bool convertToIranTimeZone = true)
+    public static IEnumerable<DateTime> GetBusinessDays(this DateTime from,
+        DateTime to,
+        bool convertToIranTimeZone = true)
     {
         if (from.Kind == DateTimeKind.Utc && convertToIranTimeZone)
         {
@@ -1453,7 +1736,7 @@ public static class IranHolidays
             to = to.ToIranTimeZoneDateTime();
         }
 
-        for (var date = from; date <= to; date = date.AddDays(1))
+        for (var date = from; date <= to; date = date.AddDays(value: 1))
         {
             if (!date.IsHoliday())
             {
@@ -1462,42 +1745,45 @@ public static class IranHolidays
         }
     }
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
     /// <summary>
-    /// دریافت لیست روزهای کاری ایران در یک بازه زمانی
-    /// از سال 1395 تا پایان سال 1398
+    ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
-    /// <param name="convertToIranTimeZone">اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل می‌کند</param>
+    /// <param name="convertToIranTimeZone">
+    ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
+    ///     می‌کند
+    /// </param>
     /// <returns>روزهای کاری</returns>
-    public static IEnumerable<DateTime> GetBusinessDays(this DateOnly from, DateOnly to,
-                                                        bool convertToIranTimeZone = true)
-    {
-        return from.ToDateTime().GetBusinessDays(to.ToDateTime(), convertToIranTimeZone);
-    }
+    public static IEnumerable<DateTime> GetBusinessDays(this DateOnly from,
+        DateOnly to,
+        bool convertToIranTimeZone = true)
+        => from.ToDateTime().GetBusinessDays(to.ToDateTime(), convertToIranTimeZone);
 #endif
 
     /// <summary>
-    /// دریافت لیست روزهای کاری ایران در یک بازه زمانی
-    /// از سال 1395 تا پایان سال 1398
+    ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns>روزهای کاری</returns>
-    public static IEnumerable<DateTime> GetBusinessDays(this DateTimeOffset from, DateTimeOffset to,
-                                                        DateTimeOffsetPart dateTimeOffsetPart =
-                                                            DateTimeOffsetPart.IranLocalDateTime)
+    public static IEnumerable<DateTime> GetBusinessDays(this DateTimeOffset from,
+        DateTimeOffset to,
+        DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var fromDt = from.GetDateTimeOffsetPart(dateTimeOffsetPart);
         var toDt = to.GetDateTimeOffsetPart(dateTimeOffsetPart);
+
         return GetBusinessDays(fromDt, toDt);
     }
 
     /// <summary>
-    /// دریافت لیست روزهای کاری ایران در یکسال شمسی
-    /// از سال 1395 تا پایان سال 1398
+    ///     دریافت لیست روزهای کاری ایران در یکسال شمسی
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="persianYear">سال شمسی</param>
     /// <returns>روزهای کاری</returns>
@@ -1505,19 +1791,20 @@ public static class IranHolidays
     {
         if (!(persianYear >= StartYear || persianYear <= EndYear))
         {
-            throw new
-                ArgumentOutOfRangeException(Invariant($"در اینجا فقط سال‌های {StartYear} تا {EndYear} پشتیبانی می‌شوند."));
+            throw new ArgumentOutOfRangeException(
+                Invariant($"در اینجا فقط سال‌های {StartYear} تا {EndYear} پشتیبانی می‌شوند."));
         }
 
         var persianYearRang = persianYear.GetPersianYearStartAndEndDates();
         var from = persianYearRang.StartDate;
         var to = persianYearRang.EndDate;
+
         return GetBusinessDays(from, to);
     }
 
     /// <summary>
-    /// دریافت لیست روزهای کاری ایران در یک ماه شمسی
-    /// از سال 1395 تا پایان سال 1398
+    ///     دریافت لیست روزهای کاری ایران در یک ماه شمسی
+    ///     از سال 1395 تا پایان سال 1398
     /// </summary>
     /// <param name="persianYear">سال شمسی</param>
     /// <param name="persianMonth">ماه شمسی</param>
@@ -1526,13 +1813,14 @@ public static class IranHolidays
     {
         if (!(persianYear >= StartYear || persianYear <= EndYear))
         {
-            throw new
-                ArgumentOutOfRangeException(Invariant($"در اینجا فقط سال‌های {StartYear} تا {EndYear} پشتیبانی می‌شوند."));
+            throw new ArgumentOutOfRangeException(
+                Invariant($"در اینجا فقط سال‌های {StartYear} تا {EndYear} پشتیبانی می‌شوند."));
         }
 
         var persianMonthRang = persianYear.GetPersianMonthStartAndEndDates(persianMonth);
         var from = persianMonthRang.StartDate;
         var to = persianMonthRang.EndDate;
+
         return GetBusinessDays(from, to);
     }
 
@@ -1540,15 +1828,16 @@ public static class IranHolidays
     {
         var from = StartYear.GetPersianYearStartAndEndDates().StartDate;
         var to = EndYear.GetPersianYearStartAndEndDates().EndDate;
-        for (var date = from; date <= to; date = date.AddDays(1))
+
+        for (var date = from; date <= to; date = date.AddDays(value: 1))
         {
             if (date.DayOfWeek == DayOfWeek.Friday)
             {
                 holidays.Add(new IranHoliday
-                             {
-                                 Holiday = date,
-                                 Description = "روز جمعه"
-                             });
+                {
+                    Holiday = date,
+                    Description = "روز جمعه"
+                });
             }
         }
     }

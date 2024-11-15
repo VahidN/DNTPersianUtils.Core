@@ -12,7 +12,7 @@ public class IranHoliday
     /// </summary>
     public DateTime Holiday { set; get; }
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
     /// <summary>
     ///     روز مناسبت تعطیل رسمی
     /// </summary>
@@ -42,9 +42,7 @@ public class IranHoliday
             return false;
         }
 
-        return Holiday.Year == day.Holiday.Year &&
-               Holiday.Month == day.Holiday.Month &&
-               Holiday.Day == day.Holiday.Day;
+        return Holiday.Year == day.Holiday.Year && Holiday.Month == day.Holiday.Month && Holiday.Day == day.Holiday.Day;
     }
 
     /// <summary>
@@ -58,6 +56,7 @@ public class IranHoliday
             var hash = 17;
             hash = hash * 23 + Holiday.GetHashCode();
             hash = hash * 23 + StringComparer.Ordinal.GetHashCode(Description);
+
             return hash;
         }
     }
