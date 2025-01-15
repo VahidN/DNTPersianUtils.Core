@@ -7275,6 +7275,19 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.WordsUtils.ReturnDotsIfEmpty
   nameWithType: WordsUtils.ReturnDotsIfEmpty
+- uid: DNTPersianUtils.Core.WordsUtils.ToFriendlyPersianTimeSpanString(System.TimeSpan)
+  name: ToFriendlyPersianTimeSpanString(TimeSpan)
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_ToFriendlyPersianTimeSpanString_System_TimeSpan_
+  commentId: M:DNTPersianUtils.Core.WordsUtils.ToFriendlyPersianTimeSpanString(System.TimeSpan)
+  fullName: DNTPersianUtils.Core.WordsUtils.ToFriendlyPersianTimeSpanString(System.TimeSpan)
+  nameWithType: WordsUtils.ToFriendlyPersianTimeSpanString(TimeSpan)
+- uid: DNTPersianUtils.Core.WordsUtils.ToFriendlyPersianTimeSpanString*
+  name: ToFriendlyPersianTimeSpanString
+  href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_ToFriendlyPersianTimeSpanString_
+  commentId: Overload:DNTPersianUtils.Core.WordsUtils.ToFriendlyPersianTimeSpanString
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.WordsUtils.ToFriendlyPersianTimeSpanString
+  nameWithType: WordsUtils.ToFriendlyPersianTimeSpanString
 - uid: DNTPersianUtils.Core.WordsUtils.WordsCount(System.String)
   name: WordsCount(string?)
   href: api/DNTPersianUtils.Core.WordsUtils.html#DNTPersianUtils_Core_WordsUtils_WordsCount_System_String_
