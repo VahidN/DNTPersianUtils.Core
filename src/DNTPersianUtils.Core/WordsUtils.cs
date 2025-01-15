@@ -51,7 +51,7 @@ public static class WordsUtils
     ///     خواندن يك متن چقدر طول مي‌كشد؟
     /// </summary>
     public static string MinReadTimeToString(this int minutes)
-        => minutes == 0 ? "کمتر از یک دقیقه" : TimeSpan.FromMinutes(minutes).ToReadableString();
+        => minutes == 0 ? "کمتر از یک دقیقه" : TimeSpan.FromMinutes(minutes).ToFriendlyPersianTimeSpanString();
 
     /// <summary>
     ///     خواندن يك متن چند دقيقه طول مي‌كشد؟
@@ -59,7 +59,13 @@ public static class WordsUtils
     public static string MinReadTimeToString(this string? text, int wordsPerMinute = 180)
         => text.MinReadTime(wordsPerMinute).MinReadTimeToString();
 
-    private static string ToReadableString(this TimeSpan span)
+    /// <summary>
+    ///     نمایش دوستانه‌ی یک بازه
+    ///     مانند یک روز و دو ساعت و سه دقیقه و چهار ثانیه
+    /// </summary>
+    /// <param name="span"></param>
+    /// <returns></returns>
+    public static string ToFriendlyPersianTimeSpanString(this TimeSpan span)
     {
         var formatted = string.Format(CultureInfo.InvariantCulture, format: "{0}{1}{2}{3}",
             span.Duration().Days > 0 ? $"{span.Days.NumberToText(Language.Persian)} روز و " : string.Empty,

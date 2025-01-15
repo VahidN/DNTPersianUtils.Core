@@ -11,11 +11,12 @@ public class FriendlyPersianDateUtilsTests
     public void Test_DateTimeOffset_Works()
     {
         var iranStandardTimeZone = TimeZoneInfo.GetSystemTimeZones()
-                                               .First(timeZoneInfo => timeZoneInfo.StandardName.Contains("Iran"));
-        Assert.IsTrue(iranStandardTimeZone.Id.StartsWith("Iran", StringComparison.Ordinal));
+            .First(timeZoneInfo => timeZoneInfo.StandardName.Contains(value: "Iran"));
 
-        var irTzi = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
-        Assert.IsTrue(irTzi.Id.StartsWith("Iran", StringComparison.Ordinal));
+        Assert.IsTrue(iranStandardTimeZone.Id.StartsWith(value: "Iran", StringComparison.Ordinal));
+
+        var irTzi = TimeZoneInfo.FindSystemTimeZoneById(id: "Iran Standard Time");
+        Assert.IsTrue(irTzi.Id.StartsWith(value: "Iran", StringComparison.Ordinal));
 
         // This part will work if your local time is Iran's time
         /*
@@ -31,35 +32,35 @@ public class FriendlyPersianDateUtilsTests
     [TestMethod]
     public void Test_ToFriendlyPersianDateTextify_With_DtoUtcNow_Works()
     {
-        var dt = DateTimeOffset.UtcNow.AddMinutes(-3);
+        var dt = DateTimeOffset.UtcNow.AddMinutes(minutes: -3);
         var actual = dt.ToFriendlyPersianDateTextify();
         Console.WriteLine(actual);
-        Assert.IsTrue(actual.Contains("دقیقه قبل"));
+        Assert.IsTrue(actual.Contains(value: "دقیقه قبل"));
     }
 
     [TestMethod]
     public void Test_ToFriendlyPersianDateTextify_With_Now_Works()
     {
-        var dt = DateTime.Now.AddMinutes(-3);
+        var dt = DateTime.Now.AddMinutes(value: -3);
         var actual = dt.ToFriendlyPersianDateTextify();
         Console.WriteLine(actual);
-        Assert.IsTrue(actual.Contains("قبل"));
+        Assert.IsTrue(actual.Contains(value: "قبل"));
     }
 
     [TestMethod]
     public void Test_ToFriendlyPersianDateTextify_With_UtcNow_Works()
     {
-        var dt = DateTime.UtcNow.AddMinutes(-3);
+        var dt = DateTime.UtcNow.AddMinutes(value: -3);
         var actual = dt.ToFriendlyPersianDateTextify();
         Console.WriteLine(actual);
-        Assert.IsTrue(actual.Contains("دقیقه قبل"));
+        Assert.IsTrue(actual.Contains(value: "دقیقه قبل"));
     }
 
     [TestMethod]
     public void Test_ToFriendlyPersianDateTextify_Works()
     {
-        var dt = new DateTime(2017, 1, 10, 10, 20, 2);
-        var comparisonBase = new DateTime(2017, 1, 20);
+        var dt = new DateTime(year: 2017, month: 1, day: 10, hour: 10, minute: 20, second: 2);
+        var comparisonBase = new DateTime(year: 2017, month: 1, day: 20);
         var actual = dt.ToFriendlyPersianDateTextify(comparisonBase);
         Assert.AreEqual($"{UnicodeConstants.RleChar}۱۰ روز قبل، سه‌شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰", actual);
     }
@@ -67,26 +68,34 @@ public class FriendlyPersianDateUtilsTests
     [TestMethod]
     public void Test_ToPersianDateTextify_Works()
     {
-        var dt = new DateTime(2017, 1, 10);
+        var dt = new DateTime(year: 2017, month: 1, day: 10);
         var actual = dt.ToPersianDateTextify();
-        Assert.AreEqual("سه‌شنبه ۲۱ دی ۱۳۹۵", actual);
+        Assert.AreEqual(expected: "سه‌شنبه ۲۱ دی ۱۳۹۵", actual);
     }
 
     [TestMethod]
     public void Test_ToFriendlyPersianDateTextify_WithoutTime_Works()
     {
-        var dt = new DateTime(2017, 1, 10, 10, 20, 2);
-        var comparisonBase = new DateTime(2017, 1, 20);
-        var actual = dt.ToFriendlyPersianDateTextify(comparisonBase, false);
+        var dt = new DateTime(year: 2017, month: 1, day: 10, hour: 10, minute: 20, second: 2);
+        var comparisonBase = new DateTime(year: 2017, month: 1, day: 20);
+        var actual = dt.ToFriendlyPersianDateTextify(comparisonBase, appendHhMm: false);
         Assert.AreEqual($"{UnicodeConstants.RleChar}۱۰ روز قبل، سه‌شنبه ۲۱ دی ۱۳۹۵", actual);
     }
 
     [TestMethod]
     public void Test_ToFriendlyPersianDateTextify_WithoutDate_Works()
     {
-        var dt = new DateTime(2017, 1, 10, 10, 20, 2);
-        var comparisonBase = new DateTime(2017, 1, 20);
-        var actual = dt.ToFriendlyPersianDateTextify(comparisonBase, false, includePersianDate: false);
+        var dt = new DateTime(year: 2017, month: 1, day: 10, hour: 10, minute: 20, second: 2);
+        var comparisonBase = new DateTime(year: 2017, month: 1, day: 20);
+        var actual = dt.ToFriendlyPersianDateTextify(comparisonBase, appendHhMm: false, includePersianDate: false);
         Assert.AreEqual($"{UnicodeConstants.RleChar}۱۰ روز قبل", actual);
+    }
+
+    [TestMethod]
+    public void Test_ToFriendlyPersianTimeSpanString_Works()
+    {
+        var dt = new TimeSpan(days: 1, hours: 2, minutes: 3, seconds: 4, milliseconds: 5);
+        var actual = dt.ToFriendlyPersianTimeSpanString();
+        Assert.AreEqual(expected: "یک روز و دو ساعت و سه دقیقه و چهار ثانیه", actual);
     }
 }
