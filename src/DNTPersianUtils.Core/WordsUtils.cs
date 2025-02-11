@@ -1,5 +1,4 @@
 using System;
-using System.Globalization;
 
 namespace DNTPersianUtils.Core;
 
@@ -58,33 +57,6 @@ public static class WordsUtils
     /// </summary>
     public static string MinReadTimeToString(this string? text, int wordsPerMinute = 180)
         => text.MinReadTime(wordsPerMinute).MinReadTimeToString();
-
-    /// <summary>
-    ///     نمایش دوستانه‌ی یک بازه
-    ///     مانند یک روز و دو ساعت و سه دقیقه و چهار ثانیه
-    /// </summary>
-    /// <param name="span"></param>
-    /// <returns></returns>
-    public static string ToFriendlyPersianTimeSpanString(this TimeSpan span)
-    {
-        var formatted = string.Format(CultureInfo.InvariantCulture, format: "{0}{1}{2}{3}",
-            span.Duration().Days > 0 ? $"{span.Days.NumberToText(Language.Persian)} روز و " : string.Empty,
-            span.Duration().Hours > 0 ? $"{span.Hours.NumberToText(Language.Persian)} ساعت و " : string.Empty,
-            span.Duration().Minutes > 0 ? $"{span.Minutes.NumberToText(Language.Persian)} دقیقه و " : string.Empty,
-            span.Duration().Seconds > 0 ? $"{span.Seconds.NumberToText(Language.Persian)} ثانیه" : string.Empty);
-
-        if (formatted.EndsWith(value: "و ", StringComparison.Ordinal))
-        {
-            formatted = formatted.Substring(startIndex: 0, formatted.Length - 2);
-        }
-
-        if (string.IsNullOrEmpty(formatted))
-        {
-            formatted = "0 ثانیه";
-        }
-
-        return formatted.Trim();
-    }
 
     /// <summary>
     ///     اگر متن خالي است، سه نقطه را بازگشت مي‌دهد

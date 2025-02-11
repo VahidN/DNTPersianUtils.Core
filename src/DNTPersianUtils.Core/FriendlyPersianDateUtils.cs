@@ -339,9 +339,9 @@ public static class FriendlyPersianDateUtils
         var date = new PersianCalendar().ToDateTime(persianYear, persianMonth, persianDay, hour, min, second: 0,
             millisecond: 0);
 
-        var diff = date - comparisonBase;
-        var totalSeconds = Math.Round(diff.TotalSeconds);
-        var totalDays = Math.Round(diff.TotalDays);
+        var timeSpan = date - comparisonBase;
+        var totalSeconds = Math.Round(timeSpan.TotalSeconds);
+        var totalDays = Math.Round(timeSpan.TotalDays);
 
         var suffix = " بعد";
 
@@ -415,14 +415,15 @@ public static class FriendlyPersianDateUtils
 
         if (totalSeconds < 12 * TimeConstants.Month)
         {
-            var months = Convert.ToInt32(Math.Floor((double)Math.Abs(diff.Days) / 30));
+            var months = Convert.ToInt32(Math.Floor((double)Math.Abs(timeSpan.Days) / 30));
 
             return months <= 1 ? Invariant($"1 ماه{suffix}{dayStr}") : Invariant($"{months} ماه{suffix}{dayStr}");
         }
 
-        var years = Convert.ToInt32(Math.Floor((double)Math.Abs(diff.Days) / 365));
-        var daysMonths = (double)Math.Abs(diff.Days) / 30;
-        var nextMonths = Convert.ToInt32(Math.Truncate(daysMonths)) - years * 12 - 1;
+        var timeSpanParts = timeSpan.ToTimeSpanParts();
+
+        var years = timeSpanParts.Years;
+        var nextMonths = timeSpanParts.Months;
         var and = years >= 1 ? " و " : "";
         var nextMonthsStr = nextMonths <= 0 ? "" : Invariant($"{and}{nextMonths} ماه");
 

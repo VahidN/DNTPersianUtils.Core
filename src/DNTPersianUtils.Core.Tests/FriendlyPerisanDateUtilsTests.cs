@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -96,6 +97,24 @@ public class FriendlyPersianDateUtilsTests
     {
         var dt = new TimeSpan(days: 1, hours: 2, minutes: 3, seconds: 4, milliseconds: 5);
         var actual = dt.ToFriendlyPersianTimeSpanString();
-        Assert.AreEqual(expected: "یک روز و دو ساعت و سه دقیقه و چهار ثانیه", actual);
+        Assert.AreEqual(expected: "\u202bیک روز و دو ساعت و سه دقیقه و چهار ثانیه", actual);
+    }
+
+    [TestMethod]
+    public void Test_ToFriendlyPersianDateTextify_Example_1_Works()
+    {
+        var dt = new DateTime(year: 1387, month: 8, day: 3, hour: 1, minute: 1, second: 1, new PersianCalendar());
+        var comparisonBase = new DateTime(year: 2025, month: 2, day: 11);
+        var actual = dt.ToFriendlyPersianDateTextify(comparisonBase);
+        Assert.AreEqual(expected: "\u202b۱۶ سال و ۳ ماه قبل، جمعه ۳ آبان ۱۳۸۷، ساعت ۰۱:۰۱", actual);
+    }
+
+    [TestMethod]
+    public void Test_ToFriendlyPersianDateTextify_Example_2_Works()
+    {
+        var dt = new DateTime(year: 1387, month: 11, day: 27, hour: 1, minute: 1, second: 1, new PersianCalendar());
+        var comparisonBase = new DateTime(year: 2025, month: 2, day: 11);
+        var actual = dt.ToFriendlyPersianDateTextify(comparisonBase);
+        Assert.AreEqual(expected: "\u202b۱۵ سال و ۱۱ ماه قبل، یکشنبه ۲۷ بهمن ۱۳۸۷، ساعت ۰۱:۰۱", actual);
     }
 }
