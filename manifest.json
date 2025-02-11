@@ -632,6 +632,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.TimeSpanParts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.TimeSpanParts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.TimeSpanUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.TimeSpanUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.UnicodeConstants.yml",
       "output": {
         ".html": {
