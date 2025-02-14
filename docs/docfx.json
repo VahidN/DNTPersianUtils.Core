@@ -23,7 +23,7 @@
       "memberLayout": "samePage",
       "allowCompilationErrors": false,
      "properties": {
-         "TargetFramework": "net7.0"
+         "TargetFramework": "net9.0"
      }
     }
   ],
