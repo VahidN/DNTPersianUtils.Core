@@ -71,7 +71,6 @@ public static class SeoUtils
         '«',
         '»',
         '|',
-        '+',
         ',',
         '<',
         '>'
@@ -92,6 +91,7 @@ public static class SeoUtils
     /// </param>
     /// <param name="convertToLower">آيا تبديل به حروف كوچك شود؟</param>
     /// <param name="replacementChar">در اينجا ليستي از حروف خاص، با - جايگزين خواهند شد</param>
+    /// <param name="charsWhiteList">اين ليست اختياري از ليست جايگزين‌ها حذف مي‌شود</param>
     /// <returns></returns>
     public static string? GetPostSlug(
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0
@@ -100,7 +100,8 @@ public static class SeoUtils
         this string? postTitle,
         ISet<char>? replacements = null,
         bool convertToLower = true,
-        char replacementChar = '-')
+        char replacementChar = '-',
+        params IEnumerable<char>? charsWhiteList)
     {
         if (string.IsNullOrWhiteSpace(postTitle))
         {
@@ -108,6 +109,8 @@ public static class SeoUtils
         }
 
         replacements ??= PersianSlugReplacements;
+
+        ApplyWhiteList(replacements, charsWhiteList);
 
         postTitle = postTitle.Trim();
 
@@ -157,6 +160,7 @@ public static class SeoUtils
     /// </param>
     /// <param name="convertToLower">آيا تبديل به حروف كوچك شود؟</param>
     /// <param name="replacementChar">در اينجا ليستي از حروف خاص، با _ جايگزين خواهند شد</param>
+    /// <param name="charsWhiteList">اين ليست اختياري از ليست جايگزين‌ها حذف مي‌شود</param>
     /// <returns></returns>
     public static string? GetCleanedTag(
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0
@@ -165,10 +169,26 @@ public static class SeoUtils
         this string? tag,
         ISet<char>? replacements = null,
         bool convertToLower = false,
-        char replacementChar = '_')
+        char replacementChar = '_',
+        params IEnumerable<char>? charsWhiteList)
     {
         replacements ??= PersianTagReplacements;
 
+        ApplyWhiteList(replacements, charsWhiteList);
+
         return tag.GetPostSlug(replacements, convertToLower, replacementChar);
+    }
+
+    private static void ApplyWhiteList(ISet<char> replacements, IEnumerable<char>? charsWhiteList)
+    {
+        if (charsWhiteList is null)
+        {
+            return;
+        }
+
+        foreach (var character in charsWhiteList)
+        {
+            replacements.Remove(character);
+        }
     }
 }
