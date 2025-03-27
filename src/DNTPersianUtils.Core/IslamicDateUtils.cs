@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 
 namespace DNTPersianUtils.Core;
 
@@ -666,10 +667,11 @@ public static class IslamicDateUtils
     /// <summary>
     ///     PersianDay To Gregorian
     /// </summary>
-    /// <param name="persian"></param>
+    /// <param name="persianDay"></param>
     /// <returns></returns>
-    public static DateTime PersianDayToGregorian(this PersianDay persian)
-        => JdnToGregorianDateTime(PersianDayToJdn(persian));
+    public static DateTime PersianDayToGregorian(this PersianDay persianDay)
+        => new PersianCalendar().ToDateTime(persianDay.Year, persianDay.Month, persianDay.Day, hour: 0, minute: 0,
+            second: 0, millisecond: 0);
 
     /// <summary>
     ///     تبدیل تاریخ شمسی به قمری

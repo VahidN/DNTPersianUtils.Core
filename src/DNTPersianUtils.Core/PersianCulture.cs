@@ -834,6 +834,14 @@ public static class PersianCulture
         return persianYear.GetPersianMonthStartAndEndDates(persianMonth);
     }
 
+    /// <summary>
+    ///     ماه شمسی معادل را محاسبه کرده و سپس
+    ///     تاریخ روزهای ابتدا و انتهای آن ماه شمسی را بازگشت می‌دهد
+    /// </summary>
+    /// <param name="persianDay">اجزای روز شمسی</param>
+    public static PersianMonth GetPersianMonthStartAndEndDates(this PersianDay persianDay)
+        => persianDay.PersianDayToGregorian().GetPersianMonthStartAndEndDates(convertToIranTimeZone: true);
+
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0
     /// <summary>
     ///     ماه شمسی معادل را محاسبه کرده و سپس

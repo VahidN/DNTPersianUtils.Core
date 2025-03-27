@@ -10,16 +10,16 @@ public class PersianCultureTests
     [TestMethod]
     public void Test_GetPersianWeekDayName_Works()
     {
-        var dt = new DateTime(2017, 1, 10, 10, 20, 2);
+        var dt = new DateTime(year: 2017, month: 1, day: 10, hour: 10, minute: 20, second: 2);
         var actual = dt.GetPersianWeekDayName();
-        Assert.AreEqual("سه‌شنبه", actual);
+        Assert.AreEqual(expected: "سه‌شنبه", actual);
     }
 
     [TestMethod]
     public void Test_GetPersianMonthName_Works()
     {
         var actual = 10.GetPersianMonthName();
-        Assert.AreEqual("دی", actual);
+        Assert.AreEqual(expected: "دی", actual);
     }
 
     [TestMethod]
@@ -32,119 +32,160 @@ public class PersianCultureTests
     [TestMethod]
     public void Test_GetPersianYear_Works()
     {
-        var date = new DateTime(2014, 4, 20);
+        var date = new DateTime(year: 2014, month: 4, day: 20);
         var year = date.GetPersianYear();
 
-        Assert.AreEqual(year, 1393);
+        Assert.AreEqual(year, actual: 1393);
     }
 
     [TestMethod]
     public void Test_GetPersianMonth_Works()
     {
-        var date = new DateTime(2014, 4, 20);
+        var date = new DateTime(year: 2014, month: 4, day: 20);
         var month = date.GetPersianMonth();
 
-        Assert.AreEqual(month, 1);
+        Assert.AreEqual(month, actual: 1);
     }
 
     [TestMethod]
     public void Test_GetPersianDayOfMonth_Works()
     {
-        var date = new DateTime(2014, 4, 20);
+        var date = new DateTime(year: 2014, month: 4, day: 20);
         var dayOfMonth = date.GetPersianDayOfMonth();
 
-        Assert.AreEqual(dayOfMonth, 31);
+        Assert.AreEqual(dayOfMonth, actual: 31);
     }
 
     [TestMethod]
-    public void Test_PersianStopwords_Works()
-    {
-        Assert.IsTrue(PersianStopwords.List.Contains("احتراما"));
-    }
+    public void Test_PersianStopwords_Works() => Assert.IsTrue(PersianStopwords.List.Contains(item: "احتراما"));
 
     [TestMethod]
-    public void Test_ApplyRle_Works()
-    {
-        Assert.IsTrue("سلام".ApplyRle().StartsWith(UnicodeConstants.RleChar));
-    }
+    public void Test_ApplyRle_Works() => Assert.IsTrue("سلام".ApplyRle().StartsWith(UnicodeConstants.RleChar));
 
     [TestMethod]
     public void Test_WrapInDirectionalDiv_Works()
-    {
-        Assert.IsTrue("تست".WrapInDirectionalDiv()
-                           .Equals("<div style='text-align: right; font-family:tahoma; font-size:9pt;' dir='rtl'>تست</div>"));
-    }
+        => Assert.IsTrue("تست".WrapInDirectionalDiv()
+            .Equals(value: "<div style='text-align: right; font-family:tahoma; font-size:9pt;' dir='rtl'>تست</div>"));
 
     [TestMethod]
     public void Test_GetPersianYearStartAndEndDates_Works()
     {
         var persianCalendar = new PersianCalendar();
         var persianYear = 1397.GetPersianYearStartAndEndDates();
-        Assert.AreEqual(new DateTime(1397, 1, 1, persianCalendar), persianYear.StartDate);
-        Assert.AreEqual(new DateTime(1397, 12, 29, 23, 59, 59, persianCalendar), persianYear.EndDate);
+        Assert.AreEqual(new DateTime(year: 1397, month: 1, day: 1, persianCalendar), persianYear.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1397, month: 12, day: 29, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianYear.EndDate);
     }
 
     [TestMethod]
     public void Test_GetPersianMonthStartAndEndDates_Works()
     {
         var persianCalendar = new PersianCalendar();
-        var persianMonth = 1397.GetPersianMonthStartAndEndDates(5);
-        Assert.AreEqual(new DateTime(1397, 5, 1, persianCalendar), persianMonth.StartDate);
-        Assert.AreEqual(new DateTime(1397, 5, 31, 23, 59, 59, persianCalendar), persianMonth.EndDate);
+        var persianMonth = 1397.GetPersianMonthStartAndEndDates(persianMonth: 5);
+        Assert.AreEqual(new DateTime(year: 1397, month: 5, day: 1, persianCalendar), persianMonth.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1397, month: 5, day: 31, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianMonth.EndDate);
+    }
+
+    [TestMethod]
+    public void Test_GetPersianMonthStartAndEndDates_Works_For_Leap_Years()
+    {
+        var persianCalendar = new PersianCalendar();
+        var persianMonth = 1403.GetPersianMonthStartAndEndDates(persianMonth: 12);
+        Assert.AreEqual(new DateTime(year: 1403, month: 12, day: 1, persianCalendar), persianMonth.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1403, month: 12, day: 30, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianMonth.EndDate);
     }
 
     [TestMethod]
     public void Test_GetPersianMonthStartAndEndDates_For_Dates_Works()
     {
         var persianCalendar = new PersianCalendar();
-        var date = new DateTime(1398, 5, 13, persianCalendar);
+        var date = new DateTime(year: 1398, month: 5, day: 13, persianCalendar);
         var persianMonth = date.GetPersianMonthStartAndEndDates();
 
-        Assert.AreEqual(new DateTime(1398, 5, 1, persianCalendar), persianMonth.StartDate);
-        Assert.AreEqual(new DateTime(1398, 5, 31, 23, 59, 59, persianCalendar), persianMonth.EndDate);
+        Assert.AreEqual(new DateTime(year: 1398, month: 5, day: 1, persianCalendar), persianMonth.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1398, month: 5, day: 31, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianMonth.EndDate);
     }
 
     [TestMethod]
     public void Test_GetPersianWeekStartAndEndDates_For_Dates_Works_1()
     {
         var persianCalendar = new PersianCalendar();
-        var date = new DateTime(1398, 5, 13, persianCalendar);
+        var date = new DateTime(year: 1398, month: 5, day: 13, persianCalendar);
         var persianWeek = date.GetPersianWeekStartAndEndDates();
 
-        Assert.AreEqual(new DateTime(1398, 5, 12, persianCalendar), persianWeek.StartDate);
-        Assert.AreEqual(new DateTime(1398, 5, 18, 23, 59, 59, persianCalendar), persianWeek.EndDate);
+        Assert.AreEqual(new DateTime(year: 1398, month: 5, day: 12, persianCalendar), persianWeek.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1398, month: 5, day: 18, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianWeek.EndDate);
     }
 
     [TestMethod]
     public void Test_GetPersianWeekStartAndEndDates_For_Dates_Works_Saturday()
     {
         var persianCalendar = new PersianCalendar();
-        var date = new DateTime(1398, 5, 12, persianCalendar);
+        var date = new DateTime(year: 1398, month: 5, day: 12, persianCalendar);
         var persianWeek = date.GetPersianWeekStartAndEndDates();
 
-        Assert.AreEqual(new DateTime(1398, 5, 12, persianCalendar), persianWeek.StartDate);
-        Assert.AreEqual(new DateTime(1398, 5, 18, 23, 59, 59, persianCalendar), persianWeek.EndDate);
+        Assert.AreEqual(new DateTime(year: 1398, month: 5, day: 12, persianCalendar), persianWeek.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1398, month: 5, day: 18, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianWeek.EndDate);
     }
 
     [TestMethod]
     public void Test_GetPersianWeekStartAndEndDates_For_Dates_Works_2()
     {
         var persianCalendar = new PersianCalendar();
-        var date = new DateTime(1398, 5, 21, persianCalendar);
+        var date = new DateTime(year: 1398, month: 5, day: 21, persianCalendar);
         var persianWeek = date.GetPersianWeekStartAndEndDates();
 
-        Assert.AreEqual(new DateTime(1398, 5, 19, persianCalendar), persianWeek.StartDate);
-        Assert.AreEqual(new DateTime(1398, 5, 25, 23, 59, 59, persianCalendar), persianWeek.EndDate);
+        Assert.AreEqual(new DateTime(year: 1398, month: 5, day: 19, persianCalendar), persianWeek.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1398, month: 5, day: 25, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianWeek.EndDate);
     }
 
     [TestMethod]
     public void Test_GetPersianWeekStartAndEndDates_For_Dates_Works_3()
     {
         var persianCalendar = new PersianCalendar();
-        var date = new DateTime(1398, 5, 30, persianCalendar);
+        var date = new DateTime(year: 1398, month: 5, day: 30, persianCalendar);
         var persianWeek = date.GetPersianWeekStartAndEndDates();
 
-        Assert.AreEqual(new DateTime(1398, 5, 26, persianCalendar), persianWeek.StartDate);
-        Assert.AreEqual(new DateTime(1398, 6, 1, 23, 59, 59, persianCalendar), persianWeek.EndDate);
+        Assert.AreEqual(new DateTime(year: 1398, month: 5, day: 26, persianCalendar), persianWeek.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1398, month: 6, day: 1, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianWeek.EndDate);
+    }
+
+    [TestMethod]
+    public void Test_GetPersianMonthStartAndEndDates_Works_For_Leap_YearsAndDates()
+    {
+        var persianMonth = new PersianDay(year: 1404, month: 1, day: 1).GetPersianMonthStartAndEndDates();
+
+        var persianCalendar = new PersianCalendar();
+        Assert.AreEqual(new DateTime(year: 1404, month: 1, day: 1, persianCalendar), persianMonth.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1404, month: 1, day: 31, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianMonth.EndDate);
+    }
+
+    [TestMethod]
+    public void Test_GetPersianMonthStartAndEndDates_Works_For_Leap_Years_And_Dates()
+    {
+        var persianMonth = new PersianDay(year: 1403, month: 12, day: 1).GetPersianMonthStartAndEndDates();
+
+        var persianCalendar = new PersianCalendar();
+        Assert.AreEqual(new DateTime(year: 1403, month: 12, day: 1, persianCalendar), persianMonth.StartDate);
+
+        Assert.AreEqual(new DateTime(year: 1403, month: 12, day: 30, hour: 23, minute: 59, second: 59, persianCalendar),
+            persianMonth.EndDate);
     }
 }
