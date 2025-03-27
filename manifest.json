@@ -18,7 +18,11 @@
           "relative_path": "api/DNTPersianUtils.Core.DateTimeOffsetPart.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.DateTimeOffsetPart",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.DateTimeOffsetPart.yml\" sourcestartlinenumber=\"1\">DateTimeOffset Part</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -28,7 +32,11 @@
           "relative_path": "api/DNTPersianUtils.Core.DateTimeUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.DateTimeUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.DateTimeUtils.yml\" sourcestartlinenumber=\"1\">متدهای کمکی جهت کار با تاریخ میلادی</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -38,7 +46,11 @@
           "relative_path": "api/DNTPersianUtils.Core.DigitGroup.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.DigitGroup",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.DigitGroup.yml\" sourcestartlinenumber=\"1\">Digit's groups</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -48,7 +60,11 @@
           "relative_path": "api/DNTPersianUtils.Core.EquinoxCalculator.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.EquinoxCalculator",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.EquinoxCalculator.yml\" sourcestartlinenumber=\"1\">Based on Jean Meeus book <em sourcefile=\"api/DNTPersianUtils.Core.EquinoxCalculator.yml\" sourcestartlinenumber=\"1\">Astronomical Algorithms</em></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -58,7 +74,11 @@
           "relative_path": "api/DNTPersianUtils.Core.FarsiDosExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.FarsiDosExtensions",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.FarsiDosExtensions.yml\" sourcestartlinenumber=\"1\">متدها و ثوابت مفيد جهت كار با فارسي سيستم عامل داس</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -68,7 +88,11 @@
           "relative_path": "api/DNTPersianUtils.Core.FriendlyPersianDateUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.FriendlyPersianDateUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.FriendlyPersianDateUtils.yml\" sourcestartlinenumber=\"1\">نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -78,7 +102,11 @@
           "relative_path": "api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.GenericsPersianDateTimeUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.GenericsPersianDateTimeUtils.yml\" sourcestartlinenumber=\"1\">Working with a generic version of DateTime related utilities</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -88,7 +116,11 @@
           "relative_path": "api/DNTPersianUtils.Core.HumanReadableInteger.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.HumanReadableInteger",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.HumanReadableInteger.yml\" sourcestartlinenumber=\"1\">Convert a number into words</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -98,7 +130,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranCities.City.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranCities.City",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranCities.City.yml\" sourcestartlinenumber=\"1\">Iran City</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -108,7 +144,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranCities.County.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranCities.County",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranCities.County.yml\" sourcestartlinenumber=\"1\">Iran's County</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -118,7 +158,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranCities.District.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranCities.District",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranCities.District.yml\" sourcestartlinenumber=\"1\">District</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -128,7 +172,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranCities.Iran.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranCities.Iran",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranCities.Iran.yml\" sourcestartlinenumber=\"1\">Iran's Cities.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -138,7 +186,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranCities.IranProvince.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranCities.IranProvince",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranCities.IranProvince.yml\" sourcestartlinenumber=\"1\">لیست استان‌های ایران</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -148,7 +200,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranCities.IranProvinceValue-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranCities.IranProvinceValue<TValue>",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranCities.IranProvinceValue-1.yml\" sourcestartlinenumber=\"1\">A custom Dictionary which returns null instead of\nthe KeyNotFoundException when accessing Dictionary value by key</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -158,7 +214,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranCities.Province.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranCities.Province",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranCities.Province.yml\" sourcestartlinenumber=\"1\">Iran's Province</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -168,7 +228,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranCities.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranCities",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -178,7 +242,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranCodesUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranCodesUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranCodesUtils.yml\" sourcestartlinenumber=\"1\">IranCodes Utils</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -188,7 +256,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranHoliday.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranHoliday",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranHoliday.yml\" sourcestartlinenumber=\"1\">مناسبت‌های تعطیلات رسمی ایران</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -198,7 +270,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranHolidays.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranHolidays",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranHolidays.yml\" sourcestartlinenumber=\"1\">مناسبت‌های تعطیلات رسمی ایران</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -208,7 +284,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranShebaUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranShebaUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranShebaUtils.yml\" sourcestartlinenumber=\"1\">Validate IBAN</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -218,7 +298,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranShetabUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranShetabUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranShetabUtils.yml\" sourcestartlinenumber=\"1\">Credit and Debit Card (Shetab) validation</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -228,7 +312,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranSystemCharPosition.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranSystemCharPosition",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranSystemCharPosition.yml\" sourcestartlinenumber=\"1\">در كدپيج ايران سيستم، حروف بر اساس محل قرارگيري آن‌ها در واژه تعريف مي‌شوند.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -238,7 +326,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranSystemData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranSystemData",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranSystemData.yml\" sourcestartlinenumber=\"1\">اطلاعات رشته ايران سيستمي</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -248,7 +340,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranSystemTables.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranSystemTables",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranSystemTables.yml\" sourcestartlinenumber=\"1\">تعاريف جداول مورد نياز جهت تبديلات ايران سيستمي</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -258,7 +354,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranSystemToUnicode.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranSystemToUnicode",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranSystemToUnicode.yml\" sourcestartlinenumber=\"1\"><a href=\"https://fa.wikipedia.org/wiki/%DA%A9%D8%AF%D8%A8%D9%86%D8%AF%DB%8C_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%E2%80%8C%D8%B3%DB%8C%D8%B3%D8%AA%D9%85\" sourcefile=\"api/DNTPersianUtils.Core.IranSystemToUnicode.yml\" sourcestartlinenumber=\"1\">https://fa.wikipedia.org/wiki/%DA%A9%D8%AF%D8%A8%D9%86%D8%AF%DB%8C_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%E2%80%8C%D8%B3%DB%8C%D8%B3%D8%AA%D9%85</a>\nتبديلگر متون ايران سيستم به يونيكد</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -268,7 +368,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IranTimeZoneInfo.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranTimeZoneInfo",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranTimeZoneInfo.yml\" sourcestartlinenumber=\"1\">تعريف اختصاصي منطقه زماني ايران؛ به دليل عدم وجود آن در يكسري از سيستم عامل‌هاي لينوكسي و همچنين عدم به روز رساني\nآن\nدر تعدادي ديگر</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -278,7 +382,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IslamicDateUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IslamicDateUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IslamicDateUtils.yml\" sourcestartlinenumber=\"1\">کلاسی برای محاسبات تاریخ قمری</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -288,7 +396,11 @@
           "relative_path": "api/DNTPersianUtils.Core.IslamicDay.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IslamicDay",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IslamicDay.yml\" sourcestartlinenumber=\"1\">اجزای روز قمری</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -298,7 +410,11 @@
           "relative_path": "api/DNTPersianUtils.Core.Language.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.Language",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.Language.yml\" sourcestartlinenumber=\"1\">Number to word languages</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -308,7 +424,11 @@
           "relative_path": "api/DNTPersianUtils.Core.NationalCodeUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.NationalCodeUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.NationalCodeUtils.yml\" sourcestartlinenumber=\"1\">Validate IR National Code</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -318,7 +438,11 @@
           "relative_path": "api/DNTPersianUtils.Core.NationalLegalCodeUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.NationalLegalCodeUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.NationalLegalCodeUtils.yml\" sourcestartlinenumber=\"1\">Validate IR National Legal Code</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -328,7 +452,11 @@
           "relative_path": "api/DNTPersianUtils.Core.Normalizer.AggressiveEditing.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.Normalizer.AggressiveEditing",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.Normalizer.AggressiveEditing.yml\" sourcestartlinenumber=\"1\">Replaces more than one ! or ? marks with just one or removes all extra kashida and spaces</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -338,7 +466,11 @@
           "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixDash.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.Normalizer.FixDash",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.Normalizer.FixDash.yml\" sourcestartlinenumber=\"1\">Replaces double dash to ndash and triple dash to mdash</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -348,7 +480,11 @@
           "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixDiacritics.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.Normalizer.FixDiacritics",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.Normalizer.FixDiacritics.yml\" sourcestartlinenumber=\"1\">حذف اعراب از حروف و کلمات</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -358,7 +494,11 @@
           "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixDots.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.Normalizer.FixDots",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.Normalizer.FixDots.yml\" sourcestartlinenumber=\"1\">Replaces three dots with ellipsis</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -368,7 +508,11 @@
           "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixEnglishQuotes.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.Normalizer.FixEnglishQuotes",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.Normalizer.FixEnglishQuotes.yml\" sourcestartlinenumber=\"1\">Replaces English quotes with their Persian equivalent</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -378,7 +522,11 @@
           "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixHalfSpace.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.Normalizer.FixHalfSpace",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.Normalizer.FixHalfSpace.yml\" sourcestartlinenumber=\"1\">Replaces thin spaces with a replacement</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -388,7 +536,11 @@
           "relative_path": "api/DNTPersianUtils.Core.Normalizer.FixZwnj.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.Normalizer.FixZwnj",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.Normalizer.FixZwnj.yml\" sourcestartlinenumber=\"1\">Puts zwnj char/half space between word and prefix/suffix</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -398,7 +550,11 @@
           "relative_path": "api/DNTPersianUtils.Core.Normalizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.Normalizer",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -408,7 +564,11 @@
           "relative_path": "api/DNTPersianUtils.Core.NumberWord.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.NumberWord",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.NumberWord.yml\" sourcestartlinenumber=\"1\">Equivalent names of a group</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -418,7 +578,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianCulture.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianCulture",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianCulture.yml\" sourcestartlinenumber=\"1\">فرهنگ فارسی سفارشی سازی شده</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -428,7 +592,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianDateTime.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianDateTime",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianDateTime.yml\" sourcestartlinenumber=\"1\">ساختاري بيانگر تاريخ و زمان شمسي</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -438,7 +606,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianDateTimeUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianDateTimeUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianDateTimeUtils.yml\" sourcestartlinenumber=\"1\">Represents PersianDateTime utils.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -448,7 +620,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianDay.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianDay",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianDay.yml\" sourcestartlinenumber=\"1\">اجزای روز شمسی</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -458,7 +634,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianKeyboard.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianKeyboard",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianKeyboard.yml\" sourcestartlinenumber=\"1\">تبديل حروف تايپ شده‌ي انگليسي به فارسي</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -468,7 +648,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianMonth.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianMonth",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianMonth.yml\" sourcestartlinenumber=\"1\">اجزای ماه شمسی</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -478,7 +662,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianMonthCalendar.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianMonthCalendar",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianMonthCalendar.yml\" sourcestartlinenumber=\"1\">مناسب جهت ساخت و نمایش یک تقویم شمسی</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -488,7 +676,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianNormalizerUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianNormalizerUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianNormalizerUtils.yml\" sourcestartlinenumber=\"1\">Persian Text Normalizer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -498,7 +690,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianNormalizers.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianNormalizers",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianNormalizers.yml\" sourcestartlinenumber=\"1\">Persian Text Normalizers</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -508,7 +704,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianNumbersUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianNumbersUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianNumbersUtils.yml\" sourcestartlinenumber=\"1\">Converts English digits of a given number to their equivalent Persian digits.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -518,7 +718,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianStopwords.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianStopwords",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianStopwords.yml\" sourcestartlinenumber=\"1\">A collection of Persian stopwords</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -528,7 +732,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianWeek.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianWeek",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianWeek.yml\" sourcestartlinenumber=\"1\">اجزای هفته شمسی</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -538,7 +746,11 @@
           "relative_path": "api/DNTPersianUtils.Core.PersianYear.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianYear",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianYear.yml\" sourcestartlinenumber=\"1\">اجزای سال شمسی</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -548,7 +760,11 @@
           "relative_path": "api/DNTPersianUtils.Core.RegexUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.RegexUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.RegexUtils.yml\" sourcestartlinenumber=\"1\">متدهای کمکی مبتنی بر عبارات باقاعده</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -558,7 +774,11 @@
           "relative_path": "api/DNTPersianUtils.Core.SeoUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.SeoUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.SeoUtils.yml\" sourcestartlinenumber=\"1\">متدهای کمکی مخصوص موتورهاي جستجو</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -568,7 +788,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ShouldContainOnlyPersianLettersAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid Persian letter.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -578,7 +802,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ShouldContainOnlyPersianNumbersAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid Persian number.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -588,7 +816,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ShouldContainPersianLettersAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ShouldContainPersianLettersAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object has valid Persian letters.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -598,7 +830,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ShouldContainPersianLettersOrNumbersAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid Persian letter.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -608,7 +844,11 @@
           "relative_path": "api/DNTPersianUtils.Core.SunEvent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.SunEvent",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.SunEvent.yml\" sourcestartlinenumber=\"1\">Sun Event</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -618,7 +858,11 @@
           "relative_path": "api/DNTPersianUtils.Core.TextEncoding.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.TextEncoding",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.TextEncoding.yml\" sourcestartlinenumber=\"1\">بسته به روش دريافت اطلاعات، عموما يكي از سه روش ارائه شده‌ي در اينجا براي پردازش اطلاعات متني داس مفيد هستند</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -628,7 +872,11 @@
           "relative_path": "api/DNTPersianUtils.Core.TimeConstants.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.TimeConstants",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.TimeConstants.yml\" sourcestartlinenumber=\"1\">Time Constants</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -638,7 +886,11 @@
           "relative_path": "api/DNTPersianUtils.Core.TimeSpanParts.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.TimeSpanParts",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.TimeSpanParts.yml\" sourcestartlinenumber=\"1\">اجزاي يك بازه‌ي زماني</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -648,7 +900,11 @@
           "relative_path": "api/DNTPersianUtils.Core.TimeSpanUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.TimeSpanUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.TimeSpanUtils.yml\" sourcestartlinenumber=\"1\">متدهای کمکی جهت کار با تاریخ میلادی</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -658,7 +914,11 @@
           "relative_path": "api/DNTPersianUtils.Core.UnicodeConstants.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.UnicodeConstants",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.UnicodeConstants.yml\" sourcestartlinenumber=\"1\">Unicode Constants</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -668,7 +928,11 @@
           "relative_path": "api/DNTPersianUtils.Core.UnicodeToIranSystem.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.UnicodeToIranSystem",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.UnicodeToIranSystem.yml\" sourcestartlinenumber=\"1\">تبديلگر متون يونيكد به كدپيج ايران سيستم</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -678,7 +942,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ValidIranShebaNumberAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ValidIranShebaNumberAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ValidIranShebaNumberAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid IranShebaNumber.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -688,7 +956,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ValidIranShetabNumberAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ValidIranShetabNumberAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ValidIranShetabNumberAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid IranShetabNumber.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -698,7 +970,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ValidIranianMobileNumberAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ValidIranianMobileNumberAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid IranianMobileNumber.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -708,7 +984,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ValidIranianNationalCodeAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ValidIranianNationalCodeAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid IranianNationalCode.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -718,7 +998,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ValidIranianNationalLegalCodeAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid IranianNationalCode.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -728,7 +1012,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ValidIranianPhoneNumberAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid IranianPhoneNumber.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -738,7 +1026,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ValidIranianPostalCodeAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ValidIranianPostalCodeAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid IranianPostalCode.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -748,7 +1040,11 @@
           "relative_path": "api/DNTPersianUtils.Core.ValidPersianDateTimeAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.ValidPersianDateTimeAttribute",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.ValidPersianDateTimeAttribute.yml\" sourcestartlinenumber=\"1\">Determines whether the specified value of the object is a valid PersianDateTime.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -758,7 +1054,11 @@
           "relative_path": "api/DNTPersianUtils.Core.WordsUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.WordsUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.WordsUtils.yml\" sourcestartlinenumber=\"1\">Words extensions</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -768,7 +1068,11 @@
           "relative_path": "api/DNTPersianUtils.Core.YeKe.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.YeKe",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.YeKe.yml\" sourcestartlinenumber=\"1\">YeKe</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -778,7 +1082,11 @@
           "relative_path": "api/DNTPersianUtils.Core.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core",
+      "Summary": null
     },
     {
       "type": "Conceptual",

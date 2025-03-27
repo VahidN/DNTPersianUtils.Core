@@ -221,9 +221,9 @@ Class SeoUtils  <a class="header-action link-secondary" title="View source" href
 
   <a id="DNTPersianUtils_Core_SeoUtils_GetCleanedTag_" data-uid="DNTPersianUtils.Core.SeoUtils.GetCleanedTag*"></a>
 
-  <h3 id="DNTPersianUtils_Core_SeoUtils_GetCleanedTag_System_String_System_Collections_Generic_ISet_System_Char__System_Boolean_System_Char_" data-uid="DNTPersianUtils.Core.SeoUtils.GetCleanedTag(System.String,System.Collections.Generic.ISet{System.Char},System.Boolean,System.Char)">
-  GetCleanedTag(string?, ISet&lt;char&gt;?, bool, char)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/SeoUtils.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DNTPersianUtils_Core_SeoUtils_GetCleanedTag_System_String_System_Collections_Generic_ISet_System_Char__System_Boolean_System_Char_System_Collections_Generic_IEnumerable_System_Char__" data-uid="DNTPersianUtils.Core.SeoUtils.GetCleanedTag(System.String,System.Collections.Generic.ISet{System.Char},System.Boolean,System.Char,System.Collections.Generic.IEnumerable{System.Char})">
+  GetCleanedTag(string?, ISet&lt;char&gt;?, bool, char, params IEnumerable&lt;char&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/SeoUtils.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>عموما عنوان يك تگ را با حذف زوائد آن تبديل به رشته‌اي مي‌كنيم كه اگر در انتهاي آدرس‌ها قرار گيرد، مطلوب موتورهاي
@@ -236,7 +236,7 @@ Class SeoUtils  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? GetCleanedTag(this string? tag, ISet&lt;char&gt;? replacements = null, bool convertToLower = false, char replacementChar = &#39;_&#39;)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? GetCleanedTag(this string? tag, ISet&lt;char&gt;? replacements = null, bool convertToLower = false, char replacementChar = &#39;_&#39;, params IEnumerable&lt;char&gt;? charsWhiteList)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -253,6 +253,9 @@ SeoUtils.PersianTagReplacements</p>
 </dd>
     <dt><code>replacementChar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
     <dd><p>در اينجا ليستي از حروف خاص، با _ جايگزين خواهند شد</p>
+</dd>
+    <dt><code>charsWhiteList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>اين ليست اختياري از ليست جايگزين‌ها حذف مي‌شود</p>
 </dd>
   </dl>
 
@@ -274,8 +277,8 @@ SeoUtils.PersianTagReplacements</p>
 
   <a id="DNTPersianUtils_Core_SeoUtils_GetPostSlug_" data-uid="DNTPersianUtils.Core.SeoUtils.GetPostSlug*"></a>
 
-  <h3 id="DNTPersianUtils_Core_SeoUtils_GetPostSlug_System_String_System_Collections_Generic_ISet_System_Char__System_Boolean_System_Char_" data-uid="DNTPersianUtils.Core.SeoUtils.GetPostSlug(System.String,System.Collections.Generic.ISet{System.Char},System.Boolean,System.Char)">
-  GetPostSlug(string?, ISet&lt;char&gt;?, bool, char)
+  <h3 id="DNTPersianUtils_Core_SeoUtils_GetPostSlug_System_String_System_Collections_Generic_ISet_System_Char__System_Boolean_System_Char_System_Collections_Generic_IEnumerable_System_Char__" data-uid="DNTPersianUtils.Core.SeoUtils.GetPostSlug(System.String,System.Collections.Generic.ISet{System.Char},System.Boolean,System.Char,System.Collections.Generic.IEnumerable{System.Char})">
+  GetPostSlug(string?, ISet&lt;char&gt;?, bool, char, params IEnumerable&lt;char&gt;?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/VahidN/DNTPersianUtils.Core/blob/master/src/DNTPersianUtils.Core/SeoUtils.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -289,7 +292,7 @@ SeoUtils.PersianTagReplacements</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? GetPostSlug(this string? postTitle, ISet&lt;char&gt;? replacements = null, bool convertToLower = true, char replacementChar = &#39;-&#39;)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? GetPostSlug(this string? postTitle, ISet&lt;char&gt;? replacements = null, bool convertToLower = true, char replacementChar = &#39;-&#39;, params IEnumerable&lt;char&gt;? charsWhiteList)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -306,6 +309,9 @@ SeoUtils.PersianSlugReplacements</p>
 </dd>
     <dt><code>replacementChar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
     <dd><p>در اينجا ليستي از حروف خاص، با - جايگزين خواهند شد</p>
+</dd>
+    <dt><code>charsWhiteList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>اين ليست اختياري از ليست جايگزين‌ها حذف مي‌شود</p>
 </dd>
   </dl>
 
