@@ -8,16 +8,21 @@ namespace DNTPersianUtils.Core;
 /// </summary>
 public static class IranCodesUtils
 {
-    private static readonly Regex _matchIranianMobileNumber1 = new(@"^(((98)|(\+98)|(0098)|0)(9){1}[0-9]{9})+$",
+    private static readonly Regex _matchIranianMobileNumber1 =
+        new(pattern: @"^(((98)|(\+98)|(0098)|0)(9){1}[0-9]{9})+$", RegexOptions.Compiled | RegexOptions.IgnoreCase,
+            RegexUtils.MatchTimeout);
+
+    private static readonly Regex _matchIranianMobileNumber2 = new(pattern: @"^(9){1}[0-9]{9}$",
         RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchIranianMobileNumber2 = new(@"^(9){1}[0-9]{9}$",
+    private static readonly Regex _matchIranianPhoneNumber = new(pattern: "^[2-9][0-9]{7}$",
         RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
-    private static readonly Regex _matchIranianPhoneNumber = new("^[2-9][0-9]{7}$",
-        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
-
-    private static readonly Regex _matchIranianPostalCode = new(@"\b(?!(\d)\1{3})[13-9]{4}[1346-9][013-9]{5}\b",
+    /// <summary>
+    ///     From
+    ///     https://blog.tapin.ir/%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D8%B3%D8%A7%D8%AE%D8%AA%D8%A7%D8%B1-%DA%A9%D8%AF-%D8%B1%D9%87%DA%AF%DB%8C%D8%B1%DB%8C-%D9%88-%DA%A9%D8%AF%D9%BE%D8%B3%D8%AA%DB%8C/
+    /// </summary>
+    private static readonly Regex _matchIranianPostalCode = new(pattern: @"^(?!(\d)\1{3})[13-9]{5}\d{5}$",
         RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
     /// <summary>
@@ -25,7 +30,7 @@ public static class IranCodesUtils
     /// </summary>
     public static bool IsValidIranianMobileNumber(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? mobileNumber)
     {
@@ -44,7 +49,7 @@ public static class IranCodesUtils
     /// </summary>
     public static bool IsValidIranianPhoneNumber(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? phoneNumber)
     {
@@ -63,7 +68,7 @@ public static class IranCodesUtils
     /// </summary>
     public static bool IsValidIranianPostalCode(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? postalCode)
     {
