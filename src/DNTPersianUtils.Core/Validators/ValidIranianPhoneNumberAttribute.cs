@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace DNTPersianUtils.Core;
 
@@ -19,7 +20,8 @@ public sealed class ValidIranianPhoneNumberAttribute : ValidationAttribute
             return true; // returning false, makes this field required.
         }
 
-        var valStr = value.ToString();
+        var valStr = Convert.ToString(value, CultureInfo.InvariantCulture);
+
         if (string.IsNullOrWhiteSpace(valStr))
         {
             return true; // returning false, makes this field required.
@@ -44,7 +46,10 @@ public sealed class ValidIranianPhoneNumberAttribute : ValidationAttribute
         }
 
         return string.IsNullOrWhiteSpace(validationContext.MemberName)
-                   ? new ValidationResult(ErrorMessage)
-                   : new ValidationResult(ErrorMessage, new[] { validationContext.MemberName });
+            ? new ValidationResult(ErrorMessage)
+            : new ValidationResult(ErrorMessage, new[]
+            {
+                validationContext.MemberName
+            });
     }
 }
