@@ -12,6 +12,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.BankCardProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.BankCardProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.BankCardProvider",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.BankCardProvider.yml\" sourcestartlinenumber=\"1\">مشخصات صادر كننده كارت بانكي</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.DateTimeOffsetPart.yml",
       "output": {
         ".html": {
@@ -376,6 +390,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranianBankCardProviders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranianBankCardProviders.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranianBankCardProviders",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranianBankCardProviders.yml\" sourcestartlinenumber=\"1\">مشخصات بانك‌هاي ايراني</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranianIbanBankProviders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranianIbanBankProviders.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranianIbanBankProviders",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranianIbanBankProviders.yml\" sourcestartlinenumber=\"1\">مشخصات بانك‌هاي ايراني</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranianMobileProviders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranianMobileProviders.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranianMobileProviders",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranianMobileProviders.yml\" sourcestartlinenumber=\"1\">شركت‌هاي موبايلي ايراني</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranianPostalCodesProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranianPostalCodesProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranianPostalCodesProvider",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranianPostalCodesProvider.yml\" sourcestartlinenumber=\"1\">تامين كننده اطلاعات محلي كدهاي پستي ايران</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.IslamicDateUtils.yml",
       "output": {
         ".html": {
@@ -415,6 +485,20 @@
       "IsMRef": true,
       "Title": "DNTPersianUtils.Core.Language",
       "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.Language.yml\" sourcestartlinenumber=\"1\">Number to word languages</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.MobileProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.MobileProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.MobileProvider",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.MobileProvider.yml\" sourcestartlinenumber=\"1\">مشخصات شركت موبايلي</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -751,6 +835,20 @@
       "IsMRef": true,
       "Title": "DNTPersianUtils.Core.PersianYear",
       "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianYear.yml\" sourcestartlinenumber=\"1\">اجزای سال شمسی</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PostalCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PostalCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PostalCode",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PostalCode.yml\" sourcestartlinenumber=\"1\">مشخصات كدپستي محل</p>\n"
     },
     {
       "type": "ManagedReference",
