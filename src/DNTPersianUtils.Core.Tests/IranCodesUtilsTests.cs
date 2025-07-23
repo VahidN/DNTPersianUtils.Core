@@ -13,6 +13,8 @@ public class IranCodesUtilsTests
     [DataRow(data: "9876543210")]
     [DataRow(data: "5174643119")]
     [DataRow(data: "1961535744")]
+    [DataRow(data: "6615853966")]
+    [DataRow(data: "1517863332")]
     public void ValidIranianPostalCodesTest(string code) => Assert.IsTrue(code.IsValidIranianPostalCode());
 
     [DataTestMethod]
