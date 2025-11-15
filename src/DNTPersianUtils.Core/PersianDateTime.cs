@@ -265,7 +265,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// <summary>
     ///     آيا تاريخ و زمان جاري شمسي معتبر است؟
     /// </summary>
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     [MemberNotNullWhen(returnValue: true, nameof(Year))]
     [MemberNotNullWhen(returnValue: true, nameof(Month))]
     [MemberNotNullWhen(returnValue: true, nameof(Day))]
@@ -307,7 +307,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
         ? null
         : new DateTimeOffset(DateTime.Value, DateTimeUtils.IranStandardTime.BaseUtcOffset);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     بيانگر تاريخ جاري شمسي به ميلادي. اگر تاريخ غيرمعتبر باشد، نال بازگشت مي‌دهد.
     /// </summary>
@@ -491,7 +491,7 @@ public class PersianDateTime : IEqualityComparer<PersianDateTime>
     /// </summary>
     public static implicit operator PersianDateTime(DateTimeOffset dateTimeOffset) => new(dateTimeOffset);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
 
     /// <summary>
     ///     Returns a PersianDateTime.

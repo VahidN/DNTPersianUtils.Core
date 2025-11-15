@@ -521,7 +521,7 @@ public static class IslamicDateUtils
     public static IslamicDay ToIslamicDay(this DateTime gregorian, bool convertToIranTimeZone = true)
         => JdnToIslamicDay(ToJdn(gregorian, convertToIranTimeZone));
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به قمری
     /// </summary>
@@ -572,7 +572,7 @@ public static class IslamicDateUtils
         return GregorianToJdn(gregorian.Year, gregorian.Month, gregorian.Day);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     To Jdn
     /// </summary>
@@ -625,7 +625,7 @@ public static class IslamicDateUtils
     public static PersianDay ToPersianDay(this DateTime gregorian, bool convertToIranTimeZone = true)
         => gregorian.ToPersianYearMonthDay(convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     To PersianDay
     /// </summary>

@@ -40,7 +40,7 @@ public static class FriendlyPersianDateUtils
         return ToPersianDateTextify(dateParts.Year, dateParts.Month, dateParts.Day);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     نمایش فارسی روز دریافتی
     ///     مانند سه شنبه ۲۱ دی ۱۳۹۵
@@ -56,7 +56,7 @@ public static class FriendlyPersianDateUtils
     public static string ToPersianDateTextify(this DateTime? dt)
         => dt == null ? string.Empty : ToPersianDateTextify(dt.Value);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     نمایش فارسی روز دریافتی
     ///     مانند سه شنبه ۲۱ دی ۱۳۹۵
@@ -103,7 +103,7 @@ public static class FriendlyPersianDateUtils
         bool includePersianDate = true)
         => $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase, appendHhMm, convertToIranTimeZone, includePersianDate).ToPersianNumbers()}";
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
     ///     مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
@@ -151,7 +151,7 @@ public static class FriendlyPersianDateUtils
             $"{UnicodeConstants.RleChar}{toFriendlyPersianDate(dt, comparisonBase, appendHhMm, convertToIranTimeZone, includePersianDate).ToPersianNumbers()}";
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
     ///     مبنای محاسبه هم اکنون
@@ -221,7 +221,7 @@ public static class FriendlyPersianDateUtils
     public static string ToFriendlyPersianDateTextify(this DateTime? dt, DateTime comparisonBase)
         => dt == null ? string.Empty : ToFriendlyPersianDateTextify(dt.Value, comparisonBase);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
     ///     مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
@@ -258,7 +258,7 @@ public static class FriendlyPersianDateUtils
         return ToFriendlyPersianDateTextify(dt.Value, comparisonBase, convertToIranTimeZone);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
     ///     مبنای محاسبه هم اکنون

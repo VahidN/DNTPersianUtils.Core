@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <Description>DNTPersianUtils.Core is a collection of Persian helper extension methods.</Description>
-        <VersionPrefix>6.7.0</VersionPrefix>
+        <VersionPrefix>6.7.1</VersionPrefix>
         <Authors>Vahid Nasiri</Authors>
-        <TargetFrameworks>net9.0;net8.0;net7.0;net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
+        <TargetFrameworks>net10.0;net9.0;net8.0;net7.0;net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
         <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">net5.0;netstandard2.1;netstandard1.3;netstandard2.0</TargetFrameworks>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <AssemblyName>DNTPersianUtils.Core</AssemblyName>
@@ -134,5 +134,10 @@
     <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0' "></ItemGroup>
     <PropertyGroup Condition=" '$(TargetFramework)' == 'net9.0' ">
         <DefineConstants>NET9_0</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net10.0' "></ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'net10.0' ">
+        <DefineConstants>NET10_0</DefineConstants>
     </PropertyGroup>
 </Project>

@@ -90,7 +90,7 @@ public static class PersianDateTimeUtils
         => new PersianCalendar().ToDateTime(persianYear, persianMonth, persianDay, hour: 0, minute: 0, second: 0,
             millisecond: 0);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل به تاریخ شمسی
     /// </summary>
@@ -227,7 +227,7 @@ public static class PersianDateTimeUtils
         return new PersianDateTime(year.Value, month.Value, day.Value, hour, minute, second);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ و زمان رشته‌ای شمسی به میلادی
     ///     با قالب‌های پشتیبانی شده‌ی ۹۰/۸/۱۴ , 1395/11/3 17:30 , ۱۳۹۰/۸/۱۴ , ۹۰-۸-۱۴ , ۱۳۹۰-۸-۱۴
@@ -279,7 +279,7 @@ public static class PersianDateTimeUtils
     public static string ToLongPersianDateString(this DateTime dt, bool convertToIranTimeZone = true)
         => dt.ToPersianDateTimeString(PersianCulture.Instance.DateTimeFormat.LongDatePattern, convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     ///     با قالبی مانند 21 دی 1395
@@ -307,7 +307,7 @@ public static class PersianDateTimeUtils
     public static string ToLongPersianDateString(this DateTime? dt, bool convertToIranTimeZone = true)
         => dt == null ? string.Empty : ToLongPersianDateString(dt.Value, convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     ///     با قالبی مانند 21 دی 1395
@@ -359,7 +359,7 @@ public static class PersianDateTimeUtils
             $"{PersianCulture.Instance.DateTimeFormat.LongDatePattern}، {PersianCulture.Instance.DateTimeFormat.LongTimePattern}",
             convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     ///     با قالبی مانند 21 دی 1395، 10:20:02 ق.ظ
@@ -387,7 +387,7 @@ public static class PersianDateTimeUtils
     public static string ToLongPersianDateTimeString(this DateTime? dt, bool convertToIranTimeZone = true)
         => dt == null ? string.Empty : ToLongPersianDateTimeString(dt.Value, convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     ///     با قالبی مانند 21 دی 1395، 10:20:02 ق.ظ
@@ -446,7 +446,7 @@ public static class PersianDateTimeUtils
         return dateTime.ToString(format, PersianCulture.Instance);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     /// </summary>
@@ -476,7 +476,7 @@ public static class PersianDateTimeUtils
         bool convertToIranTimeZone = true)
         => dateTime == null ? string.Empty : dateTime.Value.ToPersianDateTimeString(format, convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     /// </summary>
@@ -554,7 +554,7 @@ public static class PersianDateTimeUtils
     public static PersianDay? ToPersianYearMonthDay(this DateTime? gregorianDate, bool convertToIranTimeZone = true)
         => gregorianDate == null ? null : ToPersianYearMonthDay(gregorianDate.Value, convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
     /// </summary>
@@ -606,7 +606,7 @@ public static class PersianDateTimeUtils
         };
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
     /// </summary>
@@ -654,7 +654,7 @@ public static class PersianDateTimeUtils
     public static string ToShortPersianDateString(this DateTime dt, bool convertToIranTimeZone = true)
         => dt.ToPersianDateTimeString(PersianCulture.Instance.DateTimeFormat.ShortDatePattern, convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     ///     با قالبی مانند 1395/10/21
@@ -682,7 +682,7 @@ public static class PersianDateTimeUtils
     public static string ToShortPersianDateString(this DateTime? dt, bool convertToIranTimeZone = true)
         => dt == null ? string.Empty : ToShortPersianDateString(dt.Value, convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     ///     با قالبی مانند 1395/10/21
@@ -712,7 +712,7 @@ public static class PersianDateTimeUtils
             $"{PersianCulture.Instance.DateTimeFormat.ShortDatePattern} {PersianCulture.Instance.DateTimeFormat.ShortTimePattern}",
             convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     ///     با قالبی مانند 1395/10/21 10:20
@@ -740,7 +740,7 @@ public static class PersianDateTimeUtils
     public static string ToShortPersianDateTimeString(this DateTime? dt, bool convertToIranTimeZone = true)
         => dt == null ? string.Empty : ToShortPersianDateTimeString(dt.Value, convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
     ///     با قالبی مانند 1395/10/21 10:20

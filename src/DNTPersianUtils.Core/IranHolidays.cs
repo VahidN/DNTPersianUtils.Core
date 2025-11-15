@@ -1804,7 +1804,7 @@ public static class IranHolidays
         return result.Count > 0 ? result : null;
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
     ///     از سال 1395 تا پایان سال 1398
@@ -1852,7 +1852,7 @@ public static class IranHolidays
                                  x.Holiday.Month == date.Month && x.Holiday.Day == date.Day);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     تشخیص تعطیلات رسمی ایران
     ///     از سال 1395 تا پایان سال 1398
@@ -1914,7 +1914,7 @@ public static class IranHolidays
         }
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
     ///     از سال 1395 تا پایان سال 1398

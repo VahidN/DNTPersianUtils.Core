@@ -94,7 +94,7 @@ public static class SeoUtils
     /// <param name="charsWhiteList">اين ليست اختياري از ليست جايگزين‌ها حذف مي‌شود</param>
     /// <returns></returns>
     public static string? GetPostSlug(
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
         [NotNullIfNotNull(nameof(postTitle))]
 #endif
         this string? postTitle,
@@ -163,7 +163,7 @@ public static class SeoUtils
     /// <param name="charsWhiteList">اين ليست اختياري از ليست جايگزين‌ها حذف مي‌شود</param>
     /// <returns></returns>
     public static string? GetCleanedTag(
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
         [NotNullIfNotNull(nameof(tag))]
 #endif
         this string? tag,

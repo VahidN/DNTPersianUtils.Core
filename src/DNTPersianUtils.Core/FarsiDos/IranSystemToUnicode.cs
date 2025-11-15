@@ -167,7 +167,7 @@ public static class IranSystemToUnicode
 
         if (reverseInput)
         {
-            iranSystemStringBytes = iranSystemStringBytes.Reverse().ToArray();
+            iranSystemStringBytes = Enumerable.Reverse(iranSystemStringBytes).ToArray();
         }
 
         var limit = iranSystemStringBytes.Length;
