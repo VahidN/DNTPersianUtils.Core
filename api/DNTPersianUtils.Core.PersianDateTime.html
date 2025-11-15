@@ -964,7 +964,25 @@ Class PersianDateTime  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsValidDateTime { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[MemberNotNullWhen(true, &quot;Year&quot;)]
+[MemberNotNullWhen(true, &quot;Month&quot;)]
+[MemberNotNullWhen(true, &quot;Day&quot;)]
+[MemberNotNullWhen(true, &quot;Hour&quot;)]
+[MemberNotNullWhen(true, &quot;Minute&quot;)]
+[MemberNotNullWhen(true, &quot;Second&quot;)]
+[MemberNotNullWhen(true, &quot;DateTime&quot;)]
+[MemberNotNullWhen(true, &quot;DateTimeUtc&quot;)]
+[MemberNotNullWhen(true, &quot;DateTimeOffset&quot;)]
+[MemberNotNullWhen(true, &quot;DateOnly&quot;)]
+[MemberNotNullWhen(true, &quot;Holidays&quot;)]
+[MemberNotNullWhen(true, &quot;PersianWeek&quot;)]
+[MemberNotNullWhen(true, &quot;PersianMonth&quot;)]
+[MemberNotNullWhen(true, &quot;PersianYear&quot;)]
+[MemberNotNullWhen(true, &quot;PersianMonthDayNumberName&quot;)]
+[MemberNotNullWhen(true, &quot;WeekDayName&quot;)]
+[MemberNotNullWhen(true, &quot;WeekDayNumber&quot;)]
+[MemberNotNullWhen(true, &quot;MonthName&quot;)]
+public bool IsValidDateTime { get; }</code></pre>
   </div>
 
 

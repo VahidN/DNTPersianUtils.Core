@@ -103,7 +103,9 @@ the KeyNotFoundException when accessing Dictionary value by key</p>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IranProvinceValue&lt;TValue&gt; : Dictionary&lt;IranProvince, TValue?&gt;, IDictionary&lt;IranProvince, TValue?&gt;, ICollection&lt;KeyValuePair&lt;IranProvince, TValue?&gt;&gt;, IReadOnlyDictionary&lt;IranProvince, TValue?&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;IranProvince, TValue?&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;IranProvince, TValue?&gt;&gt;, IDictionary, ICollection, IEnumerable, IDeserializationCallback, ISerializable</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Usage&quot;, &quot;S3925:ISerializable should be implemented correctly&quot;, Justification = &quot;This is not an ISerializable type.&quot;)]
+[SuppressMessage(&quot;Microsoft.Usage&quot;, &quot;CA2237:Add [Serializable] to IranProvinceValue as this type implements ISerializable&quot;, Justification = &quot;This is not an ISerializable type.&quot;)]
+public class IranProvinceValue&lt;TValue&gt; : Dictionary&lt;IranProvince, TValue?&gt;, IDictionary&lt;IranProvince, TValue?&gt;, ICollection&lt;KeyValuePair&lt;IranProvince, TValue?&gt;&gt;, IReadOnlyDictionary&lt;IranProvince, TValue?&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;IranProvince, TValue?&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;IranProvince, TValue?&gt;&gt;, IDictionary, ICollection, IEnumerable, IDeserializationCallback, ISerializable</code></pre>
   </div>
 
 
