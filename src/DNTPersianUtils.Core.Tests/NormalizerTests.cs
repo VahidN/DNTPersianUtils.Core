@@ -123,6 +123,10 @@ public class NormalizerTests
         var actual = "مـجـــــــــیــــــــــد".NormalizePersianText(PersianNormalizers.RemoveAllKashida);
         var expected = "مجید";
         Assert.AreEqual(expected, actual);
+		
+        var inputWithZWNJ = "تن\u200Cماهی";
+        var expectedWithZWNJ = "تن\u200Cماهی";
+        Assert.AreEqual(expectedWithZWNJ, inputWithZWNJ.NormalizePersianText(PersianNormalizers.RemoveAllKashida));		
     }
 
     [TestMethod]

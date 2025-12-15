@@ -140,11 +140,8 @@ public static class AggressiveEditing
             return string.Empty;
         }
 
-        const char chr1600 = (char)1600; //ـ=1600
-        const char chr8204 = (char)8204; //‌=8204
-
-        return text.Replace(chr1600.ToString(), "", StringComparison.OrdinalIgnoreCase)
-            .Replace(chr8204.ToString(), "", StringComparison.OrdinalIgnoreCase);
+        const char kashida = '\u0640'; // U+0640 (ـ), decimal 1600        
+        return text.Replace(kashida.ToString(), "", StringComparison.Ordinal);
     }
 
     /// <summary>
