@@ -666,28 +666,72 @@ public class IslamicDateUtilsTests
     [TestMethod]
     public void VerifyPersianToIslamicWorks()
     {
-        var islamicDay = IslamicDateUtils.PersianDayToIslamicDay(1397, 6, 9);
-        Assert.AreEqual(new IslamicDay(1439, 12, 19), islamicDay);
+        var islamicDay = IslamicDateUtils.PersianDayToIslamicDay(year: 1397, month: 6, day: 9);
+        Assert.AreEqual(new IslamicDay(year: 1439, month: 12, day: 19), islamicDay);
     }
 
     [TestMethod]
     public void VerifyCivilToIslamicWorks()
     {
-        var islamicDay = IslamicDateUtils.GregorianToIslamicDay(2018, 08, 31);
-        Assert.AreEqual(new IslamicDay(1439, 12, 19), islamicDay);
+        var islamicDay = IslamicDateUtils.GregorianToIslamicDay(year: 2018, month: 08, day: 31);
+        Assert.AreEqual(new IslamicDay(year: 1439, month: 12, day: 19), islamicDay);
     }
 
     [TestMethod]
     public void VerifyGregorianToIslamicWorks()
     {
-        var islamicDay = new DateTime(2018, 08, 31).ToIslamicDay();
-        Assert.AreEqual(new IslamicDay(1439, 12, 19), islamicDay);
+        var islamicDay = new DateTime(year: 2018, month: 08, day: 31).ToIslamicDay();
+        Assert.AreEqual(new IslamicDay(year: 1439, month: 12, day: 19), islamicDay);
     }
 
     [TestMethod]
     public void VerifyToPersianDayWorks()
     {
-        var persianDay = new DateTime(2018, 08, 31).ToPersianDay();
-        Assert.AreEqual(1397, persianDay.Year);
+        var persianDay = new DateTime(year: 2018, month: 08, day: 31).ToPersianDay();
+        Assert.AreEqual(expected: 1397, persianDay.Year);
+    }
+
+    [TestMethod]
+    public void VerifyIssue93Works()
+    {
+        var baseDateTime = new DateTime(year: 2026, month: 1, day: 24);
+
+        var persianDay = baseDateTime.ToPersianDay();
+        Assert.AreEqual(expected: 1404, persianDay.Year);
+        Assert.AreEqual(expected: 11, persianDay.Month);
+        Assert.AreEqual(expected: 4, persianDay.Day);
+
+        var islamicDay1 = persianDay.PersianDayToIslamicDay();
+        Assert.AreEqual(expected: 1447, islamicDay1.Year);
+        Assert.AreEqual(expected: 8, islamicDay1.Month);
+        Assert.AreEqual(expected: 4, islamicDay1.Day);
+
+        var islamicDay2 = baseDateTime.ToIslamicDay();
+        Assert.AreEqual(expected: 1447, islamicDay2.Year);
+        Assert.AreEqual(expected: 8, islamicDay2.Month);
+        Assert.AreEqual(expected: 4, islamicDay2.Day);
+    }
+
+    [TestMethod]
+    [DataRow(1582, 10, 4, 2299160)]
+    [DataRow(1582, 10, 15, 2299161)]
+    [DataRow(2000, 1, 1, 2451545)]
+    public void GregorianToJdn_ShouldBeCorrect(int y, int m, int d, long expected)
+        => Assert.AreEqual(expected, JulianDayUtils.JdnFromGregorian(y, m, d));
+
+    [TestMethod]
+    [DataRow(1, 1, 1, 2978304)]
+    [DataRow(1403, 1, 1, 2460390)]
+    public void PersianToJdn_ShouldBeCorrect(int y, int m, int d, long expected)
+        => Assert.AreEqual(expected, JulianDayUtils.PersianDayToJdn(y, m, d));
+
+    [TestMethod]
+    public void TestJdnRoundtripSafety()
+    {
+        var jdn = JulianDayUtils.PersianDayToJdn(year: 1399, month: 11, day: 30);
+        var persianDay = JulianDayUtils.JdnToPersianDay(jdn);
+        Assert.AreEqual(expected: 1399, persianDay.Year);
+        Assert.AreEqual(expected: 11, persianDay.Month);
+        Assert.AreEqual(expected: 30, persianDay.Day);
     }
 }

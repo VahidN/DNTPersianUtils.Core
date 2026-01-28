@@ -16,7 +16,7 @@ public static class IslamicDateUtils
 
     // https://github.com/ilius/starcal/blob/master/scal3/cal_types/hijri-monthes.json
     private static readonly int[] hijriMonths =
-    {
+    [
         1427, 30, 29, 29, 30, 29, 30, 30, 30, 30, 29, 29, 30, 1428, 29, 30, 29, 29, 29, 30, 30, 29, 30, 30, 30, 29,
         1429, 30, 29, 30, 29, 29, 29, 30, 30, 29, 30, 30, 29, 1430, 30, 30, 29, 29, 30, 29, 30, 29, 29, 30, 30, 29,
         1431, 30, 30, 29, 30, 29, 30, 29, 30, 29, 29, 30, 29, 1432, 30, 30, 29, 30, 30, 30, 29, 29, 30, 29, 30, 29,
@@ -50,7 +50,7 @@ public static class IslamicDateUtils
         1487, 29, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30, 30, 1488, 29, 30, 30, 29, 30, 29, 30, 29, 29, 30, 29, 30,
         1489, 29, 30, 30, 30, 29, 30, 29, 30, 29, 29, 30, 29, 1490, 30, 29, 30, 30, 29, 30, 30, 29, 30, 29, 29, 30,
         1491, 29, 30, 29, 30, 29, 30, 30, 29, 30, 29, 30, 30
-    };
+    ];
 
     private static readonly Dictionary<int, long[]> _yearsMonthsInJd = new();
     private static readonly int _supportedYearsStart;
@@ -144,7 +144,7 @@ public static class IslamicDateUtils
     {
         if (jd < JdSupportStart || jd >= _jdSupportEnd || _yearsStartJd == null)
         {
-            return default;
+            return null;
         }
 
         var yearIndex = search(_yearsStartJd, jd);
@@ -153,22 +153,19 @@ public static class IslamicDateUtils
 
         if (yearMonths == null)
         {
-            return default;
+            return null;
         }
 
         var month = search(yearMonths, jd);
 
         if (yearMonths[month - 1] == 0)
         {
-            return default;
+            return null;
         }
 
         var day = (int)(jd - yearMonths[month - 1]);
 
-        return new[]
-        {
-            year, month, day
-        };
+        return [year, month, day];
     }
 
     /// <summary>
@@ -176,48 +173,7 @@ public static class IslamicDateUtils
     /// </summary>
     /// <param name="jdn"></param>
     /// <returns></returns>
-    public static PersianDay JdnToPersianDay(long jdn)
-    {
-        var depoch = jdn - PersianDayToJdn(year: 475, month: 1, day: 1);
-        var cycle = depoch / 1029983;
-        var cyear = depoch % 1029983;
-        long ycycle;
-        long aux1, aux2;
-
-        if (cyear == 1029982)
-        {
-            ycycle = 2820;
-        }
-        else
-        {
-            aux1 = cyear / 366;
-            aux2 = cyear % 366;
-            ycycle = (long)Math.Floor((2134 * aux1 + 2816 * aux2 + 2815) / 1028522d) + aux1 + 1;
-        }
-
-        int year, month, day;
-        year = (int)(ycycle + 2820 * cycle + 474);
-
-        if (year <= 0)
-        {
-            year = year - 1;
-        }
-
-        var yday = jdn - PersianDayToJdn(year, month: 1, day: 1) + 1;
-
-        if (yday <= 186)
-        {
-            month = (int)Math.Ceiling(yday / 31d);
-        }
-        else
-        {
-            month = (int)Math.Ceiling((yday - 6) / 30d);
-        }
-
-        day = (int)(jdn - PersianDayToJdn(year, month, day: 1)) + 1;
-
-        return new PersianDay(year, month, day);
-    }
+    public static PersianDay JdnToPersianDay(long jdn) => JulianDayUtils.JdnToPersianDay(jdn);
 
     /// <summary>
     ///     PersianDay To Jdn
@@ -227,36 +183,7 @@ public static class IslamicDateUtils
     /// <param name="day"></param>
     /// <returns></returns>
     public static long PersianDayToJdn(int year, int month, int day)
-    {
-        const long PERSIAN_EPOCH = 1948321; // The JDN of 1 Farvardin 1
-
-        long epbase;
-
-        if (year >= 0)
-        {
-            epbase = year - 474;
-        }
-        else
-        {
-            epbase = year - 473;
-        }
-
-        var epyear = 474 + epbase % 2820;
-
-        long mdays;
-
-        if (month <= 7)
-        {
-            mdays = (month - 1) * 31;
-        }
-        else
-        {
-            mdays = (month - 1) * 30 + 6;
-        }
-
-        return day + mdays + (epyear * 682 - 110) / 2816 + (epyear - 1) * 365 + epbase / 2820 * 1029983 +
-               (PERSIAN_EPOCH - 1);
-    }
+        => JulianDayUtils.PersianDayToJdn(year, month, day);
 
     /// <summary>
     ///     PersianDay To Jdn
@@ -264,14 +191,9 @@ public static class IslamicDateUtils
     /// <param name="persian"></param>
     /// <returns></returns>
     public static long PersianDayToJdn(this PersianDay persian)
-    {
-        if (persian == null)
-        {
-            throw new ArgumentNullException(nameof(persian));
-        }
-
-        return PersianDayToJdn(persian.Year, persian.Month, persian.Day);
-    }
+        => persian == null
+            ? throw new ArgumentNullException(nameof(persian))
+            : PersianDayToJdn(persian.Year, persian.Month, persian.Day);
 
     /// <summary>
     ///     IslamicDay To Jdn
@@ -279,14 +201,9 @@ public static class IslamicDateUtils
     /// <param name="islamic"></param>
     /// <returns></returns>
     public static long IslamicDayToJdn(this IslamicDay islamic)
-    {
-        if (islamic == null)
-        {
-            throw new ArgumentNullException(nameof(islamic));
-        }
-
-        return IslamicDayToJdn(islamic.Year, islamic.Month, islamic.Day);
-    }
+        => islamic == null
+            ? throw new ArgumentNullException(nameof(islamic))
+            : IslamicDayToJdn(islamic.Year, islamic.Month, islamic.Day);
 
     /// <summary>
     ///     IslamicDay To Jdn
@@ -437,11 +354,11 @@ public static class IslamicDateUtils
         do
         {
             mjd = visibility(k);
-            k = k - 1;
+            k -= 1;
         }
         while (mjd > jd - 0.5);
 
-        k = k + 1;
+        k += 1;
         var hm = k - 1048;
 
         year = 1405 + (int)(hm / 12);
@@ -449,13 +366,13 @@ public static class IslamicDateUtils
 
         if (hm != 0 && month <= 0)
         {
-            month = month + 12;
-            year = year - 1;
+            month += 12;
+            year -= 1;
         }
 
         if (year <= 0)
         {
-            year = year - 1;
+            year -= 1;
         }
 
         day = (int)Math.Floor(jd - mjd + 0.5);
@@ -468,47 +385,14 @@ public static class IslamicDateUtils
     /// </summary>
     /// <param name="jdn"></param>
     /// <returns></returns>
-    public static DateTime JdnToGregorianDateTime(long jdn)
-    {
-        if (jdn <= 2299160)
-        {
-            return JdnToJulian(jdn);
-        }
-
-        var l = jdn + 68569;
-        var n = 4 * l / 146097;
-        l = l - (146097 * n + 3) / 4;
-        var i = 4000 * (l + 1) / 1461001;
-        l = l - 1461 * i / 4 + 31;
-        var j = 80 * l / 2447;
-        var day = (int)(l - 2447 * j / 80);
-        l = j / 11;
-        var month = (int)(j + 2 - 12 * l);
-        var year = (int)(100 * (n - 49) + i + l);
-
-        return new DateTime(year, month, day);
-    }
+    public static DateTime JdnToGregorianDateTime(long jdn) => JulianDayUtils.JdnToGregorian(jdn);
 
     /// <summary>
     ///     Jdn To Julian
     /// </summary>
     /// <param name="jdn"></param>
     /// <returns></returns>
-    public static DateTime JdnToJulian(long jdn)
-    {
-        var j = jdn + 1402;
-        var k = (j - 1) / 1461;
-        var l = j - 1461 * k;
-        var n = (l - 1) / 365 - l / 1461;
-        var i = l - 365 * n + 30;
-        j = 80 * i / 2447;
-        var day = (int)(i - 2447 * j / 80);
-        i = j / 11;
-        var month = (int)(j + 2 - 12 * i);
-        var year = (int)(4 * k + n + i - 4716);
-
-        return new DateTime(year, month, day);
-    }
+    public static DateTime JdnToJulian(long jdn) => JulianDayUtils.JdnToGregorian(jdn);
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به قمری
@@ -519,7 +403,7 @@ public static class IslamicDateUtils
     ///     می‌کند
     /// </param>
     public static IslamicDay ToIslamicDay(this DateTime gregorian, bool convertToIranTimeZone = true)
-        => JdnToIslamicDay(ToJdn(gregorian, convertToIranTimeZone));
+        => JdnToIslamicDay(gregorian.ToPersianYearMonthDay(convertToIranTimeZone).PersianDayToJdn());
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -542,7 +426,7 @@ public static class IslamicDateUtils
     /// <returns></returns>
     public static IslamicDay ToIslamicDay(this DateTimeOffset dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => ToIslamicDay(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt.GetDateTimeOffsetPart(dateTimeOffsetPart).ToIslamicDay();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به قمری
@@ -592,17 +476,8 @@ public static class IslamicDateUtils
     /// <param name="lMonth"></param>
     /// <param name="lDay"></param>
     /// <returns></returns>
-    public static long GregorianToJdn(long lYear, long lMonth, long lDay)
-    {
-        if (lYear > 1582 || (lYear == 1582 && lMonth > 10) || (lYear == 1582 && lMonth == 10 && lDay > 14))
-        {
-            return 1461 * (lYear + 4800 + (lMonth - 14) / 12) / 4 +
-                367 * (lMonth - 2 - 12 * ((lMonth - 14) / 12)) / 12 -
-                3 * ((lYear + 4900 + (lMonth - 14) / 12) / 100) / 4 + lDay - 32075;
-        }
-
-        return JulianToJdn(lYear, lMonth, lDay);
-    }
+    public static long GregorianToJdn(int lYear, int lMonth, int lDay)
+        => JulianDayUtils.GregorianToJdn(lYear, lMonth, lDay);
 
     /// <summary>
     ///     Julian To Jdn
@@ -611,8 +486,7 @@ public static class IslamicDateUtils
     /// <param name="lMonth"></param>
     /// <param name="lDay"></param>
     /// <returns></returns>
-    public static long JulianToJdn(long lYear, long lMonth, long lDay)
-        => 367 * lYear - 7 * (lYear + 5001 + (lMonth - 9) / 7) / 4 + 275 * lMonth / 9 + lDay + 1729777;
+    public static long JulianToJdn(int lYear, int lMonth, int lDay) => JulianDayUtils.JulianToJdn(lYear, lMonth, lDay);
 
     /// <summary>
     ///     To PersianDay
@@ -644,7 +518,7 @@ public static class IslamicDateUtils
     /// <param name="islamic"></param>
     /// <returns></returns>
     public static DateTime IslamicDayToGregorian(this IslamicDay islamic)
-        => JdnToGregorianDateTime(IslamicDayToJdn(islamic));
+        => JdnToGregorianDateTime(islamic.IslamicDayToJdn());
 
     /// <summary>
     ///     IslamicDay To PersianDay
@@ -652,7 +526,7 @@ public static class IslamicDateUtils
     /// <param name="islamic"></param>
     /// <returns></returns>
     public static PersianDay IslamicDayToPersianDay(this IslamicDay islamic)
-        => JdnToPersianDay(IslamicDayToJdn(islamic));
+        => JdnToPersianDay(islamic.IslamicDayToJdn());
 
     /// <summary>
     ///     IslamicDay To PersianDay
@@ -679,7 +553,7 @@ public static class IslamicDateUtils
     /// <param name="persian">روز شمسی</param>
     /// <returns></returns>
     public static IslamicDay PersianDayToIslamicDay(this PersianDay persian)
-        => JdnToIslamicDay(PersianDayToJdn(persian));
+        => JdnToIslamicDay(persian.PersianDayToJdn());
 
     /// <summary>
     ///     تبدیل تاریخ شمسی به قمری
