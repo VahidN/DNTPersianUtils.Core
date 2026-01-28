@@ -3478,15 +3478,15 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.IslamicDateUtils.GregorianToIslamicDay
   nameWithType: IslamicDateUtils.GregorianToIslamicDay
-- uid: DNTPersianUtils.Core.IslamicDateUtils.GregorianToJdn(System.Int64,System.Int64,System.Int64)
-  name: GregorianToJdn(long, long, long)
-  href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_GregorianToJdn_System_Int64_System_Int64_System_Int64_
-  commentId: M:DNTPersianUtils.Core.IslamicDateUtils.GregorianToJdn(System.Int64,System.Int64,System.Int64)
-  name.vb: GregorianToJdn(Long, Long, Long)
-  fullName: DNTPersianUtils.Core.IslamicDateUtils.GregorianToJdn(long, long, long)
-  fullName.vb: DNTPersianUtils.Core.IslamicDateUtils.GregorianToJdn(Long, Long, Long)
-  nameWithType: IslamicDateUtils.GregorianToJdn(long, long, long)
-  nameWithType.vb: IslamicDateUtils.GregorianToJdn(Long, Long, Long)
+- uid: DNTPersianUtils.Core.IslamicDateUtils.GregorianToJdn(System.Int32,System.Int32,System.Int32)
+  name: GregorianToJdn(int, int, int)
+  href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_GregorianToJdn_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.IslamicDateUtils.GregorianToJdn(System.Int32,System.Int32,System.Int32)
+  name.vb: GregorianToJdn(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.IslamicDateUtils.GregorianToJdn(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.IslamicDateUtils.GregorianToJdn(Integer, Integer, Integer)
+  nameWithType: IslamicDateUtils.GregorianToJdn(int, int, int)
+  nameWithType.vb: IslamicDateUtils.GregorianToJdn(Integer, Integer, Integer)
 - uid: DNTPersianUtils.Core.IslamicDateUtils.GregorianToJdn*
   name: GregorianToJdn
   href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_GregorianToJdn_
@@ -3647,15 +3647,15 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.IslamicDateUtils.JdnToPersianDay
   nameWithType: IslamicDateUtils.JdnToPersianDay
-- uid: DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn(System.Int64,System.Int64,System.Int64)
-  name: JulianToJdn(long, long, long)
-  href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_JulianToJdn_System_Int64_System_Int64_System_Int64_
-  commentId: M:DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn(System.Int64,System.Int64,System.Int64)
-  name.vb: JulianToJdn(Long, Long, Long)
-  fullName: DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn(long, long, long)
-  fullName.vb: DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn(Long, Long, Long)
-  nameWithType: IslamicDateUtils.JulianToJdn(long, long, long)
-  nameWithType.vb: IslamicDateUtils.JulianToJdn(Long, Long, Long)
+- uid: DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn(System.Int32,System.Int32,System.Int32)
+  name: JulianToJdn(int, int, int)
+  href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_JulianToJdn_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn(System.Int32,System.Int32,System.Int32)
+  name.vb: JulianToJdn(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn(Integer, Integer, Integer)
+  nameWithType: IslamicDateUtils.JulianToJdn(int, int, int)
+  nameWithType.vb: IslamicDateUtils.JulianToJdn(Integer, Integer, Integer)
 - uid: DNTPersianUtils.Core.IslamicDateUtils.JulianToJdn*
   name: JulianToJdn
   href: api/DNTPersianUtils.Core.IslamicDateUtils.html#DNTPersianUtils_Core_IslamicDateUtils_JulianToJdn_
@@ -3916,6 +3916,216 @@ references:
   isSpec: "True"
   fullName: DNTPersianUtils.Core.IslamicDay.Year
   nameWithType: IslamicDay.Year
+- uid: DNTPersianUtils.Core.JulianDayUtils
+  name: JulianDayUtils
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html
+  commentId: T:DNTPersianUtils.Core.JulianDayUtils
+  fullName: DNTPersianUtils.Core.JulianDayUtils
+  nameWithType: JulianDayUtils
+- uid: DNTPersianUtils.Core.JulianDayUtils.GregorianReformDateTime
+  name: GregorianReformDateTime
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_GregorianReformDateTime
+  commentId: F:DNTPersianUtils.Core.JulianDayUtils.GregorianReformDateTime
+  fullName: DNTPersianUtils.Core.JulianDayUtils.GregorianReformDateTime
+  nameWithType: JulianDayUtils.GregorianReformDateTime
+- uid: DNTPersianUtils.Core.JulianDayUtils.GregorianReformDay
+  name: GregorianReformDay
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_GregorianReformDay
+  commentId: F:DNTPersianUtils.Core.JulianDayUtils.GregorianReformDay
+  fullName: DNTPersianUtils.Core.JulianDayUtils.GregorianReformDay
+  nameWithType: JulianDayUtils.GregorianReformDay
+- uid: DNTPersianUtils.Core.JulianDayUtils.GregorianReformMonth
+  name: GregorianReformMonth
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_GregorianReformMonth
+  commentId: F:DNTPersianUtils.Core.JulianDayUtils.GregorianReformMonth
+  fullName: DNTPersianUtils.Core.JulianDayUtils.GregorianReformMonth
+  nameWithType: JulianDayUtils.GregorianReformMonth
+- uid: DNTPersianUtils.Core.JulianDayUtils.GregorianReformYear
+  name: GregorianReformYear
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_GregorianReformYear
+  commentId: F:DNTPersianUtils.Core.JulianDayUtils.GregorianReformYear
+  fullName: DNTPersianUtils.Core.JulianDayUtils.GregorianReformYear
+  nameWithType: JulianDayUtils.GregorianReformYear
+- uid: DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn(System.DateTime)
+  name: GregorianToJdn(DateTime)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_GregorianToJdn_System_DateTime_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn(System.DateTime)
+  name.vb: GregorianToJdn(Date)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn(System.DateTime)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn(Date)
+  nameWithType: JulianDayUtils.GregorianToJdn(DateTime)
+  nameWithType.vb: JulianDayUtils.GregorianToJdn(Date)
+- uid: DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn(System.Int32,System.Int32,System.Int32)
+  name: GregorianToJdn(int, int, int)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_GregorianToJdn_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn(System.Int32,System.Int32,System.Int32)
+  name.vb: GregorianToJdn(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn(Integer, Integer, Integer)
+  nameWithType: JulianDayUtils.GregorianToJdn(int, int, int)
+  nameWithType.vb: JulianDayUtils.GregorianToJdn(Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn*
+  name: GregorianToJdn
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_GregorianToJdn_
+  commentId: Overload:DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.JulianDayUtils.GregorianToJdn
+  nameWithType: JulianDayUtils.GregorianToJdn
+- uid: DNTPersianUtils.Core.JulianDayUtils.IsGregorianDate(System.Int32,System.Int32,System.Int32)
+  name: IsGregorianDate(int, int, int)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_IsGregorianDate_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.IsGregorianDate(System.Int32,System.Int32,System.Int32)
+  name.vb: IsGregorianDate(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.IsGregorianDate(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.IsGregorianDate(Integer, Integer, Integer)
+  nameWithType: JulianDayUtils.IsGregorianDate(int, int, int)
+  nameWithType.vb: JulianDayUtils.IsGregorianDate(Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.JulianDayUtils.IsGregorianDate*
+  name: IsGregorianDate
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_IsGregorianDate_
+  commentId: Overload:DNTPersianUtils.Core.JulianDayUtils.IsGregorianDate
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.JulianDayUtils.IsGregorianDate
+  nameWithType: JulianDayUtils.IsGregorianDate
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian(System.DateTime)
+  name: JdnFromGregorian(DateTime)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnFromGregorian_System_DateTime_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian(System.DateTime)
+  name.vb: JdnFromGregorian(Date)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian(System.DateTime)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian(Date)
+  nameWithType: JulianDayUtils.JdnFromGregorian(DateTime)
+  nameWithType.vb: JulianDayUtils.JdnFromGregorian(Date)
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian(System.Int32,System.Int32,System.Int32)
+  name: JdnFromGregorian(int, int, int)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnFromGregorian_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian(System.Int32,System.Int32,System.Int32)
+  name.vb: JdnFromGregorian(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian(Integer, Integer, Integer)
+  nameWithType: JulianDayUtils.JdnFromGregorian(int, int, int)
+  nameWithType.vb: JulianDayUtils.JdnFromGregorian(Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian*
+  name: JdnFromGregorian
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnFromGregorian_
+  commentId: Overload:DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnFromGregorian
+  nameWithType: JulianDayUtils.JdnFromGregorian
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian(System.DateTime)
+  name: JdnFromJulian(DateTime)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnFromJulian_System_DateTime_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian(System.DateTime)
+  name.vb: JdnFromJulian(Date)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian(System.DateTime)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian(Date)
+  nameWithType: JulianDayUtils.JdnFromJulian(DateTime)
+  nameWithType.vb: JulianDayUtils.JdnFromJulian(Date)
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian(System.Int32,System.Int32,System.Int32)
+  name: JdnFromJulian(int, int, int)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnFromJulian_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian(System.Int32,System.Int32,System.Int32)
+  name.vb: JdnFromJulian(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian(Integer, Integer, Integer)
+  nameWithType: JulianDayUtils.JdnFromJulian(int, int, int)
+  nameWithType.vb: JulianDayUtils.JdnFromJulian(Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian*
+  name: JdnFromJulian
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnFromJulian_
+  commentId: Overload:DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnFromJulian
+  nameWithType: JulianDayUtils.JdnFromJulian
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnToGregorian(System.Int64)
+  name: JdnToGregorian(long)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnToGregorian_System_Int64_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.JdnToGregorian(System.Int64)
+  name.vb: JdnToGregorian(Long)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnToGregorian(long)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.JdnToGregorian(Long)
+  nameWithType: JulianDayUtils.JdnToGregorian(long)
+  nameWithType.vb: JulianDayUtils.JdnToGregorian(Long)
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnToGregorian*
+  name: JdnToGregorian
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnToGregorian_
+  commentId: Overload:DNTPersianUtils.Core.JulianDayUtils.JdnToGregorian
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnToGregorian
+  nameWithType: JulianDayUtils.JdnToGregorian
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnToPersianDay(System.Int64)
+  name: JdnToPersianDay(long)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnToPersianDay_System_Int64_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.JdnToPersianDay(System.Int64)
+  name.vb: JdnToPersianDay(Long)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnToPersianDay(long)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.JdnToPersianDay(Long)
+  nameWithType: JulianDayUtils.JdnToPersianDay(long)
+  nameWithType.vb: JulianDayUtils.JdnToPersianDay(Long)
+- uid: DNTPersianUtils.Core.JulianDayUtils.JdnToPersianDay*
+  name: JdnToPersianDay
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JdnToPersianDay_
+  commentId: Overload:DNTPersianUtils.Core.JulianDayUtils.JdnToPersianDay
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JdnToPersianDay
+  nameWithType: JulianDayUtils.JdnToPersianDay
+- uid: DNTPersianUtils.Core.JulianDayUtils.JulianToJdn(System.DateTime)
+  name: JulianToJdn(DateTime)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JulianToJdn_System_DateTime_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.JulianToJdn(System.DateTime)
+  name.vb: JulianToJdn(Date)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JulianToJdn(System.DateTime)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.JulianToJdn(Date)
+  nameWithType: JulianDayUtils.JulianToJdn(DateTime)
+  nameWithType.vb: JulianDayUtils.JulianToJdn(Date)
+- uid: DNTPersianUtils.Core.JulianDayUtils.JulianToJdn(System.Int32,System.Int32,System.Int32)
+  name: JulianToJdn(int, int, int)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JulianToJdn_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.JulianToJdn(System.Int32,System.Int32,System.Int32)
+  name.vb: JulianToJdn(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JulianToJdn(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.JulianToJdn(Integer, Integer, Integer)
+  nameWithType: JulianDayUtils.JulianToJdn(int, int, int)
+  nameWithType.vb: JulianDayUtils.JulianToJdn(Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.JulianDayUtils.JulianToJdn*
+  name: JulianToJdn
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_JulianToJdn_
+  commentId: Overload:DNTPersianUtils.Core.JulianDayUtils.JulianToJdn
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.JulianDayUtils.JulianToJdn
+  nameWithType: JulianDayUtils.JulianToJdn
+- uid: DNTPersianUtils.Core.JulianDayUtils.PersianDayToJdn(System.Int32,System.Int32,System.Int32)
+  name: PersianDayToJdn(int, int, int)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_PersianDayToJdn_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.PersianDayToJdn(System.Int32,System.Int32,System.Int32)
+  name.vb: PersianDayToJdn(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.PersianDayToJdn(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.PersianDayToJdn(Integer, Integer, Integer)
+  nameWithType: JulianDayUtils.PersianDayToJdn(int, int, int)
+  nameWithType.vb: JulianDayUtils.PersianDayToJdn(Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.JulianDayUtils.PersianDayToJdn*
+  name: PersianDayToJdn
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_PersianDayToJdn_
+  commentId: Overload:DNTPersianUtils.Core.JulianDayUtils.PersianDayToJdn
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.JulianDayUtils.PersianDayToJdn
+  nameWithType: JulianDayUtils.PersianDayToJdn
+- uid: DNTPersianUtils.Core.JulianDayUtils.ValidateDate(System.Int32,System.Int32,System.Int32)
+  name: ValidateDate(int, int, int)
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_ValidateDate_System_Int32_System_Int32_System_Int32_
+  commentId: M:DNTPersianUtils.Core.JulianDayUtils.ValidateDate(System.Int32,System.Int32,System.Int32)
+  name.vb: ValidateDate(Integer, Integer, Integer)
+  fullName: DNTPersianUtils.Core.JulianDayUtils.ValidateDate(int, int, int)
+  fullName.vb: DNTPersianUtils.Core.JulianDayUtils.ValidateDate(Integer, Integer, Integer)
+  nameWithType: JulianDayUtils.ValidateDate(int, int, int)
+  nameWithType.vb: JulianDayUtils.ValidateDate(Integer, Integer, Integer)
+- uid: DNTPersianUtils.Core.JulianDayUtils.ValidateDate*
+  name: ValidateDate
+  href: api/DNTPersianUtils.Core.JulianDayUtils.html#DNTPersianUtils_Core_JulianDayUtils_ValidateDate_
+  commentId: Overload:DNTPersianUtils.Core.JulianDayUtils.ValidateDate
+  isSpec: "True"
+  fullName: DNTPersianUtils.Core.JulianDayUtils.ValidateDate
+  nameWithType: JulianDayUtils.ValidateDate
 - uid: DNTPersianUtils.Core.Language
   name: Language
   href: api/DNTPersianUtils.Core.Language.html

@@ -474,6 +474,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.JulianDayUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.JulianDayUtils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.JulianDayUtils",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.JulianDayUtils.yml\" sourcestartlinenumber=\"1\">Provides utility methods for converting between\nGregorian/Julian calendar dates and the Julian Day Number (JDN).\nAutomatically handles the Gregorian calendar reform\nintroduced on 1582-10-15.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.Language.yml",
       "output": {
         ".html": {
