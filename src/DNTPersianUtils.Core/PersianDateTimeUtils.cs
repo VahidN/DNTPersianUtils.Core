@@ -98,7 +98,7 @@ public static class PersianDateTimeUtils
     /// <param name="persianMonth">ماه شمسی</param>
     /// <param name="persianDay">روز شمسی</param>
     public static DateOnly ToPersianDateOnly(this int persianYear, int persianMonth, int persianDay)
-        => ToPersianDate(persianYear, persianMonth, persianDay).ToDateOnly();
+        => persianYear.ToPersianDate(persianMonth, persianDay).ToDateOnly();
 #endif
 
     /// <summary>
@@ -114,7 +114,7 @@ public static class PersianDateTimeUtils
         bool convertToUtc = false,
         int beginningOfCentury = 1300)
     {
-        var persianDateTimeValue = ToPersianDateTime(persianDateTime, beginningOfCentury);
+        var persianDateTimeValue = persianDateTime.ToPersianDateTime(beginningOfCentury);
 
         if (persianDateTimeValue is null)
         {
@@ -183,7 +183,7 @@ public static class PersianDateTimeUtils
             return null;
         }
 
-        if (!IsValidPersianDate(year.Value, month.Value, day.Value))
+        if (!year.Value.IsValidPersianDate(month.Value, day.Value))
         {
             return null;
         }
@@ -240,7 +240,7 @@ public static class PersianDateTimeUtils
     public static DateOnly? ToGregorianDateOnly(this string? persianDateTime,
         bool convertToUtc = false,
         int beginningOfCentury = 1300)
-        => ToGregorianDateTime(persianDateTime, convertToUtc, beginningOfCentury).ToDateOnly();
+        => persianDateTime.ToGregorianDateTime(convertToUtc, beginningOfCentury).ToDateOnly();
 #endif
 
     /// <summary>
@@ -305,7 +305,7 @@ public static class PersianDateTimeUtils
     ///     می‌کند
     /// </param>
     public static string ToLongPersianDateString(this DateTime? dt, bool convertToIranTimeZone = true)
-        => dt == null ? string.Empty : ToLongPersianDateString(dt.Value, convertToIranTimeZone);
+        => dt == null ? string.Empty : dt.Value.ToLongPersianDateString(convertToIranTimeZone);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -331,7 +331,7 @@ public static class PersianDateTimeUtils
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static string ToLongPersianDateString(this DateTimeOffset? dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => dt == null ? string.Empty : ToLongPersianDateString(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt == null ? string.Empty : dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart).ToLongPersianDateString();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
@@ -342,7 +342,7 @@ public static class PersianDateTimeUtils
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static string ToLongPersianDateString(this DateTimeOffset dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => ToLongPersianDateString(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt.GetDateTimeOffsetPart(dateTimeOffsetPart).ToLongPersianDateString();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
@@ -385,7 +385,7 @@ public static class PersianDateTimeUtils
     ///     می‌کند
     /// </param>
     public static string ToLongPersianDateTimeString(this DateTime? dt, bool convertToIranTimeZone = true)
-        => dt == null ? string.Empty : ToLongPersianDateTimeString(dt.Value, convertToIranTimeZone);
+        => dt == null ? string.Empty : dt.Value.ToLongPersianDateTimeString(convertToIranTimeZone);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -411,7 +411,7 @@ public static class PersianDateTimeUtils
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static string ToLongPersianDateTimeString(this DateTimeOffset? dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => dt == null ? string.Empty : ToLongPersianDateTimeString(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt == null ? string.Empty : dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart).ToLongPersianDateTimeString();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
@@ -422,7 +422,7 @@ public static class PersianDateTimeUtils
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static string ToLongPersianDateTimeString(this DateTimeOffset dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => ToLongPersianDateTimeString(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt.GetDateTimeOffsetPart(dateTimeOffsetPart).ToLongPersianDateTimeString();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
@@ -509,7 +509,7 @@ public static class PersianDateTimeUtils
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return ToPersianDateTimeString(dt, format, convertToIranTimeZone);
+        return dt.ToPersianDateTimeString(format, convertToIranTimeZone);
     }
 
     /// <summary>
@@ -529,8 +529,8 @@ public static class PersianDateTimeUtils
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         => dateTime == null
             ? string.Empty
-            : ToPersianDateTimeString(dateTime.Value.GetDateTimeOffsetPart(dateTimeOffsetPart), format,
-                convertToIranTimeZone);
+            : dateTime.Value.GetDateTimeOffsetPart(dateTimeOffsetPart)
+                .ToPersianDateTimeString(format, convertToIranTimeZone);
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
@@ -541,7 +541,7 @@ public static class PersianDateTimeUtils
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         => gregorianDate == null
             ? null
-            : ToPersianYearMonthDay(gregorianDate.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
+            : gregorianDate.Value.GetDateTimeOffsetPart(dateTimeOffsetPart).ToPersianYearMonthDay();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
@@ -552,7 +552,7 @@ public static class PersianDateTimeUtils
     ///     می‌کند
     /// </param>
     public static PersianDay? ToPersianYearMonthDay(this DateTime? gregorianDate, bool convertToIranTimeZone = true)
-        => gregorianDate == null ? null : ToPersianYearMonthDay(gregorianDate.Value, convertToIranTimeZone);
+        => gregorianDate == null ? null : gregorianDate.Value.ToPersianYearMonthDay(convertToIranTimeZone);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -574,7 +574,7 @@ public static class PersianDateTimeUtils
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static PersianDay ToPersianYearMonthDay(this DateTimeOffset gregorianDate,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => ToPersianYearMonthDay(gregorianDate.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => gregorianDate.GetDateTimeOffsetPart(dateTimeOffsetPart).ToPersianYearMonthDay();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی و دریافت اجزای سال، ماه و روز نتیجه‌ی حاصل‌
@@ -628,7 +628,7 @@ public static class PersianDateTimeUtils
     /// <returns>تاریخ شمسی</returns>
     public static string ToShortPersianDateString(this DateTimeOffset? dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => dt == null ? string.Empty : ToShortPersianDateString(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt == null ? string.Empty : dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart).ToShortPersianDateString();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
@@ -639,7 +639,7 @@ public static class PersianDateTimeUtils
     /// <returns>تاریخ شمسی</returns>
     public static string ToShortPersianDateString(this DateTimeOffset dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => ToShortPersianDateString(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt.GetDateTimeOffsetPart(dateTimeOffsetPart).ToShortPersianDateString();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
@@ -680,7 +680,7 @@ public static class PersianDateTimeUtils
     ///     می‌کند
     /// </param>
     public static string ToShortPersianDateString(this DateTime? dt, bool convertToIranTimeZone = true)
-        => dt == null ? string.Empty : ToShortPersianDateString(dt.Value, convertToIranTimeZone);
+        => dt == null ? string.Empty : dt.Value.ToShortPersianDateString(convertToIranTimeZone);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -738,7 +738,7 @@ public static class PersianDateTimeUtils
     ///     می‌کند
     /// </param>
     public static string ToShortPersianDateTimeString(this DateTime? dt, bool convertToIranTimeZone = true)
-        => dt == null ? string.Empty : ToShortPersianDateTimeString(dt.Value, convertToIranTimeZone);
+        => dt == null ? string.Empty : dt.Value.ToShortPersianDateTimeString(convertToIranTimeZone);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -764,7 +764,9 @@ public static class PersianDateTimeUtils
     /// <returns>تاریخ شمسی</returns>
     public static string ToShortPersianDateTimeString(this DateTimeOffset? dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => dt == null ? string.Empty : ToShortPersianDateTimeString(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt == null
+            ? string.Empty
+            : dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart).ToShortPersianDateTimeString();
 
     /// <summary>
     ///     تبدیل تاریخ میلادی به شمسی
@@ -775,7 +777,7 @@ public static class PersianDateTimeUtils
     /// <returns>تاریخ شمسی</returns>
     public static string ToShortPersianDateTimeString(this DateTimeOffset dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => ToShortPersianDateTimeString(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt.GetDateTimeOffsetPart(dateTimeOffsetPart).ToShortPersianDateTimeString();
 
     private static int? getDay(string part)
     {

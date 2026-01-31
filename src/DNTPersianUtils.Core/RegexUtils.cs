@@ -12,22 +12,23 @@ public static class RegexUtils
     /// <summary>
     ///     زمان انقضای پردازش عبارت باقاعده
     /// </summary>
-    public static readonly TimeSpan MatchTimeout = TimeSpan.FromMinutes(1);
+    public static readonly TimeSpan MatchTimeout = TimeSpan.FromMinutes(value: 1);
 
     private static readonly Regex _matchAllTags =
-        new(@"<(.|\n)*?>", RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
+        new(pattern: @"<(.|\n)*?>", RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
-    private static readonly Regex _matchArabicHebrew = new(@"[\u0600-\u06FF,\u0590-\u05FF,«,»]",
+    private static readonly Regex _matchArabicHebrew = new(pattern: @"[\u0600-\u06FF,\u0590-\u05FF,«,»]",
         RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
-    private static readonly Regex _matchOnlyPersianNumbersRange = new(@"^[\u06F0-\u06F9]+$",
+    private static readonly Regex _matchOnlyPersianNumbersRange = new(pattern: @"^[\u06F0-\u06F9]+$",
         RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
     private static readonly Regex _matchOnlyPersianLetters = new(
+        pattern:
         @"^[\\s,\u06A9\u06AF\u06C0\u06CC\u060C,\u062A\u062B\u062C\u062D\u062E\u062F,\u063A\u064A\u064B\u064C\u064D\u064E,\u064F\u067E\u0670\u0686\u0698\u200C,\u0621-\u0629\u0630-\u0639\u0641-\u0654]+$",
         RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
-    internal static readonly Regex _hasHalfSpaces = new(@"\u200B|\u200C|\u200E|\u200F",
+    internal static readonly Regex _hasHalfSpaces = new(pattern: @"\u200B|\u200C|\u200E|\u200F",
         RegexOptions.Compiled | RegexOptions.IgnoreCase, MatchTimeout);
 
     /// <summary>
@@ -35,7 +36,7 @@ public static class RegexUtils
     /// </summary>
     public static bool ContainsFarsi(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? txt,
         bool allowWhitespace = false)
@@ -45,7 +46,7 @@ public static class RegexUtils
             return false;
         }
 
-        var input = txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase);
+        var input = txt.StripHtmlTags().Replace(oldValue: ",", newValue: "", StringComparison.OrdinalIgnoreCase);
 
         if (allowWhitespace)
         {
@@ -60,7 +61,7 @@ public static class RegexUtils
     /// </summary>
     public static bool ContainsOnlyFarsiLetters(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? txt,
         bool allowWhitespace = false)
@@ -70,7 +71,7 @@ public static class RegexUtils
             return false;
         }
 
-        var input = txt.StripHtmlTags().Replace(",", "", StringComparison.OrdinalIgnoreCase);
+        var input = txt.StripHtmlTags().Replace(oldValue: ",", newValue: "", StringComparison.OrdinalIgnoreCase);
 
         if (allowWhitespace)
         {
@@ -90,7 +91,7 @@ public static class RegexUtils
             return string.Empty;
         }
 
-        return string.Join("", txt.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+        return string.Join(separator: "", txt.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
     }
 
     /// <summary>
@@ -99,7 +100,8 @@ public static class RegexUtils
     public static string StripHtmlTags(this string? text)
         => string.IsNullOrEmpty(text)
             ? string.Empty
-            : _matchAllTags.Replace(text, " ").Replace("&nbsp;", " ", StringComparison.OrdinalIgnoreCase);
+            : _matchAllTags.Replace(text, replacement: " ")
+                .Replace(oldValue: "&nbsp;", newValue: " ", StringComparison.OrdinalIgnoreCase);
 
     /// <summary>
     ///     اگر متن شما حاوی یک عبارت فارسی باشد آن‌را داخل یک بلاک اچ تی ام ال راست به چپ محصور می‌کند
@@ -114,7 +116,7 @@ public static class RegexUtils
             return string.Empty;
         }
 
-        if (ContainsFarsi(body, true))
+        if (body.ContainsFarsi(allowWhitespace: true))
         {
             return
                 $"<div style='text-align: right; font-family:{fontFamily}; font-size:{fontSize};' dir='rtl'>{body}</div>";
@@ -128,7 +130,7 @@ public static class RegexUtils
     /// </summary>
     public static bool ContainsOnlyPersianNumbers(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? text,
         bool allowWhitespace = false)
@@ -151,12 +153,10 @@ public static class RegexUtils
     /// <summary>
     ///     آیا عبارت مدنظر شامل نیم فاصله است؟
     /// </summary>
-    public static bool ContainsHalfSpace(this string text)
-        => _hasHalfSpaces.IsMatch(text);
+    public static bool ContainsHalfSpace(this string text) => _hasHalfSpaces.IsMatch(text);
 
     /// <summary>
     ///     آیا عبارت مدنظر شامل نیم فاصله است؟
     /// </summary>
-    public static bool ContainsThinSpace(this string text)
-        => ContainsHalfSpace(text);
+    public static bool ContainsThinSpace(this string text) => text.ContainsHalfSpace();
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 
 namespace DNTPersianUtils.Core;
 
@@ -30,7 +31,7 @@ public static class DateTimeUtils
     public static int GetAge(this DateTimeOffset birthday,
         DateTime comparisonBase,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => GetAge(birthday.GetDateTimeOffsetPart(dateTimeOffsetPart), comparisonBase);
+        => birthday.GetDateTimeOffsetPart(dateTimeOffsetPart).GetAge(comparisonBase);
 
     /// <summary>
     ///     محاسبه سن
@@ -77,7 +78,7 @@ public static class DateTimeUtils
     {
         var now = birthday.Kind.GetNow();
 
-        return GetAge(birthday, now);
+        return birthday.GetAge(now);
     }
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
@@ -160,7 +161,7 @@ public static class DateTimeUtils
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return ToEpochMilliseconds(dt);
+        return dt.ToEpochMilliseconds();
     }
 
     /// <summary>
@@ -190,7 +191,7 @@ public static class DateTimeUtils
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return ToEpochSeconds(dt);
+        return dt.ToEpochSeconds();
     }
 
     /// <summary>
@@ -214,31 +215,34 @@ public static class DateTimeUtils
         var startDateOff = startDate.GetDateTimeOffsetPart(dateTimeOffsetPart);
         var endDateOff = endDate.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return IsBetween(dateOff, startDateOff, endDateOff, compareTime);
+        return dateOff.IsBetween(startDateOff, endDateOff, compareTime);
     }
 
     /// <summary>
-    ///     Returns whether the given date is the last day of the month
+    ///     Returns whether the given date is the last day of the Persian month
     /// </summary>
     public static bool IsLastDayOfTheMonth(this DateTime dateTime)
-        => dateTime == new DateTime(dateTime.Year, dateTime.Month, day: 1).AddMonths(months: 1).AddDays(value: -1);
+        => dateTime == new PersianCalendar()
+            .ToDateTime(dateTime.Year, dateTime.Month, day: 1, hour: 0, minute: 0, second: 0, millisecond: 0)
+            .AddMonths(months: 1)
+            .AddDays(value: -1);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
-    ///     Returns whether the given date is the last day of the month
+    ///     Returns whether the given date is the last day of the Persian month
     /// </summary>
     public static bool IsLastDayOfTheMonth(this DateOnly date) => date.ToDateTime().IsLastDayOfTheMonth();
 #endif
 
     /// <summary>
-    ///     Returns whether the given date is the last day of the month
+    ///     Returns whether the given date is the last day of the Persian month
     /// </summary>
     public static bool IsLastDayOfTheMonth(this DateTimeOffset dateTime,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return IsLastDayOfTheMonth(dt);
+        return dt.IsLastDayOfTheMonth();
     }
 
     /// <summary>
@@ -262,13 +266,13 @@ public static class DateTimeUtils
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return IsWeekend(dt);
+        return dt.IsWeekend();
     }
 
     /// <summary>
-    ///     Determines if a given year is a LeapYear or not.
+    ///     Determines if a given Persian year is a LeapYear or not.
     /// </summary>
-    public static bool IsLeapYear(this DateTime value) => DateTime.DaysInMonth(value.Year, month: 2) == 29;
+    public static bool IsLeapYear(this DateTime value) => new PersianCalendar().IsLeapYear(value.GetPersianYear());
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -284,7 +288,7 @@ public static class DateTimeUtils
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return IsLeapYear(dt);
+        return dt.IsLeapYear();
     }
 
     /// <summary>
@@ -318,7 +322,7 @@ public static class DateTimeUtils
     /// <param name="dt">Source DateTime.</param>
     /// <param name="offsetInHours">Offset</param>
     public static DateTimeOffset ToDateTimeOffset(this DateTime dt, double offsetInHours = 0)
-        => ToDateTimeOffset(dt, offsetInHours.ApproxEquals(d2: 0) ? TimeSpan.Zero : TimeSpan.FromHours(offsetInHours));
+        => dt.ToDateTimeOffset(offsetInHours.ApproxEquals(d2: 0) ? TimeSpan.Zero : TimeSpan.FromHours(offsetInHours));
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -350,7 +354,7 @@ public static class DateTimeUtils
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetStartOfDay(dt);
+        return dt.GetStartOfDay();
     }
 
     /// <summary>
@@ -373,7 +377,7 @@ public static class DateTimeUtils
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetEndOfDay(dt);
+        return dt.GetEndOfDay();
     }
 
     /// <summary>
@@ -427,7 +431,7 @@ public static class DateTimeUtils
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetPrevious(dt, dayOfWeek, includeToday);
+        return dt.GetPrevious(dayOfWeek, includeToday);
     }
 
     /// <summary>
@@ -479,7 +483,7 @@ public static class DateTimeUtils
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetNext(dt, dayOfWeek, includeToday);
+        return dt.GetNext(dayOfWeek, includeToday);
     }
 
     /// <summary>
@@ -501,7 +505,7 @@ public static class DateTimeUtils
     /// <param name="now">مبناي مقايسه</param>
     /// <returns></returns>
     public static bool HasExceeded(this DateOnly creationTime, int seconds, DateOnly now)
-        => HasExceeded(creationTime.ToDateTime(), seconds, now.ToDateTime());
+        => creationTime.ToDateTime().HasExceeded(seconds, now.ToDateTime());
 #endif
 
     /// <summary>
@@ -516,8 +520,8 @@ public static class DateTimeUtils
         int seconds,
         DateTimeOffset now,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => HasExceeded(creationTime.GetDateTimeOffsetPart(dateTimeOffsetPart), seconds,
-            now.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => creationTime.GetDateTimeOffsetPart(dateTimeOffsetPart)
+            .HasExceeded(seconds, now.GetDateTimeOffsetPart(dateTimeOffsetPart));
 
     /// <summary>
     ///     بازگشت جمع ثانيه‌هاي طول عمر پس از ايجاد تاكنون
@@ -536,7 +540,7 @@ public static class DateTimeUtils
     /// <param name="now">منباي مقايسه</param>
     /// <returns></returns>
     public static int GetLifetimeInSeconds(this DateOnly creationTime, DateOnly now)
-        => GetLifetimeInSeconds(creationTime.ToDateTime(), now.ToDateTime());
+        => creationTime.ToDateTime().GetLifetimeInSeconds(now.ToDateTime());
 #endif
 
     /// <summary>
@@ -549,8 +553,8 @@ public static class DateTimeUtils
     public static int GetLifetimeInSeconds(this DateTimeOffset creationTime,
         DateTimeOffset now,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => GetLifetimeInSeconds(creationTime.GetDateTimeOffsetPart(dateTimeOffsetPart),
-            now.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => creationTime.GetDateTimeOffsetPart(dateTimeOffsetPart)
+            .GetLifetimeInSeconds(now.GetDateTimeOffsetPart(dateTimeOffsetPart));
 
     /// <summary>
     ///     آيا منقضي شده‌است؟
@@ -582,7 +586,7 @@ public static class DateTimeUtils
     /// <param name="now">مبناي مقايسه</param>
     /// <returns></returns>
     public static bool HasExpired(this DateOnly expirationTime, DateOnly now)
-        => HasExpired(expirationTime.ToDateTime(), now.ToDateTime());
+        => expirationTime.ToDateTime().HasExpired(now.ToDateTime());
 #endif
 
     /// <summary>
@@ -595,8 +599,8 @@ public static class DateTimeUtils
     public static bool HasExpired(this DateTimeOffset expirationTime,
         DateTimeOffset now,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => HasExpired(expirationTime.GetDateTimeOffsetPart(dateTimeOffsetPart),
-            now.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => expirationTime.GetDateTimeOffsetPart(dateTimeOffsetPart)
+            .HasExpired(now.GetDateTimeOffsetPart(dateTimeOffsetPart));
 
     /// <summary>
     ///     آيا زمان وارد شده معتبر است؟

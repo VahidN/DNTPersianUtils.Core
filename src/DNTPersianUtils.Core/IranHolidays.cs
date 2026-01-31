@@ -52,15 +52,15 @@ public static class IranHolidays
     /// </summary>
     public const int EndYear = 1404;
 
-    private static readonly Lazy<ISet<IranHoliday>> _holidayProvider =
-        new(getIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
+    private static readonly Lazy<ISet<IranHoliday>> HolidayProvider =
+        new(GetIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
 
     /// <summary>
     ///     مناسبت‌های تعطیلات رسمی ایران
     /// </summary>
-    public static ISet<IranHoliday> Instance { get; } = _holidayProvider.Value;
+    public static ISet<IranHoliday> Instance { get; } = HolidayProvider.Value;
 
-    private static HashSet<IranHoliday> getIranHolidays()
+    private static HashSet<IranHoliday> GetIranHolidays()
     {
         var persianCalendar = new PersianCalendar();
 
@@ -1775,21 +1775,21 @@ public static class IranHolidays
             // ----------------------- سال 1404				
         };
 
-        addFridays(holidays);
+        AddFridays(holidays);
 
         return holidays;
     }
 
     /// <summary>
     ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="convertToIranTimeZone">
     ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
     ///     می‌کند
     /// </param>
-    public static IEnumerable<string>? GetHolidays(this DateTime date, bool convertToIranTimeZone = true)
+    public static IList<string>? GetHolidays(this DateTime date, bool convertToIranTimeZone = true)
     {
         if (date.Kind == DateTimeKind.Utc && convertToIranTimeZone)
         {
@@ -1807,34 +1807,34 @@ public static class IranHolidays
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="convertToIranTimeZone">
     ///     اگر تاریخ و زمان با فرمت UTC باشند، ابتدا آن‌ها را به منطقه‌ی زمانی ایران تبدیل
     ///     می‌کند
     /// </param>
-    public static IEnumerable<string>? GetHolidays(this DateOnly date, bool convertToIranTimeZone = true)
+    public static IList<string>? GetHolidays(this DateOnly date, bool convertToIranTimeZone = true)
         => date.ToDateTime().GetHolidays(convertToIranTimeZone);
 #endif
 
     /// <summary>
     ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
-    public static IEnumerable<string>? GetHolidays(this DateTimeOffset date,
+    public static IList<string>? GetHolidays(this DateTimeOffset date,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var fromDt = date.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetHolidays(fromDt);
+        return fromDt.GetHolidays();
     }
 
     /// <summary>
     ///     تشخیص تعطیلات رسمی ایران
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="convertToIranTimeZone">
@@ -1868,7 +1868,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     تشخیص تعطیلات رسمی ایران
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
@@ -1877,12 +1877,12 @@ public static class IranHolidays
     {
         var fromDt = date.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return IsHoliday(fromDt);
+        return fromDt.IsHoliday();
     }
 
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
@@ -1917,7 +1917,7 @@ public static class IranHolidays
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
@@ -1934,7 +1934,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
@@ -1947,12 +1947,12 @@ public static class IranHolidays
         var fromDt = from.GetDateTimeOffsetPart(dateTimeOffsetPart);
         var toDt = to.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetBusinessDays(fromDt, toDt);
+        return fromDt.GetBusinessDays(toDt);
     }
 
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یکسال شمسی
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="persianYear">سال شمسی</param>
     /// <returns>روزهای کاری</returns>
@@ -1968,12 +1968,12 @@ public static class IranHolidays
         var from = persianYearRang.StartDate;
         var to = persianYearRang.EndDate;
 
-        return GetBusinessDays(from, to);
+        return from.GetBusinessDays(to);
     }
 
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یک ماه شمسی
-    ///     از سال 1395 تا پایان سال 1398
+    ///     از سال 1395 تا پایان سال 1404
     /// </summary>
     /// <param name="persianYear">سال شمسی</param>
     /// <param name="persianMonth">ماه شمسی</param>
@@ -1990,10 +1990,10 @@ public static class IranHolidays
         var from = persianMonthRang.StartDate;
         var to = persianMonthRang.EndDate;
 
-        return GetBusinessDays(from, to);
+        return from.GetBusinessDays(to);
     }
 
-    private static void addFridays(HashSet<IranHoliday> holidays)
+    private static void AddFridays(HashSet<IranHoliday> holidays)
     {
         var from = StartYear.GetPersianYearStartAndEndDates().StartDate;
         var to = EndYear.GetPersianYearStartAndEndDates().EndDate;

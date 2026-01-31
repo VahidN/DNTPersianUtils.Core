@@ -86,14 +86,14 @@ public static class GenericsPersianDateTimeUtils
     {
         return value switch
         {
-            DateTime dateTimeValue => dateTimeValue == default ? default : dateTimeValue.TimeOfDay,
+            DateTime dateTimeValue => dateTimeValue == default ? TimeSpan.Zero : dateTimeValue.TimeOfDay,
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
-            DateOnly dateOnlyValue => dateOnlyValue == default ? default : dateOnlyValue.ToDateTime().TimeOfDay,
+            DateOnly dateOnlyValue => dateOnlyValue == default ? TimeSpan.Zero : dateOnlyValue.ToDateTime().TimeOfDay,
 #endif
             DateTimeOffset dateTimeOffsetValue => dateTimeOffsetValue == default
-                ? default
+                ? TimeSpan.Zero
                 : dateTimeOffsetValue.TimeOfDay,
-            _ => default
+            _ => TimeSpan.Zero
         };
     }
 
@@ -143,11 +143,11 @@ public static class GenericsPersianDateTimeUtils
     {
         return value switch
         {
-            DateTime dateTimeValue => FormatValue(dateTimeValue, dateFormat),
+            DateTime dateTimeValue => dateTimeValue.FormatValue(dateFormat),
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
-            DateOnly dateOnlyValue => FormatValue(dateOnlyValue, dateFormat),
+            DateOnly dateOnlyValue => dateOnlyValue.FormatValue(dateFormat),
 #endif
-            DateTimeOffset dateTimeOffsetValue => FormatValue(dateTimeOffsetValue, dateFormat),
+            DateTimeOffset dateTimeOffsetValue => dateTimeOffsetValue.FormatValue(dateFormat),
             _ => string.Empty // Handles null for Nullable<DateTime>, etc.
         };
     }
@@ -273,7 +273,7 @@ public static class GenericsPersianDateTimeUtils
     /// </summary>
     /// <param name="value">The value to format.</param>
     /// <returns>The formatted value.</returns>
-    public static string FormatValue(this DateTime value) => FormatDateTimeValueCore(value, format: null);
+    public static string FormatValue(this DateTime value) => value.FormatDateTimeValueCore(format: null);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -281,7 +281,7 @@ public static class GenericsPersianDateTimeUtils
     /// </summary>
     /// <param name="value">The value to format.</param>
     /// <returns>The formatted value.</returns>
-    public static string FormatValue(this DateOnly value) => FormatDateOnlyValueCore(value, format: null);
+    public static string FormatValue(this DateOnly value) => value.FormatDateOnlyValueCore(format: null);
 #endif
 
     /// <summary>
@@ -290,7 +290,7 @@ public static class GenericsPersianDateTimeUtils
     /// <param name="value">The value to format.</param>
     /// <param name="format">The format to use. Provided to <see cref="DateTimeOffset.ToString(string, IFormatProvider)" />.</param>
     /// <returns>The formatted value.</returns>
-    public static string FormatValue(this DateTime value, string format) => FormatDateTimeValueCore(value, format);
+    public static string FormatValue(this DateTime value, string format) => value.FormatDateTimeValueCore(format);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -307,7 +307,7 @@ public static class GenericsPersianDateTimeUtils
     /// </summary>
     /// <param name="value">The value to format.</param>
     /// <returns>The formatted value.</returns>
-    public static string? FormatValue(this DateTime? value) => FormatNullableDateTimeValueCore(value, format: null);
+    public static string? FormatValue(this DateTime? value) => value.FormatNullableDateTimeValueCore(format: null);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -315,7 +315,7 @@ public static class GenericsPersianDateTimeUtils
     /// </summary>
     /// <param name="value">The value to format.</param>
     /// <returns>The formatted value.</returns>
-    public static string? FormatValue(this DateOnly? value) => FormatNullableDateOnlyValueCore(value, format: null);
+    public static string? FormatValue(this DateOnly? value) => value.FormatNullableDateOnlyValueCore(format: null);
 #endif
 
     /// <summary>
@@ -325,7 +325,7 @@ public static class GenericsPersianDateTimeUtils
     /// <param name="format">The format to use. Provided to <see cref="DateTime.ToString(string, IFormatProvider)" />.</param>
     /// <returns>The formatted value.</returns>
     public static string? FormatValue(this DateTime? value, string? format)
-        => FormatNullableDateTimeValueCore(value, format);
+        => value.FormatNullableDateTimeValueCore(format);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -342,7 +342,7 @@ public static class GenericsPersianDateTimeUtils
     /// </summary>
     /// <param name="value">The value to format.</param>
     /// <returns>The formatted value.</returns>
-    public static string FormatValue(this DateTimeOffset value) => FormatDateTimeOffsetValueCore(value, format: null);
+    public static string FormatValue(this DateTimeOffset value) => value.FormatDateTimeOffsetValueCore(format: null);
 
     /// <summary>
     ///     Formats the provided <paramref name="value" /> as a <see cref="string" />.
@@ -351,7 +351,7 @@ public static class GenericsPersianDateTimeUtils
     /// <param name="format">The format to use. Provided to <see cref="DateTimeOffset.ToString(string, IFormatProvider)" />.</param>
     /// <returns>The formatted value.</returns>
     public static string FormatValue(this DateTimeOffset value, string format)
-        => FormatDateTimeOffsetValueCore(value, format);
+        => value.FormatDateTimeOffsetValueCore(format);
 
     /// <summary>
     ///     Formats the provided <paramref name="value" /> as a <see cref="string" />.
@@ -359,7 +359,7 @@ public static class GenericsPersianDateTimeUtils
     /// <param name="value">The value to format.</param>
     /// <returns>The formatted value.</returns>
     public static string? FormatValue(this DateTimeOffset? value)
-        => FormatNullableDateTimeOffsetValueCore(value, format: null);
+        => value.FormatNullableDateTimeOffsetValueCore(format: null);
 
     /// <summary>
     ///     Formats the provided <paramref name="value" /> as a <see cref="string" />.
@@ -368,7 +368,7 @@ public static class GenericsPersianDateTimeUtils
     /// <param name="format">The format to use. Provided to <see cref="DateTimeOffset.ToString(string, IFormatProvider)" />.</param>
     /// <returns>The formatted value.</returns>
     public static string? FormatValue(this DateTimeOffset? value, string format)
-        => FormatNullableDateTimeOffsetValueCore(value, format);
+        => value.FormatNullableDateTimeOffsetValueCore(format);
 
     /// <summary>
     ///     Attempts to convert a Persian value to a DateTime/DateOnly or DateTimeOffset.
@@ -484,18 +484,18 @@ public static class GenericsPersianDateTimeUtils
 
         if (targetType == typeof(DateTime))
         {
-            return TryParseDateTime(value, format, out result);
+            return value.TryParseDateTime(format, out result);
         }
 
         if (targetType == typeof(DateTimeOffset))
         {
-            return TryParseDateTimeOffset(value, format, out result);
+            return value.TryParseDateTimeOffset(format, out result);
         }
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
 
         if (targetType == typeof(DateOnly))
         {
-            return TryParseDateOnly(value, format, out result);
+            return value.TryParseDateOnly(format, out result);
         }
 #endif
 
@@ -519,7 +519,7 @@ public static class GenericsPersianDateTimeUtils
 #endif
         out TValue? result)
     {
-        var success = TryConvertToDateTime(value, format, out var parsedValue);
+        var success = value.TryConvertToDateTime(format, out var parsedValue);
 
         if (success)
         {
@@ -546,7 +546,7 @@ public static class GenericsPersianDateTimeUtils
         string format,
         [MaybeNullWhen(returnValue: false)] out TValue? result)
     {
-        var success = TryConvertToDateOnly(value, format, out var parsedValue);
+        var success = value.TryConvertToDateOnly(format, out var parsedValue);
 
         if (success)
         {
@@ -576,7 +576,7 @@ public static class GenericsPersianDateTimeUtils
 #endif
         out TValue? result)
     {
-        var success = TryConvertToDateTimeOffset(value, format, out var parsedValue);
+        var success = value.TryConvertToDateTimeOffset(format, out var parsedValue);
 
         if (success)
         {
@@ -602,7 +602,7 @@ public static class GenericsPersianDateTimeUtils
 #endif
         this object? obj,
         out DateTime value)
-        => ConvertToDateTimeCore(obj, out value);
+        => obj.ConvertToDateTimeCore(out value);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -617,7 +617,7 @@ public static class GenericsPersianDateTimeUtils
 #endif
         this object? obj,
         out DateOnly value)
-        => ConvertToDateOnlyCore(obj, out value);
+        => obj.ConvertToDateOnlyCore(out value);
 #endif
 
     /// <summary>
@@ -634,7 +634,7 @@ public static class GenericsPersianDateTimeUtils
         this object? obj,
         string format,
         out DateTime value)
-        => ConvertToDateTimeCore(obj, format, out value);
+        => obj.ConvertToDateTimeCore(format, out value);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -651,7 +651,7 @@ public static class GenericsPersianDateTimeUtils
         this object? obj,
         string format,
         out DateOnly value)
-        => ConvertToDateOnlyCore(obj, format, out value);
+        => obj.ConvertToDateOnlyCore(format, out value);
 #endif
 
     /// <summary>
@@ -666,7 +666,7 @@ public static class GenericsPersianDateTimeUtils
 #endif
         this object? obj,
         out DateTime? value)
-        => ConvertToNullableDateTimeCore(obj, out value);
+        => obj.ConvertToNullableDateTimeCore(out value);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -681,7 +681,7 @@ public static class GenericsPersianDateTimeUtils
 #endif
         this object? obj,
         out DateOnly? value)
-        => ConvertToNullableDateOnlyCore(obj, out value);
+        => obj.ConvertToNullableDateOnlyCore(out value);
 #endif
 
     /// <summary>
@@ -698,7 +698,7 @@ public static class GenericsPersianDateTimeUtils
         this object? obj,
         string format,
         out DateTime? value)
-        => ConvertToNullableDateTimeCore(obj, format, out value);
+        => obj.ConvertToNullableDateTimeCore(format, out value);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
@@ -715,7 +715,7 @@ public static class GenericsPersianDateTimeUtils
         this object? obj,
         string format,
         out DateOnly? value)
-        => ConvertToNullableDateOnlyCore(obj, format, out value);
+        => obj.ConvertToNullableDateOnlyCore(format, out value);
 #endif
 
     /// <summary>
@@ -730,7 +730,7 @@ public static class GenericsPersianDateTimeUtils
 #endif
         this object? obj,
         out DateTimeOffset value)
-        => ConvertToDateTimeOffsetCore(obj, out value);
+        => obj.ConvertToDateTimeOffsetCore(out value);
 
     /// <summary>
     ///     Attempts to convert a value to a <see cref="System.DateTimeOffset" />.
@@ -746,7 +746,7 @@ public static class GenericsPersianDateTimeUtils
         this object? obj,
         string format,
         out DateTimeOffset value)
-        => ConvertToDateTimeOffsetCore(obj, format, out value);
+        => obj.ConvertToDateTimeOffsetCore(format, out value);
 
     /// <summary>
     ///     Attempts to convert a value to a nullable <see cref="System.DateTimeOffset" />.
@@ -760,7 +760,7 @@ public static class GenericsPersianDateTimeUtils
 #endif
         this object? obj,
         out DateTimeOffset? value)
-        => ConvertToNullableDateTimeOffsetCore(obj, out value);
+        => obj.ConvertToNullableDateTimeOffsetCore(out value);
 
     /// <summary>
     ///     Attempts to convert a value to a nullable <see cref="System.DateTimeOffset" />.
@@ -776,10 +776,10 @@ public static class GenericsPersianDateTimeUtils
         this object? obj,
         string format,
         out DateTimeOffset? value)
-        => ConvertToNullableDateTimeOffsetCore(obj, format, out value);
+        => obj.ConvertToNullableDateTimeOffsetCore(format, out value);
 
     private static bool ConvertToDateTimeOffsetCore(this object? obj, out DateTimeOffset value)
-        => ConvertToDateTimeOffsetCore(obj, format: null, out value);
+        => obj.ConvertToDateTimeOffsetCore(format: null, out value);
 
     private static bool ConvertToDateTimeOffsetCore(this object? obj, string? format, out DateTimeOffset value)
     {
@@ -814,7 +814,7 @@ public static class GenericsPersianDateTimeUtils
     }
 
     private static bool ConvertToNullableDateTimeOffsetCore(this object? obj, out DateTimeOffset? value)
-        => ConvertToNullableDateTimeOffsetCore(obj, format: null, out value);
+        => obj.ConvertToNullableDateTimeOffsetCore(format: null, out value);
 
     private static bool ConvertToNullableDateTimeOffsetCore(this object? obj, string? format, out DateTimeOffset? value)
     {
@@ -822,7 +822,7 @@ public static class GenericsPersianDateTimeUtils
 
         if (string.IsNullOrEmpty(text))
         {
-            value = default;
+            value = null;
 
             return true;
         }
@@ -843,7 +843,7 @@ public static class GenericsPersianDateTimeUtils
             return true;
         }
 
-        value = default;
+        value = null;
 
         return false;
     }
@@ -909,11 +909,11 @@ public static class GenericsPersianDateTimeUtils
     }
 
     private static bool ConvertToDateTimeCore(this object? obj, out DateTime value)
-        => ConvertToDateTimeCore(obj, format: null, out value);
+        => obj.ConvertToDateTimeCore(format: null, out value);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     private static bool ConvertToDateOnlyCore(this object? obj, out DateOnly value)
-        => ConvertToDateOnlyCore(obj, format: null, out value);
+        => obj.ConvertToDateOnlyCore(format: null, out value);
 #endif
 
     private static bool ConvertToDateTimeCore(this object? obj, string? format, out DateTime value)
@@ -981,11 +981,11 @@ public static class GenericsPersianDateTimeUtils
 #endif
 
     private static bool ConvertToNullableDateTimeCore(this object? obj, out DateTime? value)
-        => ConvertToNullableDateTimeCore(obj, format: null, out value);
+        => obj.ConvertToNullableDateTimeCore(format: null, out value);
 
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     private static bool ConvertToNullableDateOnlyCore(this object? obj, out DateOnly? value)
-        => ConvertToNullableDateOnlyCore(obj, format: null, out value);
+        => obj.ConvertToNullableDateOnlyCore(format: null, out value);
 #endif
 
     private static bool ConvertToNullableDateTimeCore(this object? obj, string? format, out DateTime? value)
@@ -994,7 +994,7 @@ public static class GenericsPersianDateTimeUtils
 
         if (string.IsNullOrEmpty(text))
         {
-            value = default;
+            value = null;
 
             return true;
         }
@@ -1014,7 +1014,7 @@ public static class GenericsPersianDateTimeUtils
             return true;
         }
 
-        value = default;
+        value = null;
 
         return false;
     }
@@ -1026,7 +1026,7 @@ public static class GenericsPersianDateTimeUtils
 
         if (string.IsNullOrEmpty(text))
         {
-            value = default;
+            value = null;
 
             return true;
         }
@@ -1046,7 +1046,7 @@ public static class GenericsPersianDateTimeUtils
             return true;
         }
 
-        value = default;
+        value = null;
 
         return false;
     }
