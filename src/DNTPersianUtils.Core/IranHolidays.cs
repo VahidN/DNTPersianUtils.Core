@@ -50,7 +50,7 @@ public static class IranHolidays
     /// <summary>
     ///     سال خاتمه تعاریف مناسبت‌های تعطیل در این کتابخانه
     /// </summary>
-    public const int EndYear = 1404;
+    public const int EndYear = 1405;
 
     private static readonly Lazy<ISet<IranHoliday>> HolidayProvider =
         new(GetIranHolidays, LazyThreadSafetyMode.ExecutionAndPublication);
@@ -1770,9 +1770,178 @@ public static class IranHolidays
                 Holiday = persianCalendar.ToDateTime(year: 1404, month: 12, day: 29, hour: 0, minute: 0, second: 0,
                     millisecond: 0),
                 Description = MelliShodaneNaft
-            }
+            },
 
             // ----------------------- سال 1404				
+
+            // ----------------------- سال 1405
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 01, day: 01, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Salenow
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 01, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 01, day: 03, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 01, day: 04, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Nowrooz
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 01, day: 12, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozeJomhoori
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 01, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Sizdah
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 01, day: 25, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadatEmaamJafar
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 03, day: 06, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideGhorbaan
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 03, day: 14, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = $"{RehlateEmaam}؛ {EideGhadir}"
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 03, day: 15, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PaanzdaheKhordaad
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 04, day: 03, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Taasooa
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 04, day: 04, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Aashooraa
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 05, day: 13, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Arbaein
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 05, day: 21, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RehlateRasool
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 05, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateEmaamReza
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 05, day: 30, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAsgari
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 06, day: 08, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TavallodeRasool
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 08, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteZahraa
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 10, day: 02, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = RoozePedar
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 10, day: 16, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = Mabas
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 11, day: 04, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ValaadateHazrazteMahdi
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 11, day: 22, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = PiroozieEnghelaab
+            },
+
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 12, day: 09, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = ShahaadateHazrazteAli
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 12, day: 19, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = EideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 12, day: 20, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = TatilBeMonaasebateEideFetr
+            },
+            new()
+            {
+                Holiday = persianCalendar.ToDateTime(year: 1405, month: 12, day: 29, hour: 0, minute: 0, second: 0,
+                    millisecond: 0),
+                Description = MelliShodaneNaft
+            }
+
+            // ----------------------- سال 1405
         };
 
         AddFridays(holidays);
@@ -1782,7 +1951,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="convertToIranTimeZone">
@@ -1807,7 +1976,7 @@ public static class IranHolidays
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="convertToIranTimeZone">
@@ -1820,7 +1989,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     لیست مناسبت‌های تعطیلات رسمی ایران در این روز خاص در صورت وجود
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
@@ -1834,7 +2003,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     تشخیص تعطیلات رسمی ایران
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="convertToIranTimeZone">
@@ -1868,7 +2037,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     تشخیص تعطیلات رسمی ایران
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="date">تاریخ</param>
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
@@ -1882,7 +2051,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
@@ -1917,7 +2086,7 @@ public static class IranHolidays
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
@@ -1934,7 +2103,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یک بازه زمانی
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="from">از تاریخ</param>
     /// <param name="to">تا تاریخ</param>
@@ -1952,7 +2121,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یکسال شمسی
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="persianYear">سال شمسی</param>
     /// <returns>روزهای کاری</returns>
@@ -1973,7 +2142,7 @@ public static class IranHolidays
 
     /// <summary>
     ///     دریافت لیست روزهای کاری ایران در یک ماه شمسی
-    ///     از سال 1395 تا پایان سال 1404
+    ///     از سال 1395 تا پایان سال 1405
     /// </summary>
     /// <param name="persianYear">سال شمسی</param>
     /// <param name="persianMonth">ماه شمسی</param>
