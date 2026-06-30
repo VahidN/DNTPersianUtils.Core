@@ -66,7 +66,7 @@
     </ItemGroup>
     <ItemGroup>
         <AdditionalFiles Include="$(MSBuildThisFileDirectory)BannedSymbols.txt" Link="Properties/BannedSymbols.txt"/>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102" PrivateAssets="All"/>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.300" PrivateAssets="All"/>
         <None Include="../../README.md" Link="README.md" Pack="true" PackagePath="/" Visible="false"/>
     </ItemGroup>
 
