@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DNTPersianUtils.Core.PerformanceTests/DNTPersianUtils.Core.PerformanceTests.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="src/DNTPersianUtils.Core.Tests/DNTPersianUtils.Core.Tests.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="src/DNTPersianUtils.Core/DNTPersianUtils.Core.csproj" />
+  </Folder>
+</Solution>
