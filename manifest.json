@@ -26,6 +26,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.CharExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.CharExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.CharExtensions",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.DateOnlyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.DateOnlyExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.DateOnlyExtensions",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.DateOnlyExtensions.yml\" sourcestartlinenumber=\"1\">Persian DateTime Extensions</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.DateTimeContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.DateTimeContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.DateTimeContext",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.DateTimeContext.yml\" sourcestartlinenumber=\"1\">ارائه اطلاعاتي در مورد روز جاري</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.DateTimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.DateTimeExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.DateTimeExtensions",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.DateTimeExtensions.yml\" sourcestartlinenumber=\"1\">Persian DateTime Extensions</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.DateTimeOffsetExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.DateTimeOffsetExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.DateTimeOffsetExtensions",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.DateTimeOffsetExtensions.yml\" sourcestartlinenumber=\"1\">Persian DateTime Extensions</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.DateTimeOffsetPart.yml",
       "output": {
         ".html": {
@@ -278,6 +348,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranHolidayContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranHolidayContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranHolidayContext",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranHolidayContext.yml\" sourcestartlinenumber=\"1\">ارائه اطلاعاتي در مورد تعطيلات رسمي ايران</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.IranHolidays.yml",
       "output": {
         ".html": {
@@ -376,6 +460,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IranTimeContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IranTimeContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IranTimeContext",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranTimeContext.yml\" sourcestartlinenumber=\"1\">ارائه اطلاعاتي در مورد وهله زماني جاري</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.IranTimeZoneInfo.yml",
       "output": {
         ".html": {
@@ -443,6 +541,20 @@
       "IsMRef": true,
       "Title": "DNTPersianUtils.Core.IranianPostalCodesProvider",
       "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IranianPostalCodesProvider.yml\" sourcestartlinenumber=\"1\">تامين كننده اطلاعات محلي كدهاي پستي ايران</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.IslamicContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.IslamicContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.IslamicContext",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.IslamicContext.yml\" sourcestartlinenumber=\"1\">ارائه اطلاعاتي در مورد تاريخ قمري جاري</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -656,6 +768,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.NumberNormalizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.NumberNormalizer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.NumberNormalizer",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.NumberNormalizer.yml\" sourcestartlinenumber=\"1\">رشتهٔ ورودی را نرمال‌سازی کرده و در صورت معتبر بودن، آن را به نوع عددی موردنظر تبدیل می‌کند.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNTPersianUtils.Core.NumberWord.yml",
       "output": {
         ".html": {
@@ -667,6 +793,34 @@
       "IsMRef": true,
       "Title": "DNTPersianUtils.Core.NumberWord",
       "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.NumberWord.yml\" sourcestartlinenumber=\"1\">Equivalent names of a group</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianBusinessDaysContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianBusinessDaysContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianBusinessDaysContext",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianBusinessDaysContext.yml\" sourcestartlinenumber=\"1\">اطلاعات روزهاي كاري</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianContext",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianContext.yml\" sourcestartlinenumber=\"1\">اطلاعاتي در مورد تقويم شمسي</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -821,6 +975,20 @@
       "IsMRef": true,
       "Title": "DNTPersianUtils.Core.PersianStopwords",
       "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianStopwords.yml\" sourcestartlinenumber=\"1\">A collection of Persian stopwords</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNTPersianUtils.Core.PersianTextContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNTPersianUtils.Core.PersianTextContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DNTPersianUtils.Core.PersianTextContext",
+      "Summary": "<p sourcefile=\"api/DNTPersianUtils.Core.PersianTextContext.yml\" sourcestartlinenumber=\"1\">نمايش متني تاريخ شمسي</p>\n"
     },
     {
       "type": "ManagedReference",
