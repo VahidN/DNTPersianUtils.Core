@@ -3146,7 +3146,7 @@ public static class Iran
                                                               ProvinceName = "اصفهان",
                                                               CountyName = "نجف آباد",
                                                               DistrictName = "مهردشت",
-                                                              CityName = "علویچه",
+                                                              CityName = "علویجه",
                                                               CityDivisionCode = 70388
                                                           },
                                                           new City
