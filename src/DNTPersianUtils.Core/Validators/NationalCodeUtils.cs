@@ -13,7 +13,7 @@ public static class NationalCodeUtils
     /// </summary>
     public static bool IsNumber(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? data)
     {
@@ -30,7 +30,7 @@ public static class NationalCodeUtils
     /// </summary>
     public static bool IsNumeric(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? data)
         => data.IsNumber();
@@ -40,7 +40,7 @@ public static class NationalCodeUtils
     /// </summary>
     public static bool ContainsNumber(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? inputText)
         => !string.IsNullOrWhiteSpace(inputText) && inputText.ToEnglishNumbers().Any(char.IsDigit);
@@ -52,7 +52,7 @@ public static class NationalCodeUtils
     /// <returns></returns>
     public static bool IsValidIranianNationalCode(
 #if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? nationalCode)
     {
@@ -71,9 +71,15 @@ public static class NationalCodeUtils
             return false;
         }
 
-        nationalCode = nationalCode.PadLeft(10, '0');
+        nationalCode = nationalCode.PadLeft(totalWidth: 10, paddingChar: '0');
 
         if (!nationalCode.IsNumber())
+        {
+            return false;
+        }
+
+        // Reject all-identical-digit codes like 0000000000, 1111111111, 2222222222
+        if (nationalCode.All(ch => ch == nationalCode[index: 0]))
         {
             return false;
         }
@@ -87,7 +93,7 @@ public static class NationalCodeUtils
         }
 
         var remainder = sum % 11;
-        var controlNumber = (int)char.GetNumericValue(nationalCode[9]);
+        var controlNumber = (int)char.GetNumericValue(nationalCode[index: 9]);
 
         return (remainder < 2 && controlNumber == remainder) || (remainder >= 2 && controlNumber == 11 - remainder);
     }
