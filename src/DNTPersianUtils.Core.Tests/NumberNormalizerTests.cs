@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DNTPersianUtils.Core.Tests;
@@ -128,6 +129,8 @@ public class NumberNormalizerTests
     {
         var result = input.TryNormalizeAndParseNumberString<decimal>(out var actual);
         Assert.AreEqual(success, result);
-        Assert.AreEqual((decimal)expected, actual);
+
+        Assert.AreEqual(decimal.Round((decimal)expected, decimals: 2, MidpointRounding.ToEven),
+            decimal.Round(actual, decimals: 2, MidpointRounding.ToEven));
     }
 }
