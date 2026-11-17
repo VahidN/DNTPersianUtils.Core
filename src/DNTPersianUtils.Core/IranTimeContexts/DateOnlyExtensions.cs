@@ -1,4 +1,4 @@
-﻿#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+﻿#if NET11_0 || NET10_0
 using System;
 
 namespace DNTPersianUtils.Core;

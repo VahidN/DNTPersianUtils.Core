@@ -1,4 +1,4 @@
-#if NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3
+#if NET4_6
 using System;
 
 namespace DNTPersianUtils.Core;

@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <Description>DNTPersianUtils.Core is a collection of Persian helper extension methods.</Description>
-        <VersionPrefix>7.0.2</VersionPrefix>
+        <VersionPrefix>7.0.3</VersionPrefix>
         <Authors>Vahid Nasiri</Authors>
-        <TargetFrameworks>net10.0;net9.0;net8.0;net7.0;net6.0;net5.0;netstandard2.0;netstandard1.3;netstandard2.1;net46;</TargetFrameworks>
-        <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">net5.0;netstandard2.1;netstandard1.3;netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>net11.0;net10.0;net462;</TargetFrameworks>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <AssemblyName>DNTPersianUtils.Core</AssemblyName>
         <PackageId>DNTPersianUtils.Core</PackageId>
@@ -13,8 +12,6 @@
         <RepositoryUrl>https://github.com/VahidN/DNTPersianUtils.Core</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-        <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.3' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
-        <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.3' ">1.6.1</NetStandardImplicitPackageVersion>
         <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
         <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
         <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
@@ -66,78 +63,27 @@
     </ItemGroup>
     <ItemGroup>
         <AdditionalFiles Include="$(MSBuildThisFileDirectory)BannedSymbols.txt" Link="Properties/BannedSymbols.txt"/>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.401" PrivateAssets="All"/>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="11.0.100" PrivateAssets="All"/>
         <None Include="../../README.md" Link="README.md" Pack="true" PackagePath="/" Visible="false"/>
     </ItemGroup>
 
-    <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
         <Reference Include="System"/>
         <Reference Include="Microsoft.CSharp"/>
         <Reference Include="System.ComponentModel.DataAnnotations"/>
     </ItemGroup>
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
         <DefineConstants>NET4_6</DefineConstants>
         <NoWarn>$(NoWarn);nullable</NoWarn>
-    </PropertyGroup>
-
-    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-        <PackageReference Include="System.Globalization.Extensions" Version="4.3.0"/>
-        <PackageReference Include="System.Reflection" Version="4.3.0"/>
-        <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0"/>
-        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0"/>
-        <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0"/>
-        <PackageReference Include="System.Net.Http" Version="4.3.4"/>
-        <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1"/>
-    </ItemGroup>
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-        <DefineConstants>NETSTANDARD1_3</DefineConstants>
-        <NoWarn>$(NoWarn);nullable</NoWarn>
-    </PropertyGroup>
-
-    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0"/>
-        <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.0"/>
-    </ItemGroup>
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-        <DefineConstants>NETSTANDARD2_0</DefineConstants>
-        <NoWarn>$(NoWarn);nullable</NoWarn>
-    </PropertyGroup>
-
-    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
-        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0"/>
-        <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.0"/>
-    </ItemGroup>
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
-        <DefineConstants>NETSTANDARD2_1</DefineConstants>
-    </PropertyGroup>
-
-    <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' "></ItemGroup>
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
-        <DefineConstants>NET5_0</DefineConstants>
-    </PropertyGroup>
-
-    <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' "></ItemGroup>
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
-        <DefineConstants>NET6_0</DefineConstants>
-    </PropertyGroup>
-
-    <ItemGroup Condition=" '$(TargetFramework)' == 'net7.0' "></ItemGroup>
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0' ">
-        <DefineConstants>NET7_0</DefineConstants>
-    </PropertyGroup>
-
-    <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' "></ItemGroup>
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
-        <DefineConstants>NET8_0</DefineConstants>
-    </PropertyGroup>
-
-    <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0' "></ItemGroup>
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'net9.0' ">
-        <DefineConstants>NET9_0</DefineConstants>
     </PropertyGroup>
 
     <ItemGroup Condition=" '$(TargetFramework)' == 'net10.0' "></ItemGroup>
     <PropertyGroup Condition=" '$(TargetFramework)' == 'net10.0' ">
         <DefineConstants>NET10_0</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net11.0' "></ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'net11.0' ">
+        <DefineConstants>NET11_0</DefineConstants>
     </PropertyGroup>
 </Project>

@@ -13,9 +13,7 @@ public static class FriendlyPersianDateUtils
     ///     نمایش فارسی روز دریافتی شمسی
     ///     مانند سه شنبه ۲۱ دی ۱۳۹۵
     /// </summary>
-    public static string ToPersianDateTextify(int persianYear,
-        int persianMonth,
-        int persianDay,
+    public static string ToPersianDateTextify(int persianYear, int persianMonth, int persianDay,
         int beginningOfCentury = 1300)
     {
         if (persianYear <= 99)
@@ -40,7 +38,7 @@ public static class FriendlyPersianDateUtils
         return ToPersianDateTextify(dateParts.Year, dateParts.Month, dateParts.Day);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     نمایش فارسی روز دریافتی
     ///     مانند سه شنبه ۲۱ دی ۱۳۹۵
@@ -56,7 +54,7 @@ public static class FriendlyPersianDateUtils
     public static string ToPersianDateTextify(this DateTime? dt)
         => dt == null ? string.Empty : dt.Value.ToPersianDateTextify();
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     نمایش فارسی روز دریافتی
     ///     مانند سه شنبه ۲۱ دی ۱۳۹۵
@@ -96,14 +94,11 @@ public static class FriendlyPersianDateUtils
     /// </param>
     /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
     /// <returns>نمایش دوستانه</returns>
-    public static string ToFriendlyPersianDateTextify(this DateTime dt,
-        DateTime comparisonBase,
-        bool appendHhMm = true,
-        bool convertToIranTimeZone = true,
-        bool includePersianDate = true)
+    public static string ToFriendlyPersianDateTextify(this DateTime dt, DateTime comparisonBase, bool appendHhMm = true,
+        bool convertToIranTimeZone = true, bool includePersianDate = true)
         => $"{UnicodeConstants.RleChar}{dt.toFriendlyPersianDate(comparisonBase, appendHhMm, convertToIranTimeZone, includePersianDate).ToPersianNumbers()}";
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
     ///     مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
@@ -117,11 +112,8 @@ public static class FriendlyPersianDateUtils
     /// </param>
     /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
     /// <returns>نمایش دوستانه</returns>
-    public static string ToFriendlyPersianDateTextify(this DateOnly date,
-        DateOnly comparisonBase,
-        bool appendHhMm = true,
-        bool convertToIranTimeZone = true,
-        bool includePersianDate = true)
+    public static string ToFriendlyPersianDateTextify(this DateOnly date, DateOnly comparisonBase,
+        bool appendHhMm = true, bool convertToIranTimeZone = true, bool includePersianDate = true)
         => date.ToDateTime()
             .ToFriendlyPersianDateTextify(comparisonBase.ToDateTime(), appendHhMm, convertToIranTimeZone,
                 includePersianDate);
@@ -140,10 +132,8 @@ public static class FriendlyPersianDateUtils
     /// </param>
     /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
     /// <returns>نمایش دوستانه</returns>
-    public static string ToFriendlyPersianDateTextify(this DateTime dt,
-        bool appendHhMm = true,
-        bool convertToIranTimeZone = true,
-        bool includePersianDate = true)
+    public static string ToFriendlyPersianDateTextify(this DateTime dt, bool appendHhMm = true,
+        bool convertToIranTimeZone = true, bool includePersianDate = true)
     {
         var comparisonBase = convertToIranTimeZone ? dt.Kind.GetNow().ToIranTimeZoneDateTime() : dt.Kind.GetNow();
 
@@ -151,7 +141,7 @@ public static class FriendlyPersianDateUtils
             $"{UnicodeConstants.RleChar}{dt.toFriendlyPersianDate(comparisonBase, appendHhMm, convertToIranTimeZone, includePersianDate).ToPersianNumbers()}";
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
     ///     مبنای محاسبه هم اکنون
@@ -165,10 +155,8 @@ public static class FriendlyPersianDateUtils
     /// </param>
     /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
     /// <returns>نمایش دوستانه</returns>
-    public static string ToFriendlyPersianDateTextify(this DateOnly date,
-        bool appendHhMm = true,
-        bool convertToIranTimeZone = true,
-        bool includePersianDate = true)
+    public static string ToFriendlyPersianDateTextify(this DateOnly date, bool appendHhMm = true,
+        bool convertToIranTimeZone = true, bool includePersianDate = true)
         => date.ToDateTime().ToFriendlyPersianDateTextify(appendHhMm, convertToIranTimeZone, includePersianDate);
 #endif
 
@@ -182,10 +170,8 @@ public static class FriendlyPersianDateUtils
     /// <param name="appendHhMm">آیا ساعت نیز به نتیجه‌اضافه شود؟</param>
     /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
     /// <returns>نمایش دوستانه</returns>
-    public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt,
-        DateTime comparisonBase,
-        DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime,
-        bool appendHhMm = true,
+    public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt, DateTime comparisonBase,
+        DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime, bool appendHhMm = true,
         bool includePersianDate = true)
         => $"{UnicodeConstants.RleChar}{dt.GetDateTimeOffsetPart(dateTimeOffsetPart).toFriendlyPersianDate(comparisonBase, appendHhMm, convertToIranTimeZone: false, includePersianDate).ToPersianNumbers()}";
 
@@ -199,10 +185,8 @@ public static class FriendlyPersianDateUtils
     /// <param name="includePersianDate">آیا تاریخ نیز به نتیجه اضافه شود؟</param>
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns>نمایش دوستانه</returns>
-    public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt,
-        bool appendHhMm = true,
-        bool includePersianDate = true,
-        DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
+    public static string ToFriendlyPersianDateTextify(this DateTimeOffset dt, bool appendHhMm = true,
+        bool includePersianDate = true, DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var comparisonBase = DateTime.UtcNow.ToIranTimeZoneDateTime();
         var iranLocalTime = dt.GetDateTimeOffsetPart(dateTimeOffsetPart);
@@ -221,7 +205,7 @@ public static class FriendlyPersianDateUtils
     public static string ToFriendlyPersianDateTextify(this DateTime? dt, DateTime comparisonBase)
         => dt == null ? string.Empty : dt.Value.ToFriendlyPersianDateTextify(comparisonBase);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
     ///     مانند ۱۰ روز قبل، سه شنبه ۲۱ دی ۱۳۹۵، ساعت ۱۰:۲۰
@@ -258,7 +242,7 @@ public static class FriendlyPersianDateUtils
         return dt.Value.ToFriendlyPersianDateTextify(comparisonBase, convertToIranTimeZone);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
     ///     مبنای محاسبه هم اکنون
@@ -282,8 +266,7 @@ public static class FriendlyPersianDateUtils
     /// <param name="comparisonBase">مبنای مقایسه مانند هم اکنون</param>
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     /// <returns>نمایش دوستانه</returns>
-    public static string ToFriendlyPersianDateTextify(this DateTimeOffset? dt,
-        DateTime comparisonBase,
+    public static string ToFriendlyPersianDateTextify(this DateTimeOffset? dt, DateTime comparisonBase,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
         => dt == null
             ? string.Empty
@@ -311,11 +294,8 @@ public static class FriendlyPersianDateUtils
         return iranLocalTime.ToFriendlyPersianDateTextify(comparisonBase);
     }
 
-    private static string toFriendlyPersianDate(this DateTime dt,
-        DateTime comparisonBase,
-        bool appendHhMm,
-        bool convertToIranTimeZone,
-        bool includePersianDate)
+    private static string toFriendlyPersianDate(this DateTime dt, DateTime comparisonBase, bool appendHhMm,
+        bool convertToIranTimeZone, bool includePersianDate)
     {
         if (dt.Kind == DateTimeKind.Utc && convertToIranTimeZone)
         {
@@ -336,7 +316,8 @@ public static class FriendlyPersianDateUtils
         var hhMm =
             $"{hour.ToString(format: "00", CultureInfo.InvariantCulture)}:{min.ToString(format: "00", CultureInfo.InvariantCulture)}";
 
-        var date = new PersianCalendar().ToDateTime(persianYear, persianMonth, persianDay, hour, min, second: 0,
+        var date = new PersianCalendar().ToDateTime(persianYear, persianMonth, persianDay,
+            hour, min, second: 0,
             millisecond: 0);
 
         var timeSpan = date - comparisonBase;

@@ -10,9 +10,9 @@ public class IranHoliday
     /// <summary>
     ///     روز مناسبت تعطیل رسمی
     /// </summary>
-    public DateTime Holiday { set; get; }
+    public DateTime Holiday { get; set; }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     روز مناسبت تعطیل رسمی
     /// </summary>
@@ -22,7 +22,7 @@ public class IranHoliday
     /// <summary>
     ///     توضیحات مناسبت
     /// </summary>
-    public string Description { set; get; } = default!;
+    public string Description { get; set; } = default!;
 
     /// <summary>
     ///     ToString()

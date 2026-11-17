@@ -8,16 +8,16 @@ namespace DNTPersianUtils.Core;
 /// </summary>
 public static class IranShebaUtils
 {
-    private static readonly Regex _matchIranSheba = new(@"IR[0-9]{24}", RegexOptions.Compiled | RegexOptions.IgnoreCase,
-        RegexUtils.MatchTimeout);
+    private static readonly Regex _matchIranSheba = new(pattern: @"IR[0-9]{24}",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase, RegexUtils.MatchTimeout);
 
     /// <summary>
     ///     Validate IBAN (International Bank Account Number, Sheba)
     /// </summary>
     /// <param name="iban">International Bank Account Number, Sheba</param>
     public static bool IsValidIranShebaNumber(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+#if !NET4_6
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? iban)
     {
@@ -28,7 +28,8 @@ public static class IranShebaUtils
 
         iban = iban.ToEnglishNumbers();
 
-        if (iban.Length < 4 || iban[0] == ' ' || iban[1] == ' ' || iban[2] == ' ' || iban[3] == ' ')
+        if (iban.Length < 4 || iban[index: 0] == ' ' || iban[index: 1] == ' ' || iban[index: 2] == ' ' ||
+            iban[index: 3] == ' ')
         {
             return false;
         }

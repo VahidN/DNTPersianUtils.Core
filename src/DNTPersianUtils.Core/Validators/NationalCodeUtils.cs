@@ -12,7 +12,7 @@ public static class NationalCodeUtils
     ///     آيا ورودي تمام عددي است؟
     /// </summary>
     public static bool IsNumber(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
         this string? data)
@@ -29,7 +29,7 @@ public static class NationalCodeUtils
     ///     آيا ورودي تمام عددي است؟
     /// </summary>
     public static bool IsNumeric(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
         this string? data)
@@ -39,7 +39,7 @@ public static class NationalCodeUtils
     ///     آيا ورودي حاوي اعداد است؟
     /// </summary>
     public static bool ContainsNumber(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
         this string? inputText)
@@ -51,7 +51,7 @@ public static class NationalCodeUtils
     /// <param name="nationalCode">National Code</param>
     /// <returns></returns>
     public static bool IsValidIranianNationalCode(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
         this string? nationalCode)

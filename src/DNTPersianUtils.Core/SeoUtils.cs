@@ -94,13 +94,10 @@ public static class SeoUtils
     /// <param name="charsWhiteList">اين ليست اختياري از ليست جايگزين‌ها حذف مي‌شود</param>
     /// <returns></returns>
     public static string? GetPostSlug(
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
         [NotNullIfNotNull(nameof(postTitle))]
 #endif
-        this string? postTitle,
-        ISet<char>? replacements = null,
-        bool convertToLower = true,
-        char replacementChar = '-',
+        this string? postTitle, ISet<char>? replacements = null, bool convertToLower = true, char replacementChar = '-',
         params IEnumerable<char>? charsWhiteList)
     {
         if (string.IsNullOrWhiteSpace(postTitle))
@@ -163,13 +160,10 @@ public static class SeoUtils
     /// <param name="charsWhiteList">اين ليست اختياري از ليست جايگزين‌ها حذف مي‌شود</param>
     /// <returns></returns>
     public static string? GetCleanedTag(
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
         [NotNullIfNotNull(nameof(tag))]
 #endif
-        this string? tag,
-        ISet<char>? replacements = null,
-        bool convertToLower = false,
-        char replacementChar = '_',
+        this string? tag, ISet<char>? replacements = null, bool convertToLower = false, char replacementChar = '_',
         params IEnumerable<char>? charsWhiteList)
     {
         replacements ??= PersianTagReplacements;

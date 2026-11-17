@@ -266,7 +266,7 @@ public static class PersianCulture
         return Instance.DateTimeFormat.Calendar.GetDayOfMonth(dateTime);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     Returns the day-of-month part of this <see cref="DateOnly" /> localized in Persian calendar.
     /// </summary>
@@ -296,10 +296,10 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianDayOfMonth(dateTime.Value, convertToIranTimeZone);
+        return dateTime.Value.GetPersianDayOfMonth(convertToIranTimeZone);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     Returns the day-of-month part of this <see cref="DateOnly" /> localized in Persian calendar.
     /// </summary>
@@ -323,13 +323,12 @@ public static class PersianCulture
     /// </param>
     /// <param name="dateTimeOffsetPart">دریافت جزء زمانی ویژه‌ی این وهله</param>
     /// <returns>An integer between 1 and 31 representing the day-of-month part of this <see cref="DateTime" />.</returns>
-    public static int GetPersianDayOfMonth(this DateTimeOffset dateTime,
-        bool convertToIranTimeZone = true,
+    public static int GetPersianDayOfMonth(this DateTimeOffset dateTime, bool convertToIranTimeZone = true,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetPersianDayOfMonth(dt, convertToIranTimeZone);
+        return dt.GetPersianDayOfMonth(convertToIranTimeZone);
     }
 
     /// <summary>
@@ -342,8 +341,7 @@ public static class PersianCulture
     /// </param>
     /// <param name="dateTimeOffsetPart">دریافت جزء زمانی ویژه‌ی این وهله</param>
     /// <returns>An integer between 1 and 31 representing the day-of-month part of this <see cref="DateTime" />.</returns>
-    public static int? GetPersianDayOfMonth(this DateTimeOffset? dateTime,
-        bool convertToIranTimeZone = true,
+    public static int? GetPersianDayOfMonth(this DateTimeOffset? dateTime, bool convertToIranTimeZone = true,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         if (dateTime is null)
@@ -351,7 +349,7 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianDayOfMonth(dateTime.Value, convertToIranTimeZone, dateTimeOffsetPart);
+        return dateTime.Value.GetPersianDayOfMonth(convertToIranTimeZone, dateTimeOffsetPart);
     }
 
     /// <summary>
@@ -373,7 +371,7 @@ public static class PersianCulture
         return Instance.DateTimeFormat.Calendar.GetMonth(dateTime);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     Returns the month part of this <see cref="DateOnly" /> localized in Persian calendar.
     /// </summary>
@@ -403,10 +401,10 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianMonth(dateTime.Value, convertToIranTimeZone);
+        return dateTime.Value.GetPersianMonth(convertToIranTimeZone);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     Returns the month part of this <see cref="DateOnly" /> localized in Persian calendar.
     /// </summary>
@@ -430,13 +428,12 @@ public static class PersianCulture
     /// </param>
     /// <param name="dateTimeOffsetPart">دریافت جزء زمانی ویژه‌ی این وهله</param>
     /// <returns>An integer between 1 and 12 representing the month part of this <see cref="DateTime" />.</returns>
-    public static int GetPersianMonth(this DateTimeOffset dateTime,
-        bool convertToIranTimeZone = true,
+    public static int GetPersianMonth(this DateTimeOffset dateTime, bool convertToIranTimeZone = true,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetPersianMonth(dt, convertToIranTimeZone);
+        return dt.GetPersianMonth(convertToIranTimeZone);
     }
 
     /// <summary>
@@ -449,8 +446,7 @@ public static class PersianCulture
     /// </param>
     /// <param name="dateTimeOffsetPart">دریافت جزء زمانی ویژه‌ی این وهله</param>
     /// <returns>An integer between 1 and 12 representing the month part of this <see cref="DateTime" />.</returns>
-    public static int? GetPersianMonth(this DateTimeOffset? dateTime,
-        bool convertToIranTimeZone = true,
+    public static int? GetPersianMonth(this DateTimeOffset? dateTime, bool convertToIranTimeZone = true,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         if (dateTime is null)
@@ -458,7 +454,7 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianMonth(dateTime.Value, convertToIranTimeZone, dateTimeOffsetPart);
+        return dateTime.Value.GetPersianMonth(convertToIranTimeZone, dateTimeOffsetPart);
     }
 
     /// <summary>
@@ -496,10 +492,10 @@ public static class PersianCulture
     ///     گرفتن نام فارسی روزهای هفته
     /// </summary>
     public static string GetPersianWeekDayName(int persianYear, int persianMonth, int persianDay)
-        => PersianDayWeekNames[
-            new PersianCalendar()
-                .ToDateTime(persianYear, persianMonth, persianDay, hour: 0, minute: 0, second: 0, millisecond: 0)
-                .DayOfWeek];
+        => PersianDayWeekNames[new PersianCalendar().ToDateTime(persianYear, persianMonth, persianDay,
+                hour: 0, minute: 0, second: 0,
+                millisecond: 0)
+            .DayOfWeek];
 
     /// <summary>
     ///     گرفتن نام فارسی روزهای هفته
@@ -518,13 +514,13 @@ public static class PersianCulture
 
         var dateParts = dt.ToPersianYearMonthDay(convertToIranTimeZone: false);
 
-        return PersianDayWeekNames[
-            new PersianCalendar().ToDateTime(dateParts.Year, dateParts.Month, dateParts.Day, dt.Hour, dt.Minute,
-                    dt.Second, millisecond: 0)
-                .DayOfWeek];
+        return PersianDayWeekNames[new PersianCalendar().ToDateTime(dateParts.Year, dateParts.Month, dateParts.Day,
+                dt.Hour, dt.Minute, dt.Second,
+                millisecond: 0)
+            .DayOfWeek];
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     گرفتن نام فارسی روزهای هفته
     /// </summary>
@@ -546,9 +542,9 @@ public static class PersianCulture
     ///     می‌کند
     /// </param>
     public static string GetPersianWeekDayName(this DateTime? dt, bool convertToIranTimeZone = true)
-        => dt == null ? string.Empty : GetPersianWeekDayName(dt.Value, convertToIranTimeZone);
+        => dt == null ? string.Empty : dt.Value.GetPersianWeekDayName(convertToIranTimeZone);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     گرفتن نام فارسی روزهای هفته
     /// </summary>
@@ -568,7 +564,7 @@ public static class PersianCulture
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static string GetPersianWeekDayName(this DateTimeOffset? dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => dt == null ? string.Empty : GetPersianWeekDayName(dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt == null ? string.Empty : dt.Value.GetDateTimeOffsetPart(dateTimeOffsetPart).GetPersianWeekDayName();
 
     /// <summary>
     ///     گرفتن نام فارسی روزهای هفته
@@ -577,7 +573,7 @@ public static class PersianCulture
     /// <param name="dateTimeOffsetPart">کدام جزء این وهله مورد استفاده قرار گیرد؟</param>
     public static string GetPersianWeekDayName(this DateTimeOffset dt,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
-        => GetPersianWeekDayName(dt.GetDateTimeOffsetPart(dateTimeOffsetPart));
+        => dt.GetDateTimeOffsetPart(dateTimeOffsetPart).GetPersianWeekDayName();
 
     /// <summary>
     ///     Returns the year part of this <see cref="DateTime" /> localized in Persian calendar.
@@ -598,7 +594,7 @@ public static class PersianCulture
         return Instance.DateTimeFormat.Calendar.GetYear(dateTime);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     Returns the year part of this <see cref="DateOnly" /> localized in Persian calendar.
     /// </summary>
@@ -628,10 +624,10 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianYear(dateTime.Value, convertToIranTimeZone);
+        return dateTime.Value.GetPersianYear(convertToIranTimeZone);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     Returns the year part of this <see cref="DateOnly" /> localized in Persian calendar.
     /// </summary>
@@ -655,8 +651,7 @@ public static class PersianCulture
     /// </param>
     /// <param name="dateTimeOffsetPart">دریافت جزء زمانی ویژه‌ی این وهله</param>
     /// <returns>An integer between 1 and 9999 representing the year part of this <see cref="DateTime" />.</returns>
-    public static int GetPersianYear(this DateTimeOffset dateTime,
-        bool convertToIranTimeZone = true,
+    public static int GetPersianYear(this DateTimeOffset dateTime, bool convertToIranTimeZone = true,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         var dt = dateTime.GetDateTimeOffsetPart(dateTimeOffsetPart);
@@ -674,8 +669,7 @@ public static class PersianCulture
     /// </param>
     /// <param name="dateTimeOffsetPart">دریافت جزء زمانی ویژه‌ی این وهله</param>
     /// <returns>An integer between 1 and 9999 representing the year part of this <see cref="DateTime" />.</returns>
-    public static int? GetPersianYear(this DateTimeOffset? dateTime,
-        bool convertToIranTimeZone = true,
+    public static int? GetPersianYear(this DateTimeOffset? dateTime, bool convertToIranTimeZone = true,
         DateTimeOffsetPart dateTimeOffsetPart = DateTimeOffsetPart.IranLocalDateTime)
     {
         if (dateTime is null)
@@ -683,7 +677,7 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianYear(dateTime.Value, convertToIranTimeZone, dateTimeOffsetPart);
+        return dateTime.Value.GetPersianYear(convertToIranTimeZone, dateTimeOffsetPart);
     }
 
     /// <summary>
@@ -695,10 +689,12 @@ public static class PersianCulture
 
         return new PersianYear
         {
-            StartDate = persianCalendar.ToDateTime(persianYear, month: 1, day: 1, hour: 0, minute: 0, second: 0,
+            StartDate = persianCalendar.ToDateTime(persianYear, month: 1, day: 1,
+                hour: 0, minute: 0, second: 0,
                 millisecond: 0),
             EndDate = persianCalendar.ToDateTime(persianYear, month: 12,
-                persianYear.GetPersianMonthLastDay(persianMonth: 12), hour: 23, minute: 59, second: 59, millisecond: 0)
+                persianYear.GetPersianMonthLastDay(persianMonth: 12), hour: 23, minute: 59,
+                second: 59, millisecond: 0)
         };
     }
 
@@ -718,7 +714,7 @@ public static class PersianCulture
         return persianYear.GetPersianYearStartAndEndDates();
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     سال شمسی معادل را محاسبه کرده و سپس
     ///     تاریخ روزهای ابتدا و انتهای آن سال شمسی را بازگشت می‌دهد
@@ -749,10 +745,10 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianYearStartAndEndDates(dateTime.Value, convertToIranTimeZone);
+        return dateTime.Value.GetPersianYearStartAndEndDates(convertToIranTimeZone);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     سال شمسی معادل را محاسبه کرده و سپس
     ///     تاریخ روزهای ابتدا و انتهای آن سال شمسی را بازگشت می‌دهد
@@ -790,7 +786,7 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianYearStartAndEndDates(dateTimeOffset.Value, dateTimeOffsetPart);
+        return dateTimeOffset.Value.GetPersianYearStartAndEndDates(dateTimeOffsetPart);
     }
 
     /// <summary>
@@ -800,17 +796,19 @@ public static class PersianCulture
     {
         var persianCalendar = new PersianCalendar();
 
-        var startDate = persianCalendar.ToDateTime(persianYear, persianMonth, day: 1, hour: 0, minute: 0, second: 0,
+        var startDate = persianCalendar.ToDateTime(persianYear, persianMonth, day: 1,
+            hour: 0, minute: 0, second: 0,
             millisecond: 0);
 
         var endDate = persianCalendar.ToDateTime(persianYear, persianMonth,
-            persianYear.GetPersianMonthLastDay(persianMonth), hour: 23, minute: 59, second: 59, millisecond: 0);
+            persianYear.GetPersianMonthLastDay(persianMonth), hour: 23, minute: 59,
+            second: 59, millisecond: 0);
 
         return new PersianMonth
         {
             StartDate = startDate,
             EndDate = endDate,
-            LastDayNumber = GetPersianMonthLastDay(persianYear, persianMonth),
+            LastDayNumber = persianYear.GetPersianMonthLastDay(persianMonth),
             StartDateDayOfWeek = startDate.DayOfWeek.GetPersianWeekDayNumber(),
             EndDateDayOfWeek = endDate.DayOfWeek.GetPersianWeekDayNumber()
         };
@@ -842,7 +840,7 @@ public static class PersianCulture
     public static PersianMonth GetPersianMonthStartAndEndDates(this PersianDay persianDay)
         => persianDay.PersianDayToGregorian().GetPersianMonthStartAndEndDates(convertToIranTimeZone: true);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     ماه شمسی معادل را محاسبه کرده و سپس
     ///     تاریخ روزهای ابتدا و انتهای آن ماه شمسی را بازگشت می‌دهد
@@ -873,10 +871,10 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianMonthStartAndEndDates(dateTime.Value, convertToIranTimeZone);
+        return dateTime.Value.GetPersianMonthStartAndEndDates(convertToIranTimeZone);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     ماه شمسی معادل را محاسبه کرده و سپس
     ///     تاریخ روزهای ابتدا و انتهای آن ماه شمسی را بازگشت می‌دهد
@@ -916,7 +914,7 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianMonthStartAndEndDates(dateTimeOffset.Value, dateTimeOffsetPart);
+        return dateTimeOffset.Value.GetPersianMonthStartAndEndDates(dateTimeOffsetPart);
     }
 
     /// <summary>
@@ -924,10 +922,11 @@ public static class PersianCulture
     /// </summary>
     public static PersianWeek GetPersianWeekStartAndEndDates(this int persianYear, int persianMonth, int persianDay)
     {
-        var dateTime = new PersianCalendar().ToDateTime(persianYear, persianMonth, persianDay, hour: 0, minute: 0,
-            second: 0, millisecond: 0);
+        var dateTime = new PersianCalendar().ToDateTime(persianYear, persianMonth, persianDay,
+            hour: 0, minute: 0, second: 0,
+            millisecond: 0);
 
-        return GetPersianWeekStartAndEndDates(dateTime);
+        return dateTime.GetPersianWeekStartAndEndDates();
     }
 
     /// <summary>
@@ -954,12 +953,13 @@ public static class PersianCulture
         return new PersianWeek
         {
             StartDate = firstDayOfWeekDate,
-            EndDate = new DateTime(lastDayOfWeekDate.Year, lastDayOfWeekDate.Month, lastDayOfWeekDate.Day, hour: 23,
-                minute: 59, second: 59, millisecond: 0)
+            EndDate = new DateTime(lastDayOfWeekDate.Year, lastDayOfWeekDate.Month, lastDayOfWeekDate.Day,
+                hour: 23, minute: 59, second: 59,
+                millisecond: 0)
         };
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     هفته شمسی معادل را محاسبه کرده و سپس
     ///     تاریخ روزهای ابتدا و انتهای آن هفته شمسی را بازگشت می‌دهد
@@ -990,10 +990,10 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianWeekStartAndEndDates(dateTime.Value, convertToIranTimeZone);
+        return dateTime.Value.GetPersianWeekStartAndEndDates(convertToIranTimeZone);
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     هفته شمسی معادل را محاسبه کرده و سپس
     ///     تاریخ روزهای ابتدا و انتهای آن هفته شمسی را بازگشت می‌دهد
@@ -1016,7 +1016,7 @@ public static class PersianCulture
     {
         var dateTime = dateTimeOffset.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetPersianWeekStartAndEndDates(dateTime);
+        return dateTime.GetPersianWeekStartAndEndDates();
     }
 
     /// <summary>
@@ -1031,7 +1031,7 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianWeekStartAndEndDates(dateTimeOffset.Value, dateTimeOffsetPart);
+        return dateTimeOffset.Value.GetPersianWeekStartAndEndDates(dateTimeOffsetPart);
     }
 
     /// <summary>
@@ -1083,9 +1083,9 @@ public static class PersianCulture
     ///     دریافت معادل عدد شمسی نام روز هفته‌ی میلادی؛ شروع شده از عدد یک.
     ///     برای مثال سان‌دی معادل روز 2 هفته شمسی است
     /// </summary>
-    public static int GetPersianWeekDayNumber(this DateTime dateTime) => GetPersianWeekDayNumber(dateTime.DayOfWeek);
+    public static int GetPersianWeekDayNumber(this DateTime dateTime) => dateTime.DayOfWeek.GetPersianWeekDayNumber();
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     دریافت معادل عدد شمسی نام روز هفته‌ی میلادی؛ شروع شده از عدد یک.
     ///     برای مثال سان‌دی معادل روز 2 هفته شمسی است
@@ -1104,10 +1104,10 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianWeekDayNumber(dateTime.Value);
+        return dateTime.Value.GetPersianWeekDayNumber();
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     دریافت معادل عدد شمسی نام روز هفته‌ی میلادی؛ شروع شده از عدد یک.
     ///     برای مثال سان‌دی معادل روز 2 هفته شمسی است
@@ -1124,7 +1124,7 @@ public static class PersianCulture
     {
         var dateTime = dateTimeOffset.GetDateTimeOffsetPart(dateTimeOffsetPart);
 
-        return GetPersianWeekDayNumber(dateTime);
+        return dateTime.GetPersianWeekDayNumber();
     }
 
     /// <summary>
@@ -1139,7 +1139,7 @@ public static class PersianCulture
             return null;
         }
 
-        return GetPersianWeekDayNumber(dateTimeOffset.Value, dateTimeOffsetPart);
+        return dateTimeOffset.Value.GetPersianWeekDayNumber(dateTimeOffsetPart);
     }
 
     /// <summary>
@@ -1147,8 +1147,10 @@ public static class PersianCulture
     ///     برای مثال سان‌دی معادل روز 2 هفته شمسی است
     /// </summary>
     public static int GetPersianWeekDayNumber(this int persianYear, int persianMonth)
-        => GetPersianWeekDayNumber(new PersianCalendar().ToDateTime(persianYear, persianMonth, day: 1, hour: 0,
-            minute: 0, second: 0, millisecond: 0));
+        => new PersianCalendar().ToDateTime(persianYear, persianMonth, day: 1,
+                hour: 0, minute: 0, second: 0,
+                millisecond: 0)
+            .GetPersianWeekDayNumber();
 
     /// <summary>
     ///     اصلاح تقویم فرهنگ فارسی
@@ -1164,17 +1166,45 @@ public static class PersianCulture
             {
                 AbbreviatedDayNames = new[]
                 {
-                    "ی", "د", "س", "چ", "پ", "ج", "ش"
+                    "ی",
+                    "د",
+                    "س",
+                    "چ",
+                    "پ",
+                    "ج",
+                    "ش"
                 },
                 AbbreviatedMonthGenitiveNames = new[]
                 {
-                    "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن",
-                    "اسفند", string.Empty
+                    "فروردین",
+                    "اردیبهشت",
+                    "خرداد",
+                    "تیر",
+                    "مرداد",
+                    "شهریور",
+                    "مهر",
+                    "آبان",
+                    "آذر",
+                    "دی",
+                    "بهمن",
+                    "اسفند",
+                    string.Empty
                 },
                 AbbreviatedMonthNames = new[]
                 {
-                    "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن",
-                    "اسفند", string.Empty
+                    "فروردین",
+                    "اردیبهشت",
+                    "خرداد",
+                    "تیر",
+                    "مرداد",
+                    "شهریور",
+                    "مهر",
+                    "آبان",
+                    "آذر",
+                    "دی",
+                    "بهمن",
+                    "اسفند",
+                    string.Empty
                 },
                 AMDesignator = "ق.ظ",
                 CalendarWeekRule = CalendarWeekRule.FirstDay,
@@ -1182,7 +1212,13 @@ public static class PersianCulture
                 //DateSeparator = "؍",
                 DayNames = new[]
                 {
-                    "یکشنبه", "دوشنبه", "سه‌شنبه", "چهار‌شنبه", "پنجشنبه", "جمعه", "شنبه"
+                    "یکشنبه",
+                    "دوشنبه",
+                    "سه‌شنبه",
+                    "چهار‌شنبه",
+                    "پنجشنبه",
+                    "جمعه",
+                    "شنبه"
                 },
                 FirstDayOfWeek = DayOfWeek.Saturday,
                 FullDateTimePattern = "dddd dd MMMM yyyy",
@@ -1191,19 +1227,47 @@ public static class PersianCulture
                 MonthDayPattern = "dd MMMM",
                 MonthGenitiveNames = new[]
                 {
-                    "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن",
-                    "اسفند", string.Empty
+                    "فروردین",
+                    "اردیبهشت",
+                    "خرداد",
+                    "تیر",
+                    "مرداد",
+                    "شهریور",
+                    "مهر",
+                    "آبان",
+                    "آذر",
+                    "دی",
+                    "بهمن",
+                    "اسفند",
+                    string.Empty
                 },
                 MonthNames = new[]
                 {
-                    "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن",
-                    "اسفند", string.Empty
+                    "فروردین",
+                    "اردیبهشت",
+                    "خرداد",
+                    "تیر",
+                    "مرداد",
+                    "شهریور",
+                    "مهر",
+                    "آبان",
+                    "آذر",
+                    "دی",
+                    "بهمن",
+                    "اسفند",
+                    string.Empty
                 },
                 PMDesignator = "ب.ظ",
                 ShortDatePattern = "yyyy/MM/dd",
                 ShortestDayNames = new[]
                 {
-                    "ی", "د", "س", "چ", "پ", "ج", "ش"
+                    "ی",
+                    "د",
+                    "س",
+                    "چ",
+                    "پ",
+                    "ج",
+                    "ش"
                 },
                 ShortTimePattern = "HH:mm",
 

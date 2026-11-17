@@ -29,7 +29,7 @@ public static class IranCodesUtils
     ///     Validate Iranian mobile number
     /// </summary>
     public static bool IsValidIranianMobileNumber(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
         this string? mobileNumber)
@@ -48,7 +48,7 @@ public static class IranCodesUtils
     ///     Validate Iranian phone number
     /// </summary>
     public static bool IsValidIranianPhoneNumber(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
         this string? phoneNumber)
@@ -67,7 +67,7 @@ public static class IranCodesUtils
     ///     Validate Iranian postal code
     /// </summary>
     public static bool IsValidIranianPostalCode(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
         this string? postalCode)

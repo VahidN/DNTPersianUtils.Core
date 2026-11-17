@@ -7,27 +7,27 @@ namespace DNTPersianUtils.Core;
 /// </summary>
 public class PersianYear
 {
-        /// <summary>
-        ///     اولین روز سال شمسی
-        /// </summary>
-        public DateTime StartDate { set; get; }
+    /// <summary>
+    ///     اولین روز سال شمسی
+    /// </summary>
+    public DateTime StartDate { get; set; }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
-        /// <summary>
-        ///     اولین روز سال شمسی
-        /// </summary>
-        public DateOnly StartDateOnly => StartDate.ToDateOnly();
+#if NET11_0 || NET10_0
+    /// <summary>
+    ///     اولین روز سال شمسی
+    /// </summary>
+    public DateOnly StartDateOnly => StartDate.ToDateOnly();
 #endif
 
-        /// <summary>
-        ///     آخرین روز سال شمسی
-        /// </summary>
-        public DateTime EndDate { set; get; }
+    /// <summary>
+    ///     آخرین روز سال شمسی
+    /// </summary>
+    public DateTime EndDate { get; set; }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
-        /// <summary>
-        ///     آخرین روز سال شمسی
-        /// </summary>
-        public DateOnly EndDateOnly => EndDate.ToDateOnly();
+#if NET11_0 || NET10_0
+    /// <summary>
+    ///     آخرین روز سال شمسی
+    /// </summary>
+    public DateOnly EndDateOnly => EndDate.ToDateOnly();
 #endif
 }

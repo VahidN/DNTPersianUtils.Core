@@ -1,7 +1,4 @@
-﻿#if NETSTANDARD1_3
-using System;
-#endif
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text;
 
 namespace DNTPersianUtils.Core.Normalizer;

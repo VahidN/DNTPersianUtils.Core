@@ -14,8 +14,8 @@ public static class NationalLegalCodeUtils
     /// <param name="nationalLegalCode">National Legal Code</param>
     /// <returns></returns>
     public static bool IsValidIranianNationalLegalCode(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
-        [NotNullWhen(true)]
+#if !NET4_6
+        [NotNullWhen(returnValue: true)]
 #endif
         this string? nationalLegalCode)
     {
@@ -34,18 +34,27 @@ public static class NationalLegalCodeUtils
             return false;
         }
 
-        nationalLegalCode = nationalLegalCode.PadLeft(11, '0');
+        nationalLegalCode = nationalLegalCode.PadLeft(totalWidth: 11, paddingChar: '0');
 
         if (!nationalLegalCode.IsNumber())
         {
             return false;
         }
 
-        var beforeControlNumber = (int)char.GetNumericValue(nationalLegalCode[9]) + 2;
+        var beforeControlNumber = (int)char.GetNumericValue(nationalLegalCode[index: 9]) + 2;
 
         int[] coefficientStatic =
         {
-            29, 27, 23, 19, 17, 29, 27, 23, 19, 17
+            29,
+            27,
+            23,
+            19,
+            17,
+            29,
+            27,
+            23,
+            19,
+            17
         };
 
         var sum = 0;
@@ -56,7 +65,7 @@ public static class NationalLegalCodeUtils
         }
 
         var remainder = sum % 11;
-        var controlNumber = (int)char.GetNumericValue(nationalLegalCode[10]);
+        var controlNumber = (int)char.GetNumericValue(nationalLegalCode[index: 10]);
         remainder = remainder == 10 ? 0 : remainder;
 
         return controlNumber == remainder;

@@ -35,11 +35,10 @@ public static class RegexUtils
     ///     آیا عبارت مدنظر حاوی حروف و اعداد فارسی است؟
     /// </summary>
     public static bool ContainsFarsi(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
-        this string? txt,
-        bool allowWhitespace = false)
+        this string? txt, bool allowWhitespace = false)
     {
         if (string.IsNullOrEmpty(txt))
         {
@@ -60,11 +59,10 @@ public static class RegexUtils
     ///     آیا عبارت مدنظر فقط حاوی حروف فارسی است؟
     /// </summary>
     public static bool ContainsOnlyFarsiLetters(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
-        this string? txt,
-        bool allowWhitespace = false)
+        this string? txt, bool allowWhitespace = false)
     {
         if (string.IsNullOrEmpty(txt))
         {
@@ -129,11 +127,10 @@ public static class RegexUtils
     ///     آیا عبارت مدنظر فقط حاوی اعداد فارسی است؟
     /// </summary>
     public static bool ContainsOnlyPersianNumbers(
-#if !(NET4_6 || NETSTANDARD2_0 || NETSTANDARD1_3)
+#if !NET4_6
         [NotNullWhen(returnValue: true)]
 #endif
-        this string? text,
-        bool allowWhitespace = false)
+        this string? text, bool allowWhitespace = false)
     {
         if (string.IsNullOrEmpty(text))
         {

@@ -9,7 +9,11 @@ public static class WordsUtils
 {
     private static readonly char[] _separator =
     [
-        ' ', ',', ';', '.', '!', '"', '(', ')', '?', ':', '\'', '«', '»', '+', '-'
+        ' ', ',', ';',
+        '.', '!', '"',
+        '(', ')', '?',
+        ':', '\'', '«',
+        '»', '+', '-'
     ];
 
     /// <summary>
@@ -80,14 +84,14 @@ public static class WordsUtils
 
         if (data.Length < charLength)
         {
-            return ReturnDotsIfEmpty(data.StripHtmlTags());
+            return data.StripHtmlTags().ReturnDotsIfEmpty();
         }
 
         data = data.StripHtmlTags();
 
         return data.Length < charLength
             ? data.ReturnDotsIfEmpty()
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
             : string.Concat(data.AsSpan(start: 0, charLength - 7), str1: " ...");
 #else
             : string.Concat(data.Substring(0, charLength - 7), " ...");

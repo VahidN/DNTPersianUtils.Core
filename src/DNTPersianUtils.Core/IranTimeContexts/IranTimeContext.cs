@@ -20,7 +20,7 @@ public sealed class IranTimeContext
     public IranTimeContext(DateTimeOffset source)
         => DateTime = source.GetDateTimeOffsetPart(DateTimeOffsetPart.IranLocalDateTime);
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     ارائه اطلاعاتي در مورد وهله زماني جاري
     /// </summary>

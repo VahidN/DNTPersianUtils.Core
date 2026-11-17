@@ -125,7 +125,7 @@ public static class EquinoxCalculator
                now.Minute == vernalEquinoxDateTime.Minute && now.Second == vernalEquinoxDateTime.Second;
     }
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     Is given date start of a new year?
     /// </summary>
@@ -171,7 +171,7 @@ public static class EquinoxCalculator
         {
             month = (int)(e - 1.0);
         }
-        else if (ApproxEquals(e, d2: 14) || ApproxEquals(e, d2: 15))
+        else if (e.ApproxEquals(d2: 14) || e.ApproxEquals(d2: 15))
         {
             month = (int)(e - 13.0);
         }
@@ -195,8 +195,9 @@ public static class EquinoxCalculator
 
         var span = TimeSpan.FromDays(day);
 
-        return new DateTime(year, month, (int)day, span.Hours, span.Minutes, span.Seconds, span.Milliseconds,
-            DateTimeKind.Utc);
+        return new DateTime(year, month, (int)day,
+            span.Hours, span.Minutes, span.Seconds,
+            span.Milliseconds, DateTimeKind.Utc);
     }
 
     /// <summary>

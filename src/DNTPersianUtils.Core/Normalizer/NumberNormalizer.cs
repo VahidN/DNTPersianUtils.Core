@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-#if NET7_0 || NET8_0 || NET9_0 || NET10_0 || NETSTANDARD2_1 || NET5_0 || NET6_0
+#if NET11_0 || NET10_0
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 #endif
@@ -14,7 +14,7 @@ namespace DNTPersianUtils.Core;
 /// </summary>
 public static class NumberNormalizer
 {
-#if NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
     /// <summary>
     ///     رشتهٔ ورودی را نرمال‌سازی کرده و در صورت معتبر بودن، آن را به نوع عددی موردنظر تبدیل می‌کند.
     /// </summary>
@@ -42,8 +42,8 @@ public static class NumberNormalizer
 
         var normalized = value.ToNormalizedNumberString();
 
-        return normalized is not null &&
-               T.TryParse(normalized, NumberStyles.Number, CultureInfo.InvariantCulture, out number);
+        return normalized is not null && T.TryParse(normalized, NumberStyles.Number, CultureInfo.InvariantCulture,
+            out number);
     }
 #endif
 
@@ -62,18 +62,17 @@ public static class NumberNormalizer
     ///     در غیر این صورت مقدار <see langword="false" />.
     /// </returns>
     public static bool TryNormalizeAndParseNumberString(
-#if NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET11_0 || NET10_0
         [NotNullWhen(returnValue: true)]
 #endif
-        this string? value,
-        out decimal number)
+        this string? value, out decimal number)
     {
         number = 0;
 
         var normalized = value.ToNormalizedNumberString();
 
-        return normalized is not null &&
-               decimal.TryParse(normalized, NumberStyles.Number, CultureInfo.InvariantCulture, out number);
+        return normalized is not null && decimal.TryParse(normalized, NumberStyles.Number, CultureInfo.InvariantCulture,
+            out number);
     }
 
     /// <summary>
@@ -178,7 +177,7 @@ public static class NumberNormalizer
     }
 
     private static bool IsNullOrEmptyOrSign(
-#if NET7_0 || NET8_0 || NET9_0 || NET10_0 || NETSTANDARD2_1 || NET5_0 || NET6_0
+#if NET11_0 || NET10_0
         [NotNullWhen(returnValue: false)]
 #endif
         string? value)
